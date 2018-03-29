@@ -1,3 +1,11 @@
+# Mac files
+
+*.DS_Store
+
+# DVR Files
+
+Implementing DVR/*.nb
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
