@@ -64,4 +64,4 @@ def dvr_wfns(ke, pe):
 
 ## Concrete Example
 
-A concrete example of this based on a DVR developed by  [Colbert and Miller](http://xbeams.chem.yale.edu/~batista/v572/ColbertMiller.pdf)  can be found  [here](Colbert and Miller.md) .
+A concrete example of this based on a DVR developed by  [Colbert and Miller](http://xbeams.chem.yale.edu/~batista/v572/ColbertMiller.pdf)  can be found  [here](Colbert%20and%20Miller.md) .
