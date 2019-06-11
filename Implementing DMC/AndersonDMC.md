@@ -1,5 +1,7 @@
 <a id="AndersonDMC" style="width:0;height:0;margin:0;padding:0;">&zwnj;</a>
-
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 # Simple DMC Code
 
 This is walkthrough of a [Python implementation of DMC](https://github.com/McCoyGroup/DMC_DescendentWeighting/blob/master/HarmonicOscillatorDW.py) based on Anderson et. al. in  [this paper](https://aip.scitation.org/doi/10.1063/1.432868).
@@ -7,7 +9,7 @@ This is walkthrough of a [Python implementation of DMC](https://github.com/McCoy
 ### (Brief) Theory
 Diffusion Monte Carlo (DMC) is a way to solve the time-dependent Schrodinger equation (TDSE)
  using Monte Carlo sampling of a potential energy surface.  The way we will do this is by representing our 
- wavefunciton as an ensemble of localized functions, or "Walkers", each of which represents a configuration 
+ wavefunciton ($\Psi$) as an ensemble of localized functions, or "Walkers", each of which represents a configuration 
  of the molecule/system of interest.We are going to represent our wavefunction as an ensemble of localized 
  functions, called "Walkers".  One can think of these as an ensemble of delta functions.
 
