@@ -6,7 +6,7 @@
 
 This is walkthrough of a [Python implementation of Discrete Weighting DMC](https://github.com/McCoyGroup/DMC_DescendentWeighting/blob/master/HarmonicOscillatorDW.py) based on Anderson et. al. in  [this paper](https://aip.scitation.org/doi/10.1063/1.432868).
 
-###Introduction
+### Introduction
 Diffusion Monte Carlo (DMC) is a way to solve the time-dependent Schrodinger equation (TDSE)
  using Monte Carlo sampling of a potential energy surface.  At the end of the simulation we will have a wavefunction 
  and a zero point vibrational energy.  The way we will do this is by representing our 
@@ -24,7 +24,7 @@ Diffusion Monte Carlo (DMC) is a way to solve the time-dependent Schrodinger equ
  favorable, the walker may be replicated as a reward.  This whole idea of replication and deletion is referred to as 
  discrete weighting.  
 
-###The Implementation
+### The Implementation
 For simplicity of this tutorial, we are going to do a 1-dimensional DMC of the quantum model system, the harmonic oscillator.
 Physically, this simulation doesn't really mean much.  This is all done in atomic units.
 
@@ -59,7 +59,7 @@ class Walker:
 myWalkers = [Walker() for r in range(initialWalkers)]
 ```
 
-###The Overall Algorithm
+### The Overall Algorithm
 We can write our algorithm as a loop over n time steps.  At the end of the n time steps, the simulation is over!
 For now, ignore the if statement that asks if we're > 950 time steps. We'll get there in a bit.
 ```python
@@ -113,7 +113,7 @@ getting a step and then adding the displacement to our coordinates.
 
 
 
-###getPotentialForWalkers()
+### getPotentialForWalkers()
 
 The potential is usually more complicated for real systems, but since we are using a harmonic oscillator the potential
 is trivial:
@@ -129,7 +129,7 @@ def getPotentialForWalkers():
         myWalkers[d].WalkerV = (prefactor*crdssq)
 ```
 
-###getVref()
+### getVref()
 
 Vref is the average of each of the potential values of the walker, and is corrected
 by how much the population shifts from the intial amount (basically a percent change).  Alpha is a simulation parameter
@@ -143,7 +143,7 @@ def getVref(): #Use potential of all walkers to calculate vref
     return vref
 ```
 
-###birthOrDeath(Vref,whoFrom,DW)
+### birthOrDeath(Vref,whoFrom,DW)
 The most complicated part of the algorithm is the birth and death criteria, but we have a formula from the paper!
 
 ![dmcBirthDead](img/Anderson.png) 	
@@ -205,7 +205,7 @@ def birthOrDeath(vref,whoFr,Desc):
 return whoFr
 ```
 
-###Descendant Weighting
+### Descendant Weighting
 I have been ignoring things like whoFr, and Desc and the 950 index in my code because all of that is part of Descendant 
 weighting.  Descendant weighting is effectively another way to get a representation of $\Psi$, so we can calculate
 expectation values and do projections of the probability density of the wavefunction rather than just the wavefunction itself.
