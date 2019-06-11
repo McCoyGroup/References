@@ -56,6 +56,7 @@ class Walker:
     def __init__(self):
         self.coords = np.zeros((numAtoms,dimensions)) #1d surface
         self.WalkerV = 0.0
+myWalkers = [Walker() for r in range(initialWalkers)]
 ```
 
 ###The Overall Algorithm
@@ -97,114 +98,129 @@ if walkers should die or replicate, and then we recalculate vref.
 Throughout the simulation, we collect Vref at every time step, the average of which will be our zero point energy.  
 We can collect the population so that we can make sure we don't have a massive walker die off, which kills the simulation.
 
-
 ### moveRandomly()
+```python
+def moveRandomly():
+    #choose a random number from gaussian distribution (1/2pisig)(e^(-dx^2/1sig^2))
+    for p in range(len(myWalkers)):
+        gaussStep = np.random.normal(loc = 0.00000000000000,scale=sigma)
+        myWalkers[p].coords = myWalkers[p].coords + gaussStep
+```
+This method is pretty self explanatory, we are using the numpy random number generator to update our coordinates by first
+getting a step and then adding the displacement to our coordinates.
+
+
+
+
+
+###getPotentialForWalkers()
+
+The potential is usually more complicated for real systems, but since we are using a harmonic oscillator the potential
+is trivial:
+$V_{HO} = (1/2)*k*x^2 = (1/2)*m*w^2$
+
+```python
+def getPotentialForWalkers():
+	omsqd = math.pow(omega,2)
+    prefactor = 0.50000*mass*omsqd
+    for d in range(len(myWalkers)):
+        crds = float(myWalkers[d].coords)
+        crdssq = math.pow(crds,2)
+        myWalkers[d].WalkerV = (prefactor*crdssq)
+```
+
+###getVref()
+
+Vref is the average of each of the potential values of the walker, and is corrected
+by how much the population shifts from the intial amount (basically a percent change).  Alpha is a simulation parameter
+based on the time step.
+
+```python
+def getVref(): #Use potential of all walkers to calculate vref
+    varray = np.array([k.WalkerV for k in myWalkers])
+    Vbar = np.average(varray)
+    vref = Vbar - alpha*((float(len(myWalkers))-float(initialWalkers))/float(initialWalkers))
+    return vref
+```
+
+###birthOrDeath(Vref,whoFrom,DW)
+The most complicated part of the algorithm is the birth and death criteria, but we have a formula from the paper!
 
 ![dmcBirthDead](img/Anderson.png) 	
 
+The way I handle this is by going through each of the walkers.  I split it up into a favorable or unfavorable move
+(curV > Vref , else curV < Vref).  I calculate the probablility and then grab a random number.  Using the random number,
+I check if the walker should be removed or duplicated (or left along).  I have a deathAr which is a list that holds the 
+index of the walker that must die, and then a birthAr that appends the ENTIRE WALKER, coordinates and potential, marked for replication.
+
+I delete the walkers in a reversed fashion not to mess up the indexing, and then use the birthAr to just stick those 
+replicated walkers on at the end.  If I used an index for birthAr, it would have become messy from the deletion of walkers.
 ```python
-def dvr_ke(grid, m=1, hb=1):
-	'''Computes the kinetic energy for the grid (based on the chosen basis)'''
-	import numpy as np
-	
-	dx=grid[1]-grid[0]
-	divs=len(grid)
-	ke=np.empty((divs, divs))
+def giveBirth(singleWalker):
+    myWalkers.append(singleWalker)
 
-	coeff=(hb**2)/(2*m*(dx**2))
+def deleteWalker(walkerIndex,whoFr,Desc):
+    del myWalkers[walkerIndex]
+    if Desc:
+        whoFr = np.delete(whoFr,walkerIndex)
+    return whoFr
 
-	for i in range(divs):
-		for j in range(divs):
-			if i==j:
-				ke[i, j]=(-1**(i-j))*coeff*(math.pi**2)/3
-			else:
-				ke[i, j]=(-1**(i-j))*coeff*(2)/((i-j)**2)
+def birthOrDeath(vref,whoFr,Desc):
+    deathAr = []
+    birthAr = []
+    birthArInd = []
 
-	return ke
+    for y in range(len(myWalkers)):
+        Rng = np.random.random()
+        curV = myWalkers[y].WalkerV
+
+        if curV > Vref:
+            P = -1*(curV - Vref)*deltaT
+            exP = math.exp(P)
+            if exP < Rng:
+                deathAr.append(y)
+        else:
+            P = -1*(curV - Vref) * deltaT
+            exP = math.exp(P) - 1
+            if exP > Rng:
+                singleWalker = copy.deepcopy(myWalkers[y])
+                birthAr.append(singleWalker)
+                if Desc:
+                    #get the index from where the pregnant walker is from
+                    birthArInd.append(whoFr[y])
+
+    if deathAr: #If it's not empty
+        for k in reversed(deathAr):
+            whoFr = deleteWalker(k,whoFr,Desc)
+    if birthAr:
+        for j in birthAr:
+            giveBirth(j)
+        if Desc:
+            whoFr = np.concatenate((whoFr, birthArInd))
+
+
+    del deathAr[:]
+    del birthAr[:]
+
+return whoFr
 ```
 
-### Potential Energy
+###Descendant Weighting
+I have been ignoring things like whoFr, and Desc and the 950 index in my code because all of that is part of Descendant 
+weighting.  Descendant weighting is effectively another way to get a representation of $\Psi$, so we can calculate
+expectation values and do projections of the probability density of the wavefunction rather than just the wavefunction itself.
 
-The potential is simple as is usually the case, so if we have a potential function as a function of the grid point,  ```pot```  we can write this as
-
-```python
-def dvr_pe(grid, pot=None):
-	'''Computes the potential energy from the gridpoints'''
-	import numpy as np
-	
-	return np.diag([pot(x) for x in grid])
-```
-
-### Wavefunctions
-
-This will also operate in the usual way, so we have 
+Effectively, in the last 50 time steps of the code, we maintain a running list of which walkers are deleted or replicated,
+and then trace it back to the ensemble at time 950.  We then weight those walkers by their descendants.  The additions we
+need are only in the birth or death function and a little bit of clean up at the end.  I update which walkers are replicated
+with the whoFr array, and count how many walkers came from a parent walker at the end of the simulation with 
 
 ```python
-def dvr_wfns(ke, pe):
-	'''Computes the wavefunctions'''
-	import numpy as np
-	
-	return np.linalg.eig(ke+pe)
+unique,counts = np.unique(whoFrom,return_counts=True)
+z=0
+for u in unique: #teehee
+    dWeights[u]=counts[z]
+z+=1
 ```
 
-<a id="all-together" style="width:0;height:0;margin:0;padding:0;">&zwnj;</a>
-
-## All Together
-
-```python
-'''Colbert and Miller DVR on the [-inf, inf] domain'''
-
-def dvr_grid(domain=(-5, 5), divs=10, **kw):
-    '''Calculates the grid'''
-    rmin=domain[0]; rmax=domain[1];
-    inc=(rmax-rmin)/(divs-1)
-
-    return [rmin+i*inc for i in range(divs)]
-    
- def dvr_ke(grid, m=1, hb=1, **kw):
-	'''Computes the kinetic energy for the grid (based on the chosen basis)'''
-	import numpy as np
-	
-	dx=grid[1]-grid[0]
-	divs=len(grid)
-	ke=np.empty((divs, divs))
-
-	coeff=(hb**2)/(2*m*(dx**2))
-
-	for i in range(divs):
-		for j in range(divs):
-			if i==j:
-				ke[i, j]=(-1**(i-j))*coeff*(math.pi**2)/3
-			else:
-				ke[i, j]=(-1**(i-j))*coeff*(2)/((i-j)**2)
-
-	return ke
-
-
-def dvr_pe(grid, pot=None, **kw):
-	'''Computes the potential energy from the gridpoints'''
-	import numpy as np
-	
-	return np.diag([pot(x) for x in grid])
-	
-def dvr_wfns(ke, pe, **kw):
-	'''Computes the wavefunctions'''
-	import numpy as np
-	
-	return np.linalg.eig(ke+pe)
-	
-def dvr_run(**params):
-	'''Runs the entire DVR'''
-	grid = dvr_grid(**params)
-	ke = dvr_ke(grid, **params)
-	pe = dvr_pe(grid, **params)
-	wfns = dvr_wfns(ke, pe, **params)
-	
-	return wfns
-	
-	
-if __name__=='__main__':
-	### parse sys.argv
-	
-	dvr_run(**ops)
-```
+And that's it! Ask a bunch of questions to the person who directed you here so that you can understand each part better :).
