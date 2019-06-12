@@ -117,7 +117,7 @@ getting a step and then adding the displacement to our coordinates.
 
 The potential is usually more complicated for real systems, but since we are using a harmonic oscillator the potential
 is trivial:
-$V_{HO} = (1/2)*k*x^2 = (1/2)*m*w^2$
+$V(x) = (1/2)*k*x^2 = (1/2)*m*w^2$
 
 ```python
 def getPotentialForWalkers():
@@ -205,7 +205,7 @@ def birthOrDeath(vref,whoFr,Desc):
 return whoFr
 ```
 
-### Descendant Weighting
+## Descendant Weighting
 I have been ignoring things like whoFr, and Desc and the 950 index in my code because all of that is part of Descendant 
 weighting.  Descendant weighting is effectively another way to get a representation of $\Psi$, so we can calculate
 expectation values and do projections of the probability density of the wavefunction rather than just the wavefunction itself.
