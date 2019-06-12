@@ -6,7 +6,7 @@ We'll take the 1D DVR done in  [Colbert and Miller DVR](Colbert%20and%20Miller.h
 
 <a id="grid" class="Subsubsection" style="width:0;height:0;margin:0;padding:0;">&zwnj;</a>
 
-###Grid
+### Grid
 
 We discretize as before, but use NumPy functions for do this more efficiently
 
@@ -22,7 +22,7 @@ def dvr_grid(domain=(-5, 5), divs=10, **kw):
 
 <a id="kineticenergy" class="Subsubsection" style="width:0;height:0;margin:0;padding:0;">&zwnj;</a>
 
-###Kinetic Energy
+### Kinetic Energy
 
 The kinetic energy is constant along bands, so we can use this property to fill out our matrix more quickly.
 
@@ -55,27 +55,27 @@ def kinetic_energy(grid, m=1, hb=1, **kw):
 
 <a id="potentialenergy" class="Subsubsection" style="width:0;height:0;margin:0;padding:0;">&zwnj;</a>
 
-###Potential Energy
+### Potential Energy
 
 Here, we'll assume  `pot` has been written in order to take advantage of NumPy's vectorized operations and hence should be called with our entire grid fed in.
 
 ```python
 def dvr_pe(grid, pot=None):
  '''Computes the potential energy from the gridpoints'''
- 
+
  return np.diag(pot(grid))
 ```
 
 <a id="wavefunctions" class="Subsubsection" style="width:0;height:0;margin:0;padding:0;">&zwnj;</a>
 
-###Wavefunctions
+### Wavefunctions
 
 This already used NumPy so we won't change anything here.
 
 ```python
 def dvr_wfns(ke, pe):
  '''Computes the wavefunctions'''
- 
+
  return np.linalg.eig(ke+pe)
 ```
 
@@ -91,7 +91,7 @@ def dvr_grid(domain=(-5, 5), divs=10, **kw):
     '''Calculates the grid'''
 
     return np.linspace(*domain, divs)
-    
+
 def kinetic_energy(grid, m=1, hb=1, **kw):
     '''Computes the kinetic energy for the grid'''
 
@@ -119,26 +119,26 @@ def kinetic_energy(grid, m=1, hb=1, **kw):
 
 def dvr_pe(grid, pot=None):
  '''Computes the potential energy from the gridpoints'''
- 
+
  return np.diag(pot(grid))
- 
+
 def dvr_wfns(ke, pe):
  '''Computes the wavefunctions'''
- 
+
  return np.linalg.eig(ke+pe)
- 
+
 def dvr_run(**params):
  '''Runs the entire DVR'''
  grid = dvr_grid(**params)
  ke = dvr_ke(grid, **params)
  pe = dvr_pe(grid, **params)
  wfns = dvr_wfns(ke, pe, **params)
- 
+
  return wfns
- 
- 
+
+
 if __name__=='__main__':
  ### parse sys.argv
- 
+
  dvr_run(**ops)
 ```
