@@ -117,7 +117,7 @@ getting a step and then adding the displacement to our coordinates.
 
 The potential is usually more complicated for real systems, but since we are using a harmonic oscillator the potential
 is trivial:
-$V\_{HO}(x) = (1/2)\*k\*x^2 = (1/2)\*m\*w^2$
+$$V\_{HO}(x) = (1/2)\*k\*x^2 = (1/2)\*m\*w^2$$
 
 ```python
 def getPotentialForWalkers():
