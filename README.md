@@ -9,6 +9,7 @@ Collection of Markdown references on various techniques or ideas
 
 ## DMC
   - [Anderson DMC](Implementing%20DMC/AndersonDMC.html)
+  - [Reynolds DMC](Implementing%20DMC/ReynoldsDMC.html)
 
 ## Potential
   - [Harmonic Adiabatic Potentials](Adiabatic%20Potentials/Harmonic%20Adiabatic%20Potentials.html)
