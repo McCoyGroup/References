@@ -8,7 +8,8 @@ Collection of Markdown references on various techniques or ideas
   - [Multidimensional DVR](Implementing DVR/MultidimensionalDVR.html)
 
 ## DMC
-  - [Anderson DMC](Implementing DMC/AndersonDMC.html)
+  - [Anderson DMC](Implementing%20DMC/AndersonDMC.html)
+  - [Reynolds DMC](Implementing%20DMC/ReynoldsDMC.html)
 
 ## Potential
   - [Harmonic Adiabatic Potentials](Adiabatic Potentials/Harmonic Adiabatic Potentials.html)
