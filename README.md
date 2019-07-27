@@ -19,6 +19,6 @@ This repository contains three things:
   - [Harmonic Adiabatic Potentials](Adiabatic Potentials/Harmonic Adiabatic Potentials.md)
 
 
-# [Documentation](docs):
+# Documentation:
 
-  Basic docs for some of the code in the group repositories can be found on the references website
+  Basic [docs](docs) for some of the code in the group repositories is available
