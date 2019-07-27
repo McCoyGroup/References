@@ -1,4 +1,4 @@
-# <a id=RynDMC>RynDMC</a>
+# <a id="RynDMC">RynDMC</a>
     
 A DMC framework that aims to be flexible, general, and as efficient as possible within those constraints
 Provides an abstract DMC class and some concrete implementations of the class

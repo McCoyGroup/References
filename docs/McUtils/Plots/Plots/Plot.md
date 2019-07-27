@@ -1,7 +1,7 @@
-## <a id=McUtils.Plots.Plots.Plot>Plot</a>
+## <a id="McUtils.Plots.Plots.Plot">Plot</a>
 
 
-<a id=McUtils.Plots.Plots.Plot.__init__>&nbsp;</a>
+<a id="McUtils.Plots.Plots.Plot.__init__">&nbsp;</a>
 ```python
 __init__(self, func, xrange, method='plot', figure=None, axes=None, subplot_kw=None, plot_style=None, colorbar=None, **opts): 
 ```
@@ -15,12 +15,12 @@ Creates a 1D plot on 2D axes
 - `opts`: `Any`
     >No description...
 
-<a id=McUtils.Plots.Plots.Plot.plot>&nbsp;</a>
+<a id="McUtils.Plots.Plots.Plot.plot">&nbsp;</a>
 ```python
 plot(self, func, xrange, **plot_style): 
 ```
 
-<a id=McUtils.Plots.Plots.Plot.add_colorbar>&nbsp;</a>
+<a id="McUtils.Plots.Plots.Plot.add_colorbar">&nbsp;</a>
 ```python
 add_colorbar(self, **kw): 
 ```

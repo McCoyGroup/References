@@ -1,4 +1,4 @@
-# <a id=McUtils>McUtils</a>
+# <a id="McUtils">McUtils</a>
     
 a growing package of assorted functionality that finds use across many different packages, but doesn't attempt to
 provide a single unified interface for doing certain types of projects

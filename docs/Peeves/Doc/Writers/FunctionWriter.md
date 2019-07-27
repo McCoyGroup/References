@@ -1,11 +1,11 @@
-## <a id=Peeves.Doc.Writers.FunctionWriter>FunctionWriter</a>
+## <a id="Peeves.Doc.Writers.FunctionWriter">FunctionWriter</a>
 
 
 ```python
 template: str
 param_template: str
 ```
-<a id=Peeves.Doc.Writers.FunctionWriter.parse_doc>&nbsp;</a>
+<a id="Peeves.Doc.Writers.FunctionWriter.parse_doc">&nbsp;</a>
 ```python
 parse_doc(self, doc): 
 ```
@@ -15,7 +15,7 @@ parse_doc(self, doc):
 - `:returns`: `_`
     >No description...
 
-<a id=Peeves.Doc.Writers.FunctionWriter.template_params>&nbsp;</a>
+<a id="Peeves.Doc.Writers.FunctionWriter.template_params">&nbsp;</a>
 ```python
 template_params(self): 
 ```

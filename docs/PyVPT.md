@@ -1,4 +1,4 @@
-# <a id=PyVPT>PyVPT</a>
+# <a id="PyVPT">PyVPT</a>
     
 provides a class for doing (2nd order) vibrational perturbation theory in python
 builds off of resource packages to handle most of the dirty work and just does the actual potential expansions

@@ -1,7 +1,7 @@
-## <a id=McUtils.Plots.Plots.Plot2D>Plot2D</a>
+## <a id="McUtils.Plots.Plots.Plot2D">Plot2D</a>
 A base class for plots that are 3D but plotted on 2D Graphics
 
-<a id=McUtils.Plots.Plots.Plot2D.__init__>&nbsp;</a>
+<a id="McUtils.Plots.Plots.Plot2D.__init__">&nbsp;</a>
 ```python
 __init__(self, func, xrange, yrange, plot_style=None, method='contour', colorbar=None, figure=None, axes=None, subplot_kw=None, **opts): 
 ```
@@ -17,12 +17,12 @@ Creates a 3D plot on 2D axes
 - `opts`: `Any`
     >No description...
 
-<a id=McUtils.Plots.Plots.Plot2D.plot>&nbsp;</a>
+<a id="McUtils.Plots.Plots.Plot2D.plot">&nbsp;</a>
 ```python
 plot(self, func, xrange, yrange, **plot_style): 
 ```
 
-<a id=McUtils.Plots.Plots.Plot2D.add_colorbar>&nbsp;</a>
+<a id="McUtils.Plots.Plots.Plot2D.add_colorbar">&nbsp;</a>
 ```python
 add_colorbar(self, **kw): 
 ```

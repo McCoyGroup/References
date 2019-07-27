@@ -1,4 +1,4 @@
-# <a id=McUtils.Data>McUtils.Data</a>
+# <a id="McUtils.Data">McUtils.Data</a>
     
 Provides a small data framework for wrapping up datasets into classes for access and loading
 
