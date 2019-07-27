@@ -1,7 +1,7 @@
-## <a id=McUtils.Plots.Primitives.GraphicsPrimitive>GraphicsPrimitive</a>
+## <a id="McUtils.Plots.Primitives.GraphicsPrimitive">GraphicsPrimitive</a>
 
 
-<a id=McUtils.Plots.Primitives.GraphicsPrimitive.plot>&nbsp;</a>
+<a id="McUtils.Plots.Primitives.GraphicsPrimitive.plot">&nbsp;</a>
 ```python
 plot(self, graphics, *args, **kwargs): 
 ```

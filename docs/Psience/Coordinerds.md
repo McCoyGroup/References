@@ -1,4 +1,4 @@
-# <a id=Psience.Coordinerds>Psience.Coordinerds</a>
+# <a id="Psience.Coordinerds">Psience.Coordinerds</a>
     
 The Coordinerds package implements stuff for dealing with coordinates and generalized coordinate systems
 

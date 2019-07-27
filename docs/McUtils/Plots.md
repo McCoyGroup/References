@@ -1,4 +1,4 @@
-# <a id=McUtils.Plots>McUtils.Plots</a>
+# <a id="McUtils.Plots">McUtils.Plots</a>
     
 A plotting framework that builds off of matplotlib, but potentially could use a different backend
 

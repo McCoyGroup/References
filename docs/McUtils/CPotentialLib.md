@@ -1,4 +1,4 @@
-# <a id=McUtils.CPotentialLib>McUtils.CPotentialLib</a>
+# <a id="McUtils.CPotentialLib">McUtils.CPotentialLib</a>
     
 CPotentialLib provides a hook for working with potentials written at the C level
 

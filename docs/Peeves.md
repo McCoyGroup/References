@@ -1,4 +1,4 @@
-# <a id=Peeves>Peeves</a>
+# <a id="Peeves">Peeves</a>
     
 Peeves is a minor extension to the unittest framework that makes my life better
 
