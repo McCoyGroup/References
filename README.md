@@ -6,17 +6,17 @@ This repository contains three things:
   - Unit tests for the various utilities and libraries as a source of examples
 
 ## DVR
-  - [Basic DVR](Implementing DVR/Basic DVR.md)
-  - [Colbert and Miller](Implementing DVR/Colbert%20and%20Miller.md)
-  - [NumPy DVR](Implementing DVR/DVRWithNumpy.md)
-  - [Multidimensional DVR](Implementing DVR/MultidimensionalDVR.md)
+  - [Basic DVR](https://mccoygroup.github.io/References/Implementing%20DVR/Basic%20DVR.html)
+  - [Colbert and Miller](https://mccoygroup.github.io/References/Implementing%20DVR/Colbert%20and%20Miller.html)
+  - [NumPy DVR](https://mccoygroup.github.io/References/Implementing%20DVR/DVRWithNumpy.html)
+  - [Multidimensional DVR](https://mccoygroup.github.io/References/Implementing%20DVR/MultidimensionalDVR.html)
 
 ## DMC
-  - [Anderson DMC](Implementing DMC/AndersonDMC.md)
-  - [Reynolds DMC](Implementing DMC/ReynoldsDMC.md)
+  - [Anderson DMC](https://mccoygroup.github.io/References/Implementing%20DMC/AndersonDMC.html)
+  - [Reynolds DMC](https://mccoygroup.github.io/References/Implementing%20DMC/ReynoldsDMC.html)
 
 ## Potential
-  - [Harmonic Adiabatic Potentials](Adiabatic Potentials/Harmonic Adiabatic Potentials.md)
+  - [Harmonic Adiabatic Potentials](https://mccoygroup.github.io/References/Adiabatic%20Potentials/Harmonic%20Adiabatic%20Potentials.html)
 
 
 # Documentation:
