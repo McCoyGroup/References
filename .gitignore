@@ -5,6 +5,8 @@
 # DVR Files
 
 Implementing DVR/*.nb
+TestData
+.idea
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
