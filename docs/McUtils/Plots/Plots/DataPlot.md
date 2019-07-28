@@ -5,6 +5,7 @@
 ```python
 __init__(self, data, plot_style=None, method=None, figure=None, axes=None, subplot_kw=None, colorbar=None, **opts): 
 ```
+Creates a plot of data
 
 <a id="McUtils.Plots.Plots.DataPlot.plot">&nbsp;</a>
 ```python

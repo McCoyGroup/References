@@ -35,11 +35,13 @@ Handles branching in DMC. Returns the new energy array after the branching occur
 ```python
 update_weights(self, energies, weights): 
 ```
+Handles weights in DMC
 
 <a id="RynDMC.AbstractDMC.AbstractDMC.weight_descendants">&nbsp;</a>
 ```python
 weight_descendants(self): 
 ```
+Applies descendant weighting
 
 <a id="RynDMC.AbstractDMC.AbstractDMC.propagate">&nbsp;</a>
 ```python

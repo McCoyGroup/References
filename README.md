@@ -21,4 +21,4 @@ This repository contains three things:
 
 # Documentation:
 
-  Basic [docs](docs) for some of the code in the group repositories is available
+  Basic [docs](https://mccoygroup.github.io/References/docs) for some of the code in the group repositories is available

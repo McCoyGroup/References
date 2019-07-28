@@ -1,8 +1,8 @@
 # Documentation
 
-  - [McUtils.md](McUtils.md)
-  - [Psience.md](Psience.md)
-  - [Peeves.md](Peeves.md)
-  - [PyDVR.md](PyDVR.md)
-  - [PyVPT.md](PyVPT.md)
-  - [RynDMC.md](RynDMC.md)
+  - [McUtils](McUtils.md)
+  - [Psience](Psience.md)
+  - [Peeves](Peeves.md)
+  - [PyDVR](PyDVR.md)
+  - [PyVPT](PyVPT.md)
+  - [RynDMC](RynDMC.md)

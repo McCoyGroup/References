@@ -5,6 +5,7 @@
 ```python
 __init__(self, array, plot_style=None, colorbar=None, figure=None, axes=None, subplot_kw=None, method='imshow', **opts): 
 ```
+Creates an array plot from the array
 
 <a id="McUtils.Plots.Plots.ArrayPlot.plot">&nbsp;</a>
 ```python
