@@ -1,6 +1,7 @@
 ## <a id="Peeves.Timer.Timer">Timer</a>
 
 
+### Properties and Methods
 ```python
 tag_printing_times: dict
 ```
@@ -49,3 +50,4 @@ print_timing(self, time_elapsed, tag=None, steps=None):
 __call__(self, fn): 
 ```
 
+### Examples

@@ -1,6 +1,7 @@
 ## <a id="McUtils.CPotentialLib.CPotential.CPotential">CPotential</a>
 
 
+### Properties and Methods
 <a id="McUtils.CPotentialLib.CPotential.CPotential.__init__">&nbsp;</a>
 ```python
 __init__(self, pointer, mode='single'): 
@@ -16,3 +17,4 @@ call(self, atoms, coords):
 __call__(self, *args, **kwargs): 
 ```
 
+### Examples

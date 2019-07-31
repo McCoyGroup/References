@@ -1,6 +1,7 @@
 ## <a id="Peeves.TestUtils.DataGenerator">DataGenerator</a>
 Provides methods to generate relevant data for testing methods
 
+### Properties and Methods
 <a id="Peeves.TestUtils.DataGenerator.coords">&nbsp;</a>
 ```python
 coords(n=50): 
@@ -41,3 +42,4 @@ zmat(ncoords=15, use_rad=False):
 zmats(m=10, ncoords=15, use_rad=False): 
 ```
 
+### Examples

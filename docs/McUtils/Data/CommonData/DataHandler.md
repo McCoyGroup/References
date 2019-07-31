@@ -1,6 +1,7 @@
 ## <a id="McUtils.Data.CommonData.DataHandler">DataHandler</a>
 Defines a general data loader class that we can use for AtomData and any other data classes we might find useful
 
+### Properties and Methods
 ```python
 data_file: property
 data: property
@@ -30,3 +31,4 @@ __len__(self):
 __iter__(self): 
 ```
 
+### Examples

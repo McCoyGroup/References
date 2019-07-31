@@ -1,6 +1,7 @@
 ## <a id="Peeves.Doc.Writers.ClassWriter">ClassWriter</a>
 A writer targeted to a class
 
+### Properties and Methods
 ```python
 template: str
 ```
@@ -19,3 +20,4 @@ format_prop(self, k, o):
 template_params(self, function_writer=None): 
 ```
 
+### Examples

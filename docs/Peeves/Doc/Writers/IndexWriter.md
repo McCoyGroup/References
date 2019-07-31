@@ -1,6 +1,7 @@
 ## <a id="Peeves.Doc.Writers.IndexWriter">IndexWriter</a>
 
 
+### Properties and Methods
 ```python
 template: str
 ```
@@ -14,3 +15,4 @@ get_file_paths(self):
 template_params(self): 
 ```
 
+### Examples

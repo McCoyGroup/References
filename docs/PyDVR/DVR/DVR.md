@@ -4,11 +4,13 @@ This is a manager class for working with DVRs
 It uses files from which it loads the spec data and methods
 Currently all defaults are for 1D but the ND extension shouldn't be bad
 
+### Properties and Methods
 ```python
 loaded_DVRs: dict
 dvr_dir: str
 dvr_file: method
 load_dvr: method
+Results: type
 ```
 <a id="PyDVR.DVR.DVR.__init__">&nbsp;</a>
 ```python
@@ -63,3 +65,4 @@ run(self, **runpars):
 ```
 Runs the DVR. Resets state after the run
 
+### Examples

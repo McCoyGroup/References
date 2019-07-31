@@ -1,6 +1,7 @@
 ## <a id="McUtils.Plots.Primitives.Line">Line</a>
 
 
+### Properties and Methods
 <a id="McUtils.Plots.Primitives.Line.__init__">&nbsp;</a>
 ```python
 __init__(self, pos1, pos2, radius, **opts): 
@@ -11,3 +12,4 @@ __init__(self, pos1, pos2, radius, **opts):
 plot(self, graphics, *args, **kwargs): 
 ```
 
+### Examples

@@ -1,6 +1,7 @@
 ## <a id="RynDMC.ContinuousWeightingDMC.ContinuousWeightingDMC">ContinuousWeightingDMC</a>
 
 
+### Properties and Methods
 <a id="RynDMC.ContinuousWeightingDMC.ContinuousWeightingDMC.__init__">&nbsp;</a>
 ```python
 __init__(self, *args, alpha=None, **kwargs): 
@@ -28,3 +29,4 @@ Iteratively updates the weights over a set of vectors of energies
 weight_descendants(self): 
 ```
 
+### Examples

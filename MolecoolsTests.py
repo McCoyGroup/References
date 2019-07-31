@@ -31,11 +31,15 @@ class MolecoolsTests(TestCase):
         # ArrayPlot(nms.matrix).show()
         self.assertEquals(nms.matrix.shape, (3*n, 3*n))
 
-    @validationTest
+    @debugTest
     def test_Plotting(self):
         from McUtils.Plots import Graphics3D
 
-        g = Graphics3D(plot_range=[[-2, 2]]*3)
+        g = Graphics3D(
+            image_size=[1500, 1500],
+            plot_range=[[-10, 10]]*3,
+            backend="VTK"
+            )
         h5 = Molecule.from_file(
             self.test_log_h2,
             # self.test_fchk,
@@ -63,9 +67,9 @@ class MolecoolsTests(TestCase):
             # bond_style= { "circle_points": 24 },
             # atom_style= { "sphere_points": 24 }
             )
-        # g.show()
+        g.show()
 
-    @debugTest
+    @validationTest
     def test_VisualizeNormalModes(self):
 
         from Psience.Molecools.Vibrations import VibrationalModes, NormalModeCoordiantes
@@ -104,4 +108,4 @@ class MolecoolsTests(TestCase):
                                anim_opts= dict(interval = 10)
                                )
 
-        g.show()
+        # g.show()

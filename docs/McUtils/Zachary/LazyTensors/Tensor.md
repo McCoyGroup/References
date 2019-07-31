@@ -1,6 +1,7 @@
 ## <a id="McUtils.Zachary.LazyTensors.Tensor">Tensor</a>
 A semi-symbolic representation of a tensor. Allows for lazy processing of tensor operations.
 
+### Properties and Methods
 ```python
 from_array: method
 array: property
@@ -76,3 +77,4 @@ __getitem__(self, item):
 __repr__(self): 
 ```
 
+### Examples

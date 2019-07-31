@@ -1,6 +1,7 @@
 ## <a id="Peeves.Doc.Writers.DocWriter">DocWriter</a>
 A general writer class that writes a file based off a template and filling in object template specs
 
+### Properties and Methods
 ```python
 template: str
 outStream: type
@@ -8,6 +9,7 @@ out: property
 load_template: method
 get_identifier: method
 identifier: property
+param_template: str
 ```
 <a id="Peeves.Doc.Writers.DocWriter.__init__">&nbsp;</a>
 ```python
@@ -89,3 +91,14 @@ format_quote_block(self, arg):
 - `:returns`: `_`
     >No description...
 
+<a id="Peeves.Doc.Writers.DocWriter.parse_doc">&nbsp;</a>
+```python
+parse_doc(self, doc): 
+```
+
+- `doc`: `str`
+    >No description...
+- `:returns`: `_`
+    >No description...
+
+### Examples

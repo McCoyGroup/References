@@ -1,6 +1,7 @@
 ## <a id="Peeves.Doc.DocWalker.DocWalker">DocWalker</a>
 
 
+### Properties and Methods
 <a id="Peeves.Doc.DocWalker.DocWalker.__init__">&nbsp;</a>
 ```python
 __init__(self, objects, out=None, module_writer=None, class_writer=None, function_writer=None, object_writer=None): 
@@ -16,3 +17,4 @@ write_object(self, o, written=None):
 write_docs(self): 
 ```
 
+### Examples

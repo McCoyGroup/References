@@ -1,6 +1,7 @@
 ## <a id="McUtils.GaussianInterface.GaussianImporter.GaussianLogReader">GaussianLogReader</a>
 Implements a stream based reader for a Gaussian .log file... a bit messy
 
+### Properties and Methods
 ```python
 registered_components: dict
 default_keys: tuple
@@ -18,3 +19,4 @@ The main function we'll actually use. Parses bits out of a .log file.
 - `:returns`: `_`
     >No description...
 
+### Examples

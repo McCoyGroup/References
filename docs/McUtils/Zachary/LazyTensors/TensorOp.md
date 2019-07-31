@@ -1,6 +1,7 @@
 ## <a id="McUtils.Zachary.LazyTensors.TensorOp">TensorOp</a>
 A lazy representation of tensor operations to save memory
 
+### Properties and Methods
 ```python
 shape: property
 array: property
@@ -25,3 +26,4 @@ get_shape(self, a, b):
 __getitem__(self, i): 
 ```
 
+### Examples

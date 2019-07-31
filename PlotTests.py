@@ -73,7 +73,7 @@ class PlotsTests(TestCase):
                       colorbar = True
                       )
 
-    @debugTest
+    @validationTest
     def test_Animation(self):
         def get_data(*args):
             pts = np.pi*np.random.normal(scale = .25, size=(10550, 2))
@@ -90,6 +90,11 @@ class PlotsTests(TestCase):
                                   )
         # plot.show()
 
+    @validationTest
+    def test_VTK(self):
+        plot = Graphics3D(backend="VTK", image_size=[1500, 500])
+        Sphere().plot(plot)
+        # plot.show()
 
     # @debugTest
     # def test_Plot3D_adaptive(self):

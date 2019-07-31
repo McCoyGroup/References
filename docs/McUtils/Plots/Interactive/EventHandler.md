@@ -1,6 +1,7 @@
 ## <a id="McUtils.Plots.Interactive.EventHandler">EventHandler</a>
 
 
+### Properties and Methods
 ```python
 Event: type
 ```
@@ -103,3 +104,4 @@ AxesEnterEvent(self, handler, **kw):
 AxesLeaveEvent(self, handler, **kw): 
 ```
 
+### Examples

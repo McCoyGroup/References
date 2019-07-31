@@ -1,6 +1,7 @@
 ## <a id="PyVPT.PerturbationTheory.PerturbationTheoryWavefunction">PerturbationTheoryWavefunction</a>
 
 
+### Properties and Methods
 ```python
 from_params: method
 ```
@@ -9,3 +10,4 @@ from_params: method
 __init__(self, hamiltonian): 
 ```
 
+### Examples

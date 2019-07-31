@@ -1,6 +1,7 @@
 ## <a id="McUtils.Plots.Graphics.GraphicsBase">GraphicsBase</a>
 
 
+### Properties and Methods
 ```python
 styled: type
 ```
@@ -81,3 +82,4 @@ show(self):
 clear(self): 
 ```
 
+### Examples

@@ -1,6 +1,7 @@
 ## <a id="McUtils.Plots.Interactive.Animator">Animator</a>
 
 
+### Properties and Methods
 ```python
 active: property
 ```
@@ -29,3 +30,4 @@ toggle(self):
 show(self): 
 ```
 
+### Examples

@@ -1,6 +1,7 @@
 ## <a id="Peeves.TestUtils.TestManagerClass">TestManagerClass</a>
 Just manages where things load from
 
+### Properties and Methods
 ```python
 log_file: str
 log_results: bool
@@ -30,3 +31,4 @@ test_data(self, filename):
 run(self, exit=True): 
 ```
 
+### Examples

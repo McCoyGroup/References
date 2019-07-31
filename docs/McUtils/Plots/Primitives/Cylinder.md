@@ -1,6 +1,7 @@
 ## <a id="McUtils.Plots.Primitives.Cylinder">Cylinder</a>
 
 
+### Properties and Methods
 <a id="McUtils.Plots.Primitives.Cylinder.__init__">&nbsp;</a>
 ```python
 __init__(self, p1, p2, radius, circle_points=32, **opts): 
@@ -11,3 +12,4 @@ __init__(self, p1, p2, radius, circle_points=32, **opts):
 plot(self, graphics, *args, circle_points=None, **kwargs): 
 ```
 
+### Examples

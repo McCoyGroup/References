@@ -1,6 +1,7 @@
 ## <a id="RynDMC.PotentialEvaluator.PotentialEvaluator">PotentialEvaluator</a>
 
 
+### Properties and Methods
 <a id="RynDMC.PotentialEvaluator.PotentialEvaluator.__init__">&nbsp;</a>
 ```python
 __init__(self, func, mode='single'): 
@@ -16,3 +17,4 @@ call(self, atoms, coords):
 __call__(self, *args, **kwargs): 
 ```
 
+### Examples

@@ -1,6 +1,7 @@
 ## <a id="McUtils.Plots.Graphics.GraphicsGrid">GraphicsGrid</a>
 
 
+### Properties and Methods
 ```python
 image_size: property
 ```
@@ -24,3 +25,4 @@ __getitem__(self, item):
 show(self): 
 ```
 
+### Examples

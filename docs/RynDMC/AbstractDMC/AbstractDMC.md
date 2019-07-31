@@ -1,6 +1,7 @@
 ## <a id="RynDMC.AbstractDMC.AbstractDMC">AbstractDMC</a>
 A completely abstract implementation of DMC
 
+### Properties and Methods
 ```python
 zpe: property
 equilibrated: property
@@ -63,3 +64,4 @@ Saves a snapshot of the simulation to file
 - `:returns`: `_`
     >No description...
 
+### Examples

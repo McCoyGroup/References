@@ -2,6 +2,7 @@
 Provides derivatives for a function (scalar or vector valued)
     Can be indexed into or the entire tensor of derivatives may be requested
 
+### Properties and Methods
 ```python
 differencer: type
 array: property
@@ -42,3 +43,4 @@ Generates a differencer object that can be used to get derivs however your littl
 - `:returns`: `_`
     >No description...
 
+### Examples

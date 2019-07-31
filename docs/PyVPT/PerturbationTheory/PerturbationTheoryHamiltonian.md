@@ -1,15 +1,15 @@
 ## <a id="PyVPT.PerturbationTheory.PerturbationTheoryHamiltonian">PerturbationTheoryHamiltonian</a>
 Represents the main handler used in the perturbation theory calculation
+- `coords`: `Any`
+    >The current coordinates of the system (used for computing the Jacobians)
+- `pot_derivs`: `Any`
+    >The first, second, third, and fourth derivatives of the potential
+- `modes`: `CoordinateSystem`
+    >The cartesian coordinate normal modes
+- `internals`: `Any`
+    >The internal coordinate normal modes
 
-    :param coords: The current coordinates of the system (used for computing the Jacobians)
-    :type coords:
-    :param pot_derivs: The first, second, third, and fourth derivatives of the potential
-    :type pot_derivs:
-    :param modes: The cartesian coordinate normal modes
-    :type modes: CoordinateSystem
-    :param internals: The internal coordinate normal modes
-    :type internals:
-
+### Properties and Methods
 <a id="PyVPT.PerturbationTheory.PerturbationTheoryHamiltonian.__init__">&nbsp;</a>
 ```python
 __init__(self, coords, pot_derivs, modes, internals): 
@@ -57,3 +57,4 @@ QQQ(self, coefficients, dimensions, qmatrix=None):
 pQp(self, coefficients, dimensions, pmatrix=None, qmatrix=None): 
 ```
 
+### Examples

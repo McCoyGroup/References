@@ -2,6 +2,7 @@
 A class for handling expansions of an internal coordinate potential up to 4th order
     Uses Cartesian derivative matrices and the Cartesian <-> Internal normal mode Jacobian
 
+### Properties and Methods
 ```python
 tensors: property
 CoordinateTransforms: type
@@ -32,3 +33,4 @@ __call__(self, coords):
 get_tensor(self, i): 
 ```
 
+### Examples

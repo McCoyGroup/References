@@ -2,6 +2,7 @@
 Implements a stream based reader for a Gaussian .fchk file. Pretty generall I think. Should be robust-ish.
     One place to change things up is convenient parsers for specific commonly pulled parts of the fchk
 
+### Properties and Methods
 ```python
 registered_components: dict
 common_names: dict
@@ -47,3 +48,4 @@ Skips the next block
 parse(self, keys=None): 
 ```
 
+### Examples

@@ -2,6 +2,7 @@
 The FiniteDifferenceFunction encapsulates a bunch of functionality extracted from Fornberger's
     Calculation of Wieghts in Finite Difference Formulas (https://epubs.siam.org/doi/pdf/10.1137/S0036144596322507)
 
+### Properties and Methods
 ```python
 REGULAR_GRID: str
 IRREGULAR_GRID: str
@@ -39,3 +40,4 @@ Computes the mesh spacings of gp
 get_FDF(self, *args, **kwargs): 
 ```
 
+### Examples

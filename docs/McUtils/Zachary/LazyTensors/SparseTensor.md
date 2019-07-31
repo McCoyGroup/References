@@ -1,6 +1,7 @@
 ## <a id="McUtils.Zachary.LazyTensors.SparseTensor">SparseTensor</a>
 Tensor class that holds sparse tensors in its deepest levels
 
+### Properties and Methods
 ```python
 array: property
 shape: property
@@ -16,3 +17,4 @@ __init__(self, a, shape=None):
 __getitem__(self, item): 
 ```
 
+### Examples

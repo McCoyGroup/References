@@ -1,6 +1,7 @@
 ## <a id="McUtils.Plots.Primitives.GraphicsPrimitive">GraphicsPrimitive</a>
 
 
+### Properties and Methods
 <a id="McUtils.Plots.Primitives.GraphicsPrimitive.plot">&nbsp;</a>
 ```python
 plot(self, graphics, *args, **kwargs): 
@@ -15,3 +16,4 @@ The one method that needs to be implemented, which takes the graphics and actual
 - `:returns`: `_`
     >No description...
 
+### Examples

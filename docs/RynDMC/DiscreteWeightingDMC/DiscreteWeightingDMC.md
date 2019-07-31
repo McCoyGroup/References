@@ -1,6 +1,7 @@
 ## <a id="RynDMC.DiscreteWeightingDMC.DiscreteWeightingDMC">DiscreteWeightingDMC</a>
 
 
+### Properties and Methods
 <a id="RynDMC.DiscreteWeightingDMC.DiscreteWeightingDMC.branch">&nbsp;</a>
 ```python
 branch(self): 
@@ -11,3 +12,4 @@ branch(self):
 update_weights(self, potentials, v_refs): 
 ```
 
+### Examples

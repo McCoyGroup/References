@@ -1,6 +1,7 @@
 ## <a id="RynDMC.WalkerSet.WalkerSet">WalkerSet</a>
 
 
+### Properties and Methods
 <a id="RynDMC.WalkerSet.WalkerSet.__init__">&nbsp;</a>
 ```python
 __init__(self, atoms, coords, *miscargs, initial_walkers=5000, masses=None, sigmas=None, weights=None, _initialize=True): 
@@ -50,3 +51,4 @@ Generates multiple displacements and binds the last one
 - `:returns`: `_`
     >No description...
 
+### Examples
