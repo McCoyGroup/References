@@ -1,12 +1,13 @@
 ## <a id="McUtils.Plots.Plots.Plot">Plot</a>
-
+The base plotting class to interface into matplotlib or (someday) VTK or another backend
+    Builds off of the Graphics system to make a unified and convenient interface to generating plots
 
 ### Properties and Methods
 <a id="McUtils.Plots.Plots.Plot.__init__">&nbsp;</a>
 ```python
 __init__(self, *params, method='plot', figure=None, axes=None, subplot_kw=None, plot_style=None, colorbar=None, **opts): 
 ```
-Creates a 1D plot on 2D axes
+
 - `params`: `Any`
     >_empty_ or _x_, _y_ arrays or _function_, _xrange_
 - `plot_style`: `dict | None`

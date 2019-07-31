@@ -1,5 +1,5 @@
 ## <a id="McUtils.Plots.Plots.ListPlot3D">ListPlot3D</a>
-Convenience class that handles the interpolation first
+Convenience 3D plotting class that handles the interpolation first
 
 ### Properties and Methods
 <a id="McUtils.Plots.Plots.ListPlot3D.__init__">&nbsp;</a>

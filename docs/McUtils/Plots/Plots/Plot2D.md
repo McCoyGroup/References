@@ -1,5 +1,5 @@
 ## <a id="McUtils.Plots.Plots.Plot2D">Plot2D</a>
-A base class for plots that are 3D but plotted on 2D Graphics
+A base class for plots of 3D data but plotted on 2D axes
 
 ### Properties and Methods
 <a id="McUtils.Plots.Plots.Plot2D.__init__">&nbsp;</a>

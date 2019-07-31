@@ -1,12 +1,12 @@
 ## <a id="McUtils.Plots.Plots.DataPlot">DataPlot</a>
-
+Makes a 2D plot of arbitrary data using a plot method that handles that data type
 
 ### Properties and Methods
 <a id="McUtils.Plots.Plots.DataPlot.__init__">&nbsp;</a>
 ```python
 __init__(self, *params, plot_style=None, method=None, figure=None, axes=None, subplot_kw=None, colorbar=None, **opts): 
 ```
-Makes a 2D plot of arbitrary data using a plot method that handles that data type
+
 - `params`: `Any`
     >_empty_ or _data_
 - `plot_style`: `dict | None`

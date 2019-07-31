@@ -1,5 +1,5 @@
 ## <a id="McUtils.Plots.Plots.TensorPlot">TensorPlot</a>
-
+Plots slices of a tensor as a grid
 
 ### Properties and Methods
 <a id="McUtils.Plots.Plots.TensorPlot.__init__">&nbsp;</a>
