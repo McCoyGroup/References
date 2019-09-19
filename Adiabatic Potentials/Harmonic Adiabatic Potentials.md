@@ -1,4 +1,7 @@
 <a id="adiabatic-potentials" style="width:0;height:0;margin:0;padding:0;">&zwnj;</a>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 # Adiabatic Potentials
 Why this is useful:
