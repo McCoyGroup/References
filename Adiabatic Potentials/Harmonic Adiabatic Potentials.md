@@ -13,14 +13,16 @@ In this case, instead of nuclear and electronic (as in the BOA) we will be separ
 By doing this, we will be able to see changes in frequency dependent on the number of quanta in both degrees of freedom.
 This approximation works well when considering two coordinates with about an order of magnitude difference in their frequencies.
 
-Relating this to what we do in the group, an OO stretch in a water cluster is around 300 cm^-1^ where a hydrogen bonded OH stretch is around 2600 cm^-1^.
-For one example, in [this paper](https://pubs.acs.org/doi/10.1021/acs.jpca.8b08507) this method was applied to the HD~8~O~4~^+^ system.
+Relating this to what we do in the group, an OO stretch in a water cluster is around 300 $cm^{-1}$ where a hydrogen bonded OH stretch is around 2600 $cm^{-1}$.
+For one example, in [this paper](https://pubs.acs.org/doi/10.1021/acs.jpca.8b08507) this method was applied to the $HD_8O_4^+$ system.
 
 ## Creating Adiabatic Potentials
 You will need a 1D electronic potential energy surface. Most likely this will come from some sort of Gaussian calculation,
 see (MORE REFERENCES) or ask someone for details. 
 To make a Harmonic approximation, we will use the energy equation from a harmonic oscillator: 
+
 $$ E = \hbar \times \omega (n + \frac 12) $$
+
 where omega is equal to the frequency and n is the number of quanta in the stretch. 
 To get the frequency, you can either do normal mode analysis or finite differencing to find a force constant and calculate out
 a frequency. Depending on your specific system this method may change, try a few or ask around for what might be best to try.
