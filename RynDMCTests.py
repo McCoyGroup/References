@@ -2,6 +2,7 @@
 from Peeves.TestUtils import *
 from unittest import TestCase
 from McUtils.CPotentialLib import *
+import numpy as np
 
 class RynDMCTests(TestCase):
 

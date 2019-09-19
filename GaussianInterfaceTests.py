@@ -2,7 +2,7 @@
 from Peeves.TestUtils import *
 from unittest import TestCase
 from McUtils.GaussianInterface import *
-import sys, os
+import sys, os, numpy as np
 
 class GaussianInterfaceTests(TestCase):
 

@@ -31,7 +31,7 @@ class MolecoolsTests(TestCase):
         # ArrayPlot(nms.matrix).show()
         self.assertEquals(nms.matrix.shape, (3*n, 3*n))
 
-    @debugTest
+    @validationTest
     def test_Plotting(self):
         from McUtils.Plots import Graphics3D
 
@@ -67,7 +67,7 @@ class MolecoolsTests(TestCase):
             # bond_style= { "circle_points": 24 },
             # atom_style= { "sphere_points": 24 }
             )
-        g.show()
+        # g.show()
 
     @validationTest
     def test_VisualizeNormalModes(self):

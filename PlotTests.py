@@ -65,7 +65,7 @@ class PlotsTests(TestCase):
                           "cmap" : colormaps.get_cmap('viridis')
                       },
                       axes_labels = ['dogs', 'cats',
-                                     Graphics.styled('rats', color='red')
+                                     Graphics.modified('rats', color='red')
                                      ],
                       plot_label = 'my super cool 3D plot',
                       plot_range = [(-5, 5)]*3,
@@ -102,3 +102,22 @@ class PlotsTests(TestCase):
     #     plot = Plot3D(f, [0, 2*np.pi], [0, 2*np.pi])
     #     plot.show()
 
+    @validationTest
+    def test_PlotDelayed(self):
+        p = Plot(background = 'black')
+        for i, c in enumerate(('red', 'white', 'blue')):
+            p.plot(np.sin, [-2 + 4/3*i, -2 + 4/3*(i+1)], color = c)
+        # p.show()
+
+    @validationTest
+    def test_Plot3DDelayed(self):
+        p = Plot3D(background = 'black')
+        for i, c in enumerate(('red', 'white', 'blue')):
+            p.plot(
+                lambda g: (
+                    np.sin(g.T[0]) + np.cos(g.T[1])
+                ),
+                [-2 + 4/3*i, -2 + 4/3*(i+1)],
+                [-2 + 4/3*i, -2 + 4/3*(i+1)],
+                color = c)
+        # p.show()
