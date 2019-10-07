@@ -7,9 +7,4 @@ Plots an array as an image
 __init__(self, *params, plot_style=None, colorbar=None, figure=None, axes=None, subplot_kw=None, method='imshow', **opts): 
 ```
 
-<a id="McUtils.Plots.Plots.ArrayPlot.plot">&nbsp;</a>
-```python
-plot(self, array, **plot_style): 
-```
-
 ### Examples

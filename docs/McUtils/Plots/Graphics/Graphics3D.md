@@ -11,15 +11,11 @@ ticks: property
 ticks_style: property
 image_size: property
 background: property
+scale: property
 ```
 <a id="McUtils.Plots.Graphics.Graphics3D.__init__">&nbsp;</a>
 ```python
 __init__(self, *args, figure=None, axes=None, subplot_kw=None, event_handlers=None, animate=None, axes_labels=None, plot_label=None, plot_range=None, plot_legend=None, ticks=None, scale=None, ticks_style=None, image_size=None, background=None, backend='matplotlib', **kwargs): 
-```
-
-<a id="McUtils.Plots.Graphics.Graphics3D.set_options">&nbsp;</a>
-```python
-set_options(self, axes_labels=None, plot_label=None, plot_range=None, plot_legend=None, ticks=None, scale=None, ticks_style=None, image_size=None, **parent_opts): 
 ```
 
 ### Examples

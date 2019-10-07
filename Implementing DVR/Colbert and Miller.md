@@ -2,13 +2,13 @@
 
 # Colbert and Miller 1D DVR
 
-This is an implementation of the DVR on the  $[-\inf, \inf]$ range as defined by Colbert and Miller in  [this paper](http://xbeams.chem.yale.edu/~batista/v572/ColbertMiller.pdf) .
+This is an implementation of the DVR on the  $[-\infty, \infty]$ range as defined by Colbert and Miller in  [this paper](http://xbeams.chem.yale.edu/~batista/v572/ColbertMiller.pdf) .
 
 <a id="grid" class="Subsubsection" style="width:0;height:0;margin:0;padding:0;">&zwnj;</a>
 
 ### Grid
 
-We simply discretize our domain evenly. Implicit is that the domain is  *effectively* the  `[-∞, ∞]` range.
+We simply discretize our domain evenly. Implicit is that the domain is  *effectively* the  $[-\infty, \infty]$ range.
 
 ```python
 '''Colbert and Miller DVR on the [-inf, inf] domain'''

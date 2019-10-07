@@ -27,7 +27,7 @@ __init__(self, *params, method='plot', figure=None, axes=None, subplot_kw=None, 
 
 <a id="McUtils.Plots.Plots.Plot.plot">&nbsp;</a>
 ```python
-plot(self, func, xrange, **plot_style): 
+plot(self, *params, **plot_style): 
 ```
 
 <a id="McUtils.Plots.Plots.Plot.add_colorbar">&nbsp;</a>

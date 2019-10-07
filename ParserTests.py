@@ -29,9 +29,7 @@ class ParserTests(TestCase):
         eigsPattern = RegexPattern(
             (
                 "Eigenvalues --",
-                 Capturing(
-                     Repeating(Capturing(Number), suffix=Optional(Whitespace))
-                 )
+                Repeating(Capturing(Number), suffix=Optional(Whitespace))
             ),
             joiner=Whitespace
         )
@@ -39,9 +37,7 @@ class ParserTests(TestCase):
         coordsPattern = RegexPattern(
             (
                 Capturing(VariableName),
-                Capturing(
-                    Repeating(Capturing(Number), suffix=Optional(Whitespace))
-                )
+                Repeating(Capturing(Number), suffix=Optional(Whitespace))
             ),
             prefix=Whitespace,
             joiner=Whitespace
@@ -66,8 +62,9 @@ class ParserTests(TestCase):
         parse_single = parser.parse(test_str)
         parse_its = list(parser.parse_iter(test_str))
 
-        self.assertEquals(parse_res["Coordinates"].shape, [(4, 32), (4, 32, 5)])
-        self.assertIsInstance(parse_res["Coordinates"].array[1].array, np.ndarray)
+        self.assertEquals(parse_res.shape, [(4, 5), [(4, 32), (4, 32, 5)]])
+        self.assertIsInstance(parse_res["Coordinates"][1].array, np.ndarray)
+        self.assertEquals(int(parse_res["Coordinates"][1, 0].sum()), 3230)
 
         # print(parse_single["Coordinates"], file = sys.stderr)
 

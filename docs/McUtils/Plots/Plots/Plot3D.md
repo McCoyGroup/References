@@ -26,7 +26,7 @@ __init__(self, *params, plot_style=None, method='plot_surface', colorbar=None, f
 
 <a id="McUtils.Plots.Plots.Plot3D.plot">&nbsp;</a>
 ```python
-plot(self, func, xrange, yrange, **plot_style): 
+plot(self, *params, **plot_style): 
 ```
 
 <a id="McUtils.Plots.Plots.Plot3D.add_colorbar">&nbsp;</a>

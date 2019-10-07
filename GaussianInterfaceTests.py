@@ -8,24 +8,25 @@ class GaussianInterfaceTests(TestCase):
 
     test_log_water = TestManager.test_data("water_OH_scan.log")
     test_log_freq = TestManager.test_data("water_freq.log")
+    test_log_opt = TestManager.test_data("water_dimer_test.log")
     test_fchk = TestManager.test_data("water_freq.fchk")
     test_log_h2 = TestManager.test_data("outer_H2_scan_new.log")
 
-    @validationTest
+    @debugTest
     def test_GetDipoles(self):
         with GaussianLogReader(self.test_log_water) as reader:
             parse = reader.parse("DipoleMoments")
         dips = parse["DipoleMoments"]
         self.assertIsInstance(dips, np.ndarray)
 
-    @validationTest
+    @debugTest
     def test_GaussianLoad(self):
         with GaussianLogReader(self.test_log_water) as reader:
             parse = reader.parse("InputZMatrix")
         zmat = parse["InputZMatrix"]
         self.assertIsInstance(zmat, str)
 
-    @validationTest
+    @debugTest
     def test_GaussianCartesians(self):
         with GaussianLogReader(self.test_log_water) as reader:
             parse = reader.parse("CartesianCoordinates", num = 15)
@@ -33,17 +34,18 @@ class GaussianInterfaceTests(TestCase):
         self.assertIsInstance(carts[1], np.ndarray)
         self.assertEquals(carts[1].shape, (15, 3, 3))
 
-    @validationTest
+    @debugTest
     def test_GZMatCoords(self):
         with GaussianLogReader(self.test_log_water) as reader:
             parse = reader.parse("ZMatrices", num = 3)
         zmats = parse["ZMatrices"]
         # print(zmats, file=sys.stderr)
+        self.assertIsInstance(zmats[0][1][0], str)
         self.assertIsInstance(zmats[1], np.ndarray)
-        self.assertEquals(zmats[1].shape, (2, 3))
-        self.assertEquals(zmats[2].shape, (3, 2, 3))
+        self.assertEquals(zmats[1].shape, (3, 3))
+        self.assertEquals(zmats[2].shape, (3, 3, 3))
 
-    @validationTest
+    @debugTest
     def test_GZMatCoordsBiggie(self):
         num_pulled = 5
         num_entries = 8
@@ -52,8 +54,18 @@ class GaussianInterfaceTests(TestCase):
         zmats = parse["ZMatrices"]
         # print(zmats, file=sys.stderr)
         self.assertIsInstance(zmats[1], np.ndarray)
-        self.assertEquals(zmats[1].shape, (num_entries-1, 3))
-        self.assertEquals(zmats[2].shape, (num_pulled, num_entries-1, 3))
+        self.assertEquals(zmats[1].shape, (num_entries, 3))
+        self.assertEquals(zmats[2].shape, (num_pulled, num_entries, 3))
+
+    @debugTest
+    def test_OptScanEnergies(self):
+        with GaussianLogReader(self.test_log_opt) as reader:
+            parse = reader.parse("OptimizedScanEnergies")
+        e, c = parse["OptimizedScanEnergies"]
+        self.assertIsInstance(e, np.ndarray)
+        self.assertEquals(e.shape, (10,))
+        self.assertEquals(len(c.keys()), 14)
+        self.assertEquals(list(c.values())[0].shape, (10,))
 
     @validationTest
     def test_Fchk(self):

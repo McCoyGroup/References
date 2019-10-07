@@ -3,6 +3,7 @@
 
 ### Properties and Methods
 ```python
+handlers: property
 Event: type
 ```
 <a id="McUtils.Plots.Interactive.EventHandler.__init__">&nbsp;</a>

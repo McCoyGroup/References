@@ -1,9 +1,14 @@
 ## <a id="McUtils.Plots.Graphics.GraphicsBase">GraphicsBase</a>
-
+The base class for all things Graphics
+    Defines the common parts of the interface with some calling into matplotlib
 
 ### Properties and Methods
 ```python
-styled: type
+opt_keys: set
+event_handlers: property
+animated: property
+modified: type
+opts: property
 ```
 <a id="McUtils.Plots.Graphics.GraphicsBase.__init__">&nbsp;</a>
 ```python
@@ -28,16 +33,20 @@ __init__(self, *args, figure=None, axes=None, subplot_kw=None, parent=None, **op
 bind_events(self, *handlers, **events): 
 ```
 
-<a id="McUtils.Plots.Graphics.GraphicsBase.animate">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.create_animation">&nbsp;</a>
 ```python
-animate(self, *args, **opts): 
+create_animation(self, *args, **opts): 
 ```
 
 <a id="McUtils.Plots.Graphics.GraphicsBase.set_options">&nbsp;</a>
 ```python
-set_options(self, event_handlers=None, animate=None, **opts): 
+set_options(self, event_handlers=None, animated=None, **opts): 
 ```
 Sets options for the plot
+- `event_handlers`: `Any`
+    >No description...
+- `animated`: `Any`
+    >No description...
 - `opts`: `Any`
     >No description...
 - `:returns`: `_`
@@ -68,7 +77,7 @@ Refreshes the axes
 ```python
 copy(self): 
 ```
-Creates a copy of the object with new axes
+Creates a copy of the object with new axes and a new figure
 - `:returns`: `_`
     >No description...
 

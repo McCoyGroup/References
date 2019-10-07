@@ -16,6 +16,7 @@ Peeves is a minor extension to the unittest framework that makes my life better
   - [debugTest](Peeves/TestUtils/debugTest.md)
   - [timeitTest](Peeves/TestUtils/timeitTest.md)
   - [timingTest](Peeves/TestUtils/timingTest.md)
+  - [inactiveTest](Peeves/TestUtils/inactiveTest.md)
   - [Timer](Peeves/Timer/Timer.md)
   - [Doc](Peeves/Doc.md)
 

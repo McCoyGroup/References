@@ -11,6 +11,7 @@ ticks: property
 ticks_style: property
 image_size: property
 background: property
+scale: property
 ```
 <a id="McUtils.Plots.Graphics.Graphics.__init__">&nbsp;</a>
 ```python

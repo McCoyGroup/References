@@ -24,9 +24,4 @@ __init__(self, *params, plot_style=None, method='contour', colorbar=None, figure
 - `opts`: `Any`
     >options to be fed in when initializing the Graphics
 
-<a id="McUtils.Plots.Plots.Plot2D.plot">&nbsp;</a>
-```python
-plot(self, func, xrange, yrange, **plot_style): 
-```
-
 ### Examples

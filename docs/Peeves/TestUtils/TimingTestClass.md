@@ -1,5 +1,5 @@
 ## <a id="Peeves.TestUtils.TimingTestClass">TimingTestClass</a>
-The set of fast tests in the test suite
+The set of timing tests in the test suite
 
 ### Properties and Methods
 
