@@ -1,7 +1,7 @@
 ---
 layout: home
 ---
-
+ 
 # Where am I?
 
 This is a site for documentation and references pages that have accumulated over the research projects that the 
