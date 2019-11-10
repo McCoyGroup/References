@@ -1,7 +1,6 @@
 # Setup McCoy Group config
 title: McCoy Group References
-baseurl: "References" # the subpath of your site, e.g. /blog
-url: "https://mccoygroup.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mccoygroup.github.io/References" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  McCoyGroup
 footer_text: >-
   Brought to you by the McCoy Group at the University of Washington
