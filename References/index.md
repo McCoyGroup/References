@@ -1,10 +1,5 @@
 # References
 
-This repository contains three things:
-  - A collection of Markdown references on various techniques or ideas
-  - Documentation for the various utilities and libraries on the group org page
-  - Unit tests for the various utilities and libraries as a source of examples
-
 ## DVR
   - [Basic DVR](https://mccoygroup.github.io/References/References/Implementing%20DVR/Basic%20DVR.html)
   - [Colbert and Miller](https://mccoygroup.github.io/References/References/Implementing%20DVR/Colbert%20and%20Miller.html)
@@ -17,8 +12,3 @@ This repository contains three things:
 
 ## Potential
   - [Harmonic Adiabatic Potentials](https://mccoygroup.github.io/References/References/Adiabatic%20Potentials/Harmonic%20Adiabatic%20Potentials.html)
-
-
-# Documentation:
-
-  Basic [documentation](https://mccoygroup.github.io/References/Documentation) for some of the code in the group repositories is available

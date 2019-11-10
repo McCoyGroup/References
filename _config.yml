@@ -1,4 +1,58 @@
-theme: jekyll-theme-minimal
+
+title: McCoy Group References
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  McCoyGroup
+footer_text: >-
+  Brought to you by the McCoy Group at the University of Washington
+sitemap_roots:
+  - References
+  - Documentation
+sitemap_depth: 2
+links:
+  - url: about.html
+    title: About
+  - url: https://blogs.uw.edu/mccoygrp/
+    title: Home
+  - url: https://github.com/McCoyGroup
+    title: GitHub
+
+# Build settings
+markdown: kramdown
+remote_theme: b3m2a1/finx
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-optional-front-matter
 relative_links:
   enabled: true
-  collections: true
+collections:
+  docs:
+    output: true
+  references:
+    output: true
+
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "post"
+  - scope:
+      path: "index.html|about.html|404.html|search.html"
+    values:
+      layout: "page"
+  - scope:
+      path: "References"
+      type: "pages"
+    values:
+      optional_scripts: true
+      custom_styles: "refs"
+      layout: "refs"
+  - scope:
+      path: "Documentation"
+      type: "pages"
+    values:
+      optional_scripts: true
+      annotations_type: "docs"
+      custom_styles: "docs"
+      layout: "docs"
