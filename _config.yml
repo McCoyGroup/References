@@ -16,7 +16,7 @@ links:
   - url: https://github.com/McCoyGroup
     title: GitHub
   - url: https://stackoverflow.com/c/mccoygroup/questions
-    title: StackOverflow
+    title: Stack Overflow
 
 # Build settings
 markdown: kramdown
