@@ -11,6 +11,7 @@ class GaussianInterfaceTests(TestCase):
     test_log_opt = TestManager.test_data("water_dimer_test.log")
     test_fchk = TestManager.test_data("water_freq.fchk")
     test_log_h2 = TestManager.test_data("outer_H2_scan_new.log")
+    test_log_tet = TestManager.test_data("2Dtet_rigid_in.log")
 
     @debugTest
     def test_GetDipoles(self):
@@ -44,6 +45,17 @@ class GaussianInterfaceTests(TestCase):
         self.assertIsInstance(zmats[1], np.ndarray)
         self.assertEquals(zmats[1].shape, (3, 3))
         self.assertEquals(zmats[2].shape, (3, 3, 3))
+
+    @debugTest
+    def test_ScanEnergies(self):
+        with GaussianLogReader(self.test_log_tet) as reader:
+            parse = reader.parse("ScanEnergies", num=3)
+        engs = parse["ScanEnergies"]
+        self.assertIsInstance(engs, dict)
+        self.assertIsInstance(engs["values"], np.ndarray)
+        self.assertIsInstance(engs["coords"], np.ndarray)
+        self.assertEquals(engs["coords"].shape, (5,))
+        self.assertEquals(engs["values"].shape, (30, 5))
 
     @debugTest
     def test_GZMatCoordsBiggie(self):
