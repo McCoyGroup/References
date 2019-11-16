@@ -28,10 +28,34 @@ class GaussianInterfaceTests(TestCase):
         self.assertIsInstance(zmat, str)
 
     @debugTest
+    def test_GaussianAllCartesians(self):
+        with GaussianLogReader(self.test_log_water) as reader:
+            parse = reader.parse("CartesianCoordinates")
+        carts = parse["CartesianCoordinates"]
+        self.assertIsInstance(carts[1], np.ndarray)
+        self.assertEquals(carts[1].shape, (502, 3, 3))
+
+    @debugTest
     def test_GaussianCartesians(self):
         with GaussianLogReader(self.test_log_water) as reader:
-            parse = reader.parse("CartesianCoordinates", num = 15)
+            parse = reader.parse("CartesianCoordinates", num=15)
         carts = parse["CartesianCoordinates"]
+        self.assertIsInstance(carts[1], np.ndarray)
+        self.assertEquals(carts[1].shape, (15, 3, 3))
+
+    @debugTest
+    def test_GaussianStandardCartesians(self):
+        with GaussianLogReader(self.test_log_water) as reader:
+            parse = reader.parse("StandardCartesianCoordinates", num=15)
+        carts = parse["StandardCartesianCoordinates"]
+        self.assertIsInstance(carts[1], np.ndarray)
+        self.assertEquals(carts[1].shape, (15, 3, 3))
+
+    @debugTest
+    def test_GaussianZMatrixCartesians(self):
+        with GaussianLogReader(self.test_log_water) as reader:
+            parse = reader.parse("ZMatCartesianCoordinates", num=15)
+        carts = parse["ZMatCartesianCoordinates"]
         self.assertIsInstance(carts[1], np.ndarray)
         self.assertEquals(carts[1].shape, (15, 3, 3))
 
