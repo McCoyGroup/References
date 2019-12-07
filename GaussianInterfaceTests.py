@@ -13,21 +13,22 @@ class GaussianInterfaceTests(TestCase):
     test_log_h2 = TestManager.test_data("outer_H2_scan_new.log")
     test_log_tet = TestManager.test_data("2Dtet_rigid_in.log")
 
-    @debugTest
+    @validationTest
     def test_GetDipoles(self):
         with GaussianLogReader(self.test_log_water) as reader:
             parse = reader.parse("DipoleMoments")
         dips = parse["DipoleMoments"]
         self.assertIsInstance(dips, np.ndarray)
+        self.assertEquals(dips.shape, (251, 3))
 
-    @debugTest
+    @validationTest
     def test_GaussianLoad(self):
         with GaussianLogReader(self.test_log_water) as reader:
             parse = reader.parse("InputZMatrix")
         zmat = parse["InputZMatrix"]
         self.assertIsInstance(zmat, str)
 
-    @debugTest
+    @validationTest
     def test_GaussianAllCartesians(self):
         with GaussianLogReader(self.test_log_water) as reader:
             parse = reader.parse("CartesianCoordinates")
@@ -35,7 +36,7 @@ class GaussianInterfaceTests(TestCase):
         self.assertIsInstance(carts[1], np.ndarray)
         self.assertEquals(carts[1].shape, (502, 3, 3))
 
-    @debugTest
+    @validationTest
     def test_GaussianCartesians(self):
         with GaussianLogReader(self.test_log_water) as reader:
             parse = reader.parse("CartesianCoordinates", num=15)
@@ -43,7 +44,7 @@ class GaussianInterfaceTests(TestCase):
         self.assertIsInstance(carts[1], np.ndarray)
         self.assertEquals(carts[1].shape, (15, 3, 3))
 
-    @debugTest
+    @validationTest
     def test_GaussianStandardCartesians(self):
         with GaussianLogReader(self.test_log_water) as reader:
             parse = reader.parse("StandardCartesianCoordinates", num=15)
@@ -51,7 +52,7 @@ class GaussianInterfaceTests(TestCase):
         self.assertIsInstance(carts[1], np.ndarray)
         self.assertEquals(carts[1].shape, (15, 3, 3))
 
-    @debugTest
+    @validationTest
     def test_GaussianZMatrixCartesians(self):
         with GaussianLogReader(self.test_log_water) as reader:
             parse = reader.parse("ZMatCartesianCoordinates", num=15)
@@ -59,7 +60,7 @@ class GaussianInterfaceTests(TestCase):
         self.assertIsInstance(carts[1], np.ndarray)
         self.assertEquals(carts[1].shape, (15, 3, 3))
 
-    @debugTest
+    @validationTest
     def test_GZMatCoords(self):
         with GaussianLogReader(self.test_log_water) as reader:
             parse = reader.parse("ZMatrices", num = 3)
@@ -70,7 +71,7 @@ class GaussianInterfaceTests(TestCase):
         self.assertEquals(zmats[1].shape, (3, 3))
         self.assertEquals(zmats[2].shape, (3, 3, 3))
 
-    @debugTest
+    @validationTest
     def test_ScanEnergies(self):
         with GaussianLogReader(self.test_log_tet) as reader:
             parse = reader.parse("ScanEnergies", num=3)
@@ -81,7 +82,7 @@ class GaussianInterfaceTests(TestCase):
         self.assertEquals(engs["coords"].shape, (5,))
         self.assertEquals(engs["values"].shape, (30, 5))
 
-    @debugTest
+    @validationTest
     def test_GZMatCoordsBiggie(self):
         num_pulled = 5
         num_entries = 8
@@ -93,7 +94,7 @@ class GaussianInterfaceTests(TestCase):
         self.assertEquals(zmats[1].shape, (num_entries, 3))
         self.assertEquals(zmats[2].shape, (num_pulled, num_entries, 3))
 
-    @debugTest
+    @validationTest
     def test_OptScanEnergies(self):
         with GaussianLogReader(self.test_log_opt) as reader:
             parse = reader.parse("OptimizedScanEnergies")

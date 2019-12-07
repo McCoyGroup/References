@@ -1,0 +1,344 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12435,        336]
+NotebookOptionsPosition[     10161,        289]
+NotebookOutlinePosition[     10795,        311]
+CellTagsIndexPosition[     10752,        308]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["NumPy 1D DVR", "Section",
+ CellChangeTimes->{{3.731345733329906*^9, 3.731345752040162*^9}, {
+   3.731352579893578*^9, 3.7313525869095173`*^9}, 3.731354329360456*^9, {
+   3.7313544442508297`*^9, 3.7313544500140867`*^9}, {3.7692798175039454`*^9, 
+   3.76927982099613*^9}},ExpressionUUID->"c8e6f160-24d8-4f7b-af3b-\
+3ad3f9af5f68"],
+
+Cell[TextData[{
+ "We\[CloseCurlyQuote]ll take the 1D DVR done in ",
+ ButtonBox["Colbert and Miller DVR",
+  BaseStyle->"Hyperlink",
+  ButtonData->{"Colbert%20and%20Miller.html", None}],
+ " but make it ",
+ StyleBox["much",
+  FontSlant->"Italic"],
+ " more efficient by using NumPy"
+}], "Text",
+ CellChangeTimes->{{3.731345758729*^9, 3.731345827942313*^9}, {
+  3.731353759790614*^9, 3.731353766510145*^9}, {3.731354031183982*^9, 
+  3.731354031711597*^9}, {3.7313544515577297`*^9, 3.7313545033814993`*^9}, {
+  3.7692798273318443`*^9, 3.769279842711561*^9}, {3.7692798932353477`*^9, 
+  3.769279912263047*^9}},ExpressionUUID->"a9801e6a-a67e-4a2b-ac18-\
+34b3e840306d"],
+
+Cell[CellGroupData[{
+
+Cell["Grid", "Subsubsection",
+ CellChangeTimes->{{3.7313497357233257`*^9, 3.731349738737534*^9}, 
+   3.731354016271549*^9},ExpressionUUID->"4ba4a3ae-82e8-49d4-a01c-\
+a1305d5c5cf9"],
+
+Cell["\<\
+We discretize as before, but use NumPy functions for do this more efficiently\
+\
+\>", "Text",
+ CellChangeTimes->{{3.731349765871863*^9, 3.731349767762609*^9}, {
+   3.731352565899757*^9, 3.731352675472513*^9}, {3.7313527082960243`*^9, 
+   3.731352752951701*^9}, 3.7313527901432753`*^9, {3.73135451611022*^9, 
+   3.731354581345088*^9}, {3.769279929492868*^9, 3.7692799479724913`*^9}, {
+   3.769311426892572*^9, 
+   3.769311427165509*^9}},ExpressionUUID->"7251f3ac-78e7-4fe2-a91f-\
+13adec30623b"],
+
+Cell["\<\
+'''Colbert and Miller DVR on the [-inf, inf] domain using NumPy'''
+import numpy as np
+
+def dvr_grid(domain=(-5, 5), divs=10, **kw):
+    '''Calculates the grid'''
+
+    return np.linspace(*domain, divs)\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731352680319867*^9, 3.731352705455814*^9}, {
+  3.731352755967477*^9, 3.731352785543311*^9}, {3.731354624368414*^9, 
+  3.731354631597948*^9}, {3.7313553099950027`*^9, 3.7313553196026897`*^9}, {
+  3.769279923100995*^9, 3.76927995778864*^9}, {3.76928014897887*^9, 
+  3.769280167840711*^9}},ExpressionUUID->"b698f42d-fa22-483d-9e53-\
+a1617a43a3fd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Kinetic Energy", "Subsubsection",
+ CellChangeTimes->{{3.731352852979175*^9, 3.731352858214497*^9}, 
+   3.7313540133514633`*^9},ExpressionUUID->"c2268e8c-c092-4358-92ce-\
+597d7be84afc"],
+
+Cell["\<\
+The kinetic energy is constant along bands, so we can use this property to \
+fill out our matrix more quickly.\
+\>", "Text",
+ CellChangeTimes->{{3.731354715203457*^9, 3.731354751491016*^9}, {
+  3.731354845307128*^9, 3.731354846689646*^9}, {3.7313559117649384`*^9, 
+  3.7313559121138678`*^9}, {3.7692802118213997`*^9, 
+  3.7692802849409437`*^9}},ExpressionUUID->"2e27e07c-4aeb-4f39-9e23-\
+3ad01601ab65"],
+
+Cell["\<\
+def kinetic_energy(grid, m=1, hb=1, **kw):
+    '''Computes the kinetic energy for the grid'''
+
+    dx=grid[1]-grid[0] # recomputed here simply to decouple the calling from \
+dvr_grid
+    divs=len(grid)
+    ke=np.empty((divs, divs))
+
+    coeff=(hb**2)/(2*m*(dx**2))
+    # compute the band values for the first row
+    b_val_0 = coeff*(math.pi**2)/3
+    col_rng = np.arange(1, divs+1) # the column indices -- also what will be \
+used for computing the off diagonal bands
+    row_rng = np.arange(0, divs) # the row indices -- computed once and \
+sliced
+    b_vals = coeff * ((-1)**col_rng) * 2 / (col_rng**2)
+
+    for i in range(divs):
+        if i == 0:
+            np.fill_diagonal(ke, b_val_0)
+        else:
+            col_inds = col_rng[i-1:-1]#+(i-1)
+            row_inds = row_rng[:-i]
+            ke[row_inds, col_inds] = b_vals[i-1]
+            ke[col_inds, row_inds] = b_vals[i-1]
+
+    return ke\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731353375531666*^9, 3.731353466438747*^9}, 
+   3.7313548521454268`*^9, {3.731354901450779*^9, 3.731354951047799*^9}, {
+   3.731355078960391*^9, 3.731355082800501*^9}, {3.731355243043592*^9, 
+   3.731355261548087*^9}, {3.7692797812229137`*^9, 3.76927978586343*^9}, 
+   3.769279976299994*^9, {3.76928028774861*^9, 3.769280311412945*^9}, {
+   3.769280568644504*^9, 3.769280701477042*^9}, {3.7692808245262012`*^9, 
+   3.76928088305381*^9}, {3.7692810139322367`*^9, 3.769281067943596*^9}, {
+   3.769281165993936*^9, 3.7692812649237833`*^9}, 3.7693113830622263`*^9, {
+   3.769312166192083*^9, 3.7693121893094*^9}, 
+   3.76931231424163*^9},ExpressionUUID->"34120e20-5b40-413c-9105-\
+135b275476dc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Potential Energy", "Subsubsection",
+ CellChangeTimes->{{3.731352852979175*^9, 3.731352858214497*^9}, {
+   3.731353472048312*^9, 3.731353473046492*^9}, 
+   3.7313540119033537`*^9},ExpressionUUID->"2624c33e-7518-444f-9fc2-\
+12fba790443f"],
+
+Cell[TextData[{
+ "Here, we\[CloseCurlyQuote]ll assume ",
+ Cell[BoxData["pot"], "InlineInput",
+  FormatType->"StandardForm",ExpressionUUID->
+  "e8df4e78-5ff2-44ba-b432-e65a832b8f0e"],
+ " has been written in order to take advantage of NumPy\[CloseCurlyQuote]s \
+vectorized operations and hence should be called with our entire grid fed \
+in."
+}], "Text",
+ CellChangeTimes->{{3.7313529797091084`*^9, 3.731352986427567*^9}, {
+  3.7313531232423687`*^9, 3.731353212170897*^9}, {3.731353320239497*^9, 
+  3.7313533712761993`*^9}, {3.7313534746862793`*^9, 3.731353533564281*^9}, {
+  3.731354136486648*^9, 3.731354143566834*^9}, {3.731354994713743*^9, 
+  3.731355005672061*^9}, {3.7313550628242683`*^9, 3.7313551074479313`*^9}, {
+  3.769281289862143*^9, 
+  3.769281324933361*^9}},ExpressionUUID->"3f7372df-c254-4f0c-8bc8-\
+570ff2499afd"],
+
+Cell["\<\
+def dvr_pe(grid, pot=None):
+\t'''Computes the potential energy from the gridpoints'''
+\t
+\treturn np.diag(pot(grid))\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731353375531666*^9, 3.731353466438747*^9}, {
+   3.731353536580615*^9, 3.731353576588108*^9}, 3.731353747782297*^9, {
+   3.731355113575285*^9, 3.731355168614809*^9}, 3.73135524007584*^9, 
+   3.7692812812236137`*^9, {3.769281331910977*^9, 
+   3.769281335380641*^9}},ExpressionUUID->"ee22845a-3cf3-4a46-a8fe-\
+977df718cbdb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Wavefunctions", "Subsubsection",
+ CellChangeTimes->{{3.731353591507862*^9, 3.7313535978036423`*^9}, {
+  3.731354003911869*^9, 
+  3.731354045791576*^9}},ExpressionUUID->"2cb876f5-2b0b-4de4-afc7-\
+449af4c64cd5"],
+
+Cell["This already used NumPy so we won\[CloseCurlyQuote]t change anything \
+here.", "Text",
+ CellChangeTimes->{{3.731353600664434*^9, 3.731353608579874*^9}, {
+  3.731353734760166*^9, 3.731353745382123*^9}, {3.731354000769761*^9, 
+  3.731354130462872*^9}, {3.731354211344261*^9, 3.731354217215824*^9}, {
+  3.7313552278087883`*^9, 3.731355237603862*^9}, {3.769281355142313*^9, 
+  3.769281363820512*^9}},ExpressionUUID->"5d66e3d3-44a7-40d4-a38b-\
+4ddc7a9bd6d2"],
+
+Cell["\<\
+def dvr_wfns(ke, pe):
+\t'''Computes the wavefunctions'''
+\t
+\treturn np.linalg.eig(ke+pe)\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731353375531666*^9, 3.731353466438747*^9}, {
+   3.731353536580615*^9, 3.731353576588108*^9}, 3.731353747782297*^9, {
+   3.731354145214531*^9, 3.731354203688178*^9}, {3.7313552817443733`*^9, 
+   3.731355293683392*^9}, {3.7313553482283583`*^9, 3.731355349666481*^9}, 
+   3.769281341061741*^9},ExpressionUUID->"f406a2b7-bfe4-451f-aa69-\
+8dbe3e59c2cf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["All Together", "Subsection",
+ CellChangeTimes->{{3.731355301268259*^9, 
+  3.731355306578877*^9}},ExpressionUUID->"0545cc05-05c7-4294-9e87-\
+db09d196ad48"],
+
+Cell["\<\
+'''Colbert and Miller DVR on the [-inf, inf] domain using NumPy'''
+import numpy as np
+
+def dvr_grid(domain=(-5, 5), divs=10, **kw):
+    '''Calculates the grid'''
+
+    return np.linspace(*domain, divs)
+    
+def kinetic_energy(grid, m=1, hb=1, **kw):
+    '''Computes the kinetic energy for the grid'''
+
+    dx=grid[1]-grid[0] # recomputed here simply to decouple the calling from \
+dvr_grid
+    divs=len(grid)
+    ke=np.empty((divs, divs))
+
+    coeff=(hb**2)/(2*m*(dx**2))
+    # compute the band values for the first row
+    b_val_0 = coeff*(math.pi**2)/3
+    col_rng = np.arange(1, divs+1) # the column indices -- also what will be \
+used for computing the off diagonal bands
+    row_rng = np.arange(0, divs) # the row indices -- computed once and \
+sliced
+    b_vals = coeff * ((-1)**col_rng) * 2 / (col_rng**2)
+
+    for i in range(divs):
+        if i == 0:
+            np.fill_diagonal(ke, b_val_0)
+        else:
+            col_inds = col_rng[i-1:-1]#+(i-1)
+            row_inds = row_rng[:-i]
+            ke[row_inds, col_inds] = b_vals[i-1]
+            ke[col_inds, row_inds] = b_vals[i-1]
+
+    return ke
+
+def dvr_pe(grid, pot=None):
+\t'''Computes the potential energy from the gridpoints'''
+\t
+\treturn np.diag(pot(grid))
+\t
+def dvr_wfns(ke, pe):
+\t'''Computes the wavefunctions'''
+\t
+\treturn np.linalg.eig(ke+pe)
+\t
+def dvr_run(**params):
+\t'''Runs the entire DVR'''
+\tgrid = dvr_grid(**params)
+\tke = dvr_ke(grid, **params)
+\tpe = dvr_pe(grid, **params)
+\twfns = dvr_wfns(ke, pe, **params)
+\t
+\treturn wfns
+\t
+\t
+if __name__=='__main__':
+\t### parse sys.argv
+\t
+\tdvr_run(**ops)\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731355323602414*^9, 3.731355341467886*^9}, {
+   3.731355637458457*^9, 3.7313557641899652`*^9}, {3.7692813670790043`*^9, 
+   3.769281398811678*^9}, 3.769311505680777*^9, {3.769312331051147*^9, 
+   3.7693123321443357`*^9}},ExpressionUUID->"3ec31f89-1214-44a1-b191-\
+71a641eac2af"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{-946, Automatic}, {Automatic, -57}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"BTools"}, "MarkdownNotebook.nb", CharacterEncoding -> 
+       "UTF-8"]]]}, Visible -> False, FrontEndVersion -> 
+  "12.0 for Mac OS X x86 (64-bit) (April 8, 2019)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 333, 5, 51, "Section",ExpressionUUID->"c8e6f160-24d8-4f7b-af3b-3ad3f9af5f68"],
+Cell[916, 29, 660, 15, 35, "Text",ExpressionUUID->"a9801e6a-a67e-4a2b-ac18-34b3e840306d"],
+Cell[CellGroupData[{
+Cell[1601, 48, 180, 3, 40, "Subsubsection",ExpressionUUID->"4ba4a3ae-82e8-49d4-a01c-a1305d5c5cf9"],
+Cell[1784, 53, 503, 10, 35, "Text",ExpressionUUID->"7251f3ac-78e7-4fe2-a91f-13adec30623b"],
+Cell[2290, 65, 603, 14, 152, "ExternalLanguage",ExpressionUUID->"b698f42d-fa22-483d-9e53-a1617a43a3fd"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2930, 84, 190, 3, 40, "Subsubsection",ExpressionUUID->"c2268e8c-c092-4358-92ce-597d7be84afc"],
+Cell[3123, 89, 412, 8, 35, "Text",ExpressionUUID->"2e27e07c-4aeb-4f39-9e23-3ad01601ab65"],
+Cell[3538, 99, 1651, 39, 458, "ExternalLanguage",ExpressionUUID->"34120e20-5b40-413c-9105-135b275476dc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5226, 143, 242, 4, 40, "Subsubsection",ExpressionUUID->"2624c33e-7518-444f-9fc2-12fba790443f"],
+Cell[5471, 149, 827, 16, 58, "Text",ExpressionUUID->"3f7372df-c254-4f0c-8bc8-570ff2499afd"],
+Cell[6301, 167, 496, 11, 101, "ExternalLanguage",ExpressionUUID->"ee22845a-3cf3-4a46-a8fe-977df718cbdb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6834, 183, 215, 4, 40, "Subsubsection",ExpressionUUID->"2cb876f5-2b0b-4de4-afc7-449af4c64cd5"],
+Cell[7052, 189, 459, 7, 35, "Text",ExpressionUUID->"5d66e3d3-44a7-40d4-a38b-4ddc7a9bd6d2"],
+Cell[7514, 198, 496, 11, 101, "ExternalLanguage",ExpressionUUID->"f406a2b7-bfe4-451f-aa69-8dbe3e59c2cf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8047, 214, 160, 3, 41, "Subsection",ExpressionUUID->"0545cc05-05c7-4294-9e87-db09d196ad48"],
+Cell[8210, 219, 1923, 66, 1019, "ExternalLanguage",ExpressionUUID->"3ec31f89-1214-44a1-b191-71a641eac2af"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

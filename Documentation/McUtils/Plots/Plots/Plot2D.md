@@ -2,7 +2,6 @@
 A base class for plots of 3D data but plotted on 2D axes
 
 ### Properties and Methods
-<a id="McUtils.Plots.Plots.Plot2D.__init__">&nbsp;</a>
 ```python
 __init__(self, *params, plot_style=None, method='contour', colorbar=None, figure=None, axes=None, subplot_kw=None, **opts): 
 ```

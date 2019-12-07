@@ -1,4 +1,5 @@
 from Peeves.Doc import *
+import os
 
 __pkgs__ = [
     "McUtils",
@@ -9,5 +10,5 @@ __pkgs__ = [
     "RynDMC"
 ]
 
-import os
-DocWalker(__pkgs__, os.path.join(os.path.dirname(__file__), "docs")).write_docs()
+target = os.path.join(os.path.dirname(__file__), "Documentation")
+DocWalker(__pkgs__, target).write_docs()

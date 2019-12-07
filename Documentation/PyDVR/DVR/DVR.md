@@ -12,54 +12,45 @@ dvr_file: method
 load_dvr: method
 Results: type
 ```
-<a id="PyDVR.DVR.DVR.__init__">&nbsp;</a>
 ```python
 __init__(self, dvr_file='ColbertMiller1D', **kwargs): 
 ```
 
-<a id="PyDVR.DVR.DVR.domain">&nbsp;</a>
 ```python
 domain(self): 
 ```
 Computes the domain for the DVR
 
-<a id="PyDVR.DVR.DVR.divs">&nbsp;</a>
 ```python
 divs(self): 
 ```
 Computes the divisions for the DVR
 
-<a id="PyDVR.DVR.DVR.grid">&nbsp;</a>
 ```python
 grid(self): 
 ```
 Computes the grid for the DVR
 
-<a id="PyDVR.DVR.DVR.kinetic_energy">&nbsp;</a>
 ```python
 kinetic_energy(self): 
 ```
 Computes the kinetic_energy for the DVR
 
-<a id="PyDVR.DVR.DVR.potential_energy">&nbsp;</a>
 ```python
 potential_energy(self): 
 ```
 Computes the potential_energy for the DVR
 
-<a id="PyDVR.DVR.DVR.hamiltonian">&nbsp;</a>
 ```python
 hamiltonian(self): 
 ```
 Computes the hamiltonian for the DVR
 
-<a id="PyDVR.DVR.DVR.wavefunctions">&nbsp;</a>
 ```python
 wavefunctions(self): 
 ```
 Computes the wavefunctions for the DVR
 
-<a id="PyDVR.DVR.DVR.run">&nbsp;</a>
 ```python
 run(self, **runpars): 
 ```

@@ -1,0 +1,330 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12345,        322]
+NotebookOptionsPosition[      9387,        265]
+NotebookOutlinePosition[     10050,        288]
+CellTagsIndexPosition[     10007,        285]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Basic DVR", "Section",
+ CellChangeTimes->{{3.731345733329906*^9, 3.731345752040162*^9}, {
+   3.731352579893578*^9, 3.7313525869095173`*^9}, 
+   3.731354329360456*^9},ExpressionUUID->"c8e6f160-24d8-4f7b-af3b-\
+3ad3f9af5f68"],
+
+Cell["\<\
+A discrete variable representation is a way to solve the \
+Schr\[ODoubleDot]dinger equation in a simple, grid-based way. It has four \
+basic functions:\
+\>", "Text",
+ CellChangeTimes->{{3.731345758729*^9, 3.731345827942313*^9}, {
+  3.731353759790614*^9, 3.731353766510145*^9}, {3.731354031183982*^9, 
+  3.731354031711597*^9}},ExpressionUUID->"a9801e6a-a67e-4a2b-ac18-\
+34b3e840306d"],
+
+Cell[CellGroupData[{
+
+Cell["Grid", "Item",
+ CellChangeTimes->{{3.731345830710248*^9, 
+  3.731345835022043*^9}},ExpressionUUID->"f4b52d0d-e355-4274-b89f-\
+94044eb18717"],
+
+Cell["Kinetic Energy", "Item",
+ CellChangeTimes->{{3.731345837894267*^9, 
+  3.731345839953521*^9}},ExpressionUUID->"2c6fdf5a-4987-4d3b-b193-\
+1a5331c2ede4"],
+
+Cell["Potential Energy", "Item",
+ CellChangeTimes->{{3.731345837894267*^9, 
+  3.731345843485902*^9}},ExpressionUUID->"3f5c8f80-6575-4e4b-a857-\
+2a938e9fd0e3"],
+
+Cell["Wavefunctions", "Item",
+ CellChangeTimes->{{3.731353768710002*^9, 3.731353774201129*^9}, {
+  3.731354032975574*^9, 
+  3.73135403514359*^9}},ExpressionUUID->"ece2b28b-79ce-4d8b-a7f7-\
+8d760a7f49d2"]
+}, Open  ]],
+
+Cell["\<\
+Of these, the only ones that will significantly vary from DVR to DVR are the \
+grid and the kinetic energy. Everything else is pretty standardized.\
+\>", "Text",
+ CellChangeTimes->{{3.731352862303164*^9, 
+  3.7313528931110353`*^9}},ExpressionUUID->"f7c4236f-7344-496e-bb3d-\
+d108a7278fc7"],
+
+Cell[TextData[{
+ "A good primer on the mathematical foundations of DVR can be found ",
+ ButtonBox["here",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.pci.uni-heidelberg.de/tc/usr/mctdh/lit/NumericalMethods.\
+pdf"], None},
+  ButtonNote->
+   "http://www.pci.uni-heidelberg.de/tc/usr/mctdh/lit/NumericalMethods.pdf"],
+ ". There is also a nice review paper on DVR by Light and Carrington ",
+ ButtonBox["here",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://light-group.uchicago.edu/dvr-rev.pdf"], None},
+  ButtonNote->"http://light-group.uchicago.edu/dvr-rev.pdf"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.731352989763661*^9, 3.7313530045795116`*^9}, {
+  3.731353052538114*^9, 3.731353077370997*^9}, {3.7313531140039673`*^9, 
+  3.731353117640706*^9}},ExpressionUUID->"5bacaa73-65f7-4acd-8732-\
+3193166b9fd5"],
+
+Cell["\<\
+The basic motivating idea is to provide a basis that in effect discretizes \
+the domain over which the wavefunctions and which diagonalizes the \
+representation of the potential energy.\
+\>", "Text",
+ CellChangeTimes->{{3.731353233284944*^9, 
+  3.731353313535687*^9}},ExpressionUUID->"55978ea3-9023-4ce8-b368-\
+a2d8785c323a"],
+
+Cell[CellGroupData[{
+
+Cell["Grid", "Subsubsection",
+ CellChangeTimes->{{3.7313497357233257`*^9, 3.731349738737534*^9}, 
+   3.731354016271549*^9},ExpressionUUID->"4ba4a3ae-82e8-49d4-a01c-\
+a1305d5c5cf9"],
+
+Cell[TextData[{
+ "DVR solves the Schr\[ODoubleDot]dinger equation on a grid, so the first \
+thing we need is a function to set up the appropriate grid. To make this grid \
+we take in a grid domain, e.g. ",
+ Cell[BoxData[
+  RowBox[{"[", 
+   RowBox[{"0", ",", " ", "1"}], "]"}]], "InlineInput",ExpressionUUID->
+  "af2d2c32-1215-4901-9aeb-d4336b2d7ff0"],
+ ", and a number of grid points, say ",
+ Cell[BoxData[
+ "15"], "InlineInput",ExpressionUUID->
+  "457b89d3-4aae-4800-bfeb-cdb69053ac75"],
+ ". If we were to make a script ",
+ Cell["basic_dvr.py", "InlineText",ExpressionUUID->
+  "0c02e6ff-0aa3-41e7-b752-d49e40e1df26"],
+ " this would look like:"
+}], "Text",
+ CellChangeTimes->{{3.731349765871863*^9, 3.731349767762609*^9}, {
+   3.731352565899757*^9, 3.731352675472513*^9}, {3.7313527082960243`*^9, 
+   3.731352752951701*^9}, 
+   3.7313527901432753`*^9},ExpressionUUID->"7251f3ac-78e7-4fe2-a91f-\
+13adec30623b"],
+
+Cell["\<\
+'''basic_dvr.py is a template DVR'''
+
+def dvr_grid(domain, divs):
+\t'''Discretizes domain into divs number of point'''
+\t# subdivide domain\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731352680319867*^9, 3.731352705455814*^9}, {
+  3.731352755967477*^9, 
+  3.731352785543311*^9}},ExpressionUUID->"b698f42d-fa22-483d-9e53-\
+a1617a43a3fd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Kinetic Energy", "Subsubsection",
+ CellChangeTimes->{{3.731352852979175*^9, 3.731352858214497*^9}, 
+   3.7313540133514633`*^9},ExpressionUUID->"c2268e8c-c092-4358-92ce-\
+597d7be84afc"],
+
+Cell["\<\
+This is the complicated part in a DVR. Various strategies may be taken for \
+creating an expression for the kinetic energy, but in the optimal case they \
+will only have a dependence on the grid of choice. So we could add this to \
+our script like so:\
+\>", "Text",
+ CellChangeTimes->{{3.7313529797091084`*^9, 3.731352986427567*^9}, {
+  3.7313531232423687`*^9, 3.731353212170897*^9}, {3.731353320239497*^9, 
+  3.7313533712761993`*^9}},ExpressionUUID->"b5192bf6-e459-4590-9ac5-\
+1d3853cf6da3"],
+
+Cell["\<\
+def dvr_ke(grid, **params):
+\t'''Computes the kinetic energy for the grid (based on the chosen basis)'''
+\t# calculate kinetic energy based on grid and system parameters passed as \
+dict\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731353375531666*^9, 
+  3.731353466438747*^9}},ExpressionUUID->"34120e20-5b40-413c-9105-\
+135b275476dc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Potential Energy", "Subsubsection",
+ CellChangeTimes->{{3.731352852979175*^9, 3.731352858214497*^9}, {
+   3.731353472048312*^9, 3.731353473046492*^9}, 
+   3.7313540119033537`*^9},ExpressionUUID->"2624c33e-7518-444f-9fc2-\
+12fba790443f"],
+
+Cell["\<\
+This is what makes DVR so attractive. By choosing the appropriate basis we \
+can get a representation of the potential that is diagonal and thus depends \
+only on the grid points. A template can look like:\
+\>", "Text",
+ CellChangeTimes->{{3.7313529797091084`*^9, 3.731352986427567*^9}, {
+  3.7313531232423687`*^9, 3.731353212170897*^9}, {3.731353320239497*^9, 
+  3.7313533712761993`*^9}, {3.7313534746862793`*^9, 3.731353533564281*^9}, {
+  3.731354136486648*^9, 
+  3.731354143566834*^9}},ExpressionUUID->"3f7372df-c254-4f0c-8bc8-\
+570ff2499afd"],
+
+Cell["\<\
+def dvr_pe(grid, **params):
+\t'''Computes the potential energy from the gridpoints'''
+\t# make diagonal matrix base on value of the potential at the gridpoints \
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731353375531666*^9, 3.731353466438747*^9}, {
+   3.731353536580615*^9, 3.731353576588108*^9}, 3.731353747782297*^9, {
+   3.731355623904525*^9, 
+   3.731355624589957*^9}},ExpressionUUID->"ee22845a-3cf3-4a46-a8fe-\
+977df718cbdb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Wavefunctions", "Subsubsection",
+ CellChangeTimes->{{3.731353591507862*^9, 3.7313535978036423`*^9}, {
+  3.731354003911869*^9, 
+  3.731354045791576*^9}},ExpressionUUID->"2cb876f5-2b0b-4de4-afc7-\
+449af4c64cd5"],
+
+Cell["\<\
+In the most general case, the wavefunctions are simply the eigenvalues of the \
+kinetic energy plus the potential energy. Optimizations can be done to take \
+only the smallest-n eigenvalues or in higher dimensions to use sparse matrix \
+methods, but at the base level this will always look like:\
+\>", "Text",
+ CellChangeTimes->{{3.731353600664434*^9, 3.731353608579874*^9}, {
+  3.731353734760166*^9, 3.731353745382123*^9}, {3.731354000769761*^9, 
+  3.731354130462872*^9}, {3.731354211344261*^9, 
+  3.731354217215824*^9}},ExpressionUUID->"5d66e3d3-44a7-40d4-a38b-\
+4ddc7a9bd6d2"],
+
+Cell["\<\
+def dvr_wfns(ke, pe):
+\t'''Computes the wavefunctions'''
+\t# compute eigensystem of ke+pe\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731353375531666*^9, 3.731353466438747*^9}, {
+   3.731353536580615*^9, 3.731353576588108*^9}, 3.731353747782297*^9, {
+   3.731354145214531*^9, 3.731354203688178*^9}, {3.731355626486127*^9, 
+   3.73135562693391*^9}},ExpressionUUID->"f406a2b7-bfe4-451f-aa69-\
+8dbe3e59c2cf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Concrete Example", "Subsection",
+ CellChangeTimes->{{3.731354335571669*^9, 
+  3.731354342699605*^9}},ExpressionUUID->"861305ca-54a4-41e7-a21a-\
+c60e7724a64a"],
+
+Cell[TextData[{
+ "A concrete example of this based on a DVR developed by ",
+ ButtonBox["Colbert and Miller",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://xbeams.chem.yale.edu/~batista/v572/ColbertMiller.pdf"], None},
+  
+  ButtonNote->"http://xbeams.chem.yale.edu/~batista/v572/ColbertMiller.pdf"],
+ " can be found ",
+ ButtonBox["here",
+  BaseStyle->"Hyperlink",
+  ButtonData->{"Colbert and Miller.md", None}],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.731354343971368*^9, 3.731354396132156*^9}, {
+  3.7313559892420597`*^9, 3.73135601494608*^9}, {3.731360100547698*^9, 
+  3.731360109615296*^9}},ExpressionUUID->"9d7c7369-0340-4722-a43b-\
+424c39246428"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{84, Automatic}, {16, Automatic}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"BTools"}, "MarkdownNotebook.nb", CharacterEncoding -> 
+       "UTF-8"]]]}, Visible -> False, FrontEndVersion -> 
+  "11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, 2018)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 229, 4, 51, "Section",ExpressionUUID->"c8e6f160-24d8-4f7b-af3b-3ad3f9af5f68"],
+Cell[812, 28, 393, 8, 58, "Text",ExpressionUUID->"a9801e6a-a67e-4a2b-ac18-34b3e840306d"],
+Cell[CellGroupData[{
+Cell[1230, 40, 146, 3, 32, "Item",ExpressionUUID->"f4b52d0d-e355-4274-b89f-94044eb18717"],
+Cell[1379, 45, 156, 3, 32, "Item",ExpressionUUID->"2c6fdf5a-4987-4d3b-b193-1a5331c2ede4"],
+Cell[1538, 50, 158, 3, 32, "Item",ExpressionUUID->"3f5c8f80-6575-4e4b-a857-2a938e9fd0e3"],
+Cell[1699, 55, 203, 4, 32, "Item",ExpressionUUID->"ece2b28b-79ce-4d8b-a7f7-8d760a7f49d2"]
+}, Open  ]],
+Cell[1917, 62, 299, 6, 58, "Text",ExpressionUUID->"f7c4236f-7344-496e-bb3d-d108a7278fc7"],
+Cell[2219, 70, 832, 20, 58, "Text",ExpressionUUID->"5bacaa73-65f7-4acd-8732-3193166b9fd5"],
+Cell[3054, 92, 335, 7, 58, "Text",ExpressionUUID->"55978ea3-9023-4ce8-b368-a2d8785c323a"],
+Cell[CellGroupData[{
+Cell[3414, 103, 180, 3, 40, "Subsubsection",ExpressionUUID->"4ba4a3ae-82e8-49d4-a01c-a1305d5c5cf9"],
+Cell[3597, 108, 909, 21, 83, "Text",ExpressionUUID->"7251f3ac-78e7-4fe2-a91f-13adec30623b"],
+Cell[4509, 131, 350, 10, 118, "ExternalLanguage",ExpressionUUID->"b698f42d-fa22-483d-9e53-a1617a43a3fd"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4896, 146, 190, 3, 40, "Subsubsection",ExpressionUUID->"c2268e8c-c092-4358-92ce-597d7be84afc"],
+Cell[5089, 151, 502, 9, 81, "Text",ExpressionUUID->"b5192bf6-e459-4590-9ac5-1d3853cf6da3"],
+Cell[5594, 162, 348, 8, 84, "ExternalLanguage",ExpressionUUID->"34120e20-5b40-413c-9105-135b275476dc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5979, 175, 242, 4, 40, "Subsubsection",ExpressionUUID->"2624c33e-7518-444f-9fc2-12fba790443f"],
+Cell[6224, 181, 556, 10, 58, "Text",ExpressionUUID->"3f7372df-c254-4f0c-8bc8-570ff2499afd"],
+Cell[6783, 193, 445, 9, 84, "ExternalLanguage",ExpressionUUID->"ee22845a-3cf3-4a46-a8fe-977df718cbdb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7265, 207, 215, 4, 40, "Subsubsection",ExpressionUUID->"2cb876f5-2b0b-4de4-afc7-449af4c64cd5"],
+Cell[7483, 213, 589, 10, 81, "Text",ExpressionUUID->"5d66e3d3-44a7-40d4-a38b-4ddc7a9bd6d2"],
+Cell[8075, 225, 419, 9, 84, "ExternalLanguage",ExpressionUUID->"f406a2b7-bfe4-451f-aa69-8dbe3e59c2cf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8531, 239, 164, 3, 41, "Subsection",ExpressionUUID->"861305ca-54a4-41e7-a21a-c60e7724a64a"],
+Cell[8698, 244, 661, 17, 35, "Text",ExpressionUUID->"9d7c7369-0340-4722-a43b-424c39246428"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

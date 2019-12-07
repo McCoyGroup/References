@@ -2,7 +2,6 @@
 
 
 ### Properties and Methods
-<a id="McUtils.Plots.Primitives.GraphicsPrimitive.plot">&nbsp;</a>
 ```python
 plot(self, graphics, *args, **kwargs): 
 ```

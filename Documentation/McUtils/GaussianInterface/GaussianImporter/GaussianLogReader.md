@@ -7,7 +7,6 @@ registered_components: dict
 default_keys: tuple
 default_ordering: dict
 ```
-<a id="McUtils.GaussianInterface.GaussianImporter.GaussianLogReader.parse">&nbsp;</a>
 ```python
 parse(self, keys=None, num=None): 
 ```

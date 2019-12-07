@@ -11,16 +11,16 @@ class PlotsTests(TestCase):
         import matplotlib.pyplot as plt
         # plt.show()
 
+    @debugTest
+    def test_Plot(self):
+        grid = np.linspace(0, 2*np.pi, 100)
+        plot = Plot(grid, np.sin(grid))
+        plot.show()
+
     @validationTest
     def test_Scatter(self):
         pts = np.random.rand(50, 2)
         plot = ScatterPlot(*pts.T)
-
-    @validationTest
-    def test_Plot(self):
-        pts = np.random.rand(50)
-        sins = np.sin(pts)
-        plot = ScatterPlot(pts, sins)
 
     @validationTest
     def test_ListContourPlot(self):
@@ -121,3 +121,20 @@ class PlotsTests(TestCase):
                 [-2 + 4/3*i, -2 + 4/3*(i+1)],
                 color = c)
         # p.show()
+
+    @validationTest
+    def test_GraphicsGrid(self):
+
+        main = GraphicsGrid(ncols=3, nrows=1)
+        grid = np.linspace(0, 2 * np.pi, 100)
+        grid_2D = np.meshgrid(grid, grid)
+        main[0, 0] = ContourPlot(grid_2D[1], grid_2D[0], np.sin(grid_2D[0]), figure=main[0, 0])
+        main[0, 1] = ContourPlot(grid_2D[1], grid_2D[0], np.sin(grid_2D[0])*np.cos(grid_2D[1]), figure=main[0, 1])
+        main[0, 2] = ContourPlot(grid_2D[1], grid_2D[0], np.cos(grid_2D[1]), figure=main[0, 2])
+        main.colorbar = { "graphics" : main[0, 1].graphics } # the spec
+        main[0, 1].axes_labels = ["dogs (arb.)", "cats (cc)"]
+        # main.show()
+        # fig_path = os.path.expanduser("~/Desktop/test.png")
+        # main.figure.savefig(fig_path)
+        # import subprocess
+        # subprocess.call(["open", fig_path])

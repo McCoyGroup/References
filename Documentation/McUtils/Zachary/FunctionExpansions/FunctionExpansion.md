@@ -8,12 +8,10 @@ tensors: property
 CoordinateTransforms: type
 FunctionDerivatives: type
 ```
-<a id="McUtils.Zachary.FunctionExpansions.FunctionExpansion.__init__">&nbsp;</a>
 ```python
 __init__(self, derivatives, transforms=None): 
 ```
 
-<a id="McUtils.Zachary.FunctionExpansions.FunctionExpansion.expand">&nbsp;</a>
 ```python
 expand(self, coords): 
 ```
@@ -23,12 +21,10 @@ Returns a numerical value for the expanded coordinates
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Zachary.FunctionExpansions.FunctionExpansion.__call__">&nbsp;</a>
 ```python
 __call__(self, coords): 
 ```
 
-<a id="McUtils.Zachary.FunctionExpansions.FunctionExpansion.get_tensor">&nbsp;</a>
 ```python
 get_tensor(self, i): 
 ```

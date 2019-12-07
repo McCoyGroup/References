@@ -7,7 +7,6 @@ Provides derivatives for a function (scalar or vector valued)
 differencer: type
 array: property
 ```
-<a id="McUtils.Zachary.Derivatives.FiniteDifferenceDerivative.__init__">&nbsp;</a>
 ```python
 __init__(self, f, order=1, function_shape=(0, 0), **fd_opts): 
 ```
@@ -21,7 +20,6 @@ __init__(self, f, order=1, function_shape=(0, 0), **fd_opts):
 - `fd_opts`: `Any`
     >the options to pass to the finite difference function
 
-<a id="McUtils.Zachary.Derivatives.FiniteDifferenceDerivative.derivatives">&nbsp;</a>
 ```python
 derivatives(self, center=0, order=None, coordinates=None, displacement_function=None, mesh_spacing=0.01, prep=None, **fd_opts): 
 ```

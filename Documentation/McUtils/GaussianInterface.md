@@ -7,8 +7,7 @@ but... well we can't have everything.
 
   - [GaussianFChkReader](GaussianInterface/GaussianImporter/GaussianFChkReader.md)
   - [GaussianLogReader](GaussianInterface/GaussianImporter/GaussianLogReader.md)
-  - [GaussianFChkReader](GaussianInterface/GaussianImporter/GaussianFChkReader.md)
-  - [GaussianLogReader](GaussianInterface/GaussianImporter/GaussianLogReader.md)
+  - [GaussianJob](GaussianInterface/GaussianJob/GaussianJob.md)
 
 ### Examples:
 

@@ -1,0 +1,492 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20292,        484]
+NotebookOptionsPosition[     17822,        435]
+NotebookOutlinePosition[     18454,        457]
+CellTagsIndexPosition[     18411,        454]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Colbert and Miller 1D DVR", "Section",
+ CellChangeTimes->{{3.731345733329906*^9, 3.731345752040162*^9}, {
+   3.731352579893578*^9, 3.7313525869095173`*^9}, 3.731354329360456*^9, {
+   3.7313544442508297`*^9, 
+   3.7313544500140867`*^9}},ExpressionUUID->"c8e6f160-24d8-4f7b-af3b-\
+3ad3f9af5f68"],
+
+Cell[TextData[{
+ "This is an implementation of the DVR on the ",
+ Cell[BoxData[
+  RowBox[{"[", 
+   RowBox[{
+    RowBox[{"-", "\[Infinity]"}], ",", " ", "\[Infinity]"}], "]"}]], 
+  "InlineInput",ExpressionUUID->"1743c73a-1b63-4bd3-8c91-d01ce201a49b"],
+ " range as defined by Colbert and Miller in ",
+ ButtonBox["this paper",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://xbeams.chem.yale.edu/~batista/v572/ColbertMiller.pdf"], None},
+  
+  ButtonNote->"http://xbeams.chem.yale.edu/~batista/v572/ColbertMiller.pdf"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.731345758729*^9, 3.731345827942313*^9}, {
+  3.731353759790614*^9, 3.731353766510145*^9}, {3.731354031183982*^9, 
+  3.731354031711597*^9}, {3.7313544515577297`*^9, 
+  3.7313545033814993`*^9}},ExpressionUUID->"a9801e6a-a67e-4a2b-ac18-\
+34b3e840306d"],
+
+Cell[CellGroupData[{
+
+Cell["Grid", "Subsubsection",
+ CellChangeTimes->{{3.7313497357233257`*^9, 3.731349738737534*^9}, 
+   3.731354016271549*^9},ExpressionUUID->"4ba4a3ae-82e8-49d4-a01c-\
+a1305d5c5cf9"],
+
+Cell[TextData[{
+ "We simply discretize our domain evenly. Implicit is that the domain is ",
+ StyleBox["effectively",
+  FontSlant->"Italic"],
+ " the ",
+ Cell[BoxData[
+  RowBox[{"[", 
+   RowBox[{
+    RowBox[{"-", "\[Infinity]"}], ",", " ", "\[Infinity]"}], "]"}]], 
+  "InlineInput",ExpressionUUID->"87abbed1-46d6-475f-b385-94c30147eb85"],
+ " range."
+}], "Text",
+ CellChangeTimes->{{3.731349765871863*^9, 3.731349767762609*^9}, {
+   3.731352565899757*^9, 3.731352675472513*^9}, {3.7313527082960243`*^9, 
+   3.731352752951701*^9}, 3.7313527901432753`*^9, {3.73135451611022*^9, 
+   3.731354581345088*^9}},ExpressionUUID->"7251f3ac-78e7-4fe2-a91f-\
+13adec30623b"],
+
+Cell["\<\
+'''Colbert and Miller DVR on the [-inf, inf] domain'''
+
+def dvr_grid(domain=(-5, 5), divs=10, **kw):
+    '''Calculates the grid'''
+    rmin=domain[0]; rmax=domain[1];
+    inc=(rmax-rmin)/(divs-1)
+
+    return [rmin+i*inc for i in range(divs)]\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731352680319867*^9, 3.731352705455814*^9}, {
+  3.731352755967477*^9, 3.731352785543311*^9}, {3.731354624368414*^9, 
+  3.731354631597948*^9}, {3.7313553099950027`*^9, 
+  3.7313553196026897`*^9}},ExpressionUUID->"b698f42d-fa22-483d-9e53-\
+a1617a43a3fd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Kinetic Energy", "Subsubsection",
+ CellChangeTimes->{{3.731352852979175*^9, 3.731352858214497*^9}, 
+   3.7313540133514633`*^9},ExpressionUUID->"c2268e8c-c092-4358-92ce-\
+597d7be84afc"],
+
+Cell["\<\
+One nice part of this DVR is that it has no explicit dependence on the basis. \
+In fact the only way it depends on the grid is in the grid spacing, \
+\[CapitalDelta]x, and the number of nodes. This leads to a very simple \
+implementation. The kinetic energy  is defined by:\
+\>", "Text",
+ CellChangeTimes->{{3.7313529797091084`*^9, 3.731352986427567*^9}, {
+  3.7313531232423687`*^9, 3.731353212170897*^9}, {3.731353320239497*^9, 
+  3.7313533712761993`*^9}, {3.731354644425375*^9, 3.7313546739723263`*^9}, {
+  3.731354753098919*^9, 
+  3.7313548317379*^9}},ExpressionUUID->"b5192bf6-e459-4590-9ac5-1d3853cf6da3"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1:eJztnQW0FFUYxxVQsbGwFezuoxwbG8UCsQsOIQYoYIvd3Yld2N2B3Yrdgt2F
+3Vd+95z/nm8vs/s2Zvbtvr3/compiled+bt29mZOzP33u9+/U3XfkN7DWw32WSTDe84
+8U+vvvt3Hzas74G9O0380mfI8MGDhgzo32PIiAGDBgzr1q/9xJ09J24TJm4d
+Jm4uIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi
+okX8+++/7u+///afEfWD//77z/3zzz+tfRsRdY5K6JZ59ddff0Waj4ioE3z0
+0UfuqKOOco888oj/ngZtwkPs/7Rp9zUqsngG9feff/7p18fHHnvMrbvuum6D
+DTZw999/f2bXjWhsaE6cfvrpbo455nArr7yyu/vuu/2+QvIb57CNHj3aHXDA
+Ae6VV17JaytsO+m3RubdWdKRbfuTTz5x11xzjevevbsjxfDyyy/3+6NcHSGI
+jh588EE/R0444YSSz3nttdfcTjvt5NZee203//zzuz/++MPvD+f3999/7379
+9dfc99dff9199913aT1Cq+GHH37w/DJNfPrpp/7z1ltvdXfeeWduPzQ799xz
+u1VWWcV/1xoaEaH1vH///m722Wf3tMbcwK4VQnNG8+e3337z37/88ks/v37+
++ee832n7999/d6uttpobM2aMP2699dZzHTp0cPPMM4+74447/PGNxI+lB4wf
+P97NOOOM7pJLLvH7k/qr3Dbfffddv45ecMEFrkuXLm6PPfbI6+dDDz3UtW/f
+3r3//vu58yIiNA8222wzt+aaa+btAyE9Q5fh+r/33nu7U045Je9cfR588MFe
+DuS8yy67zF188cXu4Ycf9nx7pZVWyrtOI0D3iR3vxBNPdM8884z/bp/bblrP
+wn1JbbLeIQeddtpprnPnzu6rr77y++H1HHPqqad6Gh87dmzeNSOaG5oHm2++
+udt0003zfBjF6IpjoO1DDjnE7brrru7HH390n332Wd75L7zwgptlllk8zwJW
+7hwwYIDnM2qrEaD+QDe4+eab3dNPP523v5o2kVFY4+jDl156ydsY9LvW0JNO
+OsnTsGwPkYYjgOYB9LvVVlv5/y2v/fbbb92BBx7odd6FFlrI7bjjjl4enmuu
+udziiy/uZp55Zrf88su7hRde2D300EP+HM05+Prw4cPzrsMnvGvRRRd1b775
+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
+RNvF/ypB1XM=
+     "], {{0, 76}, {241, 0}}, {0, 255},
+     ColorFunction->RGBColor],
+    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+    Selectable->False],
+   DefaultBaseStyle->"ImageGraphics",
+   ImageSizeRaw->{241, 76},
+   PlotRange->{{0, 241}, {0, 76}}]], "Text",ExpressionUUID->
+  "60061545-c376-4b5f-95e9-557f86595eac"],
+ "\t"
+}], "Text",
+ CellChangeTimes->{
+  3.731354694947859*^9, {3.731354727163405*^9, 3.731354740675458*^9}, {
+   3.731355871782899*^9, 
+   3.731355875154817*^9}},ExpressionUUID->"84adfeb4-ed76-4e98-8b97-\
+cbb6b39900a4"],
+
+Cell["And so we can write the kinetic energy as:", "Text",
+ CellChangeTimes->{{3.731354715203457*^9, 3.731354751491016*^9}, {
+  3.731354845307128*^9, 3.731354846689646*^9}, {3.7313559117649384`*^9, 
+  3.7313559121138678`*^9}},ExpressionUUID->"2e27e07c-4aeb-4f39-9e23-\
+3ad01601ab65"],
+
+Cell["\<\
+def dvr_ke(grid, m=1, hb=1):
+\t'''Computes the kinetic energy for the grid (based on the chosen basis)'''
+\timport numpy as np
+\t
+\tdx=grid[1]-grid[0]
+\tdivs=len(grid)
+\tke=np.empty((divs, divs))
+
+\tcoeff=(hb**2)/(2*m*(dx**2))
+
+\tfor i in range(divs):
+\t\tfor j in range(divs):
+\t\t\tif i==j:
+\t\t\t\tke[i, j]=((-1)**(i-j))*coeff*(math.pi**2)/3
+\t\t\telse:
+\t\t\t\tke[i, j]=((-1)**(i-j))*coeff*(2)/((i-j)**2)
+
+\treturn ke\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731353375531666*^9, 3.731353466438747*^9}, 
+   3.7313548521454268`*^9, {3.731354901450779*^9, 3.731354951047799*^9}, {
+   3.731355078960391*^9, 3.731355082800501*^9}, {3.731355243043592*^9, 
+   3.731355261548087*^9}, {3.7692797812229137`*^9, 
+   3.76927978586343*^9}},ExpressionUUID->"34120e20-5b40-413c-9105-\
+135b275476dc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Potential Energy", "Subsubsection",
+ CellChangeTimes->{{3.731352852979175*^9, 3.731352858214497*^9}, {
+   3.731353472048312*^9, 3.731353473046492*^9}, 
+   3.7313540119033537`*^9},ExpressionUUID->"2624c33e-7518-444f-9fc2-\
+12fba790443f"],
+
+Cell[TextData[{
+ "The potential is simple as is usually the case, so if we have a potential \
+function as a function of the grid point, ",
+ Cell[BoxData[
+ "pot"], "InlineInput",ExpressionUUID->"62363620-2391-44b9-ba99-f2f73af7f966"],
+ " we can write this as"
+}], "Text",
+ CellChangeTimes->{{3.7313529797091084`*^9, 3.731352986427567*^9}, {
+  3.7313531232423687`*^9, 3.731353212170897*^9}, {3.731353320239497*^9, 
+  3.7313533712761993`*^9}, {3.7313534746862793`*^9, 3.731353533564281*^9}, {
+  3.731354136486648*^9, 3.731354143566834*^9}, {3.731354994713743*^9, 
+  3.731355005672061*^9}, {3.7313550628242683`*^9, 
+  3.7313551074479313`*^9}},ExpressionUUID->"3f7372df-c254-4f0c-8bc8-\
+570ff2499afd"],
+
+Cell["\<\
+def dvr_pe(grid, pot=None):
+\t'''Computes the potential energy from the gridpoints'''
+\timport numpy as np
+\t
+\treturn np.diag([pot(x) for x in grid])\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731353375531666*^9, 3.731353466438747*^9}, {
+   3.731353536580615*^9, 3.731353576588108*^9}, 3.731353747782297*^9, {
+   3.731355113575285*^9, 3.731355168614809*^9}, 
+   3.73135524007584*^9},ExpressionUUID->"ee22845a-3cf3-4a46-a8fe-\
+977df718cbdb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Wavefunctions", "Subsubsection",
+ CellChangeTimes->{{3.731353591507862*^9, 3.7313535978036423`*^9}, {
+  3.731354003911869*^9, 
+  3.731354045791576*^9}},ExpressionUUID->"2cb876f5-2b0b-4de4-afc7-\
+449af4c64cd5"],
+
+Cell["This will also operate in the usual way, so we have ", "Text",
+ CellChangeTimes->{{3.731353600664434*^9, 3.731353608579874*^9}, {
+  3.731353734760166*^9, 3.731353745382123*^9}, {3.731354000769761*^9, 
+  3.731354130462872*^9}, {3.731354211344261*^9, 3.731354217215824*^9}, {
+  3.7313552278087883`*^9, 
+  3.731355237603862*^9}},ExpressionUUID->"5d66e3d3-44a7-40d4-a38b-\
+4ddc7a9bd6d2"],
+
+Cell["\<\
+def dvr_wfns(ke, pe):
+\t'''Computes the wavefunctions'''
+\timport numpy as np
+\t
+\treturn np.linalg.eig(ke+pe)\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731353375531666*^9, 3.731353466438747*^9}, {
+   3.731353536580615*^9, 3.731353576588108*^9}, 3.731353747782297*^9, {
+   3.731354145214531*^9, 3.731354203688178*^9}, {3.7313552817443733`*^9, 
+   3.731355293683392*^9}, {3.7313553482283583`*^9, 
+   3.731355349666481*^9}},ExpressionUUID->"f406a2b7-bfe4-451f-aa69-\
+8dbe3e59c2cf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["All Together", "Subsection",
+ CellChangeTimes->{{3.731355301268259*^9, 
+  3.731355306578877*^9}},ExpressionUUID->"0545cc05-05c7-4294-9e87-\
+db09d196ad48"],
+
+Cell["\<\
+'''Colbert and Miller DVR on the [-inf, inf] domain'''
+
+def dvr_grid(domain=(-5, 5), divs=10, **kw):
+    '''Calculates the grid'''
+    rmin=domain[0]; rmax=domain[1];
+    inc=(rmax-rmin)/(divs-1)
+
+    return [rmin+i*inc for i in range(divs)]
+    
+ def dvr_ke(grid, m=1, hb=1, **kw):
+\t'''Computes the kinetic energy for the grid (based on the chosen basis)'''
+\timport numpy as np
+\t
+\tdx=grid[1]-grid[0]
+\tdivs=len(grid)
+\tke=np.empty((divs, divs))
+
+\tcoeff=(hb**2)/(2*m*(dx**2))
+
+\tfor i in range(divs):
+\t\tfor j in range(divs):
+\t\t\tif i==j:
+\t\t\t\tke[i, j]=(-1**(i-j))*coeff*(math.pi**2)/3
+\t\t\telse:
+\t\t\t\tke[i, j]=(-1**(i-j))*coeff*(2)/((i-j)**2)
+
+\treturn ke
+
+
+def dvr_pe(grid, pot=None, **kw):
+\t'''Computes the potential energy from the gridpoints'''
+\timport numpy as np
+\t
+\treturn np.diag([pot(x) for x in grid])
+\t
+def dvr_wfns(ke, pe, **kw):
+\t'''Computes the wavefunctions'''
+\timport numpy as np
+\t
+\treturn np.linalg.eig(ke+pe)
+\t
+def dvr_run(**params):
+\t'''Runs the entire DVR'''
+\tgrid = dvr_grid(**params)
+\tke = dvr_ke(grid, **params)
+\tpe = dvr_pe(grid, **params)
+\twfns = dvr_wfns(ke, pe, **params)
+\t
+\treturn wfns
+\t
+\t
+if __name__=='__main__':
+\t### parse sys.argv
+\t
+\tdvr_run(**ops)\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731355323602414*^9, 3.731355341467886*^9}, {
+  3.731355637458457*^9, 
+  3.7313557641899652`*^9}},ExpressionUUID->"3ec31f89-1214-44a1-b191-\
+71a641eac2af"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{Automatic, 160}, {27, Automatic}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"BTools"}, "MarkdownNotebook.nb", CharacterEncoding -> 
+       "UTF-8"]]]}, Visible -> False, FrontEndVersion -> 
+  "12.0 for Mac OS X x86 (64-bit) (April 8, 2019)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 299, 5, 51, "Section",ExpressionUUID->"c8e6f160-24d8-4f7b-af3b-3ad3f9af5f68"],
+Cell[882, 29, 813, 20, 35, "Text",ExpressionUUID->"a9801e6a-a67e-4a2b-ac18-34b3e840306d"],
+Cell[CellGroupData[{
+Cell[1720, 53, 180, 3, 40, "Subsubsection",ExpressionUUID->"4ba4a3ae-82e8-49d4-a01c-a1305d5c5cf9"],
+Cell[1903, 58, 657, 16, 35, "Text",ExpressionUUID->"7251f3ac-78e7-4fe2-a91f-13adec30623b"],
+Cell[2563, 76, 551, 14, 169, "ExternalLanguage",ExpressionUUID->"b698f42d-fa22-483d-9e53-a1617a43a3fd"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3151, 95, 190, 3, 40, "Subsubsection",ExpressionUUID->"c2268e8c-c092-4358-92ce-597d7be84afc"],
+Cell[3344, 100, 620, 10, 81, "Text",ExpressionUUID->"b5192bf6-e459-4590-9ac5-1d3853cf6da3"],
+Cell[3967, 112, 8524, 148, 91, "Text",ExpressionUUID->"84adfeb4-ed76-4e98-8b97-cbb6b39900a4"],
+Cell[12494, 262, 283, 4, 35, "Text",ExpressionUUID->"2e27e07c-4aeb-4f39-9e23-3ad01601ab65"],
+Cell[12780, 268, 805, 25, 339, "ExternalLanguage",ExpressionUUID->"34120e20-5b40-413c-9105-135b275476dc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13622, 298, 242, 4, 40, "Subsubsection",ExpressionUUID->"2624c33e-7518-444f-9fc2-12fba790443f"],
+Cell[13867, 304, 696, 13, 58, "Text",ExpressionUUID->"3f7372df-c254-4f0c-8bc8-570ff2499afd"],
+Cell[14566, 319, 456, 11, 118, "ExternalLanguage",ExpressionUUID->"ee22845a-3cf3-4a46-a8fe-977df718cbdb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15059, 335, 215, 4, 40, "Subsubsection",ExpressionUUID->"2cb876f5-2b0b-4de4-afc7-449af4c64cd5"],
+Cell[15277, 341, 389, 6, 35, "Text",ExpressionUUID->"5d66e3d3-44a7-40d4-a38b-4ddc7a9bd6d2"],
+Cell[15669, 349, 495, 12, 118, "ExternalLanguage",ExpressionUUID->"f406a2b7-bfe4-451f-aa69-8dbe3e59c2cf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16201, 366, 160, 3, 41, "Subsection",ExpressionUUID->"0545cc05-05c7-4294-9e87-db09d196ad48"],
+Cell[16364, 371, 1430, 60, 968, "ExternalLanguage",ExpressionUUID->"3ec31f89-1214-44a1-b191-71a641eac2af"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

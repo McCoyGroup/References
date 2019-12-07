@@ -2,12 +2,10 @@
 
 
 ### Properties and Methods
-<a id="RynDMC.DiscreteWeightingDMC.DiscreteWeightingDMC.branch">&nbsp;</a>
 ```python
 branch(self): 
 ```
 
-<a id="RynDMC.DiscreteWeightingDMC.DiscreteWeightingDMC.update_weights">&nbsp;</a>
 ```python
 update_weights(self, potentials, v_refs): 
 ```

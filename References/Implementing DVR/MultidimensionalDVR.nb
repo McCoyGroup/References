@@ -1,0 +1,477 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17573,        469]
+NotebookOptionsPosition[     14984,        419]
+NotebookOutlinePosition[     15619,        441]
+CellTagsIndexPosition[     15576,        438]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Multidimensional DVR", "Section",
+ CellChangeTimes->{{3.731345733329906*^9, 3.731345752040162*^9}, {
+   3.731352579893578*^9, 3.7313525869095173`*^9}, 3.731354329360456*^9, {
+   3.7313544442508297`*^9, 3.7313544500140867`*^9}, {3.7692798175039454`*^9, 
+   3.76927982099613*^9}, {3.769281437896096*^9, 
+   3.769281441406518*^9}},ExpressionUUID->"c8e6f160-24d8-4f7b-af3b-\
+3ad3f9af5f68"],
+
+Cell["\<\
+Assuming one has a separable kinetic energy, DVR in n dimensions is a simple \
+tensor extension of a 1D DVR. We\[CloseCurlyQuote]ll reuse the Colbert and \
+Miller kinetic energy and build the potential as usual.\
+\>", "Text",
+ CellChangeTimes->{{3.731345758729*^9, 3.731345827942313*^9}, {
+  3.731353759790614*^9, 3.731353766510145*^9}, {3.731354031183982*^9, 
+  3.731354031711597*^9}, {3.7313544515577297`*^9, 3.7313545033814993`*^9}, {
+  3.7692798273318443`*^9, 3.769279842711561*^9}, {3.7692798932353477`*^9, 
+  3.769279912263047*^9}, {3.769281442478565*^9, 3.769281496177915*^9}, {
+  3.769281707982602*^9, 
+  3.769281726462223*^9}},ExpressionUUID->"a9801e6a-a67e-4a2b-ac18-\
+34b3e840306d"],
+
+Cell[CellGroupData[{
+
+Cell["Grid", "Subsubsection",
+ CellChangeTimes->{{3.7313497357233257`*^9, 3.731349738737534*^9}, 
+   3.731354016271549*^9},ExpressionUUID->"4ba4a3ae-82e8-49d4-a01c-\
+a1305d5c5cf9"],
+
+Cell["\<\
+We\[CloseCurlyQuote]ll build this to take a set of 1D domains and turn them \
+into a full n-dimensional mesh\
+\>", "Text",
+ CellChangeTimes->{{3.731349765871863*^9, 3.731349767762609*^9}, {
+   3.731352565899757*^9, 3.731352675472513*^9}, {3.7313527082960243`*^9, 
+   3.731352752951701*^9}, 3.7313527901432753`*^9, {3.73135451611022*^9, 
+   3.731354581345088*^9}, {3.769279929492868*^9, 3.7692799479724913`*^9}, {
+   3.7692838606593513`*^9, 3.7692838946981087`*^9}, {3.769284005319694*^9, 
+   3.769284014361018*^9}},ExpressionUUID->"7251f3ac-78e7-4fe2-a91f-\
+13adec30623b"],
+
+Cell["\<\
+import numpy as np
+import scipy.sparse as sp
+
+def dvr_grid_1D(domain=(-5, 5), divs=10, **kw):
+    '''Calculates a 1D grid'''
+
+    return np.linspace(*domain, divs)\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731352680319867*^9, 3.731352705455814*^9}, {
+  3.731352755967477*^9, 3.731352785543311*^9}, {3.731354624368414*^9, 
+  3.731354631597948*^9}, {3.7313553099950027`*^9, 3.7313553196026897`*^9}, {
+  3.769279923100995*^9, 3.76927995778864*^9}, {3.76928014897887*^9, 
+  3.769280167840711*^9}, {3.769282481692749*^9, 3.769282482211793*^9}, {
+  3.7692826048166227`*^9, 3.7692826054407063`*^9}, {3.769283864074726*^9, 
+  3.769283943049473*^9}, {3.769284050701559*^9, 3.769284064477414*^9}, {
+  3.769284242046358*^9, 3.7692842457077417`*^9}, {3.7693182759544773`*^9, 
+  3.769318289072487*^9}},ExpressionUUID->"b698f42d-fa22-483d-9e53-\
+a1617a43a3fd"],
+
+Cell["\<\
+def dvr_grid(domain=((-5, -5), (-5, 5)), divs=(10, 10), **kw):
+\t'''Creates a ND grid from 1D ones'''
+\t
+\tmesh = np.array(np.meshgrid(*map(cm1D.grid, domain, divs), indexing='ij'))
+\tfor i in range(mesh.shape[0]):
+\t    mesh = mesh.swapaxes(i, i+1) # this is clumsy but the single \
+.transpose() call that should have worked wasn't working...
+\t
+\treturn mesh\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731352680319867*^9, 3.731352705455814*^9}, {
+  3.731352755967477*^9, 3.731352785543311*^9}, {3.731354624368414*^9, 
+  3.731354631597948*^9}, {3.7313553099950027`*^9, 3.7313553196026897`*^9}, {
+  3.769279923100995*^9, 3.76927995778864*^9}, {3.76928014897887*^9, 
+  3.769280167840711*^9}, {3.769282481692749*^9, 3.769282482211793*^9}, {
+  3.7692826048166227`*^9, 3.7692826054407063`*^9}, {3.769283864074726*^9, 
+  3.769283943049473*^9}, {3.769284050701559*^9, 3.769284064477414*^9}, {
+  3.769284242046358*^9, 3.7692842761504507`*^9}, {3.7693182264616337`*^9, 
+  3.769318260192555*^9}},ExpressionUUID->"5151c1ae-b9b9-440b-b719-\
+78b3f81d16c3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Kinetic Energy", "Subsubsection",
+ CellChangeTimes->{{3.731352852979175*^9, 3.731352858214497*^9}, 
+   3.7313540133514633`*^9},ExpressionUUID->"c2268e8c-c092-4358-92ce-\
+597d7be84afc"],
+
+Cell["\<\
+We\[CloseCurlyQuote]ll use sparse matrix methods and tensor products to build \
+our n-dimensional kinetic energy. First we have our 1D KE:\
+\>", "Text",
+ CellChangeTimes->{{3.731354715203457*^9, 3.731354751491016*^9}, {
+  3.731354845307128*^9, 3.731354846689646*^9}, {3.7313559117649384`*^9, 
+  3.7313559121138678`*^9}, {3.7692802118213997`*^9, 3.7692802849409437`*^9}, {
+  3.769283971136963*^9, 3.769284003871608*^9}, {3.7692842237236*^9, 
+  3.7692842281790657`*^9}},ExpressionUUID->"2e27e07c-4aeb-4f39-9e23-\
+3ad01601ab65"],
+
+Cell["\<\
+def dvr_ke_1D(grid, m=1, hb=1):
+\t'''Computes the kinetic energy for the grid'''
+\t
+\tdx=grid[1]-grid[0] # recomputed here simply to decouple the calling from \
+dvr_grid
+\tdivs=len(grid)
+\tke=np.empty((divs, divs))
+\t
+\tcoeff=(hb**2)/(2*m*(dx**2))
+\t# compute the band values for the first row
+\tb_val_0 = (math.pi**2)/3
+\tb_vals = np.arange(1, divs) # set up the index numbers
+\tb_vals = ((-1)**b_vals) * 2/(b_vals**2)
+\t
+\t
+\tfor i in range(divs):
+\t\tif i == 0:
+\t\t\tnp.fill_diagonal(ke, b_val_0)
+\t\telse:
+\t\t\tnp.fill_diagonal(ke[i:], b_vals[i])
+
+\treturn ke\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731353375531666*^9, 3.731353466438747*^9}, 
+   3.7313548521454268`*^9, {3.731354901450779*^9, 3.731354951047799*^9}, {
+   3.731355078960391*^9, 3.731355082800501*^9}, {3.731355243043592*^9, 
+   3.731355261548087*^9}, {3.7692797812229137`*^9, 3.76927978586343*^9}, 
+   3.769279976299994*^9, {3.76928028774861*^9, 3.769280311412945*^9}, {
+   3.769280568644504*^9, 3.769280701477042*^9}, {3.7692808245262012`*^9, 
+   3.76928088305381*^9}, {3.7692810139322367`*^9, 3.769281067943596*^9}, {
+   3.769281165993936*^9, 3.7692812649237833`*^9}, {3.769284067685268*^9, 
+   3.769284218646881*^9}},ExpressionUUID->"34120e20-5b40-413c-9105-\
+135b275476dc"],
+
+Cell["\<\
+Then we build the n-dimensional extension off of the 1D ones:\
+\>", "Text",
+ CellChangeTimes->{{3.769284230346663*^9, 3.7692842375706367`*^9}, {
+  3.769318326465276*^9, 
+  3.769318330055735*^9}},ExpressionUUID->"c6d6f89a-e69a-44ce-9266-\
+38d332bc07b9"],
+
+Cell["\<\
+def dvr_ke(grid, m=1, hb=1):
+\t'''Computes n-dimensional kinetic energy for the grid'''
+\tfrom functools import reduce
+\t
+\tndims = grid.shape[-1]
+\ttry:
+\t    iter(m); ms = m
+\texcept TypeError:
+\t    ms = [m]*ndims
+\t
+\ttry:
+\t    iter(hb); hbs = hb
+\texcept TypeError:
+\t    hbs = [hb]*ndims
+\t
+\tndim = grid.shape[-1]
+\tgrids = [ grid[(0, )*i + (...,) + (0, ) * (ndim-i-1) +(i,)] for i in \
+range(ndim) ]
+\tkes = [ dvr_ke_1D(g, m=m, hb=hb) for g, m, hb in zip(grids, ms, hbs) ]
+\t
+\tkes = map(sp.csr_matrix, kes)
+\t
+\tdef _kron_sum(a, b):
+\t    '''Computes a Kronecker sum to build our Kronecker-Delta tensor product \
+expression'''
+\t    n_1 = a.shape[0]
+\t    n_2 = b.shape[0]
+\t    ident_1 = sp.identity(n_1)
+\t    ident_2 = sp.identity(n_2)
+\t
+\t    return sp.kron(a, ident_2) + sp.kron(ident_1, b)
+\t
+\tke = reduce(_kron_sum, kes)
+\treturn ke\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731353375531666*^9, 3.731353466438747*^9}, 
+   3.7313548521454268`*^9, {3.731354901450779*^9, 3.731354951047799*^9}, {
+   3.731355078960391*^9, 3.731355082800501*^9}, {3.731355243043592*^9, 
+   3.731355261548087*^9}, {3.7692797812229137`*^9, 3.76927978586343*^9}, 
+   3.769279976299994*^9, {3.76928028774861*^9, 3.769280311412945*^9}, {
+   3.769280568644504*^9, 3.769280701477042*^9}, {3.7692808245262012`*^9, 
+   3.76928088305381*^9}, {3.7692810139322367`*^9, 3.769281067943596*^9}, {
+   3.769281165993936*^9, 3.7692812649237833`*^9}, {3.769284067685268*^9, 
+   3.7692842201229258`*^9}, {3.7693183162792873`*^9, 3.769318323975677*^9}, {
+   3.769318458007339*^9, 
+   3.7693184624224997`*^9}},ExpressionUUID->"6459e24b-ecfe-4985-a28b-\
+c48854cb2599"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Potential Energy", "Subsubsection",
+ CellChangeTimes->{{3.731352852979175*^9, 3.731352858214497*^9}, {
+   3.731353472048312*^9, 3.731353473046492*^9}, 
+   3.7313540119033537`*^9},ExpressionUUID->"2624c33e-7518-444f-9fc2-\
+12fba790443f"],
+
+Cell[TextData[{
+ "Here, we\[CloseCurlyQuote]ll again assume ",
+ Cell[BoxData[
+ "pot"], "InlineInput",ExpressionUUID->"e8df4e78-5ff2-44ba-b432-e65a832b8f0e"],
+ " has been written in order to take advantage of NumPy\[CloseCurlyQuote]s \
+vectorized operations, so we simply need to feed in our set of grid points:"
+}], "Text",
+ CellChangeTimes->{{3.7313529797091084`*^9, 3.731352986427567*^9}, {
+  3.7313531232423687`*^9, 3.731353212170897*^9}, {3.731353320239497*^9, 
+  3.7313533712761993`*^9}, {3.7313534746862793`*^9, 3.731353533564281*^9}, {
+  3.731354136486648*^9, 3.731354143566834*^9}, {3.731354994713743*^9, 
+  3.731355005672061*^9}, {3.7313550628242683`*^9, 3.7313551074479313`*^9}, {
+  3.769281289862143*^9, 3.769281324933361*^9}, {3.769318336533093*^9, 
+  3.769318354983121*^9}},ExpressionUUID->"3f7372df-c254-4f0c-8bc8-\
+570ff2499afd"],
+
+Cell["\<\
+def dvr_pe(grid, pot=None):
+\t'''Computes the potential energy from the gridpoints'''
+\t
+\tfrom functools import reduce
+    from operator import mul
+
+    npts = reduce(mul, grid.shape[:-1], 1)
+    gps = np.reshape(grid, (npts, grid.shape[-1]))
+    pots = potential_function(gps)
+    return sp.diags( [ pots ], [0])\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731353375531666*^9, 3.731353466438747*^9}, {
+   3.731353536580615*^9, 3.731353576588108*^9}, 3.731353747782297*^9, {
+   3.731355113575285*^9, 3.731355168614809*^9}, 3.73135524007584*^9, 
+   3.7692812812236137`*^9, {3.769281331910977*^9, 3.769281335380641*^9}, {
+   3.7693183672198772`*^9, 3.769318385718567*^9}, {3.7693185235491133`*^9, 
+   3.769318523884622*^9}},ExpressionUUID->"ee22845a-3cf3-4a46-a8fe-\
+977df718cbdb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Wavefunctions", "Subsubsection",
+ CellChangeTimes->{{3.731353591507862*^9, 3.7313535978036423`*^9}, {
+  3.731354003911869*^9, 
+  3.731354045791576*^9}},ExpressionUUID->"2cb876f5-2b0b-4de4-afc7-\
+449af4c64cd5"],
+
+Cell["This now needs to use sparse matrix methods for efficiency:", "Text",
+ CellChangeTimes->{{3.731353600664434*^9, 3.731353608579874*^9}, {
+  3.731353734760166*^9, 3.731353745382123*^9}, {3.731354000769761*^9, 
+  3.731354130462872*^9}, {3.731354211344261*^9, 3.731354217215824*^9}, {
+  3.7313552278087883`*^9, 3.731355237603862*^9}, {3.769281355142313*^9, 
+  3.769281363820512*^9}, {3.769318396720052*^9, 
+  3.769318412406489*^9}},ExpressionUUID->"5d66e3d3-44a7-40d4-a38b-\
+4ddc7a9bd6d2"],
+
+Cell["\<\
+def dvr_wfns(ke, pe, num_wfns=10):
+\t\"\"\"Computes the wavefunctions using sparse methods\"\"\"
+\timport scipy.sparse.linalg as la
+\treturn la.eigsh(hamiltonian, num_wfns, which = 'SM')\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731353375531666*^9, 3.731353466438747*^9}, {
+   3.731353536580615*^9, 3.731353576588108*^9}, 3.731353747782297*^9, {
+   3.731354145214531*^9, 3.731354203688178*^9}, {3.7313552817443733`*^9, 
+   3.731355293683392*^9}, {3.7313553482283583`*^9, 3.731355349666481*^9}, 
+   3.769281341061741*^9, {3.7693184084517508`*^9, 
+   3.769318426774782*^9}},ExpressionUUID->"f406a2b7-bfe4-451f-aa69-\
+8dbe3e59c2cf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["All Together", "Subsection",
+ CellChangeTimes->{{3.731355301268259*^9, 
+  3.731355306578877*^9}},ExpressionUUID->"0545cc05-05c7-4294-9e87-\
+db09d196ad48"],
+
+Cell["\<\
+'''Colbert and Miller DVR in multiple dimensions'''
+import numpy as np
+import scipy.sparse as sp
+
+def dvr_grid_1D(domain=(-5, 5), divs=10, **kw):
+    '''Calculates a 1D grid'''
+
+    return np.linspace(*domain, divs)
+
+def dvr_grid(domain=((-5, -5), (-5, 5)), divs=(10, 10), **kw):
+\t'''Creates a ND grid from 1D ones'''
+\t
+\tmesh = np.array(np.meshgrid(*map(cm1D.grid, domain, divs), indexing='ij'))
+\tfor i in range(mesh.shape[0]):
+\t    mesh = mesh.swapaxes(i, i+1) # this is clumsy but the single \
+.transpose() call that should have worked wasn't working...
+\t
+\treturn mesh
+
+def dvr_ke_1D(grid, m=1, hb=1):
+\t'''Computes the kinetic energy for the grid'''
+\t
+\tdx=grid[1]-grid[0] # recomputed here simply to decouple the calling from \
+dvr_grid
+\tdivs=len(grid)
+\tke=np.empty((divs, divs))
+\t
+\tcoeff=(hb**2)/(2*m*(dx**2))
+\t# compute the band values for the first row
+\tb_val_0 = (math.pi**2)/3
+\tb_vals = np.arange(1, divs) # set up the index numbers
+\tb_vals = ((-1)**b_vals) * 2/(b_vals**2)
+\t
+\t
+\tfor i in range(divs):
+\t\tif i == 0:
+\t\t\tnp.fill_diagonal(ke, b_val_0)
+\t\telse:
+\t\t\tnp.fill_diagonal(ke[i:], b_vals[i])
+
+\treturn ke
+\t
+def dvr_ke(grid, m=1, hb=1):
+\t'''Computes n-dimensional kinetic energy for the grid'''
+\tfrom functools import reduce
+\t
+\tndims = grid.shape[-1]
+\ttry:
+\t    iter(m); ms = m
+\texcept TypeError:
+\t    ms = [m]*ndims
+\t
+\ttry:
+\t    iter(hb); hbs = hb
+\texcept TypeError:
+\t    hbs = [hb]*ndims
+\t
+\tndim = grid.shape[-1]
+\tgrids = [ grid[(0, )*i + (...,) + (0, ) * (ndim-i-1) +(i,)] for i in \
+range(ndim) ]
+\tkes = [ dvr_ke_1D(g, m=m, hb=hb) for g, m, hb in zip(grids, ms, hbs) ]
+\t
+\tkes = map(sp.csr_matrix, kes)
+\t
+\tdef _kron_sum(a, b):
+\t    '''Computes a Kronecker sum to build our Kronecker-Delta tensor product \
+expression'''
+\t    n_1 = a.shape[0]
+\t    n_2 = b.shape[0]
+\t    ident_1 = sp.identity(n_1)
+\t    ident_2 = sp.identity(n_2)
+\t
+\t    return sp.kron(a, ident_2) + sp.kron(ident_1, b)
+\t
+\tke = reduce(_kron_sum, kes)
+\treturn ke
+
+
+def dvr_pe(grid, pot=None):
+\t'''Computes the potential energy from the gridpoints'''
+\t
+\tfrom functools import reduce
+    from operator import mul
+
+    npts = reduce(mul, grid.shape[:-1], 1)
+    gps = np.reshape(grid, (npts, grid.shape[-1]))
+    pots = potential_function(gps)
+    return sp.diags( [ pots ], [0])
+\t
+def dvr_wfns(ke, pe, num_wfns=10):
+\t\"\"\"Computes the wavefunctions using sparse methods\"\"\"
+\timport scipy.sparse.linalg as la
+\treturn la.eigsh(hamiltonian, num_wfns, which = 'SM')
+\t
+def dvr_run(**params):
+\t'''Runs the entire DVR'''
+\tgrid = dvr_grid(**params)
+\tke = dvr_ke(grid, **params)
+\tpe = dvr_pe(grid, **params)
+\twfns = dvr_wfns(ke, pe, **params)
+\t
+\treturn wfns
+\t
+\t
+if __name__=='__main__':
+\t### parse sys.argv
+\t
+\tdvr_run(**ops)\
+\>", "ExternalLanguage",
+ CellChangeTimes->{{3.731355323602414*^9, 3.731355341467886*^9}, {
+  3.731355637458457*^9, 3.7313557641899652`*^9}, {3.7692813670790043`*^9, 
+  3.769281398811678*^9}, {3.769318434643009*^9, 
+  3.769318536452054*^9}},ExpressionUUID->"3ec31f89-1214-44a1-b191-\
+71a641eac2af"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{-1555, Automatic}, {Automatic, -11}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"BTools"}, "MarkdownNotebook.nb", CharacterEncoding -> 
+       "UTF-8"]]]}, Visible -> False, FrontEndVersion -> 
+  "12.0 for Mac OS X x86 (64-bit) (April 8, 2019)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 391, 6, 51, "Section",ExpressionUUID->"c8e6f160-24d8-4f7b-af3b-3ad3f9af5f68"],
+Cell[974, 30, 703, 12, 58, "Text",ExpressionUUID->"a9801e6a-a67e-4a2b-ac18-34b3e840306d"],
+Cell[CellGroupData[{
+Cell[1702, 46, 180, 3, 40, "Subsubsection",ExpressionUUID->"4ba4a3ae-82e8-49d4-a01c-a1305d5c5cf9"],
+Cell[1885, 51, 582, 10, 35, "Text",ExpressionUUID->"7251f3ac-78e7-4fe2-a91f-13adec30623b"],
+Cell[2470, 63, 862, 18, 152, "ExternalLanguage",ExpressionUUID->"b698f42d-fa22-483d-9e53-a1617a43a3fd"],
+Cell[3335, 83, 1059, 20, 186, "ExternalLanguage",ExpressionUUID->"5151c1ae-b9b9-440b-b719-78b3f81d16c3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4431, 108, 190, 3, 40, "Subsubsection",ExpressionUUID->"c2268e8c-c092-4358-92ce-597d7be84afc"],
+Cell[4624, 113, 535, 9, 58, "Text",ExpressionUUID->"2e27e07c-4aeb-4f39-9e23-3ad01601ab65"],
+Cell[5162, 124, 1267, 33, 390, "ExternalLanguage",ExpressionUUID->"34120e20-5b40-413c-9105-135b275476dc"],
+Cell[6432, 159, 262, 6, 35, "Text",ExpressionUUID->"c6d6f89a-e69a-44ce-9266-38d332bc07b9"],
+Cell[6697, 167, 1659, 47, 594, "ExternalLanguage",ExpressionUUID->"6459e24b-ecfe-4985-a28b-c48854cb2599"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8393, 219, 242, 4, 40, "Subsubsection",ExpressionUUID->"2624c33e-7518-444f-9fc2-12fba790443f"],
+Cell[8638, 225, 844, 14, 58, "Text",ExpressionUUID->"3f7372df-c254-4f0c-8bc8-570ff2499afd"],
+Cell[9485, 241, 794, 18, 203, "ExternalLanguage",ExpressionUUID->"ee22845a-3cf3-4a46-a8fe-977df718cbdb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10316, 264, 215, 4, 40, "Subsubsection",ExpressionUUID->"2cb876f5-2b0b-4de4-afc7-449af4c64cd5"],
+Cell[10534, 270, 491, 7, 35, "Text",ExpressionUUID->"5d66e3d3-44a7-40d4-a38b-4ddc7a9bd6d2"],
+Cell[11028, 279, 645, 12, 101, "ExternalLanguage",ExpressionUUID->"f406a2b7-bfe4-451f-aa69-8dbe3e59c2cf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11710, 296, 160, 3, 41, "Subsection",ExpressionUUID->"0545cc05-05c7-4294-9e87-db09d196ad48"],
+Cell[11873, 301, 3083, 114, 1835, "ExternalLanguage",ExpressionUUID->"3ec31f89-1214-44a1-b191-71a641eac2af"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
