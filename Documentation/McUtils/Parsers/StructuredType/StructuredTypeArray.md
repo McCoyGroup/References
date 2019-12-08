@@ -22,6 +22,7 @@ array: property
 has_indeterminate_shape: property
 filled_to: property
 ```
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__init__">&nbsp;</a>
 ```python
 __init__(self, stype, num_elements=50): 
 ```
@@ -31,6 +32,7 @@ __init__(self, stype, num_elements=50):
 - `num_elements`: `int`
     >number of default elements in dynamically sized arrays
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.axis_shape_indeterminate">&nbsp;</a>
 ```python
 axis_shape_indeterminate(self, axis): 
 ```
@@ -40,18 +42,22 @@ Tries to determine if an axis has had any data placed into it or otherwise been 
 - `:returns`: `_`
     >No description...
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.set_filling">&nbsp;</a>
 ```python
 set_filling(self, amt, axis=0): 
 ```
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.increment_filling">&nbsp;</a>
 ```python
 increment_filling(self, inc=1, axis=0): 
 ```
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__len__">&nbsp;</a>
 ```python
 __len__(self): 
 ```
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.empty_array">&nbsp;</a>
 ```python
 empty_array(self, shape=None, num_elements=None): 
 ```
@@ -66,14 +72,17 @@ Creates empty arrays with (potentially) default elements
 - `:returns`: `_`
     >No description...
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.extend_array">&nbsp;</a>
 ```python
 extend_array(self, axis=None): 
 ```
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__setitem__">&nbsp;</a>
 ```python
 __setitem__(self, key, value): 
 ```
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.set_part">&nbsp;</a>
 ```python
 set_part(self, key, value): 
 ```
@@ -85,10 +94,12 @@ Recursively sets parts of an array if not simple, otherwise just delegates to Nu
 - `:returns`: `_`
     >No description...
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__getitem__">&nbsp;</a>
 ```python
 __getitem__(self, item): 
 ```
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.get_part">&nbsp;</a>
 ```python
 get_part(self, item, use_full_array=True): 
 ```
@@ -99,6 +110,7 @@ If simple, delegates to NumPy, otherwise tries to recursively get parts...?
 - `:returns`: `_`
     >No description...
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.add_axis">&nbsp;</a>
 ```python
 add_axis(self, which=0, num_elements=None, change_shape=True): 
 ```
@@ -111,6 +123,7 @@ Adds an axis to the array, generally used for expanding from singular or 1D data
 - `:returns`: `_`
     >No description...
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.can_cast">&nbsp;</a>
 ```python
 can_cast(self, val): 
 ```
@@ -120,6 +133,7 @@ Determines whether val can probably be cast to the right return type and shape w
 - `:returns`: `_`
     >No description...
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.append">&nbsp;</a>
 ```python
 append(self, val, axis=0): 
 ```
@@ -129,6 +143,7 @@ Puts val in the first empty slot in the array
 - `:returns`: `_`
     >No description...
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.extend">&nbsp;</a>
 ```python
 extend(self, val, single=True, prepend=False, axis=None): 
 ```
@@ -140,6 +155,7 @@ Adds the sequence val to the array
 - `:returns`: `_`
     >No description...
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.fill">&nbsp;</a>
 ```python
 fill(self, array): 
 ```
@@ -149,6 +165,7 @@ Sets the result array to be the passed array
 - `:returns`: `_`
     >No description...
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.cast_to_array">&nbsp;</a>
 ```python
 cast_to_array(self, txt): 
 ```
@@ -159,6 +176,7 @@ Casts a string of things with a given data type to an array of that type and doe
 - `:returns`: `_`
     >No description...
 
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__repr__">&nbsp;</a>
 ```python
 __repr__(self): 
 ```

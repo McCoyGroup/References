@@ -8,18 +8,22 @@ Job: type
 Config: type
 System: type
 ```
+<a id="McUtils.GaussianInterface.GaussianJob.GaussianJob.__init__">&nbsp;</a>
 ```python
 __init__(self, name, *args, description=None, system=None, job=None, config=None, template='Template.gjf', file=None): 
 ```
 
+<a id="McUtils.GaussianInterface.GaussianJob.GaussianJob.format">&nbsp;</a>
 ```python
 format(self): 
 ```
 
+<a id="McUtils.GaussianInterface.GaussianJob.GaussianJob.write">&nbsp;</a>
 ```python
 write(self, file=None): 
 ```
 
+<a id="McUtils.GaussianInterface.GaussianJob.GaussianJob.start">&nbsp;</a>
 ```python
 start(self, *cmd, binary='g09', **kwargs): 
 ```
@@ -33,10 +37,12 @@ Starts a Gaussian job
 - `:returns`: `_`
     >started process
 
+<a id="McUtils.GaussianInterface.GaussianJob.GaussianJob.run">&nbsp;</a>
 ```python
 run(self, *args, **kwargs): 
 ```
 
+<a id="McUtils.GaussianInterface.GaussianJob.GaussianJob.__str__">&nbsp;</a>
 ```python
 __str__(self): 
 ```

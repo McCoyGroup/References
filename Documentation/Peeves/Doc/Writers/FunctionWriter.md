@@ -5,6 +5,7 @@
 ```python
 template: str
 ```
+<a id="Peeves.Doc.Writers.FunctionWriter.template_params">&nbsp;</a>
 ```python
 template_params(self): 
 ```

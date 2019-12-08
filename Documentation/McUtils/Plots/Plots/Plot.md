@@ -3,6 +3,7 @@ The base plotting class to interface into matplotlib or (someday) VTK or another
     Builds off of the Graphics system to make a unified and convenient interface to generating plots
 
 ### Properties and Methods
+<a id="McUtils.Plots.Plots.Plot.__init__">&nbsp;</a>
 ```python
 __init__(self, *params, method='plot', figure=None, axes=None, subplot_kw=None, plot_style=None, **opts): 
 ```
@@ -24,10 +25,12 @@ __init__(self, *params, method='plot', figure=None, axes=None, subplot_kw=None, 
 - `opts`: `Any`
     >options to be fed in when initializing the Graphics
 
+<a id="McUtils.Plots.Plots.Plot.plot">&nbsp;</a>
 ```python
 plot(self, *params, **plot_style): 
 ```
 
+<a id="McUtils.Plots.Plots.Plot.add_colorbar">&nbsp;</a>
 ```python
 add_colorbar(self, graphics=None, norm=None, **kw): 
 ```

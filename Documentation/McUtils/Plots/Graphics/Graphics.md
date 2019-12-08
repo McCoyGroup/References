@@ -14,14 +14,17 @@ background: property
 colorbar: property
 scale: property
 ```
+<a id="McUtils.Plots.Graphics.Graphics.__init__">&nbsp;</a>
 ```python
 __init__(self, *args, figure=None, axes=None, subplot_kw=None, event_handlers=None, animate=None, axes_labels=None, plot_label=None, plot_range=None, plot_legend=None, ticks=None, scale=None, image_size=None, background='white', colorbar=None, **kwargs): 
 ```
 
+<a id="McUtils.Plots.Graphics.Graphics.set_options">&nbsp;</a>
 ```python
 set_options(self, axes_labels=None, plot_label=None, plot_range=None, plot_legend=None, ticks=None, scale=None, ticks_style=None, image_size=None, background=None, colorbar=None, **parent_opts): 
 ```
 
+<a id="McUtils.Plots.Graphics.Graphics.add_colorbar">&nbsp;</a>
 ```python
 add_colorbar(self, graphics=None, norm=None, cmap=None, **kw): 
 ```
