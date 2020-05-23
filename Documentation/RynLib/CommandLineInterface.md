@@ -111,3 +111,58 @@ pot:
       Tests a generic potential under MPI. Args: NAME
 ```
 
+## Environment Variables & Bash Flags
+
+All of that is just for the actual containerized application itself. 
+The `rynlib` command also provides convenience syntax/flags/variables for running things, to make it easier to remember how stuff works.
+
+### Environment Variables
+
+All environment variables are prefaced with `RYNLIB`.
+The current list of them is
+
+```ignorelang
+RYNLIB_CONFIG_PATH=<PATH/IN/CONTAINER>
+  the path to use for finding/storing simulations, potentials, etc. (default: $PWD/config)
+RYNLIB_ENTOS_PATH=<PATH/ON/HOST>
+  the path to the Entos folder to use when using Entos as a potential (default: None)
+RYNLIB_IMAGE=<IMAGE_OR_SIF>
+  the image to use when running rynlib (default: rynimg or rynimg.sif)
+RYNLIB_CONTAINER_RUNNER=<EXEC>
+  the executable to use for running containers (default: platform dependent, locally docker)
+```
+
+There are a few flags that _can_ be changed, but aren't really intended to be changed
+
+```ignorelang
+RYNLIB_IMAGE_NAME="rynimg"
+  the base name of the image we're working with
+RYNLIB_DOCKER_IMAGE="mccoygroup/rynlib:$RYNLIB_IMAGE_NAME"
+  the DockerHub location for the image
+RYNLIB_SINGULARITY_EXTENSION="-centos"
+  the extension to the image name used when running with Singularity (well really just on a CentOS based HPC)
+RYNLIB_SHIFTER_IMAGE="registry.services.nersc.gov/b3m2a1/$RYNLIB_IMAGE_NAME"
+  the image hosted on the NeRSC image registry -- not really used anymore, but easy to update so left as is
+```
+
+### Bash Flags
+
+All bash flags start with a single `-` and come before any `--` options or container commands. 
+The current list of those is
+
+```ignorelang
+-n <NUMBER>
+  run using the `mpirun` command inside the container spawing NUMBER jobs
+-L <PATH>
+  run using the specified path to the RynLib source code -- allows for quick tests and changes, since small source changes don't require a full rebuild
+-e
+  echo the command that would be run -- necessary in some cases where external `mpirun` refuses to run the `rynlib` bash function
+-V [EXTERNAL_PATH]:[CONTAINER_PATH],[EXTERNAL_PATH]:[CONTAINER_PATH]...
+  bind the specified directories into the container -- useful for getting data in/out
+-W <PATH>
+  run using PATH as the initial working directory
+-E <EXEC>
+  run using EXEC as the container entrypoint, rather than CLI.py -- useful for starting /bin/bash
+-M <FILE>
+  run using a memory profiler and write the results to FILE -- useful for finding memory leaks on the C++ side
+```
