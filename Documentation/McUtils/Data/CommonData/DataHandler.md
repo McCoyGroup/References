@@ -5,10 +5,11 @@ Defines a general data loader class that we can use for AtomData and any other d
 ```python
 data_file: property
 data: property
+source: property
 ```
 <a id="McUtils.Data.CommonData.DataHandler.__init__">&nbsp;</a>
 ```python
-__init__(self, data_name, data_key=None, data_dir=None, data_pkg=None, alternate_keys=None, getter=None): 
+__init__(self, data_name, data_key=None, source_key=None, data_dir=None, data_pkg=None, alternate_keys=None, getter=None): 
 ```
 
 <a id="McUtils.Data.CommonData.DataHandler.load">&nbsp;</a>

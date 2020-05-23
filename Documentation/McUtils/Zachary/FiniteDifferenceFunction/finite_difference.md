@@ -1,22 +1,22 @@
 <a id="McUtils.Zachary.FiniteDifferenceFunction.finite_difference">&nbsp;</a>
 ```python
-finite_difference(grid, values, order, accuracy=4, stencil=None, end_point_precision=4, axis=None, gridtype='regular', **kw): 
+finite_difference(grid, values, order, accuracy=2, stencil=None, end_point_accuracy=1, axes=None, dtype='float64', **kw): 
 ```
 Computes a finite difference derivative for the values on the grid
 - `grid`: `np.ndarray`
     >the grid of points for which the vlaues lie on
 - `values`: `np.ndarray`
     >the values on the grid
-- `order`: `int | list[int]`
+- `order`: `int | Iterable[int]`
     >order of the derivative to compute
-- `stencil`: `int | list[int]`
+- `stencil`: `int | Iterable[int]`
     >number of points to use in the stencil
-- `accuracy`: `Any`
-    >No description...
-- `end_point_precision`: `Any`
-    >No description...
-- `gridtype`: `str`
-    >'regular' or 'irregular' specifying grid type
+- `accuracy`: `int | Iterable[int]`
+    >approximate accuracy of the derivative to request (overridden by `stencil`)
+- `end_point_accuracy`: `int | Iterable[int]`
+    >extra stencil points to use on the edges
+- `axes`: `int | Iterable[int]`
+    >which axes to perform the successive derivatives over (defaults to the first _n_ axes)
 - `:returns`: `_`
     >No description...
 

@@ -4,6 +4,8 @@ A general writer class that writes a file based off a template and filling in ob
 ### Properties and Methods
 ```python
 template: str
+template_root: str
+example_root: str
 outStream: type
 out: property
 load_template: method
@@ -13,7 +15,7 @@ param_template: str
 ```
 <a id="Peeves.Doc.Writers.DocWriter.__init__">&nbsp;</a>
 ```python
-__init__(self, obj, out_file, root=None): 
+__init__(self, obj, out_file, template=None, root=None): 
 ```
 
 - `obj`: `Any`

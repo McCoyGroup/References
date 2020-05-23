@@ -5,11 +5,17 @@ A semi-symbolic representation of a tensor. Allows for lazy processing of tensor
 ```python
 from_array: method
 array: property
+shape: property
 dim: property
 ```
 <a id="McUtils.Zachary.LazyTensors.Tensor.__init__">&nbsp;</a>
 ```python
 __init__(self, a, shape=None): 
+```
+
+<a id="McUtils.Zachary.LazyTensors.Tensor.get_shape">&nbsp;</a>
+```python
+get_shape(self, a): 
 ```
 
 <a id="McUtils.Zachary.LazyTensors.Tensor.get_dim">&nbsp;</a>
@@ -30,6 +36,11 @@ mul(self, other, **kw):
 <a id="McUtils.Zachary.LazyTensors.Tensor.dot">&nbsp;</a>
 ```python
 dot(self, other, **kw): 
+```
+
+<a id="McUtils.Zachary.LazyTensors.Tensor.transpose">&nbsp;</a>
+```python
+transpose(self, axes, **kw): 
 ```
 
 <a id="McUtils.Zachary.LazyTensors.Tensor.pow">&nbsp;</a>
@@ -66,6 +77,11 @@ handle_missing_indices(self, missing, extant):
 ```python
 pull_index(self, *idx): 
 ```
+Defines custom logic for handling how we pull indices
+- `idx`: `Any`
+    >No description...
+- `:returns`: `_`
+    >No description...
 
 <a id="McUtils.Zachary.LazyTensors.Tensor.__getitem__">&nbsp;</a>
 ```python

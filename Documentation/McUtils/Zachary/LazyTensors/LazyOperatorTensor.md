@@ -7,7 +7,7 @@ array: property
 ```
 <a id="McUtils.Zachary.LazyTensors.LazyOperatorTensor.__init__">&nbsp;</a>
 ```python
-__init__(self, operator, shape, memoization=True): 
+__init__(self, operator, shape, memoization=True, dtype=<class 'object'>, fill=None): 
 ```
 
 <a id="McUtils.Zachary.LazyTensors.LazyOperatorTensor.__getitem__">&nbsp;</a>

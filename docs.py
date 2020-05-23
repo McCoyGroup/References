@@ -5,9 +5,7 @@ __pkgs__ = [
     "McUtils",
     "Psience",
     "Peeves",
-    "PyDVR",
-    "PyVPT",
-    "RynDMC"
+    "RynLib"
 ]
 
 target = os.path.join(os.path.dirname(__file__), "Documentation")

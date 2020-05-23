@@ -9,19 +9,21 @@ axes_labels: property
 plot_range: property
 ticks: property
 ticks_style: property
+aspect_ratio: property
 image_size: property
 background: property
+frame: property
 colorbar: property
 scale: property
 ```
 <a id="McUtils.Plots.Graphics.Graphics.__init__">&nbsp;</a>
 ```python
-__init__(self, *args, figure=None, axes=None, subplot_kw=None, event_handlers=None, animate=None, axes_labels=None, plot_label=None, plot_range=None, plot_legend=None, ticks=None, scale=None, image_size=None, background='white', colorbar=None, **kwargs): 
+__init__(self, *args, figure=None, axes=None, frame=((True, False), (True, False)), subplot_kw=None, event_handlers=None, animate=None, axes_labels=None, plot_label=None, plot_range=None, plot_legend=None, ticks=None, scale=None, image_size=None, background='white', aspect_ratio=1, colorbar=None, **kwargs): 
 ```
 
 <a id="McUtils.Plots.Graphics.Graphics.set_options">&nbsp;</a>
 ```python
-set_options(self, axes_labels=None, plot_label=None, plot_range=None, plot_legend=None, ticks=None, scale=None, ticks_style=None, image_size=None, background=None, colorbar=None, **parent_opts): 
+set_options(self, axes_labels=None, plot_label=None, plot_range=None, plot_legend=None, frame=None, ticks=None, scale=None, ticks_style=None, image_size=None, aspect_ratio=None, background=None, colorbar=None, prolog=None, epilog=None, **parent_opts): 
 ```
 
 <a id="McUtils.Plots.Graphics.Graphics.add_colorbar">&nbsp;</a>

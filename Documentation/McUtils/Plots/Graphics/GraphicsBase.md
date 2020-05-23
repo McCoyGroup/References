@@ -7,6 +7,8 @@ The base class for all things Graphics
 opt_keys: set
 event_handlers: property
 animated: property
+prolog: property
+epilog: property
 modified: type
 opts: property
 ```
@@ -40,7 +42,7 @@ create_animation(self, *args, **opts):
 
 <a id="McUtils.Plots.Graphics.GraphicsBase.set_options">&nbsp;</a>
 ```python
-set_options(self, event_handlers=None, animated=None, **opts): 
+set_options(self, event_handlers=None, animated=None, prolog=None, epilog=None, **opts): 
 ```
 Sets options for the plot
 - `event_handlers`: `Any`

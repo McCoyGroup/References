@@ -3,6 +3,7 @@ A convenience class that makes it easy to pull blocks out of strings and whatnot
 
 ### Properties and Methods
 ```python
+MatchIterator: type
 get_regex_block_handlers: method
 get_regex_dtypes: method
 handler_method: method

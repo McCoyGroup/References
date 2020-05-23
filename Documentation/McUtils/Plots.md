@@ -8,6 +8,7 @@ A plotting framework that builds off of matplotlib, but potentially could use a 
   - [Graphics](Plots/Graphics/Graphics.md)
   - [Graphics3D](Plots/Graphics/Graphics3D.md)
   - [GraphicsGrid](Plots/Graphics/GraphicsGrid.md)
+  - [modified](Plots/Graphics/GraphicsBase/modified.md)
   - [Plot](Plots/Plots/Plot.md)
   - [ScatterPlot](Plots/Plots/ScatterPlot.md)
   - [ErrorBarPlot](Plots/Plots/ErrorBarPlot.md)

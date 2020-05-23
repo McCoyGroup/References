@@ -14,6 +14,7 @@ Peeves is a minor extension to the unittest framework that makes my life better
   - [load_tests](Peeves/TestUtils/ManagedTestLoader/load_tests.md)
   - [validationTest](Peeves/TestUtils/validationTest.md)
   - [debugTest](Peeves/TestUtils/debugTest.md)
+  - [dataGenTest](Peeves/TestUtils/dataGenTest.md)
   - [timeitTest](Peeves/TestUtils/timeitTest.md)
   - [timingTest](Peeves/TestUtils/timingTest.md)
   - [inactiveTest](Peeves/TestUtils/inactiveTest.md)
