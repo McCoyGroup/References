@@ -11,7 +11,7 @@ mpi_manager: property
 ```
 <a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.__init__">&nbsp;</a>
 ```python
-__init__(self, potential, *ignore, bad_walker_file='bad_walkers.txt', mpi_manager=None, raw_array_potential=None, vectorized_potential=False, error_value=10000000000.0, fortran_potential=False): 
+__init__(self, potential, *ignore, bad_walker_file='bad_walkers.txt', mpi_manager=None, raw_array_potential=None, vectorized_potential=False, error_value=10000000000.0, fortran_potential=False, transpose_call=None): 
 ```
 
 <a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.call_single">&nbsp;</a>

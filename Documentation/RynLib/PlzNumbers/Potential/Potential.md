@@ -11,7 +11,7 @@ mpi_manager: property
 ```
 <a id="RynLib.PlzNumbers.Potential.Potential.__init__">&nbsp;</a>
 ```python
-__init__(self, name=None, potential_source=None, wrap_potential=None, function_name=None, raw_array_potential=None, arguments=(), potential_directory=None, static_source=False, extra_functions=(), src_ext='src', description='An extension module', verion='1.0.0', include_dirs=None, linked_libs=None, macros=None, source_files=None, build_script=None, requires_make=False, out_dir=None, cleanup_build=True, python_potential=False, pointer_name=None, fortran_potential=False, bad_walker_file='bad_walkers.txt', mpi_manager=None, vectorized_potential=False, error_value=10000000000.0): 
+__init__(self, name=None, potential_source=None, atom_pattern=None, wrap_potential=None, function_name=None, raw_array_potential=None, arguments=(), shim_script='', conversion=None, potential_directory=None, static_source=False, extra_functions=(), src_ext='src', description='An extension module', verion='1.0.0', include_dirs=None, linked_libs=None, macros=None, source_files=None, build_script=None, requires_make=False, out_dir=None, cleanup_build=True, python_potential=False, pointer_name=None, fortran_potential=False, bad_walker_file='bad_walkers.txt', mpi_manager=None, vectorized_potential=False, error_value=10000000000.0, transpose_call=None): 
 ```
 
 - `name`: `Any`
@@ -87,7 +87,7 @@ bind_arguments(self, args):
 
 <a id="RynLib.PlzNumbers.Potential.Potential.__call__">&nbsp;</a>
 ```python
-__call__(self, coordinates, *extra_args): 
+__call__(self, coordinates, *extra_args, **extra_kwargs): 
 ```
 
 ### Examples

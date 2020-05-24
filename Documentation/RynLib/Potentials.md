@@ -19,6 +19,38 @@ rynlib pot import NAME SRC
 
 These are just `zip`/`unzip` operations so you can certainly also do them by hand if you prefer
 
+## Calling a Potential
+
+Once we have a potential installed, `RynLib` is able to load it by name. This is done through the `PotentialManager` class
+
+```python
+pm = PotentialManager()
+pot = pm.load_potential("<NAME>")
+```
+
+With the potential loaded, we can call it like
+
+```python
+pot(coords, atoms, *parameters)
+```
+
+or if we've supplied an `arguments` spec, we can use the associated names, like
+
+```python
+pot(coords, atoms, **parameters)
+```
+
+### Binding arguments
+
+If the same arguments will be used over-and-over, it can be convenient to bind them to the potential. 
+Both the atoms and the parameters can be bound this way. If we choose to do this, we run like so
+
+```python
+pot.bind_atoms(atoms)
+pot.bind_args(parameters)
+pot(coords)
+```
+
 ## Compiling a Potential
 
 ### Directly Compiling the Potential
@@ -76,10 +108,10 @@ If you know the binary you have will work with the container, you can pass it in
 When getting a potential into the container, we use the command
 
 ```ignorelang
-rynlib pot add src
+rynlib pot add SRC
 ```
 
-The _source_ should be where our potential is stored, so either the directory containing the source or the potential binary.
+The _SRC_ should be where our potential is stored, so either the directory containing the source or the potential binary.
 
 The _config\_file_ holds the parameters for the potential. 
 For the most part it just makes sense to look at one of the examples, since there are an overwhelming number of options.
@@ -112,6 +144,7 @@ Here's a listing of all of the options specific to the automatic wrapper
 * `arguments` - this is the set of arguments that go in to the potential, each argument will have a name and will conform to the "argument spec" defined below
 * `shim_script` - this is a string that gets inserted directly into the wrapper function after the arguments are loaded, which makes it possible to do things like create a temporary buffer to fill in
 * `raw_array_potential` - this specifies whether the potential expects to get a flat set of coordinates or not
+* `fortran_potential` - a convenience flag that let's the templator know that everything should be set up so that Fortran can work with the data
 
 Of these, by far the most subtle is the `arguments`. The reason for this is two-fold. 
 
@@ -137,7 +170,50 @@ no transmogrification is done.
 
 This possible annoyance and subtlety was done to make the thing I thought was common easy. This may have been a mistake.
 
-The second subtlety has everything to do with C++ and to explain it I think it will be easiest to describe the full possible argument spect
+The second subtlety has everything to do with C++ and to explain it I think it will be easiest to describe the full possible argument spec.
+
+Any given argument has four parameters (and if given as a tuple this is how they should be passed)
+
+* `name` -- pretty simply the name of the argument that will go into the code, this is the least important argument except for four special names `coords`, `raw_coords`, `atoms`, and `energy`; these are effectively reserved
+* `dtype` -- the type of the argument; for most simple arguments, this is just the _string_ form of the python type. If the argument will be passed in as a parameter it _must_ be either a `float`, `int`, or `bool`.
+* `ref` -- whether the argument should be _passed by reference_ or not; this is the fundamental subtlety mentioned earlier. In C/C++ arguments can be passed by _value_ (in which case they are copied) or passed by _reference_ (in which case the underlying memory is passed). Python is entirely pass-by-reference, C++ defaults to pass-by-value. Fortran, however, expects everything to be passed by reference.
+* `extra` -- whether this argument should be passed from the python side or will be defined in the `shim_script`; most of the time this parameter doesn't need to be filled out, but it doesn't necessarily hurt to fill it out.
+
+These can either be passed as a `tuple` (in this order), or as a `dict`. The arguments specified will also be used by `Potential` to validate any calls made.
+
+Here is an example of a more complicated setup used to compile the `TTM2.1-F` potential
+
+```python
+config = dict(
+    wrap_potential=True,
+    function_name='__ttm2f_mod_MOD_ttm2f',
+    shim_script="double derivs[nwaters*3*3]; // allocate space for the derivatives",
+    arguments=(
+        ('nwaters', 'int'),
+        dict(name='raw_coords', dtype="FlatCoordinates"),
+        dict(name='derivs', dtype="double*", ref=False, extra=False),
+        dict(name='energy', dtype="double", ref=True, extra=False),
+        ('imodel', 'int')
+    ),
+    requires_make=True,
+    fortran_potential=True,
+    transpose_call=False
+)
+```
+
+We see here how the `raw_coords` argument can be used (it will always have the type `FlatCoordinates`, which is an alias for `double*`). 
+
+Because of the way the potential is set up, we also have an argument that has to be defined in the `shim_script`, which is
+
+```c++
+double derivs[nwaters*3*3]; // allocate space for the derivatives
+```
+
+this provides a place for Fortran to write the derivatives to.
+
+The function call itself is into a function called `__ttm2f_mod_MOD_ttm2f`, which is the name Fortran gives to the function `ttm2f` which lives in the Fortran module `ttm2f_mod`.
+
+Since this is labeled as a `fortran_potential`, the `nwaters` and `imodel` arguments actually end up being passed by reference (the `ref` gets inserted automatically). But because of the way the function is defined on the Fortran side, both C++ and Fortran have the same ordering for the memory, so we also need to specify that `transpose_call=False` (this is an argument that gets fed to the caller).
 
 ### Wrapping Your Own Potential
 
@@ -194,5 +270,5 @@ After doing that we need to
 * Wrap this up in a `PyCapsule`
 * Expose these things via the python extension module boilerplate
 
-None of this requires much thought, so I've provided some helpful boilerplate [here](https://github.com/McCoyGroup/RynLib/tree/master/RynUtils/C%2B%2B%20Common/Boilerplate)
+None of this requires much thought, so I've provided some helpful boilerplate [here](https://github.com/McCoyGroup/RynLib/tree/master/RynUtils/C%2B%2B%20Common/Boilerplate). There are a number of places where you will need to Find/Replace stuff, though.
 

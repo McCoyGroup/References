@@ -3,6 +3,7 @@
 
 ### Properties and Methods
 ```python
+raise_bad_arg: method
 raise_bad_option: method
 raise_missing_option: method
 ```
