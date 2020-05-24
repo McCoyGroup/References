@@ -150,7 +150,7 @@ RYNLIB_SHIFTER_IMAGE="registry.services.nersc.gov/b3m2a1/$RYNLIB_IMAGE_NAME"
 All bash flags start with a single `-` and come before any `--` options or container commands. 
 The current list of those is
 
-```ignorelang
+```shell
 -n <NUMBER>
   # run using the `mpirun` command inside the container spawing NUMBER jobs
 -L <PATH>
