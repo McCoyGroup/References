@@ -1,14 +1,14 @@
-#RynLib Command-Line Interface
+# Command-Line Interface
 
 Since this is happening inside a container, we provide a command-line interface to the packages inside. This looks like:
 
-```ignorelang
+```console
 $ rynlib [--<flags>] group command [args]
 ```
 
 You can find more info by running with the `--help` flag
 
-```ignorelang
+```console
 $ rynlib --help
 rynlib [--output|--error|--script|--root|--noomp|--t|--interact] GRP CMD [ARGS] runs RynLib with the specified command
 rynlib --help all: list all available commands
@@ -17,7 +17,7 @@ rynlib --help grp: list commands in grp
 
 If we run `rynlib --help all` we get the full CLI documentation, such as it is
 
-```ignorelang
+```console
 $ rynlib --help all
 rynlib  [--<flags>]  GRP  CMD  [ARGS]  runs  RynLib  with  the  specified  command
 Flags:
@@ -121,7 +121,7 @@ The `rynlib` command also provides convenience syntax/flags/variables for runnin
 All environment variables are prefaced with `RYNLIB`.
 The current list of them is
 
-```ignorelang
+```shell
 RYNLIB_CONFIG_PATH=<PATH/IN/CONTAINER>
   the path to use for finding/storing simulations, potentials, etc. (default: $PWD/config)
 RYNLIB_ENTOS_PATH=<PATH/ON/HOST>
@@ -134,7 +134,7 @@ RYNLIB_CONTAINER_RUNNER=<EXEC>
 
 There are a few flags that _can_ be changed, but aren't really intended to be changed
 
-```ignorelang
+```shell
 RYNLIB_IMAGE_NAME="rynimg"
   the base name of the image we're working with
 RYNLIB_DOCKER_IMAGE="mccoygroup/rynlib:$RYNLIB_IMAGE_NAME"
