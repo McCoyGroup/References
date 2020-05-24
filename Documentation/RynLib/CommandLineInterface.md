@@ -123,26 +123,26 @@ The current list of them is
 
 ```shell
 RYNLIB_CONFIG_PATH=<PATH/IN/CONTAINER>
-  the path to use for finding/storing simulations, potentials, etc. (default: $PWD/config)
+  # the path to use for finding/storing simulations, potentials, etc. (default: $PWD/config)
 RYNLIB_ENTOS_PATH=<PATH/ON/HOST>
-  the path to the Entos folder to use when using Entos as a potential (default: None)
+  # the path to the Entos folder to use when using Entos as a potential (default: None)
 RYNLIB_IMAGE=<IMAGE_OR_SIF>
-  the image to use when running rynlib (default: rynimg or rynimg.sif)
+  # the image to use when running rynlib (default: rynimg or rynimg.sif)
 RYNLIB_CONTAINER_RUNNER=<EXEC>
-  the executable to use for running containers (default: platform dependent, locally docker)
+  # the executable to use for running containers (default: platform dependent, locally docker)
 ```
 
 There are a few flags that _can_ be changed, but aren't really intended to be changed
 
 ```shell
 RYNLIB_IMAGE_NAME="rynimg"
-  the base name of the image we're working with
+  # the base name of the image we're working with
 RYNLIB_DOCKER_IMAGE="mccoygroup/rynlib:$RYNLIB_IMAGE_NAME"
-  the DockerHub location for the image
+  # the DockerHub location for the image
 RYNLIB_SINGULARITY_EXTENSION="-centos"
-  the extension to the image name used when running with Singularity (well really just on a CentOS based HPC)
+  # the extension to the image name used when running with Singularity (well really just on a CentOS based HPC)
 RYNLIB_SHIFTER_IMAGE="registry.services.nersc.gov/b3m2a1/$RYNLIB_IMAGE_NAME"
-  the image hosted on the NeRSC image registry -- not really used anymore, but easy to update so left as is
+  # the image hosted on the NeRSC image registry -- not really used anymore, but easy to update so left as is
 ```
 
 ### Bash Flags
@@ -152,17 +152,17 @@ The current list of those is
 
 ```ignorelang
 -n <NUMBER>
-  run using the `mpirun` command inside the container spawing NUMBER jobs
+  # run using the `mpirun` command inside the container spawing NUMBER jobs
 -L <PATH>
-  run using the specified path to the RynLib source code -- allows for quick tests and changes, since small source changes don't require a full rebuild
+  # run using the specified path to the RynLib source code -- allows for quick tests and changes, since small source changes don't require a full rebuild
 -e
-  echo the command that would be run -- necessary in some cases where external `mpirun` refuses to run the `rynlib` bash function
+  # echo the command that would be run -- necessary in some cases where external `mpirun` refuses to run the `rynlib` bash function
 -V [EXTERNAL_PATH]:[CONTAINER_PATH],[EXTERNAL_PATH]:[CONTAINER_PATH]...
-  bind the specified directories into the container -- useful for getting data in/out
+  # bind the specified directories into the container -- useful for getting data in/out
 -W <PATH>
-  run using PATH as the initial working directory
+  # run using PATH as the initial working directory
 -E <EXEC>
-  run using EXEC as the container entrypoint, rather than CLI.py -- useful for starting /bin/bash
+  # run using EXEC as the container entrypoint, rather than CLI.py -- useful for starting /bin/bash
 -M <FILE>
-  run using a memory profiler and write the results to FILE -- useful for finding memory leaks on the C++ side
+  # run using a memory profiler and write the results to FILE -- useful for finding memory leaks on the C++ side
 ```
