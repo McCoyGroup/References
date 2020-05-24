@@ -61,6 +61,7 @@ defaults:
 # Exclude from processing
 exclude:
   - Documentation/examples
+  - Documentation/templates
   - Gemfile
   - Gemfile.lock
   - node_modules
