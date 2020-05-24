@@ -2,7 +2,7 @@
 
 The basic idea no matter where one submits is to do something like this
 
-```ignorelang
+```shell
 module load <MPI> # must be inline with what is inside container
 # load any other modules we need
 
@@ -10,7 +10,7 @@ RYNLIB_PATH=<path-to-the-RynLib-folder>
 . $RYNLIB_PATH/setup/env.sh
 # set RYNLIB_ENTOS_PATH if we're using entos
 # set RYNLIB_IMAGE if we're not using the defaults
-$RUNTIME_FLAGS=... # can be like -L $PWD/RynLib if we're using a version of the RynLib source code in $PWD
+RUNTIME_FLAGS=... # can be like -L $PWD/RynLib if we're using a version of the RynLib source code in $PWD
 rynlib=$(rynlib $RUNTIME_FLAGS -e) # we use -e echo the command that rynlib would run, since `mpirun` doesn't like not being passed an executable
 
 # SET THINGS LIKE OMP_NUM_THREADS
@@ -32,7 +32,7 @@ mpirun -n $NUM_MPI_JOBS $rynlib sim run $JOB_NAME
 
 If we're targeting Singularity/Hyak we want to load these modules
 
-```ignorelang
+```shell
 module load gcc_19-ompi_3.1.4
 module load singularity
 ```
@@ -41,7 +41,7 @@ module load singularity
 
 With Shifter we have a slight subtlety in that `sbatch` has been set up to take an `image` argument, e.g.
 
-```ignorelang
+```shell
 #--SBATCH image=<whatever/image/we're/using>
 ```
 

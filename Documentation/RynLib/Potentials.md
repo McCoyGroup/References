@@ -3,7 +3,11 @@
 RynLib has a very flexible system for using potentials. 
 It was written originally to allow for hyper-distributed calling of Entos, but now can work with pretty much any potential, compiled or not.
 
-## Installing a Prebuilt Potential
+## Installing a Potential
+
+Before we can use a potential, we need to get it into the system and accessible. There are two ways to go about this.
+
+### Installing a Prebuilt Potential
 
 One of the big benefits of the container architecture is the portability of what gets built. For many use cases, a potential will already have been created. If that's the case, we can compress it and get it out of the container on one platform via
 
@@ -18,6 +22,21 @@ rynlib pot import NAME SRC
 ```
 
 These are just `zip`/`unzip` operations so you can certainly also do them by hand if you prefer
+
+### Installing a New Potential
+
+If no prebuilt potential exists, we'll need to add and compile one ourselves. To start, we'll focus on the adding part.
+When getting a potential into the container, we use the command
+
+```ignorelang
+rynlib pot add NAME SRC
+```
+
+_NAME_ is the name we'll reference the potential by inside RynLib, _SRC_ should be where our potential is stored.
+Inside _SRC_, we expect two (maybe three) things
+* The source code for the potential (or a precompiled binary to call)
+* A config file detailing the configuration of the potential (see the examples)
+* Optional: a test file to use as the default when testing the potential (see the section on testing)
 
 ## Calling a Potential
 
@@ -51,7 +70,38 @@ pot.bind_args(parameters)
 pot(coords)
 ```
 
+## Running a Test
+
+Potentials can also be run using a test config file, the parameters in this one are
+
+```python
+config = dict(
+    atoms= [...], # atom spec
+    coordinates = [
+        ... # list of coordinate
+    ],
+    parameters=dict(...), # parameters (experimental support for kwargs)
+    walkers_per_core=..., # when testing with MPI/threading, how many configurations to put on each core
+    steps_per_propagation=..., # when testing with MPI/threading, how many steps to propagate the configurations forward
+    random_seed=..., # when testing with MPI/threading, the random seed for the displacement, for reproducibility
+)
+```
+
+Then when we call this, we use
+
+```shell
+rynlib [-n MPI_JOBS] pot test[-mpi] NAME --input=</container/path/to/test.py>
+```
+
+
+
 ## Compiling a Potential
+
+The hardest part of working with potentials in RynLib is figuring out how to get them to compile. 
+I've built out tooling to make this process _easier_, but I don't have a way to make it automatic (and such a thing literally cannot exist).
+
+To help make this easier, I've detailed the many ways a potential can be compiled. I recommend initially skipping this section and going to the discussion of the automatic wrapper, since that should serve for 90% of cases.
+
 
 ### Directly Compiling the Potential
 
@@ -102,20 +152,6 @@ All of the data will get farmed out to the different cores when doing this.
 ### Using a Precompiled Binary
 
 If you know the binary you have will work with the container, you can pass it in directly. In this case we simply have to turn off the `requires_make` flag.
-
-### Loading the Potential
-
-When getting a potential into the container, we use the command
-
-```ignorelang
-rynlib pot add SRC
-```
-
-The _SRC_ should be where our potential is stored, so either the directory containing the source or the potential binary.
-
-The _config\_file_ holds the parameters for the potential. 
-For the most part it just makes sense to look at one of the examples, since there are an overwhelming number of options.
-At some point in the future, once the API has stabilized, I'll go back and document the options here.
 
 ## Creating a Wrapper
 
