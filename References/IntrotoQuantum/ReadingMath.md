@@ -1,17 +1,13 @@
-# References
+# Reading Math
 
-This is the general list of references we've written up. 
-More may come in the future in which case they will be linked to here.
+Coming Soon!
 
-## DVR
-  - [Basic DVR](https://mccoygroup.github.io/References/References/Implementing%20DVR/Basic%20DVR.html)
-  - [Colbert and Miller](https://mccoygroup.github.io/References/References/Implementing%20DVR/Colbert%20and%20Miller.html)
-  - [NumPy DVR](https://mccoygroup.github.io/References/References/Implementing%20DVR/DVRWithNumpy.html)
-  - [Multidimensional DVR](https://mccoygroup.github.io/References/References/Implementing%20DVR/MultidimensionalDVR.html)
+Here's the basic outline:
 
-## DMC
-  - [Anderson DMC](https://mccoygroup.github.io/References/References/Implementing%20DMC/AndersonDMC.html)
-  - [Reynolds DMC](https://mccoygroup.github.io/References/References/Implementing%20DMC/ReynoldsDMC.html)
+* Math expressions have the same hierarchical structure as code does
+* By replacing chunks of the expression with variables, we can make the physical meaning explicit
+* A mathematical expression should tell a (very very tiny) story that encodes connections between physical entities
+* Plus tips and tricks for piecing this all together!
 
-## Potential
-  - [Harmonic Adiabatic Potentials](https://mccoygroup.github.io/References/References/Adiabatic%20Potentials/Harmonic%20Adiabatic%20Potentials.html)
+Next: [Translating Math Into Code](TranslatingMathIntoCode.md)
+---

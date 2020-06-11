@@ -1,17 +1,14 @@
-# References
+# A Hierarchical View of Problem Solving
 
-This is the general list of references we've written up. 
-More may come in the future in which case they will be linked to here.
+Coming Soon!
 
-## DVR
-  - [Basic DVR](https://mccoygroup.github.io/References/References/Implementing%20DVR/Basic%20DVR.html)
-  - [Colbert and Miller](https://mccoygroup.github.io/References/References/Implementing%20DVR/Colbert%20and%20Miller.html)
-  - [NumPy DVR](https://mccoygroup.github.io/References/References/Implementing%20DVR/DVRWithNumpy.html)
-  - [Multidimensional DVR](https://mccoygroup.github.io/References/References/Implementing%20DVR/MultidimensionalDVR.html)
+Here's the basic outline:
 
-## DMC
-  - [Anderson DMC](https://mccoygroup.github.io/References/References/Implementing%20DMC/AndersonDMC.html)
-  - [Reynolds DMC](https://mccoygroup.github.io/References/References/Implementing%20DMC/ReynoldsDMC.html)
+* We only deal with _straightforward_ problems in the kind of science we do
+* These kinds of problems have a hierarchical structure
+* We can treat the problem similar to following a map
+* By having a pretty rigid overarching structure, but flexibility w.r.t to solving the smallest, most specific bits, we can make progress without getting trapped on one route 
+* This problem solving structure maps directly onto code!
 
-## Potential
-  - [Harmonic Adiabatic Potentials](https://mccoygroup.github.io/References/References/Adiabatic%20Potentials/Harmonic%20Adiabatic%20Potentials.html)
+Next: [Reading a Function](ReadingAFunction.md)
+---

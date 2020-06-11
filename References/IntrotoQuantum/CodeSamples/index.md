@@ -1,17 +1,8 @@
-# References
+# Sample Problems
 
-This is the general list of references we've written up. 
-More may come in the future in which case they will be linked to here.
+We've taken some of the common problems we see in the kind of research we do and broken them down into their component pieces and provided a framework for tackling them.
 
-## DVR
-  - [Basic DVR](https://mccoygroup.github.io/References/References/Implementing%20DVR/Basic%20DVR.html)
-  - [Colbert and Miller](https://mccoygroup.github.io/References/References/Implementing%20DVR/Colbert%20and%20Miller.html)
-  - [NumPy DVR](https://mccoygroup.github.io/References/References/Implementing%20DVR/DVRWithNumpy.html)
-  - [Multidimensional DVR](https://mccoygroup.github.io/References/References/Implementing%20DVR/MultidimensionalDVR.html)
+Give the examples a look. They'll both teach you how to do a specific new thing _and_ teach you how you could solve it again for yourself. How nice, right?
 
-## DMC
-  - [Anderson DMC](https://mccoygroup.github.io/References/References/Implementing%20DMC/AndersonDMC.html)
-  - [Reynolds DMC](https://mccoygroup.github.io/References/References/Implementing%20DMC/ReynoldsDMC.html)
-
-## Potential
-  - [Harmonic Adiabatic Potentials](https://mccoygroup.github.io/References/References/Adiabatic%20Potentials/Harmonic%20Adiabatic%20Potentials.html)
+The list of problems we've solved is:
+* [Coming Soon](ComingSoon.md): This is a placeholder for when we actually do this :|

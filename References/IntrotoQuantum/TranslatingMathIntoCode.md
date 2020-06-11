@@ -1,17 +1,14 @@
-# References
+# Translating Math Into Code
 
-This is the general list of references we've written up. 
-More may come in the future in which case they will be linked to here.
+Coming Soon!
 
-## DVR
-  - [Basic DVR](https://mccoygroup.github.io/References/References/Implementing%20DVR/Basic%20DVR.html)
-  - [Colbert and Miller](https://mccoygroup.github.io/References/References/Implementing%20DVR/Colbert%20and%20Miller.html)
-  - [NumPy DVR](https://mccoygroup.github.io/References/References/Implementing%20DVR/DVRWithNumpy.html)
-  - [Multidimensional DVR](https://mccoygroup.github.io/References/References/Implementing%20DVR/MultidimensionalDVR.html)
+Here's the basic outline:
 
-## DMC
-  - [Anderson DMC](https://mccoygroup.github.io/References/References/Implementing%20DMC/AndersonDMC.html)
-  - [Reynolds DMC](https://mccoygroup.github.io/References/References/Implementing%20DMC/ReynoldsDMC.html)
+* We'll basically just put everything we learned together
+* We'll break our larger mathematical problem into subproblems
+* Each of those will have a mathematical form
+* We'll parse those mathematical forms into their physical meaning
+* Finally we'll set up the code to implement this meaning
 
-## Potential
-  - [Harmonic Adiabatic Potentials](https://mccoygroup.github.io/References/References/Adiabatic%20Potentials/Harmonic%20Adiabatic%20Potentials.html)
+Next: [What Now?](WhatNow.md)
+---
