@@ -3,6 +3,10 @@
 This is the general list of references we've written up. 
 More may come in the future in which case they will be linked to here.
 
+## Intro to Problems in Quantum Chem
+We wrote up some useful stuff on how to solve common problems what we encounter
+  - [Overview](https://mccoygroup.github.io/References/References/IntrotoQuantum)
+
 ## DVR
   - [Basic DVR](https://mccoygroup.github.io/References/References/Implementing%20DVR/Basic%20DVR.html)
   - [Colbert and Miller](https://mccoygroup.github.io/References/References/Implementing%20DVR/Colbert%20and%20Miller.html)
