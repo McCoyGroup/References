@@ -11,4 +11,5 @@ Here's the basic outline:
 * This problem solving structure maps directly onto code!
 
 Next: [Reading a Function](ReadingAFunction.md)
+
 ---

@@ -44,6 +44,7 @@ Hopefully over the course of this brief intro, though, you'll become convinced t
 
 
 Next: [A Hierarchical View Of Problem Solving](AHierarchicalViewOfProblemSolving.md)
+
 ---
 
 1. <a id="fn1"></a> It's a little bit tricky to explain _what_ an allowed vibration really is (and it's a little circular), but it's very, very closely related to the potential energy surface of a system (here's what Wikipedia has to say: https://en.wikipedia.org/wiki/Transition_state_theory#Potential_energy_surfaces).

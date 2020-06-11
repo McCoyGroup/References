@@ -10,4 +10,5 @@ Here's the basic outline:
 * Plus tips and tricks for piecing this all together!
 
 Next: [Translating Math Into Code](TranslatingMathIntoCode.md)
+
 ---
