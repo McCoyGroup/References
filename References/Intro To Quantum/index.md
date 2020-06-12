@@ -1,7 +1,7 @@
 # An Intro to Problem-Solving in Quantum Chemistry
 
 Quantum chemistry, as an application of quantum mechanics, gets a bad rap for being "hard".
-If you non-chemists that you do "quantum", usually they look at you askance since they've either only heard the term in bad sci-fi technobabble or from the mouth of some pretentious physicist who thinks they're God's gift to knowledge.
+If you mention to non-chemists that you do "quantum", usually they look at you askance since they've either only heard the term in bad sci-fi technobabble or from the mouth of some pretentious physicist who thinks they're God's gift to knowledge.
 On the other hand, even within chemistry, there's sometimes still a conception that "quantum" is tough, born of one basic fact:
 **integrals suck**. 
 And basically to "do quantum" you need do integrals, which most people see in intro calculus and then hope to never see again.

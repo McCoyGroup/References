@@ -36,7 +36,7 @@ and again
 > I want to _figure out what the allowed states of my system are_, so I need to _calculate the possible wavefunctions for my system_
 
 and once we've reached the step where we're _calculating_, now we get to make decisions about how to do the calculation.
-Even though the calculation might be a pain, though, we want to keep the focus on the stuff we actually _want to know_.
+Even though actually doing the calculation might be the hardest step in the process pain, we want to keep the focus on the stuff we actually _want to know_.
 Calculation techniques are useful and important to know, but they're not why we're doing the science.
 
 You might notice that our original statement of what we needed to do had two branches, i.e. we said
