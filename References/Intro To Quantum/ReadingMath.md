@@ -1,13 +1,19 @@
 # Reading Math
 
-Coming Soon!
+This is the section where I'm hoping to convince you that the math we work with is really not so bad and that you can do it too.
+So pls be convinced.
+We're going to treat mathematical expressions the exact same way we treated our code, that is we'll say
 
-Here's the basic outline:
+> A math expression...
+* Takes a set of inputs
+* Applies a series of transformations to the data to return an output
+* Tells a "story"
 
-* Math expressions have the same hierarchical structure as code does
-* By replacing chunks of the expression with variables, we can make the physical meaning explicit
-* A mathematical expression should tell a (very very tiny) story that encodes connections between physical entities
-* Plus tips and tricks for piecing this all together!
+What's pretty convenient is these expressions are inherently hierarchical, so if we're given the expression
+
+
+
+
 
 Next: [Translating Math Into Code](TranslatingMathIntoCode.md)
 

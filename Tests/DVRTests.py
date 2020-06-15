@@ -1,7 +1,8 @@
 
 from Peeves.TestUtils import *
 from unittest import TestCase
-from PyDVR.DVR import *
+from Psience.DVR.DVR import *
+import numpy as np
 
 class DVRTests(TestCase):
 

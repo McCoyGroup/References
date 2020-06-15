@@ -1,7 +1,7 @@
 
 from Peeves.TestUtils import *
 from McUtils.Zachary import *
-from McUtils.Zachary.ZachLib import *
+from McUtils.Zachary.Taylor.ZachLib import *
 from McUtils.Plots import *
 from unittest import TestCase
 import sys, h5py, math, numpy as np

@@ -646,16 +646,37 @@ and with the knowledge that `MapThread` loops over two lists at once (like `zip`
 
 > This is a function that takes a set of masses and their positions and returns the moment of inertia tensor of the system
 > It does this by looping over the masses and positions together and generating a subtensor.
-> Once it has this list of subtensors it adds them all up and returns the resultant matrix.
+> Once it has this list of subtensors it adds them all up and returns the total matrix.
 
-Next: [Reading a Function](ReadingAFunction.md)
+
+## Adding in Context
+
+Everything we've focused on thus far is in the context of single functions in isolation and figuring out what they do mechanistically.
+Once thing that becomes especially relevant as the code becomes more complex is knowing the context in which the function was written.
+Usually with a package this means looking at any documentation you can find, be it package or module level READMEs, posts, or git commit messages.
+
+In the absence of requests, I'm not gonna give examples of this, but this basically changes the "story" that the function tells rather than anything else. I.e. instead of saying
+
+> This is a function that takes a set of masses and their positions and returns the moment of inertia tensor of the system
+> It does this by looping over the masses and positions together and generating a subtensor.
+> Once it has this list of subtensors it adds them all up and returns the total matrix.
+
+if we know this will be applied to molecular systems as part of a reaction-path calculation we could say
+
+> This is a function that takes a set the masses and positions of the atoms in a molecular system and returns the moment of inertia tensor of the system. Its primary use case is for obtaining rotational eigenvectors.
+> It does this by looping over the atoms and generating a moment of intertia tensor for that atom's rotations.
+> Once it has this list of subtensors it adds them all up and returns the total matrix.
+
+obviously the function can be applied to _any_ set of masses and positions, but the context makes the function a bit easier to remember/make sense of.
+
+Next: [Reading Math](ReadingMath.md)
 
 ---
 
 1. <a id="fn1"></a> There are tons of different terms for different kinds pieces code. _scripts_ are little pieces of code that were written once without the intent to reuse--try to avoid writing scripts, they're sometimes quick, but they lack of reusability and the laziness with which they are often written means they're a bad habit and will probably cause you more grief than just writing the code well the first time. Other names for chunks of code: _functions_ are the smallest useful unit of code, _classes_ are single objects, _packages_ are small-to-medium sized accumulations of functions and classes intended for a single purpose, _libraries_ are large scale accumulations of functions and classes usually with a few different purposes that are written to be by other pieces of code, _interfaces_ are layers that either connect different libraries and packages together or feed user input into a library/package, _applications_ are collections of interfaces and libraries that serve a few purposes and are intended to hide all of the complexity of the code altogether. A well-designed application is a super powerful tool, but is also usually overkill. Aim to never write scripts, mostly write packages, and occasionally write a library.
-2. <a id="fn2></a> Matrix representations are a somewhat subtle (although not particularly challenging) concept, but I've written about them before at some length [here](https://stackoverflow.com/c/mccoygroup/questions/74).
-3. <a id="fn3></a> Unfortunately, linear algebra is pretty much unavoidable in quantum mechanics. On the plus side, it's some of the simpler math you'll ever have to learn! In essence, it's a _complexity hiding_ strategy for operations that can be expressed in terms of sums and products. The _dot product_ is just an operation where you multiply two lists of numbers by each other and then add them all up to get another number. It seems too simple to be useful, but actually ends up rearing its head all over the place. A _tensor_ is just a three- or higher-dimensional matrix. They suck to think about, but all the standard 2D matrix tricks end up generalizing quite nicely.
-4. <a id="fn4></a> [Mathematica](https://mathematica.stackexchange.com/) is a super powerful language and scientific platform _if you use it well_, but will likely cause you to cry tears of blood when you first start with it because it's so different from python-like programming languages. I highly recommend learning it if you have the time, but also totally understand that most people are time constrained. It took me ~2 years before I started to use it really well, but now I can do stuff that takes hundreds to thousands of lines of python code in tens of lines of Mathematica code. It's also a fun intro to [functional](https://mresources.github.io/tutorial/mathematica-programming/functional-programming/procedural-programming.html) and [rule-based](https://mresources.github.io/tutorial/mathematica-programming/code-structure/replacement-patterns.html) programming.
+2. <a id="fn2"></a> Matrix representations are a somewhat subtle (although not particularly challenging) concept, but I've written about them before at some length [here](https://stackoverflow.com/c/mccoygroup/questions/74).
+3. <a id="fn3"></a> Unfortunately, linear algebra is pretty much unavoidable in quantum mechanics. On the plus side, it's some of the simpler math you'll ever have to learn! In essence, it's a _complexity hiding_ strategy for operations that can be expressed in terms of sums and products. The _dot product_ is just an operation where you multiply two lists of numbers by each other and then add them all up to get another number. It seems too simple to be useful, but actually ends up rearing its head all over the place. A _tensor_ is just a three- or higher-dimensional matrix. They suck to think about, but all the standard 2D matrix tricks end up generalizing quite nicely.
+4. <a id="fn4"></a> [Mathematica](https://mathematica.stackexchange.com/) is a super powerful language and scientific platform _if you use it well_, but will likely cause you to cry tears of blood when you first start with it because it's so different from python-like programming languages. I highly recommend learning it if you have the time, but also totally understand that most people are time constrained. It took me ~2 years before I started to use it really well, but now I can do stuff that takes hundreds to thousands of lines of python code in tens of lines of Mathematica code. It's also a fun intro to [functional](https://mresources.github.io/tutorial/mathematica-programming/functional-programming/procedural-programming.html) and [rule-based](https://mresources.github.io/tutorial/mathematica-programming/code-structure/replacement-patterns.html) programming.
 
 [<sup>1</sup>]: #fn1
 [<sup>2</sup>]: #fn2
