@@ -2,8 +2,11 @@
 from Peeves.TestUtils import *
 from unittest import TestCase
 from Psience.Molecools import Molecule, NormalModeCoordinates
-from McUtils.GaussianInterface import GaussianFChkReader
+from Psience.Molecools.Transformations import MolecularTransformation
+from Psience.Data import DipoleSurface # this will be leaving Zachary very soon I think...
+from McUtils.GaussianInterface import GaussianFChkReader, GaussianLogReader
 from McUtils.Plots import *
+from McUtils.Coordinerds import cartesian_to_zmatrix
 from McUtils.Data import UnitsData
 import numpy as np
 
@@ -21,6 +24,68 @@ class MolecoolsTests(TestCase):
         n = 3 # water
         m = Molecule.from_file(self.test_fchk)
         self.assertEquals(m.atoms, ("O", "H", "H"))
+
+    @debugTest
+    def test_Eckart(self):
+        scan_file = TestManager.test_data("tbhp_030.log")
+        ref_file = TestManager.test_data("tbhp_180.fchk")
+
+        scan = Molecule.from_file(scan_file)
+        ref = Molecule.from_file(ref_file)
+        sel = np.where(ref.masses > 3)[0]
+
+        pax_rot = ref.principle_axis_frame(sel=sel) #type: MolecularTransformation
+        rot_ref = pax_rot.apply(ref)
+
+        #transf = scan.principle_axis_frame(sel=sel)
+        transf = scan.eckart_frame(ref, sel=sel)
+        tf_test = transf[0].transformation_function
+
+        tf_mat = tf_test.transform
+        self.assertTrue(np.allclose(tf_mat@tf_mat.T - np.eye(3), 0.))
+        self.assertEquals(tf_test.transf.shape, (4, 4))
+
+        for t, m in zip(transf, scan):
+            new_mol = t(m)
+            # rot_ref.guess_bonds = False
+            # ref.guess_bonds = False
+            # m.guess_bonds = False
+            # new_mol.guess_bonds = False
+            # m = m #type: Molecule
+            # g1, a, b = m.plot()
+            # ref.plot(figure=g1)
+            # g, a, b = new_mol.plot()
+            # rot_ref.plot(figure=g)
+            # g.show()
+            fuckup = np.linalg.norm(new_mol.coords[sel] - rot_ref.coords[sel])
+            self.assertLess(fuckup/len(sel), .1)
+
+    @debugTest
+    def test_EckartEmbedDipoles(self):
+        scan_file = TestManager.test_data("tbhp_030.log")
+        ref_file = TestManager.test_data("tbhp_180.fchk")
+
+        scan = Molecule.from_file(scan_file)
+        ref = Molecule.from_file(ref_file)
+
+        transf = scan.eckart_frame(ref, sel=np.where(ref.masses>3)[0])
+
+        carts, dips = DipoleSurface.get_log_values(scan_file, keys=("StandardCartesianCoordinates", "OptimizedDipoleMoments"))
+        rot_dips = np.array([ np.dot(t.transformation_function.transform, d) for t,d in zip(transf, dips) ])
+        self.assertTrue(np.allclose(np.linalg.norm(dips, axis=1)-np.linalg.norm(rot_dips, axis=1), 0.))
+
+        ### Visualize dipole surface
+        dists = np.linalg.norm(carts[1:, 5] - carts[1:, 6], axis=1)
+        Graphics.default_style['image_size'] = 575
+        g = GraphicsGrid(nrows=1, ncols=2, padding=((.075, 0), (0, .45)))
+        p = Plot(dists, rot_dips[:, 0], figure=g[0, 0])
+        Plot(dists, rot_dips[:, 1], figure=p)
+        Plot(dists, rot_dips[:, 2], figure=p)
+        p2= Plot(dists, dips[:, 0], figure=g[0, 1])
+        Plot(dists, dips[:, 1], figure=p2)
+        Plot(dists, dips[:, 2], figure=p2)
+        # g.show()
+
 
     @validationTest
     def test_NormalModes(self):
@@ -76,12 +141,12 @@ class MolecoolsTests(TestCase):
         m = Molecule.from_file(self.test_fchk)
         self.assertEquals(m.bonds, [[0, 1, 1], [0, 2, 1]])
 
-    @debugTest
+    @inactiveTest
     def test_Frags(self):
         m = Molecule.from_file(self.test_fchk)
         self.assertEquals(len(m.prop("fragments")), 1)
 
-    @debugTest
+    @inactiveTest
     def test_AutoZMat(self):
         m = Molecule.from_file(self.test_fchk)
 

@@ -18,3 +18,6 @@ What's pretty convenient is these expressions are inherently hierarchical, so if
 Next: [Translating Math Into Code](TranslatingMathIntoCode.md)
 
 ---
+
+
+[Edit on GitHub]()
