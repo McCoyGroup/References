@@ -15,3 +15,7 @@ If you're looking for stuff to read, here are some (hopefully) useful resources:
 * [Version Control](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners): Most of the world uses `git` for this, but basically just a way to make sure that you never lose work by accident with the added benefit of logging all of the great stuff you've done! Employers love to see active GitHub repos.
 * [Programming Blogs](https://blog.codinghorror.com/): I waffled on whether to include this, since a lot of these bloggers are huge neckbeards that love themselves too much. On the other hand, it's really helpful to see how other people approached problems. On the other hand, despite having a literal neckbeard, Jeff Atwood is one of the better people about this. 
 * So many other things!: I just listed the five things that I had off the top of my head. As you work on your own projects and things, I'm sure you'll find what works for you and that is what matters most.
+
+---
+
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Intro%20To%20Quantum/WhatNow.md)

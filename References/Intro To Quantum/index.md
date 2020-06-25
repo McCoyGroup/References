@@ -23,3 +23,7 @@ And if you don't like this game plan, that's cool too. There are tons of great r
 No need to follow mine, but if you do I will be eternally grateful for feedback ;_;
 
 [Let's get started!](PracticalQuantumMechanics.md)
+
+---
+
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Intro%20To%20Quantum/index.md)

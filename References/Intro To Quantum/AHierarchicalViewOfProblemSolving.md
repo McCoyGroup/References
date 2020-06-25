@@ -242,3 +242,6 @@ Next: [Reading a Function](ReadingAFunction.md)
 [<sup>1</sup>]: #fn1
 [<sup>2</sup>]: #fn2
 [<sup>3</sup>]: #fn3
+
+
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Intro%20To%20Quantum/AHierarchicalViewOfProblemSolving.md)

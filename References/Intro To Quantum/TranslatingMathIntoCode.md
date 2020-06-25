@@ -13,3 +13,6 @@ Here's the basic outline:
 Next: [What Now?](WhatNow.md)
 
 ---
+
+
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Intro%20To%20Quantum/TranslatingMathIntoCode.md)

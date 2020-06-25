@@ -682,3 +682,5 @@ Next: [Reading Math](ReadingMath.md)
 [<sup>2</sup>]: #fn2
 [<sup>3</sup>]: #fn3
 [<sup>4</sup>]: #fn4
+
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Intro%20To%20Quantum/ReadingAFunction.md)
