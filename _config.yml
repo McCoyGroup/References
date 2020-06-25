@@ -9,10 +9,8 @@ sitemap_roots:
   - Documentation
 sitemap_depth: 2
 links:
-  - url: about.html
-    title: About
   - url: https://blogs.uw.edu/mccoygrp/
-    title: Home
+    title: Group Website
   - url: https://github.com/McCoyGroup
     title: GitHub
   - url: https://stackoverflow.com/c/mccoygroup/questions
