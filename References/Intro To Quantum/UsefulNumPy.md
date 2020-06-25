@@ -10,4 +10,4 @@ These are functions for making arrays
 
 
 ---
-[Edit on GitHub]()
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Intro%20To%20Quantum/UsefulNumPy.md)
