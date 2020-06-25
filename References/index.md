@@ -19,3 +19,6 @@ We wrote up some useful stuff on how to solve common problems what we encounter
 
 ## Potential
   - [Harmonic Adiabatic Potentials](https://mccoygroup.github.io/References/References/Adiabatic%20Potentials/Harmonic%20Adiabatic%20Potentials.html)
+  
+  ---
+  [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/index.md)
