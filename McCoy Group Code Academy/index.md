@@ -7,7 +7,7 @@ We hope that this is a nice stepping stone between learning python and jumping i
 
 ## Numpy:
 * [Numpy 101](numpy101.md)
-* [List of Helpful Numpy Functions](numpyfunctions.md)
+* [List of Helpful Numpy Functions](numpyFunctions.md)
 
 ## Matplotlib:
 * Matplotlib 101
@@ -23,7 +23,7 @@ We hope that this is a nice stepping stone between learning python and jumping i
 * How do I write a data file?
 
 ## Code Structure:
-* [What are Functions?](functions.md)
+* [What are Functions?](WhatAreFunctions.md)
 * [Create a .xyz file writing function](xyz_writer.py)
 * What are Scripts?
 * Create a plotting script
