@@ -42,5 +42,5 @@ We hope that this is a nice stepping stone between learning python and jumping i
 If you have questions, you can also always ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask).
 
 ---
-[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/McCoy%20Group%20Code%20Academy/index.md)
+[Edit on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/index.md)
 
