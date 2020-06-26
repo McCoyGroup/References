@@ -3,11 +3,11 @@
 We hope that this is a nice stepping stone between learning python and jumping into research! Working through these samples will introduce you to (what we have deemed) helpful functions and _tricky tricks_ for the problems we work on in the group. 
 
 ## Getting Started: 
-* Introduction
+* [Introduction](intro.md)
 
 ## Numpy:
-* Numpy 101
-* List of Helpful Numpy Functions
+* [Numpy 101](numpy101.md)
+* [List of Helpful Numpy Functions](numpyfunctions.md)
 
 ## Matplotlib:
 * Matplotlib 101
@@ -23,15 +23,18 @@ We hope that this is a nice stepping stone between learning python and jumping i
 * How do I write a data file?
 
 ## Code Structure:
-* Functions
-* Scripts
-* Classes
+* [What are Functions?](functions.md)
+* [Create a .xyz file writing function](xyz_writer.py)
+* What are Scripts?
+* Create a plotting script
+* What are Classes?
+* Create a Converter Class
 * How do I make my code faster?
 
 ## Exercises
 * Expand a Function as a Fourier Series
 * Apply a change of basis to a Hamiltonian
-* Colbert-Miller 1D DVR
+* [Colbert-Miller 1D DVR](CM_1D.py)
 * Colbert-Miller Multidimensional DVR
 * Calculate Adiabatic Potentials
 * Calculate Franck-Condon Transition Intensities
