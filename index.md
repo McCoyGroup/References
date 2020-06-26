@@ -14,6 +14,10 @@ References written up to help explain topics that are common to our research. Us
 kind of audience. Often these are written by first years in the group as an introductions to Markdown and to explaining 
 scientific concepts via code. There is useful information in them but they
  should not be treated as gospel.
+ 
+### [McCoy Group Code Academy](McCoy%20Group%20Code%20Academy)
+
+:)
 
 ### [Documentation](Documentation)
 
