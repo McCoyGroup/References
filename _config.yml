@@ -19,7 +19,7 @@ links:
 
 # Build settings
 markdown: kramdown
-remote_theme: b3m2a1/finx
+remote_theme: McCoyGroup/finx
 plugins:
   - jekyll-feed
   - jekyll-include-cache
