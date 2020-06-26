@@ -11,12 +11,19 @@ We're going to treat mathematical expressions the exact same way we treated our 
 
 What's pretty convenient is these expressions are inherently hierarchical, so if we're given the expression
 
-![base](img/base_integral.png)
+$$
+\int _0^{2 \pi }\int _0^{\infty }f (\theta) g(r)+ \frac{\partial f}{\partial \theta }(\theta_e)g(r) dr d\theta
+$$
 
 we can restructure this like
 
-
-![sep](img/separated_integral.png)
+$$
+\begin{array}{c}
+ \left(\int _0^{\, 2\pi }f(\theta )d\, \theta  \right) * \left(\int _0^{\, \infty }g(r)d\, r\right) \\
+ + \\
+ \left(\frac{\partial f}{\partial \theta }\left(\theta _e\right)\right) * \left(\int _0^{\, 2\pi }d\, \theta \right) * \left(\int _0^{\, \infty }g(r)d\, r\, \right) \\
+\end{array}
+$$
 
 then we can replace the expressions with a symbolic equivalent
 
@@ -28,7 +35,7 @@ Plus[
     ],
   Times[
    Derivative[f[Theta]][Theta_e]
-   Integrate[1, {Theta, 0, 2Pi}], 
+   Integrate[{Theta, 0, 2Pi}],
    Integrate[g[r], {r, 0, Infinity}]
    ]
   ]
@@ -36,11 +43,70 @@ Plus[
 
 and hopefully the hierarchy of statements is pretty clear there. 
 
-What's note worthy is that _all_ mathematical expressions can be represented like this
+What's also noteworthy is that _all_ mathematical expressions can be represented like this.
+
+Keep in mind, too, that this isn't the only possible partitioning.
+We could just have easily split it up like
+
+$$
+\left(\int _0^{\, \infty }g(r)d\, r\right)*\left(\int _0^{\, 2\pi }f(\theta ) +\frac{\partial f}{\partial \theta }\left(\theta _e\right)d\, \theta \right)
+$$
+
+and then gotten
+
+```lang-none
+Times[
+  Integrate[g[r], {r, 0, Infinity}],
+  Integrate[
+    Plus[f[Theta], Derivative[f[Theta]][Theta_e]],
+    {Theta, 0, 2Pi}
+    ]
+  ]
+```
+
+where the only difference is whether we choose to have the outer-most operation be a multiplication or an addition.0
+
+Why does that matter? Well let's think about how we'd turn this expression into a function.
+
+If we took our original expression we'd have
+
+```python
+def my_integral(f, g, df, theta_e):
+  """Computes the integral as we had it in the beginning"""
+  def integrand(theta, r):
+     g(r)*f(theta) + df(theta_e)*g(r)
+  return integrate(integrand, [0, 2*math.pi], [0, math.infinity])
+```
+
+and this requires that our `integrate` function both be able to handle 2D integrals and also probably be very efficient, since our `integrand` isn't particularly simple.
+
+If we were to tell the story of this function it might be
+
+> `my_integral` integrates a two-dimensional integrand over an infinite disk
+
+which isn't particularly compelling. No rising action, no climax, no denouement.
+
+Looking at our next two versions, maybe things are somewhat better
+
+```python
+def my_integral_2(f, g, df, theta_e):
+  """Computes the integral as we had it in the second form"""
+  g_int = integrate(g, [0, 2*math.pi])
+  f_int = integrate(f, [0, 2*math.pi])
+  df_te = df(theta_e)
+  disk = integrate([0, 2*math.pi])
+  return g_int*f_int + df_te*disk*g_int
+```
+
+and maybe for this one we'd say
+
+> `my_integral_2` integrates two 1D functions and multiplies them together and then by the area of a disk
 
 
 
+Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 Next: [Translating Math Into Code](TranslatingMathIntoCode.md)
+Previous: [Reading a Function](ReadingAFunction.md)
 
 ---
 

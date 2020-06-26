@@ -669,7 +669,9 @@ if we know this will be applied to molecular systems as part of a reaction-path 
 
 obviously the function can be applied to _any_ set of masses and positions, but the context makes the function a bit easier to remember/make sense of.
 
+Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 Next: [Reading Math](ReadingMath.md)
+Previous: [A Hierachical View of Problem Solving](AHierarchicalViewOfProblemSolving.md)
 
 ---
 
