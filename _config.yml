@@ -6,8 +6,9 @@ footer_text: >-
   Brought to you by the McCoy Group at the University of Washington
 sitemap_roots:
   - References
+  - McCoy Group Code Academy
   - Documentation
-sitemap_depth: 2
+sitemap_depth: 1
 links:
   - url: https://blogs.uw.edu/mccoygrp/
     title: Group Website
