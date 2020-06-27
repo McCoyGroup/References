@@ -6,3 +6,6 @@ To make that transition as smooth as possible, we're documenting some of the mos
 * [Introduction](intro.md)
 * [Your First Python Script](FirstPythonScript.md)
 * [To Functions and Beyond](FunctionsAndBeyond.md)
+
+---
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/index.md)

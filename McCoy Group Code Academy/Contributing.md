@@ -47,7 +47,7 @@ _this is italic_
 
 As you want to do more and more stuff, there are tons of Markdown resources out there so definitely give them a look.
 
-### Footer
+# Footer
 
 To make it easy to edit files, we're providing a standardized footer at the bottom of our pages, which in Markdown looks like
 
@@ -91,6 +91,37 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/McCoy%20Group%20Code%20Academy/<Path/To/Page.md>)
 ```
+
+# Styling
+
+If you're comfortable with the languages of web programming, here are some helpful hints.
+
+GitHub pages uses Jekyll to render its Markdown by default.
+Our config file for this is [here](../_config.yml).
+
+As of when I write this, we're using [Kramdown](https://kramdown.gettalong.org/quickref.html) as our Markdown renderer. The theme is one I developed specifically for this, which you can find [here](https://github.com/McCoyGroup/finx).
+
+This is important, because Kramdown supports a non-standard syntax to add styling to elements which looks like
+```lang-none
+This is a test
+{: .test-class}
+```
+
+where `test-class` is a CSS class.
+
+Now combining that with the fact that the theme builds off of [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/) we can make use of their huge library of styling classes to add stuff to our text, e.g.
+
+You can do this too!
+{: .alert-primary .rounded-pill .p-3}
+
+```lang-none
+You can do this too!
+{: .alert-primary .rounded-pill .p-3}
+```
+
+I also wrote a syntax layer for doing pattern matching and adding annotations on the generated HTML. You can see an example of that [here](https://github.com/b3m2a1/annotateMD/blob/master/annotations/simple_transforms.ts). That's all done in TypeScript, so feel free to dive into it if you want to add more complex interactions to the pages.
+This will definitely be a steeper learning curve than the Bootstrap CSS, though.
+
 
 
 ---

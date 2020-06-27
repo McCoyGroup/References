@@ -18,7 +18,6 @@ There's no better way to get good at something that practice, so we've created a
 We've tried to write them to follow good programming practices that'll help make your code easier to debug and share with others.
 Give them a look [here](Examples).
 
-
 Feel free to let us know if you run into [any issues](https://github.com/McCoyGroup/References/issues) or if you [want to contribute](Contributing.md).<br/>
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask).
 
