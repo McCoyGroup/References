@@ -31,6 +31,8 @@ collections:
     output: true
   references:
     output: true
+  mccoy group code academy:
+    output: true
 
 defaults:
   - scope:
@@ -41,6 +43,13 @@ defaults:
       path: "index.html|about.html|404.html|search.html"
     values:
       layout: "page"
+  - scope:
+      path: "McCoy Group Code Academy"
+      type: "pages"
+    values:
+      optional_scripts: true
+      custom_styles: "refs"
+      layout: "refs"
   - scope:
       path: "References"
       type: "pages"
