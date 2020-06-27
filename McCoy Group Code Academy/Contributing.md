@@ -31,14 +31,14 @@ Here's the brief overview.
 ### This is a subsubheader
 ```
 
-[This is a link](https://thisisalink.fake)</br>
+[This is a link](https://thisisalink.fake)<br/>
 ![This tries to load an image](https://thisisanimage.fake)
 ```
 [This is a link](https://thisisalink.fake)
 ![This tries to load an image](https://thisisanimage.fake)
 ```
 
-_this is italic_</br>
+_this is italic_<br/>
 **this is bold**
 ```
 _this is italic_
@@ -66,6 +66,7 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 
 If we want to give external people places to report issues, we can provide a link to the GitHub issues page
 ```
+Find an issue? [Report it!](https://github.com/McCoyGroup/References/issues/new)
 ```
 
 If you want to add footnotes, you can do that too.
@@ -125,4 +126,4 @@ This will definitely be a steeper learning curve than the Bootstrap CSS, though.
 
 
 ---
-[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/McCoy%20Group%20Code%20Academy/Contributing.md)
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/Contributing.md)
