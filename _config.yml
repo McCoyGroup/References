@@ -5,10 +5,12 @@ github_username:  McCoyGroup
 footer_text: >-
   Brought to you by the McCoy Group at the University of Washington
 sitemap_roots:
-  - McCoy Group Code Academy
-  - References
-  - Documentation
-sitemap_depth: 1
+  - name: McCoy Group Code Academy
+    depth: 3
+  - name: References
+    depth: 3
+  - name: Documentation
+    depth: 2
 links:
   - url: https://blogs.uw.edu/mccoygrp/
     title: Group Website
@@ -26,13 +28,6 @@ plugins:
   - jekyll-optional-front-matter
 relative_links:
   enabled: true
-collections:
-  docs:
-    output: true
-  references:
-    output: true
-  mccoy group code academy:
-    output: true
 
 defaults:
   - scope:
