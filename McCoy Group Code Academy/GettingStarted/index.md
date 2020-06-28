@@ -7,5 +7,7 @@ To make that transition as smooth as possible, we're documenting some of the mos
 * [Your First Python Script](FirstPythonScript.md)
 * [To Functions and Beyond](FunctionsAndBeyond.md)
 
+We've also collected some resource for you to help you [find helpful tools](UsefulTools.md) and [avoid common issues](CommonIssues.md).
+
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/index.md)
