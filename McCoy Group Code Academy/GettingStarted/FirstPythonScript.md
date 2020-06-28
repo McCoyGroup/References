@@ -83,11 +83,67 @@ It's a way to explore ideas and build tools that you can share with other people
 Do silly things, make mistakes, hack into the NSA's servers, sell state secrets to the highest bidder, get arrested, etc.
 This is a great time to explore, and the moment you turn 18 all of that gets expunged from your permanent record.
 
-## Writing a Script
+## Writing and Running a Script
 
 If you haven't already installed PyCharm, now might be a good time to.
+Definitely no need to, but it might help with writing the code.
+As before, I'll pretend we haven't.
+You will, however, need _some_ way to edit a file.
+Most operating systems have one built in. Windows has Notepad++, Mac has TextEdit. If you're on Linux...maybe `vim` is all you have?
+Once again, I've got no idea, but hopefully you do.
 
+So after all that playing around we're ready to start writing a script that'll do something super cool.
+What this super cool thing is...well that's still TBD.
+For now we're just gonna write a script that says rude things about someone named Ryna.
+To do so we'll make a file called `im_a_jerk.py`.
 
+In it, to start, we'll put this content
+
+```python
+person = "Ryna"
+place = "New Jersye"
+bad_place = "Princeton"
+print(f"{person} is from {place}. You know what's in {place}? {bad_place}")
+```
+
+then to run this we'll do
+
+```console
+$ python3 im_a_jerk.py
+Ryna is from New Jersye. You know what's in New Jersye? Princeton
+```
+
+but...well that feels like a bit of a low blow (sorry Ryna).
+So let's change this up to be a bit nicer.
+We'll replace Princeton with an objectively better place, like Trenton.
+So we'll change our script to look like
+
+```python
+person = "Ryna"
+place = "New Jersye"
+better_place = "Trenton"
+print(f"{person} is from {place}. You know what's in {place}? {better_place}")
+```
+
+and then we get
+
+```console
+$ python3 im_a_jerk.py
+Ryna is from New Jersye. You know what's in New Jersye? Trenton
+```
+
+at this stage we can do all sorts of stuff.
+
+We could change our script so that instead of having to change up the actual body of the script we load the `person`, `place`, and `bad_place` from another file. Or we could pass them directly on the command line, (i.e. with `$ python3 im_a_jerk.py Mark Michigan Marquette`).
+The possibilities are endless, and the best thing to do is explore for yourself.
+
+Instead, we'll move onto discussing some tips for making it easier to write code that does interesting stuff.
+Don't feel like you need to plow straight on, though.
+Play around for a while and go on when you're ready.
+
+Next: [To Functions and Beyond](FunctionsAndBeyond.md)<br/>
+Previous: [Introduction](intro.md)<br/>
+Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/CommonIssues.md)
