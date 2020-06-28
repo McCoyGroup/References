@@ -141,9 +141,13 @@ Instead, we'll move onto discussing some tips for making it easier to write code
 Don't feel like you need to plow straight on, though.
 Play around for a while and go on when you're ready.
 
-Next: [To Functions and Beyond](FunctionsAndBeyond.md)<br/>
-Previous: [Introduction](intro.md)<br/>
+<span class="text-muted">Next:</span>
+ [To Functions and Beyond](FunctionsAndBeyond.md)<br/>
+<span class="text-muted">Previous:</span>
+ [Introduction](intro.md)
+
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
+{: .alert .alert-info}
 
 ---
-[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/CommonIssues.md)
+[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/CommonIssues.md)
