@@ -27,9 +27,13 @@ Both of these will give you peace of mind that if something breaks, you can figu
 A common thing we need to do when debugging is visualize our molecules. You can write code to do this or you can use an existing tool.
 JMol and Avogadro are the most common applications we use in the group to do this.
 
-Next: [Common Issues](CommonIssues.md)<br/>
-Previous: [What Now?](WhatNow.md)<br/>
+> <span class="badge badge-dark">Next:</span>
+ [Common Issues](CommonIssues.md)<br/>
+> <span class="badge badge-dark">Previous:</span>
+ [What Now?](WhatNow.md)
+
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
+{: .alert .alert-info}
 
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/UsefulTools.md)
