@@ -232,9 +232,9 @@ most python code you see _won't_ look like this, simply for reasons of convenien
 On the other hand, all programs _have this structure_, even if the person writing it didn't realize it. 
 By hiding complexity beneath lots of little functions, though, you make your logic clearer, make it less taxing to write, and make it easier to reuse.
 
+Next: [Reading A Function](ReadingAFunction.md)<br/>
+Previous: [Practical Quantum Mechanics](PracticalQuantumMechanics.md)<br/>
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
-Next: [Reading A Function](ReadingAFunction.md)
-Previous: [Practical Quantum Mechanics](PracticalQuantumMechanics.md)
 
 ---
 1. <a id="fn1"></a> The capitol of the Xinjiang Uyghur Autonomous Region in the Western edge of China

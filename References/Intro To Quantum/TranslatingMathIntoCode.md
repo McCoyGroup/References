@@ -10,7 +10,9 @@ Here's the basic outline:
 * We'll parse those mathematical forms into their physical meaning
 * Finally we'll set up the code to implement this meaning
 
-Next: [What Now?](WhatNow.md)
+Next: [What Now?](WhatNow.md)<br/>
+Previous: [Reading Math](ReadingMath.md)<br/>
+Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 
 ---
 

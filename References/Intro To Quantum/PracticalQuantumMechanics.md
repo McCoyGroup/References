@@ -42,8 +42,8 @@ And that's...pretty much all we need do? Once we have that we can use other func
 There are lots of ways to find or approximate $\psi(x)$ and I don't have the time, energy, or expertise to enumerate them all.
 Hopefully over the course of this brief intro, though, you'll become convinced that no matter what the method, with a bit of grit and a good dollop of time, you could find $\psi(x)$ too.
 
+Next: [A Hierarchical View Of Problem Solving](AHierarchicalViewOfProblemSolving.md)<br/>
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
-Next: [A Hierarchical View Of Problem Solving](AHierarchicalViewOfProblemSolving.md)
 
 ---
 
