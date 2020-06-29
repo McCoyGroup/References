@@ -11,7 +11,7 @@ Despite that, we really want to be using python3. The features are worth it, and
 Add a note or two..
 
 ## How do I download them?
-You really have two choices here: you can install python through anaconda, or you can directly install python. Either is just as good and there really is no preferred method. If you already have Anaconda from using jupityer or something of the sort, you are off to a good start.
+Here we like to use Anaconda. It is a bit more streamlined and is the same way python is installed on the group computers as well as any _High Performace Computing_ (HPC) clusters (like mox or NERSC) you may encounter. If you already have Anaconda from using jupityer or something of the sort, you are off to a good start.
 
 ### Installing Anaconda 3
 
