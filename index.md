@@ -13,9 +13,9 @@ This site's purpose is to provide resource and reference to the code and problem
 References written up to help explain topics that are common to our research.
 
 
-### [McCoy Group Code Academy](McCoy%20Group%20Code%20Academy)
+### [McCode Academy](McCoy%20Group%20Code%20Academy)
 
-This is the home page of our new McCoy Group Academy.
+This is the home page of our new McCode Academy.
 This was written with the intention of getting people ready and thinking about the kinds of problems we approach.
 It is written (hopefully) to compliment the references provided in the above pages!
 
@@ -36,5 +36,5 @@ they can be a powerful tool for figuring out how to use the code.*
 
 ### Not sure where to start?
 Try this: [Introduction to Quantum Chemistry](https://mccoygroup.github.io/References/References/Intro%20To%20Quantum/)
-or this: [Introduction to McCoy Group Code Academy](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/intro.html)
+or this: [Getting Started with McCode Academy](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/GettingStarted/)
 or ask someone!
