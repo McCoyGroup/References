@@ -1,6 +1,6 @@
-# Your First Python Script
+# Your "First" Python Script
 
-The biggest hurdle to overcome when starting out isn't the kind of abstract thinking coding requires, nor is it needing to understand the syntax of the language, and it's definitely not needing to know how computers do what they do--very few programmers actually know that.
+Add some notes here.. The biggest hurdle to overcome when starting out isn't the kind of abstract thinking coding requires, nor is it needing to understand the syntax of the language, and it's definitely not needing to know how computers do what they do--very few programmers actually know that.
 Instead, it's literally just getting everything installed and playing nicely together.
 So we're gonna walk through the basics of what'll be needed to get through this tutorial.
 
