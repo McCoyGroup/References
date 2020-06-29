@@ -7,8 +7,9 @@ Through these pages, we have attempted to *hit the highlights* and lay a nice gr
 
 ## Choose your own adventure
 Start by walking through Code Structures: 
-* [Your First Python Script](FirstPythonScript.md)
-* [To Functions and Beyond](FunctionsAndBeyond.md)
+* [Your "First" Python Script](FirstPythonScript.md)
+* [How to Write a Function](HowToWriteAFunction.md)
+* [From Functions to Classes](FunctionsToClasses.md)
 
 or by looking at how to: 
 * [Find Helpful Tools](UsefulTools.md) 
