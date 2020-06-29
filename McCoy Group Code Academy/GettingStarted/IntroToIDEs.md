@@ -21,7 +21,7 @@ Notes here on setting congfiguration environment and comment about linking githu
 <span class="text-muted">Next:</span>
  [Your "First" Python Script](FirstPythonScript.md)<br/>
 <span class="text-muted">Previous:</span>
- [An Introduction to Pyhton/Anaconda](IntroToPython.md)
+ [An Introduction to Python/Anaconda](IntroToPython.md)
  
  Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
