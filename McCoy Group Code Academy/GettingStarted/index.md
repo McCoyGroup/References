@@ -16,7 +16,7 @@ Through these pages, we have attempted to *hit the highlights* and lay a nice gr
 
 ### Next, Look at How to: 
 * [Find Helpful Tools](UsefulTools.md) 
-* [Avoid Common Issues](CommonIssues.md).
+* [Avoid Common Issues](CommonIssues.md)
 
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/index.md)
