@@ -1,8 +1,28 @@
 # An Introduction to Python
 
-# What is Anaconda?
+Why learn Python? ...
 
-# How do I download them?
+**A quick aside:** If you start googling around, one of the first things you'll figure out about python is that there are two main versions of it. There's python2, which first came out in 2000, and python3 which came out in 2008.
+Migration to python3 has been [incredibly slow](https://stackoverflow.blog/2019/11/14/why-is-the-migration-to-python-3-taking-so-long/), so you'll probably see stuff talking about python2 when you try to look stuff up on the internet.
+Despite that, we really want to be using python3. The features are worth it, and python2 is no longer supported.
+
+## What is Anaconda?
+
+Add a note or two..
+
+## How do I download them?
+You really have two choices here: you can install python through anaconda, or you can directly install python. Either is just as good and there really is no preferred method. If you already have Anaconda from using jupityer or something of the sort, you are off to a good start.
+
+### Installing Anaconda 3
+
+Fill in :) 
+
+### Installing Python 3
+
+First we'll go to the [Python Organization downloads page](https://www.python.org/downloads/) and download whichever version they're saying is the latest (as of writing this that's currently 3.8).
+That should download an installer and we'll just do what the python.org people tell us to do to get it installed.
+
+
 
 <span class="text-muted">Next:</span>
  [Do I need an IDE?](IntroToIDEs.md)<br/>
