@@ -8,7 +8,7 @@ Through these pages, we have attempted to *hit the highlights* and lay a nice gr
 ### You may want to start with.. 
 * [An Introduction to Python/Anaconda](IntroToPython.md): You can find download instructions here too!
 * [Interactive Python](InteractivePython.md): An Introduction to using python through the command line.
-* [Do I need an IDE?](IntroToIDEs.md): An Introduction to _Integrated Development Environments_ and why we like them! 
+* [What is an IDE?](IntroToIDEs.md): An Introduction to _Integrated Development Environments_ and why we like them! 
 
 ### Then, Walk through Code Structures: 
 * [Your "First" Python Script](FirstPythonScript.md)
