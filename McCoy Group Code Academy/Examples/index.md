@@ -22,7 +22,7 @@ With that said, here's the list of exercises to work through. Don't feel obligat
 
 * Expand a Function as a Fourier Series
 * Apply a change of basis to a Hamiltonian
-* [Colbert-Miller 1D DVR](CM_1D.py)
+* [Colbert-Miller 1D DVR](CM_1D.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Examples/CM_1D.py))
 * Colbert-Miller Multidimensional DVR
 * Calculate Adiabatic Potentials
 * Calculate Franck-Condon Transition Intensities
@@ -30,7 +30,8 @@ With that said, here's the list of exercises to work through. Don't feel obligat
 * Anderson DMC
 * Reyonolds DMC
 
-Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask).
+Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
+{: .alert .alert-info}
 
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/Examples/index.md)
