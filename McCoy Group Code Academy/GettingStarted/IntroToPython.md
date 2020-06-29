@@ -25,7 +25,7 @@ That should download an installer and we'll just do what the python.org people t
 
 
 <span class="text-muted">Next:</span>
- [Do I need an IDE?](IntroToIDEs.md)<br/>
+ [What is an IDE?](IntroToIDEs.md)<br/>
 <span class="text-muted">Previous:</span>
  [Getting Started](index.md)
  
