@@ -6,19 +6,7 @@ So we're gonna walk through the basics of what'll be needed to get through this 
 
 ## Set Up
 
-### Installing Python
-
-If you start googling around, one of the first things you'll figure out about python is that there are two main versions of it. There's python2, which first came out in 2000, and python3 which came out in 2008.
-Migration to python3 has been [incredibly slow](https://stackoverflow.blog/2019/11/14/why-is-the-migration-to-python-3-taking-so-long/), so you'll probably see stuff talking about python2 when you try to look stuff up on the internet.
-Despite that, we really want to be using python3. The features are worth it, and python2 is no longer supported.
-So with that probably unnecessarily long preamble out of the way, what do we need to do? Well first we'll go to the [Python Organization downloads page](https://www.python.org/downloads/) and download whichever version they're saying is the latest (as of writing this that's currently 3.8).
-That should download an installer and we'll just do what the python.org people tell us to do to get it installed.
-
-### Installing PyCharm
-
-If you'd like, feel free to jump directly to installing [PyCharm](https://www.jetbrains.com/pycharm/).
-It's a tool that makes it way easier to write python code that doesn't have bugs in it.
-We'll continue on as if you hadn't done so, but you'll probably want to install it before long, so why not now?
+You can either work with Python interactively in the command window, or with an IDE like PyCharm. 
 
 ### Interactive Python
 
@@ -85,59 +73,26 @@ This is a great time to explore, and the moment you turn 18 all of that gets exp
 
 ## Writing and Running a Script
 
-If you haven't already installed PyCharm, now might be a good time to.
-Definitely no need to, but it might help with writing the code.
-As before, I'll pretend we haven't.
-You will, however, need _some_ way to edit a file.
-Most operating systems have one built in. Windows has Notepad++, Mac has TextEdit. If you're on Linux...maybe `vim` is all you have?
-Once again, I've got no idea, but hopefully you do.
+If you haven't already installed PyCharm, now might be a good time to. Actually, just do it. Here are the [instructions](IntroToIDEs.md). PyCharm is basically a Spell Check of sorts for Python Code, so if you are gonna start writing scripts, why wouldn't you want Spell Check?
 
-So after all that playing around we're ready to start writing a script that'll do something super cool.
-What this super cool thing is...well that's still TBD.
-For now we're just gonna write a script that says rude things about someone named Ryna.
-To do so we'll make a file called `im_a_jerk.py`.
+Ok, now we're ready to start writing a script that'll do something super cool.
+What this super cool thing is...well that's still TBD. (and to be determined by you!)
+For now we're just gonna write a script that converts frequencies from wavenumbers (cm^-1) to their atomic units (Hartree).
+To do so we'll make a file called `wave_to_au.py`.
 
-In it, to start, we'll put this content
+In it, to start, we'll put this content:
 
 ```python
-person = "Ryna"
-place = "New Jersye"
-bad_place = "Princeton"
-print(f"{person} is from {place}. You know what's in {place}? {bad_place}")
+  frequency = 3600  # the frequency of an OH strech in water 
+  conversion_factor = 219474.6  # cm^-1 = 1 Hartree
+  print()
 ```
+Now, let's break this down a little bit:
 
-then to run this we'll do
+# What else can we do with this?
+...
 
-```console
-$ python3 im_a_jerk.py
-Ryna is from New Jersye. You know what's in New Jersye? Princeton
-```
-
-but...well that feels like a bit of a low blow (sorry Ryna).
-So let's change this up to be a bit nicer.
-We'll replace Princeton with an objectively better place, like Trenton.
-So we'll change our script to look like
-
-```python
-person = "Ryna"
-place = "New Jersye"
-better_place = "Trenton"
-print(f"{person} is from {place}. You know what's in {place}? {better_place}")
-```
-
-and then we get
-
-```console
-$ python3 im_a_jerk.py
-Ryna is from New Jersye. You know what's in New Jersye? Trenton
-```
-
-at this stage we can do all sorts of stuff.
-
-We could change our script so that instead of having to change up the actual body of the script we load the `person`, `place`, and `bad_place` from another file. Or we could pass them directly on the command line, (i.e. with `$ python3 im_a_jerk.py Mark Michigan Marquette`).
-The possibilities are endless, and the best thing to do is explore for yourself.
-
-Instead, we'll move onto discussing some tips for making it easier to write code that does interesting stuff.
+Now, we'll move onto discussing some tips for making it easier to write code that does interesting stuff.
 Don't feel like you need to plow straight on, though.
 Play around for a while and go on when you're ready.
 
