@@ -38,6 +38,7 @@ After running, you should see the following output:
 ```3600 wavenumbers is 0.01640280925446498 in Hartree```
 
 Congrats! You did it! 
+
 **Bonus Round**: If you don't want _all_ those digits on your Hartree value, you can edit the value that gets printed in the Format String. This is cool because it doesn't change the value of the variable `frequency_au`. In order to do this, you can tell the string how many values to print. This looks like:
 ```python
   print(f"{frequency} wavenumbers is {frequency_au:.5f} in Hartree")
