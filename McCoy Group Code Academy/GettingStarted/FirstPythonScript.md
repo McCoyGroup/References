@@ -22,9 +22,9 @@ In it, to start, we'll put this content:
 Now, let's break this down a little bit:
 1. Define variables, `frequency` and `conversion_factor`.
 2. Convert the frequency. 
-3. Print a _Format String_ showing the input frequency and the converted frequency. 
+3. Print a _F-String_ showing the input frequency and the converted frequency. 
 
-A _Format String_ you ask? This is one of your best friends for getting data quick, checking values, and debugging. You define a format string by placing a lowercase `f` in front of your string quotes like so, `f" "`. with this in place, you can type and insert variables directly by enclosing them in curly brackets `{}`. Then when the `print()` function prints your string to the command window (or the Run window in PyCharm), it fills in the blanks with the values of the variables you provided.  
+A _F-String_ you ask? This is one of your best friends for getting data quick, checking values, and debugging. You define an f-string by placing a lowercase `f` in front of your string quotes like so, `f" "`. With this in place, you can type and insert variables directly by enclosing them in curly brackets `{}`. Then when the `print()` function prints your string to the command window (or the Run window in PyCharm), it fills in the blanks with the values of the variables you provided. Note: The _F-string_ is new to Python3 and mirrors using something like `"".format()` or `"%.s" {}` if these are something you are more familiar with. Learn more about f-strings [here](https://realpython.com/python-f-strings/#f-strings-a-new-and-improved-way-to-format-strings-in-python)  
 
 ## Running a Script
 
@@ -39,7 +39,7 @@ After running, you should see the following output:
 
 Congrats! You did it! 
 
-**Bonus Round**: If you don't want _all_ those digits on your Hartree value, you can edit the value that gets printed in the Format String. This is cool because it doesn't change the value of the variable `frequency_au`. In order to do this, you can tell the string how many values to print. This looks like:
+**Bonus Round**: If you don't want _all_ those digits on your Hartree value, you can edit the value that gets printed in the f-string. This is cool because it doesn't change the value of the variable `frequency_au`. In order to do this, you can tell the string how many values to print. This looks like:
 ```python
   print(f"{frequency} wavenumbers is {frequency_au:.5f} in Hartree")
 ```
