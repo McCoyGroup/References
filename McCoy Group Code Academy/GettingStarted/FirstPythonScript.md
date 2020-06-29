@@ -24,7 +24,7 @@ Now, let's break this down a little bit:
 2. Convert the frequency. 
 3. Print a _F-String_ showing the input frequency and the converted frequency. 
 
-A _F-String_ you ask? This is one of your best friends for getting data quick, checking values, and debugging. You define an f-string by placing a lowercase `f` in front of your string quotes like so, `f" "`. With this in place, you can type and insert variables directly by enclosing them in curly brackets `{}`. Then when the `print()` function prints your string to the command window (or the Run window in PyCharm), it fills in the blanks with the values of the variables you provided. Note: The _F-string_ is new to Python3 and mirrors using something like `"".format()` or `"%.s" {}` if these are something you are more familiar with. Learn more about f-strings [here](https://realpython.com/python-f-strings/#f-strings-a-new-and-improved-way-to-format-strings-in-python)  
+A _F-String_ you ask? This is one of your best friends for getting data quick, checking values, and debugging. You define an f-string by placing a lowercase `f` in front of your string quotes like so, `f" "`. With this in place, you can type and insert variables directly by enclosing them in curly brackets `{}`. Then when the `print()` function prints your string to the command window (or the Run window in PyCharm), it fills in the blanks with the values of the variables you provided. Note: The _F-string_ is new to Python3 and mirrors using something like `"".format()` or `"%.s" {}` if these are something you are more familiar with. Learn more about f-strings [here](https://realpython.com/python-f-strings/#f-strings-a-new-and-improved-way-to-format-strings-in-python)!  
 
 ## Running a Script
 
