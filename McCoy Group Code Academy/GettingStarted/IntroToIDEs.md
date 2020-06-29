@@ -1,8 +1,21 @@
 # What is an IDE?
 
-# Why is it useful?
+insightful comments.
 
-# How do I download one?
+JetBrains has made a truly great python IDE called [PyCharm](https://www.jetbrains.com/pycharm/).
+There's a free community version and also a paid professional version. As someone with a `@uw.edu` email, you can use the pro version for free.
+
+## Why is it useful?
+
+even more insightful comments.
+
+## How do I install PyCharm?
+
+You can find the installer for PyCharm [here](https://www.jetbrains.com/pycharm/). And as with Python we will follow the instructions laid out by JetBrains.
+
+### Setting Up PyCharm 
+
+Notes here on setting congfiguration environment and comment about linking github in the future...
 
 
 <span class="text-muted">Next:</span>
