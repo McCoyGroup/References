@@ -35,7 +35,9 @@ In order to see if/how this is working, we will want to run our script. To do th
 It is important to note here that the file listed to the left of the green play button is the file that will run when you press it. You can change it using the dropdown arrow.
 
 After running, you should see the following output:
-```3600 wavenumbers is 0.01640280925446498 in Hartree```
+```python
+"3600 wavenumbers is 0.01640280925446498 in Hartree"
+```
 
 Congrats! You did it! 
 
