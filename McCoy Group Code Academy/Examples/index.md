@@ -1,4 +1,4 @@
-# Code Examples
+# Code Exercises
 
 Like anything else, coding takes time and effort to get good at.
 And like many other things, it's also got an opinionated, sometimes virulent practitioner base.
@@ -6,7 +6,7 @@ To help you along and to (hopefully) spare you some of the toxicitiy of the inte
 These samples are scripts where the logical structure of a program is provided as a reference so that you can build off of it/fill it out and get a working implementation that follows python best practices.
 
 We'll take [`Template.py`](Template.py) to look at the basic structure of these samples.
-The file will auto-download when you click on the link, so open it in PyCharm or [view it on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Examples/Template.py).
+The file will auto-download when you click on the link, so open it in PyCharm or [view it on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Template.py).
 
 If we look at the file we see it's got basically five chunks to it
 
@@ -18,11 +18,11 @@ If we look at the file we see it's got basically five chunks to it
 
 ### List
 
-With that said, here's the list of examples to work through
+With that said, here's the list of exercises to work through. Don't feel obligated to do them all right away or in order. But do remember they are here as your research projects expand and evolve. 
 
 * Expand a Function as a Fourier Series
 * Apply a change of basis to a Hamiltonian
-* [Colbert-Miller 1D DVR](CM_1D.py)
+* [Colbert-Miller 1D DVR](CM_1D.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Examples/CM_1D.py))
 * Colbert-Miller Multidimensional DVR
 * Calculate Adiabatic Potentials
 * Calculate Franck-Condon Transition Intensities
@@ -30,7 +30,8 @@ With that said, here's the list of examples to work through
 * Anderson DMC
 * Reyonolds DMC
 
-Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask).
+Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
+{: .alert .alert-info}
 
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/Examples/index.md)

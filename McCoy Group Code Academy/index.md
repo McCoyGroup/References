@@ -1,9 +1,9 @@
-# Welcome to McCoy Group Code Academy!
+# Welcome to McCode Academy!
 
-We hope that this is a nice stepping stone between learning python and jumping into research! Working through these samples will introduce you to (what we have deemed) helpful functions and _tricky tricks_ for the problems we work on in the group.
+We hope that this is a nice stepping stone between learning basic python and jumping into research! (or a nice introduction into the tools we use to problem solve in the group) Working through these samples will introduce you to (what we have deemed) helpful functions and _tricky tricks_ for commonly addressed problems in the group.
 If you'd like an introduction to the kind of mindset we use when figuring out how to solve problems in quantum chemistry, we have that [here](https://github.com/McCoyGroup/References/Intro%20TO%20Quantum).
 
-Here's a basic road map we think you might find useful
+Here's a basic road map we think you might find useful:
 
 * [Getting Started](GettingStarted): introduction to programs, scripts, and common pitfalls
 * [NumPy and SciPy](NumPy): working with big blocks of numbers
@@ -14,8 +14,8 @@ Here's a basic road map we think you might find useful
 
 ## Exercises
 
-There's no better way to get good at something that practice, so we've created a number of exercises that you can work through that'll hopefully help you build up your self-confidence.
-We've tried to write them to follow good programming practices that'll help make your code easier to debug and share with others.
+There's no better way to get good at something than practice, so we've created a number of exercises that you can work through that'll hopefully help you build up your self-confidence and prepare you for tackling your own research problems. 
+We've written them to follow good programming practices (remember: comments are your friends) that'll help make your code easier to debug, share with others, or revisit after a few weeks.
 Give them a look [here](Examples).
 
 Feel free to let us know if you run into [any issues](https://github.com/McCoyGroup/References/issues) or if you [want to contribute](Contributing.md).<br/>
