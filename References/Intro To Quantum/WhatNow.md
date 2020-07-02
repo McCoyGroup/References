@@ -17,7 +17,11 @@ If you're looking for stuff to read, here are some (hopefully) useful resources:
 * [Programming Blogs](https://blog.codinghorror.com/): I waffled on whether to include this, since a lot of these bloggers are huge neckbeards that love themselves too much. On the other hand, it's really helpful to see how other people approached problems. On the other hand, despite having a literal neckbeard, Jeff Atwood is one of the better people about this. 
 * So many other things!: I just listed the things that I had off the top of my head. As you work on your own projects and things, I'm sure you'll find what works for you and that is what matters most.
 
+<span class="text-muted">Previous:</span>
+ [Translating Math Into Code](TranslatingMathIntoCode.md)
+
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
+{: .alert .alert-info}
 
 ---
 

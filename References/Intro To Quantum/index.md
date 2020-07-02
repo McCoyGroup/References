@@ -34,6 +34,9 @@ And if you're feeling generous, come back and drop some [feedback]() (It wasn't 
 
 [Let's get started!](PracticalQuantumMechanics.md)
 
+Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
+{: .alert .alert-info}
+
 ---
 
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Intro%20To%20Quantum/index.md)

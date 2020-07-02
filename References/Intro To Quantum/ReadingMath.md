@@ -156,9 +156,13 @@ TBD.
 
 I think I'd like to break down the expressions involved in an Eckart transformation, the expression for the intensity of an absorption, and then something more abstract like the core idea for a DVR.
 
-Next: [Translating Math Into Code](TranslatingMathIntoCode.md)<br/>
-Previous: [Reading a Function](ReadingAFunction.md)<br/>
+<span class="text-muted">Next:</span>
+ [Translating Math Into Code](TranslatingMathIntoCode.md)<br/>
+<span class="text-muted">Previous:</span>
+ [Reading a Function](ReadingAFunction.md)
+
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
+{: .alert .alert-info}
 
 ---
 
