@@ -18,7 +18,7 @@ There's no better way to get good at something than practice, so we've created a
 We've written them to follow good programming practices (remember: comments are your friends) that'll help make your code easier to debug, share with others, or revisit after a few weeks.
 Give them a look [here](Exercises).
 
-Feel free to let us know if you run into [any issues](https://github.com/McCoyGroup/References/issues) or if you [want to contribute](Contributing.md).</br>
+Feel free to let us know if you run into [any issues](https://github.com/McCoyGroup/References/issues) or if you [want to contribute](Contributing.md).<br/>
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
 
