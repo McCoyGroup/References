@@ -14,7 +14,7 @@ New pages can be made using GitHub's built-in Add File mechanism, and files can 
 
 We'll keep adding more details on how everything should be set up as we work through it.
 
-<div class="container bg-light border rounded p-3 font-weight-bold">
+<div class="container alert alert-secondary bg-light">
  <div class="row">
   <div class="col">
    <span class="text-muted">Markdown:</span>
@@ -56,7 +56,7 @@ We'll keep adding more details on how everything should be set up as we work thr
    [Styling](#styling)
   </div>
   <div class="col" markdown="1">
-   [Direct Links](#direct-content-links)
+   [Sublinks](#direct-content-links)
   </div>
   <div class="col"></div>
   <div class="col"></div>
@@ -66,7 +66,7 @@ We'll keep adding more details on how everything should be set up as we work thr
    <span class="text-muted">Standards:</span>
   </div>
   <div class="col" markdown="1">
-   [Next/Prev.](#nextprevious-buttons)
+   [Next/Prev](#nextprevious-buttons)
   </div>
   <div class="col" markdown="1">
    [Footer](#footer)
@@ -75,7 +75,7 @@ We'll keep adding more details on how everything should be set up as we work thr
    [Unfinished](#unfinished-content)
   </div>
   <div class="col" markdown="1">
-   [Jump Links](#jump-links)
+   [Jumps](#jump-links)
   </div>
   <div class="col"></div>
  </div>
@@ -331,7 +331,7 @@ This is built as a Markdown list, but we wrap it in some styling for thematic co
 We use the Bootstrap [grid](https://getbootstrap.com/docs/4.5/layout/grid/) layout system for these, which basically has you designate an outer `container` and a set of `row` objects which contain a series of `column` objects.
 It's a little confusing at first, but surprisingly easier to maintain than a Markdown table.
 
-<div class="container bg-light border rounded p-3 font-weight-bold">
+<div class="container alert alert-secondary bg-light">
  <div class="row">
   <div class="col" markdown="1">
    [A Content Link](#Header_To_Link_To)
@@ -374,7 +374,7 @@ It's a little confusing at first, but surprisingly easier to maintain than a Mar
 
 Admittedly you'll probably have no more than one row... If you don't want the links to stretch, you can make "empty" columns. Here's a good example. I've personally found that a 6-column layout isn't bad.
 
-<div class="container bg-light border rounded p-3 font-weight-bold">
+<div class="container alert alert-secondary bg-light">
  <div class="row">
   <div class="col" markdown="1">
    [Header 1](#Header_1)
@@ -410,7 +410,7 @@ Admittedly you'll probably have no more than one row... If you don't want the li
 </div>
 
 ```html
-<div class="container bg-light border rounded p-3 font-weight-bold">
+<div class="container alert alert-secondary bg-light">
  <div class="row">
   <div class="col" markdown="1">
    [Header 1](#Header_1)
