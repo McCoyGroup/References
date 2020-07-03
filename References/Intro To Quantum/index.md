@@ -1,23 +1,25 @@
 # An Intro to Problem-Solving in Quantum Chemistry
 
 Quantum chemistry, as an application of quantum mechanics, gets a bad rap for being "hard".
-Simply put, it is a field where technical language has taken over and can be unwelcoming and overwhelming to those just dipping their toes in. 
+There's a lot of jargon and technical language in the field, which can put up an immediate barrier to entry.
+On the other hand, it is our belief that _anyone_ can (with a bit of grit) be a quantum chemist.
+It doesn't require a steady hand, and you don't need to be a pro at doing experiments, and once you get past the big words, you'll find that we don't really do anything that requires math past what you might have done in eigth grade algebra.
+All we're gonna ask of you is that you give it a chance and believe in yourself.
 
-For example, in standard converstaion, bringing up work in "quantum chemistry" evokes looks of horror, although it is usually a conversation ender if you need an out.  
-On the other hand, even within chemistry, there's sometimes still a conception that "quantum" is tough, primarily based of these three simple facts:
+We think there are three main reasons that people think it's hard
 
-1. It is **usually** the last discipline of chemistry covered (if at all) during a Bachelor's degree.
-2. It is one of the most "mathematically involved" (Linear algebra? Who do you know here?)
-3. We let the words carry too much power. 
+1. In a regular Bachelor's degree, quantum is one of the final courses taken (it it's taken at all)
+2. It is (seemingly) one of the most "mathematically involved"
+3. There's a boat-load of jargon
 
-So let's break down:
+Let's rebut those point-by-point
 
-1. Ever heard of saving the best for last?
-2. Yes, **integrals suck** and you need them, BUT _you (usually) don't need to do any integrals yourself_, since some mathematician somewhere did the relevant ones for you in 1840 and like why reinvent the wheel?
-3. Not to get philosophical but "What's in a name? that which we call a rose; By any other name would smell as sweet..."
+1. Sure, it's one of the last courses, but that's just because it's too fun to teach to everyone :)
+2. 90% of the time we some French mathematician did the grunt work of figuring out the math for us ~1840 and like why reinvent the wheel?
+3. Jargon's annoying for sure, but jargon is just words and we don't want to let the words have too much power.
 
-Our hope with this resource is to develop strategies to get around having to do integrals--and often derivatives-- (and some linear algebra) by breaking our problems down into bits and using _tricky tricks_ (a term coined by our very own, Mark Boyer).
-This will of course require time and effort to get good at, after all you are embarking on a journey in a new language, but we hope to be a friendly travel guide and we don't expect any creative breakthroughs, strokes of genius, or aesthsically pleasing social media posts. (although these are sometimes helpful too.)
+Our hope with this resource is to develop strategies to get around having to do integrals--and often derivatives--by breaking our problems down into bits and figuring out the patterns
+This will of course require time and effort to get good at, after all you're embarking on a journey in a new sphere of knowledge, but we're hoping to be a friendly travel guide.
 
 So for a quick roadmap:
 
@@ -27,10 +29,10 @@ So for a quick roadmap:
 4. [Then](ReadingMath.md) we'll take a stab at developing strategies for breaking a chunk of math into its component bits so that we can reuse ideas
 5. [Finally](TranslatingMathIntoCode.md) we'll put this all together to find ways to translate math into code
 
-And for a bonus round, you can head to [McCoy Group Code Academy]() for practical applications of these problems!
+And for a bonus round, you can head to [McCoy Group Code Academy](../McCoy%20Group%Code%20Academy/) for practical applications of these problems!
 
 Finally, if this isn't your path that's cool too. There are tons of great resources out there, track some down that work for you. 
-And if you're feeling generous, come back and drop some [feedback]() (It wasn't the Romeo and Juliet was it?)
+And if you're feeling generous, come back and drop some [feedback](https://github.com/McCoyGroup/References/issues) or get involved at [contribute](../Contributing.md)!
 
 [Let's get started!](PracticalQuantumMechanics.md)
 
