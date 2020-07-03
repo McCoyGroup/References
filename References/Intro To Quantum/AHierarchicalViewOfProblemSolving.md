@@ -232,7 +232,7 @@ most python code you see _won't_ look like this, simply for reasons of convenien
 On the other hand, all programs _have this structure_, even if the person writing it didn't realize it. 
 By hiding complexity beneath lots of little functions, though, you make your logic clearer, make it less taxing to write, and make it easier to reuse.
 
-<span class="text-muted">Previous:</span>
+<span class="text-muted">Next:</span>
  [Reading A Function](ReadingAFunction.md)<br/>
 <span class="text-muted">Previous:</span>
  [Practical Quantum Mechanics](PracticalQuantumMechanics.md)
