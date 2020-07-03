@@ -1,7 +1,7 @@
 # Welcome to McCode Academy!
 
 We hope that this is a nice stepping stone between learning basic python and jumping into research! (or a nice introduction into the tools we use to problem solve in the group) Working through these samples will introduce you to (what we have deemed) helpful functions and _tricky tricks_ for commonly addressed problems in the group.
-If you'd like an introduction to the kind of mindset we use when figuring out how to solve problems in quantum chemistry, we have that [here](https://github.com/McCoyGroup/References/Intro%20TO%20Quantum).
+If you'd like an introduction to the kind of mindset we use when figuring out how to solve problems in quantum chemistry, we have that [here](https://mccoygroup.github.io/References/References/Intro%20To%20Quantum).
 
 Here's a basic road map we think you might find useful:
 
