@@ -21,9 +21,10 @@ All we need to do is a bunch of summations, and even there as long as we use the
 I'm not going to go through the specific cases here, but we've written up some references to help introduce you to the most useful basis sets to use.
 These are intended to be read in no particular order, but roughly go from simpler to more complicated.
 
-* [The Particle in a Box Basis](PIB.md)
+* [The General Overview](GeneralOverview.md)
 * [The Harmonic Oscillator Basis](HarmonicOscillator.md)
 * [The Particle on a Ring Basis](POR.md)
+* [The Particle in a Box Basis](PIB.md)
 * [Discrete Variable Representation](BasicDVR.md)
 
 We've also got a set of more advanced references for tackling multidimensional systems that will be easiest to understand after you understand the preliminaries.

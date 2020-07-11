@@ -35,6 +35,7 @@ These will be referenced inside the exercises, but don't feel like you need to w
 {: .alert .alert-warning}
 
 * [Filling out a Matrix](FillingAMatrix.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/FillingAMatrix.py))
+* [Turning a Piecewise Formula into a Matrix](PiecewiseToMatrix.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/PiecewiseToMatrix.py))
 * [Performing a Change of Basis](ChoB.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/ChoB.py))
 
 ### Basis Set Methods
