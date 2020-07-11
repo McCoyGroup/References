@@ -1,7 +1,7 @@
 ---
 ---
 # The Particle on a Ring Basis
-The particle on the ring basis is useful for studying rotations and torsions within a molecule. Here we will talk about using this basis with the coefficients of an equation expanded using sin and cos functions. This will enable us to take advantage of the Euler relations. 
+The particle on the ring basis is useful for studying rotations and torsions within a molecule.  
 
 ### Hamiltonian Forms
 The Hamiltonian 
@@ -21,6 +21,7 @@ where, based on the Euler relationships
 $$
 \cos\left (m\tau\right ) = \frac{1}{2}\left [\exp\left (im\tau\right) + \exp\left (-im\tau\right)\right ]
 $$
+
     
 ### Properties of the Basis
 The wavefunctions are described as
@@ -43,6 +44,11 @@ $$
 $$
 
 ### Sample Applications
+You can find an exercise to implement the Particle on a Ring Basis [here](). 
+In this exercise, you will work through how to set up and solve for eigenvalues and eigenfunctions of the above described Hamiltonian granted that you have coefficents of $B$ and $V$ as they are expanded in a Fourier series. 
+
+If you have already solved the Hamiltion and are interested in the wavefunctions and plotting them, you can find an exercise for that [here]().
+
 
 ...
 [EDIT](https://github.com/McCoyGroup/References/edit/gh-pages/References/Basis%20Set%20Methods/POR.md)
