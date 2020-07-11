@@ -39,8 +39,7 @@ $$
 In this basis..
 
 $$
-\left\langle k^\prime|H|k\right\rangle &=& \left \{b_0\left(k^2\right )+v_0\right \}\delta_{k,k^\prime}\nonumber \\
-&& + \sum_{m=1}  \left\{ \left [\left (k^\prime\right )^2 +k^2-m^2\right ]\frac {b_m}{4}+\frac{v_m}{2}\right \}\delta_{|k-k^\prime|-m,0}
+\left\langle k^\prime|H|k\right\rangle &=& \left \{b_0\left(k^2\right )+v_0\right \}\delta_{k,k^\prime}\nonumber + \sum_{m=1}  \left\{ \left [\left (k^\prime\right )^2 +k^2-m^2\right ]\frac {b_m}{4}+\frac{v_m}{2}\right \}\delta_{|k-k^\prime|-m,0}
 $$
 
 ### Sample Applications
