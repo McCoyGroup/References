@@ -2,7 +2,7 @@
 ---
 # The Particle in a Box Basis
 
-...
+...<br/>
 [EDIT](https://github.com/McCoyGroup/References/edit/gh-pages/References/Basis%20Set%20Methods/PIB.md)
 {: .alert .alert-warning}
 

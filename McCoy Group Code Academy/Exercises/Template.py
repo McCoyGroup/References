@@ -1,4 +1,7 @@
-""" Goal: To serve as a template for writing your own example scripts
+"""
+Goal: To serve as a template for writing your own example scripts
+Fundamentals: None
+Related Exercises: None
 """
 
 ## Imports: put all import statments here

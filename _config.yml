@@ -16,6 +16,8 @@ sitemap_roots:
         url: /McCoy%20Group%20Code%20Academy/DataIO/
       - name: Plotting
         url: /McCoy%20Group%20Code%20Academy/Plotting/
+      - name: Exercises
+        url: /McCoy%20Group%20Code%20Academy/Exercises/
       - name: Programming Best-Practices
         url: /McCoy%20Group%20Code%20Academy/ProgrammingTips/
       - name: Tips and Tricks

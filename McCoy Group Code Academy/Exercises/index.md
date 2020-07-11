@@ -5,6 +5,13 @@ And like many other things, it's also got an opinionated, sometimes virulent pra
 To help you along and to (hopefully) spare you some of the toxicitiy of the internet, we've collected samples for some of the fundamentals of what we do.
 These samples are scripts where the logical structure of a program is provided as a reference so that you can build off of it/fill it out and get a working implementation that follows python best practices.
 
+### General Layout
+
+We've written this in the way we feel best represents good python code.
+Obviously with anything code-style related, there are differences in opinion, but our feeling is that this layout will serve you well.
+We think the structure we're showing here will help you if you choose to switch to a language like Java or C++ and will also serve you well if you try to find a job outside of academic chemistry research.
+{: .alert .alert-success}
+
 We'll take [`Template.py`](Template.py) to look at the basic structure of these samples.
 The file will auto-download when you click on the link, so open it in PyCharm or [view it on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Template.py).
 
@@ -16,19 +23,37 @@ If we look at the file we see it's got basically five chunks to it
 4. Classes and Functions: the actual meat-and-potatoes of what we're writing. Aim to write more classes than functions, but whatever gets your logic across the cleanest is best.
 5. Run Script: if you're writing code that's only intended to be used from other code you don't need this, but if you want to run your code from the command line, it's good to separate out the definitions (i.e the prior 4 sections) from the runtime. To do that we put the run script inside a block wrapped with `if __name__ == '__main__':`
 
-### List
+## Exercise List
 
-With that said, here's the list of exercises to work through. Don't feel obligated to do them all right away or in order. But do remember they are here as your research projects expand and evolve. 
+We've split our list of exercises up so that they roughly match the layout we have in our [References](../../References).
+If you'd like to brush up on your python or object-oriented programming, give the [Getting Started](../GettingStarted) guide a look.
+Each exercise is just a `.py` file and downloads automatically, but if you'd prefer you can also view them on GitHub.
 
-* Expand a Function as a Fourier Series
-* Apply a change of basis to a Hamiltonian
-* [Colbert-Miller 1D DVR](CM_1D.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Examples/CM_1D.py))
-* Colbert-Miller Multidimensional DVR
-* Calculate Adiabatic Potentials
-* Calculate Franck-Condon Transition Intensities
-* Calculate Intensities with a Linear Dipole
-* Anderson DMC
-* Reyonolds DMC
+### Fundamentals
+
+These will be referenced inside the exercises, but don't feel like you need to work through all of them right now.
+{: .alert .alert-warning}
+
+* [Filling out a Matrix](FillingAMatrix.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/FillingAMatrix.py))
+* [Performing a Change of Basis](ChoB.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/ChoB.py))
+
+### Basis Set Methods
+
+* [Particle in a Box Representation](PIBRep.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/PIBRep.py))
+* [Harmonic Oscillator Representation](HORep.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/HORep.py))
+* [Colbert-Miller 1D DVR](CM_1D.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/CM_1D.py))
+
+### Monte Carlo Methods
+
+* [Discrete Weighting DMC](DiscreteDMC.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/DiscreteDMC.py))
+* [Continuous Weighting DMC](ContinuousDMC.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/ContinuousDMC.py))
+* [Importance Sampling](ImpSamp.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/ImpSamp.py))
+
+### Spectrum Generation
+
+* [General Basis Set Intensities](BasisSetIntensities.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/BasisSetIntensities.py))
+* [Adiabatic Intensities](AdiabaticIntensities.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/AdiabaticIntensities.py))
+* [Franck-Condon Intensities](FranckCondonIntensitie.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/FranckCondonIntensitie.py))
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
