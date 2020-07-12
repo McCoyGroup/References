@@ -72,7 +72,7 @@ class UnitConverter:
     ...
 ```
 
-You'll notice that we have a `dict` called `conversion_factors` which is where we'll stick our conversions.
+You'll notice that we have a `dict` called `conversion_factors` which is where we'll stick our conversions. A dictionary or `dict` is a way to hold data as key value pair. This can be an incredibly useful and poweful tool to help you keep data organized. Learn more about them [here](https://realpython.com/python-dicts/) and ask around about how we use them specifically in the group. (P.S. Holding all your conversion factors or atomic masses is a good place to start)
 You'll also notice that we put a number of `def` statements in this class, which looks a lot like a regular function definition, except each has a `self` argument. We call these _methods_, and this `self` argument is the only reason they're different from regular functions.
 On the other hand, this `self` is really why this is "object-oriented".
 When we make an instance of our class and call one of its methods, the instance itself is passed as that `self` argument, which means it can refer to its own stored data.
@@ -85,10 +85,10 @@ class UnitConverter:
   """
   An object that allows for conversions of quantities from one unit to another
   """
-  conversion_factors = {("bohr", "angstroms"):.529} # look up a more precise number if you're gonna reuse this
+  conversion_factors = {("bohr", "angstroms"):.529177} 
 ```
 
-so with this in mind, we can think about how we'd implement the `get_conversion` function, which might look like
+Note that since `conversion_factors` is _mutable_ (basically we can continue to add key value pairs to it as we please without disrupting anything), once we get this class up and running we can easily expand it to encapsulate wavenumber to hartree and other conversions. But before we get ahead of ourselves, let's think about how we'd implement the `get_conversion` function, which might look like
 
 ```python
   def get_conversion(self, from_unit, to_unit):
@@ -108,8 +108,7 @@ so with this in mind, we can think about how we'd implement the `get_conversion`
     # if we can't find a conversion factor at all, we raise an error
     if key not in self.conversion_factors:
       raise KeyError(
-        "No conversion factor from '{}' to '{}' known".format(
-          from_unit, to_unit
+        f"No conversion factor from {from_unit} to {to_unit} known"
       ))
     # otherwise we pull the conversion factor, and if the factor
     # is for the reverse direction, we invert it
@@ -131,6 +130,8 @@ and then with this in hand, we can pretty easily do the `convert` method
     conv = self.get_conversion(from_unit, to_unit)
     return conv * quantity
 ```
+
+Once you feel confident with this, try adding `("wavenumbers", "hartrees"):219474.6` to your `conversion_factors` dictionary or some others and have some fun!
 
 <span class="text-muted">Next:</span>
  [Another Example of Classes](AnotherClassExample.md)<br/>
