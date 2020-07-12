@@ -99,7 +99,7 @@ This will be a very powerful tool to let us decrease the amount of work we need 
 ### The Problem with Potentials
 
 This discussion will be somewhat different when we start talking about things like _discrete variable representation_, but for the classic basis set approaches, the difficulty in representation generally shows up in the potential.
-Most of the bases we like to work with are based on _orthogonal polynomials_,[<sup>1</sup> which almost always have simple representations for the second derivative operator.
+Most of the bases we like to work with are based on _orthogonal polynomials_,[<sup>1</sup>] which almost always have simple representations for the second derivative operator.
 Unfortunately, we have no assurances as to the form of the potential, and so we can't say for sure whether we'll get a simple representation for it.
 As we show concrete examples of useful bases, we'll discuss approaches for dealing with this problem. For now, though, simply keep the mantra in mind, _the potential is the problem_.
 
@@ -136,7 +136,7 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 {: .alert .alert-info}
 
 ---
-<a id="#fn1/> The mathematical literature on these polynomials (which are closely related to the _special functions) is pretty dense, but interesting. Unfortunately I've never found a good intro for people without an undergrad math background :| If you've got questions about them, ask on the the SO and I'd be delighted to answer.
+<a id="#fn1>&nbsp;</a> The mathematical literature on these polynomials (which are closely related to the _special functions) is pretty dense, but interesting. Unfortunately I've never found a good intro for people without an undergrad math background :| If you've got questions about them, ask on the the SO and I'd be delighted to answer.
 [<sup>1</sup>]:#fn1
 
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Basis%20Set%20Methods/GeneralOverview.md)
