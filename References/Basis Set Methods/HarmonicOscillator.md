@@ -51,7 +51,10 @@ $$
 
 where the $c_i$ and $k_i$ are simple coefficients that only depend on the value of $i$.
 
-For completeness, these are
+It's worth noting that these representations are _simple_, because for most values of $i$ and $j$, these matrix elements will be zero.
+Specifically, only when $i = j \pm 1$ will this be non-zero, which means our matrix representation will have zeroes everywhere _except_ for the first upper and lower sub-diagonals.
+
+For completeness, the coefficients are
 
 $$
 \begin{align}
