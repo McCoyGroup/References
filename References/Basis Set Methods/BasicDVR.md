@@ -108,6 +108,13 @@ The end result of this is that their DVR basis functions are shifted $\frac{\sin
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
 
+## Sample Applications
+
+There are tons of applications for DVR out there.
+It's one the main tools that we keep in our toolbox.
+To get you started, we've got an exercise on writing your first [Colbert & Miller-style DVR](../../McCoy%20Group%20Code%20%Academy/Exercises).
+Check it out.
+
 ---
 <a id="#fn1">&nbsp;</a> Nothing requires this operator to just be something like $\hat{x}$. In a curvilinear system, we can just as easily use $cos(\theta)$ as $\theta$, should that be a more convenient choice.
 
