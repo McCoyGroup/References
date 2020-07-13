@@ -13,7 +13,6 @@ import numpy as np
 __all__ = [
     "kinetic_energy",
     "potential_energy",
-    "hamiltonian",
     "energies_and_wavefunctions"
 ]
 
@@ -69,7 +68,8 @@ def potential_energy(coefficients, mass=1, hbar=1, omega=1, basis_size=25):
 
 def energies_and_wavefunctions(coefficients, mass=1, hbar=1, omega=1, basis_size=25):
     """
-    Takes the hamiltonian_matrix defined before and diagonalizes it to get energies and wavefunctions
+    Takes the kinetic_energy and potential_energy defined before and creates a Hamiltonian
+    Then diagonalizes this to get energies and wavefunctions
 
     :param coefficients: the power series coefficients for the potential
     :type coefficients: list of float
@@ -83,7 +83,8 @@ def energies_and_wavefunctions(coefficients, mass=1, hbar=1, omega=1, basis_size
     :rtype:
     """
 
-    hamiltonian_matrix = hamiltonian(coefficients, mass=mass, hbar=hbar, omega=omega, basis_size=basis_size)
+    # Recall H = T + V
+    hamiltonian_matrix = ...
     # now look at the NumPy 101 tutorial for a function that gives you eigenvalues and eigenvectors
     # of a real symmetric (i.e. Hermitian) matrix
     energies, wavefunction_coeffs = ...
