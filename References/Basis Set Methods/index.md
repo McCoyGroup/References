@@ -19,7 +19,7 @@ Instead, by picking $\{\phi_i\}$ appropriately we can let other people do the gr
 All we need to do is a bunch of summations, and even there as long as we use the language of linear algebra, we don't even need to do that!
 
 I'm not going to go through the specific cases here, but we've written up some references to help introduce you to the most useful basis sets to use.
-These are intended to be read in no particular order, but roughly go from simpler to more complicated.
+With the exception of the [General Overview](GeneralOverview.md), these are intended to be read in no particular order, but roughly go from simpler to more complicated.
 
 * [The General Overview](GeneralOverview.md)
 * [The Harmonic Oscillator Basis](HarmonicOscillator.md)

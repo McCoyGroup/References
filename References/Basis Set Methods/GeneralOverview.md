@@ -136,7 +136,8 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 {: .alert .alert-info}
 
 ---
-<a id="#fn1>&nbsp;</a> The mathematical literature on these polynomials (which are closely related to the _special functions) is pretty dense, but interesting. Unfortunately I've never found a good intro for people without an undergrad math background :| If you've got questions about them, ask on the the SO and I'd be delighted to answer.
+<a id="#fn1">&nbsp;</a> The mathematical literature on these polynomials (which are closely related to the _special functions_) is pretty dense, but interesting. Unfortunately I've never found a good intro for people without an undergrad math background :| If you've got questions about them, ask on the the SO and I'd be delighted to answer.
+
 [<sup>1</sup>]:#fn1
 
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Basis%20Set%20Methods/GeneralOverview.md)

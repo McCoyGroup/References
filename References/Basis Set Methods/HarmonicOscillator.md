@@ -4,15 +4,28 @@
 
 The harmonic oscillator (HO) basis is, in some sense,
 _the_ fundamental basis for studying vibrations.
+It gives the solution to the Schrödinger equation for the Hamiltonian
+
+$$
+H = -\frac{1}{2 m} \frac{d^2}{d x^2} + m \omega^2 x^2
+$$
+
+where $m$ is the mass of the system and $\omega$ is the frequency of the vibration. For this, $x$ should range from $[-\infty, \infty]$.
 Unsurprisingly, for a vibration that's perfectly harmonic, the HO basis gives the simplest possible representation.
 
 For _nearly harmonic_ vibrations, the HO basis is often still good.
 
 ### Properties of the Basis
 
-The appropriate coordinate range is $[-\infty, \infty]$.
+The HO wavefunctions are
 
-The HO basis has two important operators for which it gives simple representations.
+$$
+\phi_n(x) = N_n H_n(x) e^{-(x^2/2)}
+$$
+
+where $N_n$ is a normalization factor and $H_n$ is the $n^th$ _Hermite polynomial_.
+
+This basis has two important operators for which it gives simple representations.
 
 We have the coordinate operator
 
