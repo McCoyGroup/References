@@ -105,6 +105,8 @@ The end result of this is that their DVR basis functions are shifted $\frac{\sin
 
 ![leg funcs](../img/dvr_basis.png){:width="650px"}
 
+We recommend reading Appendix A of Colbert and Miller's paper and starting with the (- $inf$, $inf$) interval! (aka your kinetic energy is described by Equation A7) But note you will need some potential function to run this all the way through, seems like the perfect place for a harmonic oscillator!
+
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
 
