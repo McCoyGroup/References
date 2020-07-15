@@ -1,17 +1,18 @@
 # Data & Input/Output
 
-Coming Soon! Here's the outline:
+I think it's probably unsurprising to say that we run on data.
+We're scientists, data is what we do.
+A big part of this is [data presentation](../Plotting), but we also need to develop tricks and strategies for managing the raw data we're working with, both loading it into our code and writing out our results.
 
-* What is I/O?
-* We can't do anything without data
-* Sometimes you can copy-paste but this quickly becomes cumbersome
-* With huge data there's no way you can copy paste
-* Some formats for storing data are better than others
-* Some formats are _de facto_ standards and generally using one of these is good
-* Standardization of storage formats across the group would increase code reusability
-* How do I parse a large data file?
-* How do I write a data file?
-* What formats are most relevant for us?
+When you're prototyping a new method or just getting started, there's a decent chance you're copying and pasting.
+As you start to do serious work, though, copy-paste becomes both cumbersome and error prone (with the latter being the biggest issue).
+
+We all learned how to work with data the hard way. Our hope is that we can provide you some tips and tricks so that you can hit fewer pitfalls than we did.
+
+Here's the roadmap:
+* [Data Formats](DataFormats.md)
+* [Getting Data into your Program](LoadingDataIn.md)
+* [Getting Data out of your Program](ExportingDataOut.md)
 
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/DataIO/index.md)

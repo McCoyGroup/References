@@ -71,6 +71,9 @@ defaults:
       optional_scripts: true
       custom_styles: "refs"
       layout: "refs"
+      breadcrumbs:
+        num_links: 2
+        min_depth: 0
   - scope:
       path: "References"
       type: "pages"
@@ -78,6 +81,9 @@ defaults:
       optional_scripts: true
       custom_styles: "refs"
       layout: "refs"
+      breadcrumbs:
+        num_links: 2
+        min_depth: 1
   - scope:
       path: "Documentation"
       type: "pages"
@@ -85,7 +91,10 @@ defaults:
       optional_scripts: true
       annotations_type: "refs"
       custom_styles: "refs"
-      layout: "refs"
+      layout: "docs"
+      breadcrumbs:
+        num_links: 0
+        min_depth: 1
 
 # Exclude from processing
 exclude:

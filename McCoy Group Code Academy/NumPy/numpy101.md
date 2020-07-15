@@ -27,7 +27,7 @@ We're not going to try to cover everything NumPy and arrays can do, but we want 
 {: .alert .alert-info}
 
 <span class="text-muted">Next:</span>
- [List of NumPy Functions](NumPyFunctions.md)<br/>
+ [List of NumPy Functions](NumpyFunctions.md)<br/>
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}

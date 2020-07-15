@@ -31,7 +31,7 @@ At this point in time, that's all we're asking, but the hope is that it'll keep 
 <span class="text-muted">Next:</span>
  [Usage Examples](Examples.md)<br/>
 <span class="text-muted">Previous:</span>
- [NumPy 101](NumPy101.md)
+ [NumPy 101](Numpy101.md)
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
