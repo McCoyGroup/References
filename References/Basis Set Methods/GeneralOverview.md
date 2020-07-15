@@ -12,7 +12,7 @@ $$
 H_{i, j}=\langle i|\hat{H}|j\rangle
 $$
 
-there aren't many values of $i$ and $j$ for which $H_{i, j}$ is non-zero.
+there aren't many values of $i$ and $j$ for which $H_{i, j}$ is non-zero. Equivalently, for _most_ values of $i$ and $j$, $H_{i, j} = 0$.
 
 We also need to choose our basis so that the range of configuration space that's relevant for our problem is also well-described by our basis.
 This usually isn't much of a problem, as long as we choose one that covers the same range as our coordinates of interest.

@@ -40,7 +40,8 @@ $$
 \end{cases}
 $$
 
-where $n$ and $m$ represent the Particle on a Ring basis states. This means that the range of $n$ and $m$ varies with the number of basis functions you choose to use or the _Basis Size_. Ultimately, the range spans from -_Basis Size_ to _Basis Size_ including 0. One last thing to note at this point, the Basis Size at it's smallest would be equal to the expansion order or $k$, but in order to get _stable_ solutions to the Hamiltionian (not changing numerically by increasing the basis size), the basis size will become larger than the value of $k$, but these properties greatly simplify increasing the size of the basis. Do you see why?
+where $n$ and $m$ represent the Particle on a Ring basis states. This means that the range of $n$ and $m$ varies with the number of basis functions you choose to use or the _Basis Size_. Ultimately, the range spans from - _Basis Size_ to _Basis Size_ including 0. 
+One last thing to note at this point, the Basis Size at it's smallest would be equal to the expansion order or $k$, but in order to get _stable_ solutions to the Hamiltionian (not changing numerically by increasing the basis size), the basis size will become larger than the value of $k$, but these properties greatly simplify increasing the size of the basis. Do you see why?
 
 ### Hamiltonian Forms
 
@@ -83,16 +84,16 @@ $$
 Looking at the matrix elements, we know
 
 $$
-\langle n|\exp\left (im\tau\right )|m = \delta_{|m-n|-k}
+\langle n|\exp\left (ik\tau\right )|m \rangle = \delta_{|m-n|-k}
 $$
 
 so using this Hamiltonian form we can rewrite as follows
 
 $$
-        \left\langle n|H|m\right\rangle &=& \left \{b_0\left(m^2\right )+v_0\right \}\delta_{m,n}\nonumber + \sum_{k=1}  \left\{ \left [\left (n\right )^2 +m^2-k^2\right ]\frac {b_k}{4}+\frac{v_k}{2}\right \}\delta_{|m-n|-k,0}
+        \left\langle n|H|m\right\rangle = \left \{b_0\left(m^2\right )+v_0\right \}\delta_{m,n}\nonumber + \sum_{k=1}  \left\{ \left [\left (n\right )^2 +m^2-k^2\right ]\frac {b_k}{4}+\frac{v_k}{2}\right \}\delta_{|m-n|-k,0}
 $$
 
-A final note, circling back to the properties of the basis, we know that once $|m-n| > k$ the matrix element is 0. Keep this in mind as you are thinking of ways to write and _optimize_ your python implementation of the Particle on a Ring Basis Set Representation.
+A final note, circling back to the properties of the basis, we know that once $m - n > k$ or $m - n < -k$ the matrix element is 0. Keep this in mind as you are thinking of ways to write and _optimize_ your python implementation of the Particle on a Ring Basis Set Representation.
 
 ### Sample Applications
 
