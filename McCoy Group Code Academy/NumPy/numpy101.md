@@ -10,18 +10,27 @@ We're not going to try to cover everything NumPy and arrays can do, but we want 
 
 ### An Introduction to Arrays
 
-...</br>
+...<br/>
 [EDIT](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/NumPy/NumPy101.md)
+{: .alert .alert-info}
 
 ### Shaping and Slicing
 
-...</br>
+...<br/>
 [EDIT](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/NumPy/NumPy101.md)
+{: .alert .alert-info}
 
 ### Performance Considerations
 
-...</br>
+...<br/>
 [EDIT](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/NumPy/NumPy101.md)
+{: .alert .alert-info}
+
+<span class="text-muted">Next:</span>
+ [List of NumPy Functions](NumPyFunctions.md)<br/>
+
+Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
+{: .alert .alert-info}
 
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/NumPy/NumPy101.md)

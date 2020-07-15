@@ -1,8 +1,12 @@
 ---
 ---
-# General Overview to Basis Set Methods
+# Mathematical Overview to Basis Set Methods
 
-With all classic basis set methods, we choose a basis to give a "simple" representation of our system.
+With all classic basis set methods, we choose a basis so that our representation is
+1. Easy to evaluate
+2. Compact (i.e. we don't have to use tons of basis functions)
+
+Often, this corresponds to one where we have a "simple" representation of our system, which is to say when we look at
 
 $$
 H_{i, j}=\langle i|\hat{H}|j\rangle
@@ -10,38 +14,22 @@ $$
 
 there aren't many values of $i$ and $j$ for which $H_{i, j}$ is non-zero.
 
-We also want to choose our basis so that the range of configuration space that's relevant for our problem is also well-described by our basis.
-I.e. we choose one that covers the same range as our coordinates of interest.
+We also need to choose our basis so that the range of configuration space that's relevant for our problem is also well-described by our basis.
+This usually isn't much of a problem, as long as we choose one that covers the same range as our coordinates of interest.
 
-### Representation "Simplicity"
+### Ease of Representation in the Hamiltonian
 
-For a complete basis, i.e. an indexed set of functions we'll call $\|n\rangle$, we know _a priori_ that given an operator $\hat{O}$ there's a set of coefficients $$ \{ c_n \} $$ such that
+One of our big design principles in picking a basis is that we want one where our matrix elements are easy to evaluate.
+What this means is just that we can get analytic forms for any of our matrix elements.
 
-$$
-\hat{O}|j\rangle = \sum_n c_n |n\rangle
-$$
-
-and for an orthonormal basis, then, we know
+When we look at
 
 $$
-\langle i|\hat{O}|j\rangle = \langle i|\sum_n c_n |n\rangle = \sum_n c_n  \langle i|n\rangle = c_i
+\hat{H} = \hat{T} + \hat{V}
 $$
 
-therefore the key to determining whether a representation of $\hat{O}$ is simple or not is determining how many of the $$ \{ c_n \} $$ are non-zero.
-The more of these coefficient that are zero, the simpler the representation.
-
-### Simplicity in the Hamiltonian
-
-Returning to an actual physical system, we know we have
-
-$$
-H_{i, j}=\langle i|\hat{T} + \hat{V}|j\rangle = \langle i|\hat{T}|j\rangle + \langle i|\hat{V}|j\rangle
-$$
-
-So when we're looking at simplicity in this representation, we're really asking about the simplicity of the representations of $\hat{T}$ and $\hat{V}$.
-
-The kinetic energy term is often somewhat easier to deal with, so we'll start there.
-In general, we have
+we'll look first at the kinetic energy term.
+If you're working in Cartesian coordinates, we know
 
 $$
 T \propto \frac{d^2}{d x^2}
@@ -49,20 +37,20 @@ $$
 
 and so if we can get a representation for $\frac{d^2}{d x^2}$ we can get one for $\hat{T}$ essentially for free.
 
-As we're just discussing the general approach, it's impossible to say whether or not this representation will be simple, but we can make use of a nice property of matrix representations when computing it.
-We know that we can say
+As we're just discussing the general approach, it's impossible to say whether or not this representation will be easy to evaluate, but we can make use of a nice property of matrix representations when doing so.
+First off, we know (assuming sufficient basis completeness) that we can say
 
 $$
 \hat{\frac{d}{d x}}|j\rangle = \sum_n c^{(j)}_n |n\rangle
 $$
 
-and we can write
+and then we can write
 
 $$
 \frac{d^2}{d x^2} = \frac{d}{d x}\frac{d}{d x}
 $$
 
-therefore we can note that
+therefore we know that
 
 $$
 \frac{d^2}{d x^2}|j\rangle = \frac{d}{d x}\frac{d}{d x}|j\rangle = \frac{d}{d x}\sum_n c^(j)_n |n\rangle
@@ -74,7 +62,8 @@ $$
 \frac{d}{d x}\sum_n c^{(j)}_n |n\rangle = \sum_n c^{(j)}_n \frac{d}{d x} |n\rangle = \sum_n c^{(j)}_n \sum_m c^{(n)}_m |m\rangle
 $$
 
-This might not look like a win at the moment, but if we assume we have a matrix representation of $\frac{d}{d x}$ that I'll call $D$, i.e. we have
+This might not look like a win at the moment, but let's we assume we have a matrix representation of $\frac{d}{d x}$ that I'll call $D$.
+I.e. we have
 
 $$
 D_{i,j} = \langle i|\frac{d}{d x}|j\rangle
@@ -88,7 +77,10 @@ $$
 
 which is to say, the second-derivative matrix representation is the same as applying the first-derivative matrix representation to itself.
 
-And in fact, there was nothing special about this that restricts us to derivatives. In general, given some linear operator $\hat{x}$ with matrix representation $X$, we have
+This means that if the _first_ derivative operator is easy to evaluate, up to the approximateness of our assumption of a complete basis, our second derivative operator is easy to evaluate.
+
+And in fact, there's nothing special about this that restricts us to derivatives.
+In general, given some linear operator $\hat{x}$ with matrix representation $X$, we have
 
 $$
 \langle i|\hat{x}^n|j\rangle = (\underbrace{X X ... X}_{n \text{times}})_{i,j}
@@ -96,10 +88,28 @@ $$
 
 This will be a very powerful tool to let us decrease the amount of work we need to do when making these matrix representations.
 
+### Compactness
+
+When we talk about compactness of a representation, the primary metric we care about is whether or not it's _diagonally dominant_, which just means that given some Hamiltonian representation $H$
+
+$$
+\forall_{i} \left|H_ii\right|^2 >= \sum_{j \neq i} \left|H_ij\right|^2
+$$
+
+Thinking about what this means in the context of
+
+$$
+H_{i,j} = \langle i| \hat{H} |j \rangle = \int_{\pmb{r}\in \mathbb{D}} \phi_i \hat{H} \phi_j d\pmb{r}
+$$
+
+the coupling _between_ basis functions is pretty weak.
+
+Of course, _coupling_ is a vague term with no real formal definition beyond $H_{i,j}$ being large, but it commonly appears in the literature so it's worth keeping this definition in mind.
+
 ### The Problem with Potentials
 
-This discussion will be somewhat different when we start talking about things like _discrete variable representation_, but for the classic basis set approaches, the difficulty in representation generally shows up in the potential.
-Most of the bases we like to work with are based on _orthogonal polynomials_,[<sup>1</sup>] which almost always have simple representations for the second derivative operator.
+This discussion is somewhat different when we start talking about things like _discrete variable representation_, but for the classic basis set approaches, the difficulty in representation generally shows up in the potential.
+Most of the bases we like to work with are based on _orthogonal polynomials_,[<sup>1</sup>] which almost always have clean representations for the second derivative operator.
 Unfortunately, we have no assurances as to the form of the potential, and so we can't say for sure whether we'll get a simple representation for it.
 As we show concrete examples of useful bases, we'll discuss approaches for dealing with this problem. For now, though, simply keep the mantra in mind, _the potential is the problem_.
 

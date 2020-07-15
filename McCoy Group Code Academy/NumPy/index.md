@@ -12,9 +12,9 @@ New ones come out every day and we've got no real desire to write our own when t
 On the other hand, we don't really use most of the NumPy features that the tutorial writers care about and also want to make sure that everyone has a similar base level of knowledge, so long story short we're gonna write a rather limited one that hits the highlights of what we think everyone really ought to know.
 
 Here's the road map:
-* [Numpy 101](numpy101.md)
-* [List of Helpful NumPy Functions](numpyFunctions.md)
-* [List of Helpful SciPy Functions](scipyFunctions.md)
+* [Numpy 101](Numpy101.md)
+* [List of Helpful NumPy Functions](NumpyFunctions.md)
+* [Usage Examples](Examples.md)
 
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/NumPy/index.md)

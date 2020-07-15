@@ -10,7 +10,7 @@ We'll do the traditional thing and call our basis $\{\phi_i\}$, which just means
 We don't really need to understand how to derive this[<sup>3</sup>], but the heart of our matrix representation is to say
 
 $$
-H_{i\, j}=\langle i|\hat{H}|j\rangle =\int _{\pmb{r}\in \mathbb{D}}\phi _i(\pmb{r})\hat{H}\left(\phi _j(\pmb{r})\right)d\, \pmb{r}
+H_{i\, j}=\langle i|\hat{H}|j\rangle = \int_{\pmb{r}\in \mathbb{D}}\phi _i(\pmb{r})\hat{H}\left(\phi _j(\pmb{r})\right)d\, \pmb{r}
 $$
 
 This (rightfully) looks nasty. There is nothing harder in mathematics than doing integrals.
@@ -19,9 +19,10 @@ Instead, by picking $\{\phi_i\}$ appropriately we can let other people do the gr
 All we need to do is a bunch of summations, and even there as long as we use the language of linear algebra, we don't even need to do that!
 
 I'm not going to go through the specific cases here, but we've written up some references to help introduce you to the most useful basis sets to use.
-With the exception of the [General Overview](GeneralOverview.md), these are intended to be read in no particular order, but roughly go from simpler to more complicated.
+With the exception of the [Physical Picture](ThePhysicalPicture.md) and [Mathematical Overview](GeneralOverview.md), these are intended to be read in no particular order, but roughly go from simpler to more complicated.
 
-* [The General Overview](GeneralOverview.md)
+* [The Physical Picture](ThePhysicalPicture.md)
+* [The Mathematical Overview](GeneralOverview.md)
 * [The Harmonic Oscillator Basis](HarmonicOscillator.md)
 * [The Particle on a Ring Basis](POR.md)
 * [The Particle in a Box Basis](PIB.md)

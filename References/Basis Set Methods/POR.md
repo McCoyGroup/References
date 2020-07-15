@@ -74,31 +74,31 @@ $$
 B(\tau) = \sum_k b_k \cos(k \tau)
 $$
 
-So in the frame of this discussion we are looking at a total Hamiltonian of the form 
+So in the frame of this discussion we are looking at a total Hamiltonian of the form
 
 $$
 H = \frac{1}{2}\left [p_\tau^2B(\tau) +B(\tau) p_\tau^2 +\frac{d^2B(\tau)}{d\tau^2}\right ] + V(\tau)
 $$
 
-Looking at the matrix elements, we know 
+Looking at the matrix elements, we know
 
 $$
 \langle n|\exp\left (im\tau\right )|m = \delta_{|m-n|-k}
 $$
-    
+
 so using this Hamiltonian form we can rewrite as follows
-    
+
 $$
         \left\langle n|H|m\right\rangle &=& \left \{b_0\left(m^2\right )+v_0\right \}\delta_{m,n}\nonumber + \sum_{k=1}  \left\{ \left [\left (n\right )^2 +m^2-k^2\right ]\frac {b_k}{4}+\frac{v_k}{2}\right \}\delta_{|m-n|-k,0}
 $$
 
-A final note, circling back to the properties of the basis, we know that once $|m-n| > k$ the matrix element is 0. Keep this in mind as you are thinking of ways to write and _optimize_ your python implementation of the Particle on a Ring Basis Set Representation.  
+A final note, circling back to the properties of the basis, we know that once $|m-n| > k$ the matrix element is 0. Keep this in mind as you are thinking of ways to write and _optimize_ your python implementation of the Particle on a Ring Basis Set Representation.
 
 ### Sample Applications
 
-Within the McCode Academy exercises found [here](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/Exercises/), you will find three related to this topic. 
+Within the McCode Academy exercises found [here](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/Exercises/), you will find three related to this topic.
 1. How to expand a function as a Fourier Series.
-2. How to set up and solve for eigenvalues and eigenvectors of the above described Hamiltonian starting with coefficents of $B$ and $V$ as they are expanded in a Fourier series. 
+2. How to set up and solve for eigenvalues and eigenvectors of the above described Hamiltonian starting with coefficents of $B$ and $V$ as they are expanded in a Fourier series.
 3. How to use the eigenvalues and eigevectors of this representation to evaluate and plot the Particle on a Ring wavefunctions.
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)

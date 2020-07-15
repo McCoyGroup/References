@@ -109,3 +109,11 @@ if __name__ == '__main__':
                                                       omega=omega,
                                                       basis_size=basis_size
                                                       )
+
+    ## Future Work:
+    # Play with the parameter space
+    #   Try it with only an x**2 term
+    #   Try it with different coefficients
+    #   Try it with a different mass and omega
+    #   Try it with a different basis_size
+    # Plot the wave functions you get out
