@@ -95,7 +95,12 @@ if __name__ == '__main__':
     mass=1
     frequency=3
     
-    run(potential_function='HarmonicOscillator', potential_options=..., mass=mass, frequency=frequency, range=[-5, 5], points=100)  
+    run(potential_function='HarmonicOscillator', potential_options=..., mass=mass, frequency=frequency, range=[-5, 5], points=100)
+    
+    # Now that you know your code is working, play around with it!
+    # Find parameters appropriate for, e.g., an OH stretch in a water molecule,
+    #   or HCl, or HF.
+    # The idea is to build intution, so play around with the parameters and the potential and see what happens
     
     
 
