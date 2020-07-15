@@ -35,12 +35,12 @@ def CM_kinE(grid, mu):
 
     return kinE
 
-def HO_potE(grid):
+def HO_potE(grid, mass=..., frequency=...):
     """Here we will use a harmonic oscillator to create the matrix representation of the potential energy."""
     # Remember: The potential matrix is 0 for all terms off the diagonal...
     return potE
 
-def MO_potE(grid):
+def MO_potE(grid, alpha=..., De=...):
     """Here we will use a morse oscillator to create the matrix representation of the potential energy."""
     return potE
 
@@ -86,5 +86,16 @@ def run():
 
 if __name__ == '__main__':
     # adding this makes it so you can get this results dictionary if you chose to run the script in the command line
-    run()  
+    
+    # Here are some sample parameters to try:
+    #   First, let's start with a harmonic oscillator of mass 1 with frequency 3, giving us a pot_func like
+    #   Let's try running this with a grid_range from [-5, 5] with 100 DVR points
+    #   If all is going well, you should get energies that look like [1.5, 4.5, 7.5, ...]
+    
+    mass=1
+    frequency=3
+    
+    run(potential_function='HarmonicOscillator', potential_options=..., mass=mass, frequency=frequency, range=[-5, 5], points=100)  
+    
+    
 
