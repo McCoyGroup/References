@@ -11,7 +11,7 @@ Despite that, we really want to be using python3. The features are worth it, and
 Anaconda is a distribution of Python (either 2 or 3) that contains various scientific computing packages (NumPy/SciPy/matplotlib/etc.).  It also provides a package installer/deployer/manager (conda) so that programmers can install python packages, as well as deploy their own in a convient fashion.  As a group, we have moved over to using Anaconda on the group computers. All the supercomputers we use (Mox, NERSC) have anaconda installed or available as well.  The benefit of using Anaconda vs. just downloading pure python is that it is provides a standard across the group and beyond, rather than manually downloading all the packages required yourself.
 
 ## How do I download them?
-If you already have Anaconda from using jupityer or something of the sort, you are off to a good start.
+If you already have Anaconda from using jupyter or something of the sort, you are off to a good start.
 
 ### Using Preinstalled Anaconda3 on the group computers
 
