@@ -57,12 +57,15 @@ You should get the output
 Navigate to the [Anaconda downloads page ](https://www.anaconda.com/products/individual) and download the system-specific installer (9 times out of 10 you need the 64-bit installer instead of 32-bit, and download the Graphical Installer one rather than command line). Follow the installer's instructions and recommended installation instructions. You may be asked if you want to download pycharm along the way, which is the group's recommended Integrated Development Environment (IDE) for coding and debugging in Python.
 
 **Windows**
+
 Once you have installed Anaconda, you will be given a suite of tools at your disposal.  The  anaconda powershell is a good one, where you can use linux-style commands (`cd`, `ls`, etc.) and then run your anaconda python installation with `python file.py`, or entering an interactive python session by simply typing `python`.
 
 **Mac**
+
 Need help here, y'all.
 
 **Linux**
+
 If you have a Linux laptop or desktop at home, talk to Ryan about how to install and we will go through it together.
 
 
