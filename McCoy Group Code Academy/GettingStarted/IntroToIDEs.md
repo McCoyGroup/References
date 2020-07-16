@@ -13,9 +13,9 @@ PyCharm is a great tool mainly to make your life easier by catching syntax bugs,
 
 **Usage on the group computers**
 
-If you want to use it on the group computers, Argon and Neon currently have the "JetBrains ToolBox" installed on them. Navigate to /opt/jetbrains-toolbox.../ and then run `./jetbrains-toolbox`. This should pop up a graphical interface where you can download PyCharm Community or Professional (Pro requires a .edu address, The group doesn't use the extra features of Professional all that much). Once this is done downloading and you go through the setup, you _should_ be able to run PyCharm by simply typing `pycharm` on the command line.  If this doesn't work, talk to Ryan as this is relatively new technology in the group.
+If you want to use it on the group computers, Argon and Neon currently have the "JetBrains ToolBox" installed on them. Navigate to /opt/jetbrains-toolbox.../ and then run `./jetbrains-toolbox`. This should pop up a graphical interface where you can download PyCharm Community or Professional (As mentioned before, Pro requires a .edu address, The group doesn't use the extra features of Professional all that much). Once this is done downloading and you go through the setup, you _should_ be able to run PyCharm by simply typing `pycharm` on the command line.  If this doesn't work, talk to Ryan as this is relatively new technology in the group.
 
-**Usage on your laptop*
+**Usage on your laptop**
 
 Make sure you download anaconda before proceeding. You can find the installer for PyCharm [here](https://www.jetbrains.com/pycharm/). We will follow the instructions laid out by JetBrains. Use the all the recommended settings, so just keep hitting next until it's finished. Once installed, open it up and follow the configuration instructions, we don't need any of their _featured plugins_.
 
