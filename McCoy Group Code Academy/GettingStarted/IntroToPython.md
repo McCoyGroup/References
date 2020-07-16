@@ -20,9 +20,10 @@ If you are using the group computers, they all have anaconda3 installed on them!
 SSH onto a group computer, then:
 
 **Short version (for people who know how to edit files over SSH):**
-add:
+
+Add:
 `export PATH=/opt/anaconda3/bin:$PATH`
-At the end of your ~/.bashrc file and  then restart the terminal.
+at the end of your ~/.bashrc file and  then restart the terminal.
 
 Now, exit the terminal and start up a new one.  Now, when you type 
 `[rjdiri@argon ~]$ which python`
@@ -30,6 +31,7 @@ You should get the output
 	/opt/anaconda3/bin/python
 
 **Long version (for people who don't know how to edit files over SSH):**
+
 Here are some steps to do it with something called emacs, a text editing software.
 Log on, you should see something that looks like:
 `[rjdiri@argon ~]$`
