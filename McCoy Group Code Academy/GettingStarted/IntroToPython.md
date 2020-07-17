@@ -62,7 +62,8 @@ Once you have installed Anaconda, you will be given a suite of tools at your dis
 
 **Mac**
 
-Need help here, y'all.
+Follow directions from **Using Preinstalled Anaconda3 on the group computers** section, now. You just need to know where Anaconda is installed. (most likely in /opt/anaconda3/)
+
 
 **Linux**
 
