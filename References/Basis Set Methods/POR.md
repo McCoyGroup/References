@@ -18,7 +18,7 @@ To be valid wavefunctions, the POR basis must be _periodic_ and hence is relevan
 The wavefunctions are given by
 
 $$
-\phi_k(\tau) = \sqrt{\frac{1}{2\pi}} e^{(i k \tau)}
+\phi_k(\tau) = \sqrt{\frac{1}{2\pi}} e^{i k \tau}
 $$
 
 where $k$ is any integer and has the range of 0 to the expansion order of the Fourier function.
@@ -26,8 +26,8 @@ where $k$ is any integer and has the range of 0 to the expansion order of the Fo
 This leads to a few key properties[<sup>1</sup>]. Assuming that $n<m$
 
 $$
-|m\rangle|n\rangle = |n+m\rangle \\
-\langle n|\frac{d^2}{d x^2}|m\rangle = -k^2 \delta_{n,m} \\
+e^{i k \tau}|n\rangle = |k+m\rangle \\
+\langle n|\frac{d^2}{d x^2}|m\rangle = -m^2 \delta_{n,m} \\
 \langle n|\cos(k \tau)|m\rangle = \begin{cases}
   1 &  k=m+n \\
   1 & -k=m+n \\
