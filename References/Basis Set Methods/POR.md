@@ -26,10 +26,12 @@ where $m$ is any integer.
 This leads to a few key properties[<sup>1</sup>].
 
 $$
-e^{i m \tau}|n\rangle = |m+n\rangle \\
-\langle n|\frac{d^2}{d x^2}|m\rangle = -m^2 \delta_{n,m} \\
-\langle n|\cos(k \tau)|m\rangle = \frac{1}{2}(\delta_{n, m+k} + \delta_{n, m-k}) \\
-\langle n|\sin(k \tau)|m\rangle = \frac{1}{2i}(\delta_{n, m+k} - \delta_{n, m-k})
+\begin{align} 
+e^{i m \tau}|n\rangle &= |m+n\rangle\\
+\langle n|\frac{d^2}{d x^2}|m\rangle &= -m^2 \delta_{n,m}\\
+\langle n|\cos(k \tau)|m\rangle &= \frac{1}{2}(\delta_{n, m+k} + \delta_{n, m-k})\\
+\langle n|\sin(k \tau)|m\rangle &= \frac{1}{2i}(\delta_{n, m+k} - \delta_{n, m-k}) 
+\end{align}
 $$
 
 where $n$ and $m$ represent the Particle on a Ring basis states. This means that the range of $n$ and $m$ varies with the number of basis functions you choose to use or the _Basis Size_. Ultimately, the range spans from - _Basis Size_ to _Basis Size_ including 0. 
@@ -77,14 +79,16 @@ We will solve for the matrix elements of this Hamiltonian by looking at it in th
 First, as if $B(\tau)$ and $V(\tau)$ are just intergers, i.e. $b_0$ and $v_0$
 
 $$
-\left\langle n|b_0|m\right\rangle = b_0\left(m^2\right )\delta_{m,n}\nonumber
-\left\langle n|v_0|m\right\rangle = v_0\delta_{m,n}\nonumber
+\begin{align}
+\left\langle n|b_0|m\right\rangle &= b_0\left(m^2\right )\delta_{m,n}\nonumber \\
+\left\langle n|v_0|m\right\rangle &= v_0\delta_{m,n}\nonumber 
+\end{align}
 $$
 
 Second, by looking at the rest of the series of $V(\tau)$
 
 $$
-\left\langle n|\sum_{k=1}v_k cos(k \tau)|m\right\rangle = \frac{v_k}{2}\delta_{|m-n|-k,0}
+\left\langle n\left|\sum_{k=1}v_k cos(k \tau)\right|m\right\rangle = \frac{v_k}{2}\delta_{|m-n|-k,0}
 $$
 
 And finally by looking at the rest of the kinetic energy operator. This is where the fun math trick comes into play. So, looking at what is left
@@ -96,7 +100,7 @@ $$
 We operate the first term to the left, the second to the right, and evaluate the third. What falls out is
 
 $$
-\sum_{k=1} \left\[ \left (n^2 +m^2-k^2\right )\frac {b_k}{4}\right \]\delta_{|m-n|-k,0}
+\sum_{k=1} \frac {b_k}{4} \left\[ n^2 +m^2-k^2\right \] \delta_{|m-n|-k,0}
 $$
 
 Pretty neat huh? Okay well, maybe not. But putting the three pieces together we get matrix elements of the form
