@@ -28,7 +28,7 @@ This leads to a few key properties[<sup>1</sup>].
 $$
 e^{i m \tau}|n\rangle = |m+n\rangle \\
 \langle n|\frac{d^2}{d x^2}|m\rangle = -m^2 \delta_{n,m} \\
-\langle n|\cos(k \tau)|m\rangle = \frac{1}{2}(\delta_{n, m+k} + \delta_{n, m-k})
+\langle n|\cos(k \tau)|m\rangle = \frac{1}{2}(\delta_{n, m+k} + \delta_{n, m-k}) \\
 \langle n|\sin(k \tau)|m\rangle = \frac{1}{2i}(\delta_{n, m+k} - \delta_{n, m-k})
 $$
 
@@ -40,7 +40,7 @@ One last thing to note at this point, the Basis Size at it's smallest would be e
 Any function that can be fit to a form like
 
 $$
-F(\tau) = \sum_{k} c_k cos(k \tau) + s_k sin(k \tau)
+F(\tau) = \sum_{k}^{k_max} c_k cos(k \tau) + s_k^{k_max} sin(k \tau)
 $$
 
 will have a simple representation in this basis. The technical name for this form is a _Fourier series_, so in the applications that follow we'll talk about using a Fourier expansion for our operators.
@@ -48,7 +48,7 @@ will have a simple representation in this basis. The technical name for this for
 A common form of Hamiltonian that this is good for is something like
 
 $$
-\hat{H} = \frac{p_\tau^2}{2 I} + \sum_{k} v_k cos(k \tau)
+\hat{H} = \frac{p_\tau^2}{2 I} + \sum_{k}^{k_max} v_k cos(k \tau)
 $$
 
 which is just a particle on a ring with an added potential term, also expanded as a Fourier series.
@@ -90,13 +90,13 @@ $$
 And finally by looking at the rest of the kinetic energy operator. This is where the fun math trick comes into play. So, looking at what is left
 
 $$
-\left\langle n|\frac{1}{2}\sum_{k=1} b_k \left\(cos(k \tau)p_\tau^2 + p_\tau^2cos(k \tau) + \frac{d^2B(\tau)}{d\tau^2}(cos(k \tau)\right \ )|m\right\rangle
+\left\langle n \left| \frac{1}{2} \sum_{k=1} \left(b_k cos(k \tau)p_\tau^2 + p_\tau^2cos(k \tau) + \frac{d^2B(\tau)}{d\tau^2}cos(k \tau)\right)\right| m\right\rangle
 $$
 
 We operate the first term to the left, the second to the right, and evaluate the third. What falls out is
 
 $$
-\sum_{k=1} \left\{ \left [n^2 +m^2-k^2\right ]\frac {b_k}{4}\right \}\delta_{|m-n|-k,0}
+\sum_{k=1} \left\[ \left (n^2 +m^2-k^2\right )\frac {b_k}{4}\right \]\delta_{|m-n|-k,0}
 $$
 
 Pretty neat huh? Okay well, maybe not. But putting the three pieces together we get matrix elements of the form
