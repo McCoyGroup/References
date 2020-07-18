@@ -100,10 +100,10 @@ $$
 We operate the first term to the left, the second to the right, and evaluate the third. What falls out is
 
 $$
-\sum_{k=1} \frac {b_k}{4} \left\[ n^2 +m^2-k^2\right \] \delta_{|m-n|-k,0}
+\sum_{k=1} \frac {b_k}{4} \left\[ n^2 +m^2-k^2\right \] \delta_{\left|m-n\right|-k,0}
 $$
 
-Pretty neat huh? Okay well, maybe not. But putting the three pieces together we get matrix elements of the form
+Pretty neat huh? Okay well, maybe not. Make sure you take a few minutes with all of this and make sure you undrestand where these results came from. We just applied the properties of the basis listed above, but prove that to yourself. Putting the three pieces together we get matrix elements of the form
 
 $$
         \left\langle n|H|m\right\rangle = \left \{b_0\left(m^2\right )+v_0\right \}\delta_{m,n}\nonumber + \sum_{k=1}  \left\{ \left [n^2 +m^2-k^2\right ]\frac {b_k}{4}+\frac{v_k}{2}\right \}\delta_{|m-n|-k,0}
