@@ -28,7 +28,7 @@ This leads to a few key properties[<sup>1</sup>].
 $$
 \begin{align} 
 e^{i m \tau}|n\rangle &= |m+n\rangle\\
-\langle n|\frac{d^2}{d x^2}|m\rangle &= -m^2 \delta_{n,m}\\
+\langle n|\frac{d^2}{d /tau^2}|m\rangle &= -m^2 \delta_{n,m}\\
 \langle n|\cos(k \tau)|m\rangle &= \frac{1}{2}(\delta_{n, m+k} + \delta_{n, m-k})\\
 \langle n|\sin(k \tau)|m\rangle &= \frac{1}{2i}(\delta_{n, m+k} - \delta_{n, m-k}) 
 \end{align}
@@ -42,7 +42,7 @@ One last thing to note at this point, the Basis Size at it's smallest would be e
 Any function that can be fit to a form like
 
 $$
-F(\tau) = \sum_{k}^{k_max} c_k cos(k \tau) + s_k^{k_max} sin(k \tau)
+F(\tau) = \sum_{k}^{k_{max}} c_k \cos(k \tau) + s_k \sin(k \tau)
 $$
 
 will have a simple representation in this basis. The technical name for this form is a _Fourier series_, so in the applications that follow we'll talk about using a Fourier expansion for our operators.
@@ -50,7 +50,7 @@ will have a simple representation in this basis. The technical name for this for
 A common form of Hamiltonian that this is good for is something like
 
 $$
-\hat{H} = \frac{p_\tau^2}{2 I} + \sum_{k}^{k_max} v_k cos(k \tau)
+\hat{H} = \frac{p_\tau^2}{2 I} + \sum_{k=0}^{k_{max}} v_k \cos(k \tau)
 $$
 
 which is just a particle on a ring with an added potential term, also expanded as a Fourier series.
@@ -66,7 +66,7 @@ is more appropriate.
 For the purposes of this discussion, $B$ represents an effective rotation constant. We also treat $B$ through a Fourier expansion as
 
 $$
-B(\tau) = \sum_k b_k \cos(k \tau)
+B(\tau) = \sum_{k=0}^{k_{max}} b_k \cos(k \tau)
 $$
 
 So in the frame of this discussion we are looking at a total Hamiltonian of the form
@@ -100,13 +100,13 @@ $$
 We operate the first term to the left, the second to the right, and evaluate the third. What falls out is
 
 $$
-\sum_{k=1} \frac {b_k}{4} \left\[ n^2 +m^2-k^2\right \] \delta_{\left|m-n\right|-k,0}
+\sum_{k=1} \frac{b_k}{4} \left[ n^2 +m^2-k^2 \right] \delta_{\left| m-n \right| - k,0}
 $$
 
 Pretty neat huh? Okay well, maybe not. Make sure you take a few minutes with all of this and make sure you undrestand where these results came from. We just applied the properties of the basis listed above, but prove that to yourself. Putting the three pieces together we get matrix elements of the form
 
 $$
-        \left\langle n|H|m\right\rangle = \left \{b_0\left(m^2\right )+v_0\right \}\delta_{m,n}\nonumber + \sum_{k=1}  \left\{ \left [n^2 +m^2-k^2\right ]\frac {b_k}{4}+\frac{v_k}{2}\right \}\delta_{|m-n|-k,0}
+\left\langle n|H|m \right\rangle = \left\{ b_0 \left\( m^2 \right\)+v_0 \right\} \delta_{m,n} + \sum_{k=1}^{k_{max}} \left\{ \left[ n^2 +m^2-k^2 \right] \frac{b_k}{4} + \frac{v_k}{2} \right\} \delta_{|m-n|-k,0}
 $$
 
 A final note, circling back to the properties of the basis, we know that once $m - n > k_{max}$ or $m - n < -k_{max}$ the matrix element is 0. Keep this in mind as you are thinking of ways to write and _optimize_ your python implementation of the Particle on a Ring Basis Set Representation.
