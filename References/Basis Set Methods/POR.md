@@ -28,7 +28,7 @@ This leads to a few key properties[<sup>1</sup>].
 $$
 \begin{align} 
 e^{i m \tau}|n\rangle &= |m+n\rangle\\
-\langle n|\frac{d^2}{d /tau^2}|m\rangle &= -m^2 \delta_{n,m}\\
+\langle n|\frac{d^2}{d \tau^2}|m\rangle &= -m^2 \delta_{n,m}\\
 \langle n|\cos(k \tau)|m\rangle &= \frac{1}{2}(\delta_{n, m+k} + \delta_{n, m-k})\\
 \langle n|\sin(k \tau)|m\rangle &= \frac{1}{2i}(\delta_{n, m+k} - \delta_{n, m-k}) 
 \end{align}
@@ -106,7 +106,7 @@ $$
 Pretty neat huh? Okay well, maybe not. Make sure you take a few minutes with all of this and make sure you undrestand where these results came from. We just applied the properties of the basis listed above, but prove that to yourself. Putting the three pieces together we get matrix elements of the form
 
 $$
-\left\langle n|H|m \right\rangle = \left\{ b_0 \left\( m^2 \right\)+v_0 \right\} \delta_{m,n} + \sum_{k=1}^{k_{max}} \left\{ \left[ n^2 +m^2-k^2 \right] \frac{b_k}{4} + \frac{v_k}{2} \right\} \delta_{|m-n|-k,0}
+\left\langle n|H|m \right\rangle = \left\{ b_0 \left( m^2 \right)+v_0 \right\} \delta_{m,n} + \sum_{k=1}^{k_{max}} \left\{ \left[ n^2 +m^2-k^2 \right] \frac{b_k}{4} + \frac{v_k}{2} \right\} \delta_{|m-n|-k,0}
 $$
 
 A final note, circling back to the properties of the basis, we know that once $m - n > k_{max}$ or $m - n < -k_{max}$ the matrix element is 0. Keep this in mind as you are thinking of ways to write and _optimize_ your python implementation of the Particle on a Ring Basis Set Representation.
