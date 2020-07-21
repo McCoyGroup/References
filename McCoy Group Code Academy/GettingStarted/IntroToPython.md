@@ -3,30 +3,94 @@
 Python is a _programming language_, which is to say, it's a way to write down instructions for computers to do things so we don't have to.
 There are tons of programming languages out there and as you get more and more comfortable with programming, you'll undoubtedly find yourself working with more than one of them.
 The fact that there are so many languages out there also means that we should probably justify why we opt to use python over any of the other choices, and there are a few big reasons:
-1. Python is nice: it works hard to hide unnecessary details about how computers work (people often say it's a _high-level language_)
+1. Python is nice: It works hard to hide unnecessary details about how computers work (people often say it's a _high-level language_)
 2. Python is flexible: It's not the fastest language, but it can do just about anything. As scientists, we generally need flexibility more than speed.
-3. Python is popular: As opposed to something like [Mathematica](https://www.wolfram.com/language/elementary-introduction/2nd-ed/01-starting-out-elementary-arithmetic.html), another nice, flexible language, Python has a huge user base, which means most python questions can be resolved just with a bit of googling.
+3. Python is popular: As opposed to something like [Mathematica](https://www.wolfram.com/language/elementary-introduction/2nd-ed/01-starting-out-elementary-arithmetic.html), another nice, flexible language, Python has a huge user base. This means most Python questions can be resolved just with a bit of googling.
 
-**Important Note:** If you start googling around, one of the first things you'll figure out about python is that there are two main versions of it. There's python2, which first came out in 2000, and python3 which came out in 2008.
-Migration to python3 has been [incredibly slow](https://stackoverflow.blog/2019/11/14/why-is-the-migration-to-python-3-taking-so-long/), so you'll probably see stuff talking about python2 when you try to look stuff up on the internet.
-Despite that, we really want to be using python3. The features are worth it, and python2 is no longer supported.
+**Important Note:** If you start googling around, one of the first things you'll figure out about python is that there are two main versions of it. There's Python 2, which first came out in 2000, and python3 which came out in 2008.
+Migration to Python 3 has been [incredibly slow](https://stackoverflow.blog/2019/11/14/why-is-the-migration-to-python-3-taking-so-long/), so you'll probably see stuff talking about Python 2 when you try to look stuff up on the internet.
+Despite that, we really want to be using Python 3. The features are worth it, and Python 2 is no longer formally supported.
 
 ## What is Anaconda?
 
-Unlike a regular application, e.g. Slack, Python can be distributed
+Unlike a regular application, e.g. Slack, lots of different organizations have their own _distributions_ of Python which all have slightly different use cases.
+For the most part, we're agnostic as to what distribution you use, but if you're just getting started, we'll recommend [Anaconda](https://www.anaconda.com/products/individual).
 
-## How do I download them?
-Here we like to use Anaconda.
-It is a bit more streamlined and is the same way python is installed on the group computers as well as any _High Performace Computing_ (HPC) clusters (like mox or NERSC) you may encounter.
- If you already have Anaconda from using Jupyter or something of the sort, you are off to a good start.
+Anaconda is a distribution of Python that comes with various scientific computing packages ([`numpy`/`SciPy`/`matplotlib`/etc.) preinstalled.
+It also provides extra tools, like its own installer/manager ([`conda`](https://docs.conda.io/en/latest/)).
+As a group, we have moved over to using Anaconda on the group computers. All the supercomputers we use ([Hyak/Mox](https://wiki.cac.washington.edu/display/hyakusers/Hyak+mox+Overview) & [NeRSC](https://www.nersc.gov/)) have Anaconda installed or available as well.
 
-### Installing Anaconda 3
+### Using Anaconda on the Group Computers
 
-Fill in :) 
+If you are working on one of the group computers, they all already have anaconda3 installed on them.
+The first time you use Anaconda on one of the computers, you'll need to do a bit of set up work.
+Every other time it should "just work".
+
+To start, you'll need to [`ssh`](https://stackoverflow.com/c/mccoygroup/questions/11) onto one of the group computers.
+Once you've got that working, run
+
+```console
+$ conda -V
+```
+
+if Anaconda has been set up, you should get something like
+
+```console
+$ conda -V
+conda 4.8.3
+```
+
+if not we'll need to set things up.
+
+**Short version**: _(for people who know how to edit files via the command line)_
+
+Add the following to your `~/.bashrc` file
+
+```lang-none
+export PATH=/opt/anaconda3/bin:$PATH
+````
+
+Now, exit and log in again.
+
+**Long version**: _(for people who don't know how to edit files via the command line)_
+
+Here are some steps to do the same with a text editing software called [`emacs`]()
+
+Log on, you should see something that looks like
+
+```console
+[yourusername@thecomputer ~]$
+```
+
+Once you have this, we'll use `emacs` to edit the `.bashrc` file in our home directory, by doing
+
+```console
+[yourusername@thecomputer some_folder] emacs -nw ~/.bashrc$
+```
+
+You will open up the file at that point.
+Use the arrow keys to go to the bottom of the file, and add the line
+
+```lang-none
+export PATH=/opt/anaconda3/bin:$PATH
+````
+
+Once you do this, hit `Ctrl+x` and then `Ctrl+c` and then type `y`.
+This will save the changes you made and exit the emacs software.
+When you log off and log back in, Anaconda should be ready to go.
+
+*If this doesn't work for some reason, consult our shared drive ComputerSOP documentation or a senior member of the group.*
+
+### Installing Anaconda3 on your laptop or desktop at home
+
+Go to the [Anaconda downloads page](https://www.anaconda.com/products/individual#Downloads) and download the appropriate installer. Almost certainly, you'll want the **64-bit Graphical Installer**.
+Follow the installer's instructions and recommended installation instructions.
+You may be asked if you want to download `PyCharm` along the way, which is the group's recommended Integrated Development Environment (IDE) for coding and debugging in Python.
 
 ### Installing Python 3
 
-First we'll go to the [Python Organization downloads page](https://www.python.org/downloads/) and download whichever version they're saying is the latest (as of writing this that's currently 3.8).
+If for some reason you prefer to use the standard distribution Python over the Anaconda one, that works too.
+To do this, go to the [Python Organization downloads page](https://www.python.org/downloads/) and download whichever version they're saying is the latest (as of writing this that's currently 3.8).
 That should download an installer and we'll just do what the python.org people tell us to do to get it installed.
 
 

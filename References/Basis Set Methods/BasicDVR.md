@@ -105,15 +105,17 @@ The end result of this is that their DVR basis functions are shifted $\frac{\sin
 
 ![leg funcs](../img/dvr_basis.png){:width="650px"}
 
-Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
-{: .alert .alert-info}
+We recommend looking at Appendix A of Colbert and Miller's paper for the equations, starting with the (- $\infty$, $\infty$) interval! (i.e. your kinetic energy is described by Equation A7) But note you will need some potential function to run this all the way through. Seems like the perfect place for a harmonic oscillator!
 
 ## Sample Applications
 
 There are tons of applications for DVR out there.
 It's one the main tools that we keep in our toolbox.
-To get you started, we've got an exercise on writing your first [Colbert & Miller-style DVR](../../McCoy%20Group%20Code%20%Academy/Exercises).
+To get you started, we've got an exercise on writing your first [Colbert & Miller-style DVR](../../McCoy%20Group%20Code%20Academy/Exercises).
 Check it out.
+
+Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
+{: .alert .alert-info}
 
 ---
 <a id="#fn1">&nbsp;</a> Nothing requires this operator to just be something like $\hat{x}$. In a curvilinear system, we can just as easily use $cos(\theta)$ as $\theta$, should that be a more convenient choice.

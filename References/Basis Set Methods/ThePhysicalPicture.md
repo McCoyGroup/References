@@ -22,7 +22,7 @@ For instance, let's think about water, and we'll even label the atoms
 
 _**INSERT WATER GRAPHIC**_
 
-A common problem we'd ask ourselves is "what is the frequency of the vibration involving the stretching and contraction of the bond between $\mathrm{O}_1$ and $\mathrm{O}_2$?"
+A common problem we'd ask ourselves is "what is the frequency of the vibration involving the stretching and contraction of the bond between O1 and H2?"
 If this seems like a bit of a pointless question, I'm totally with you.
 The questions we ask only really take meaning when we have some experimental data we're trying to make sense of.
 On the other hand, knowing _how_ to ask these questions in a simpler context (like a bare water molecule) will be a boon when moving on to real physically-relevant systems.
