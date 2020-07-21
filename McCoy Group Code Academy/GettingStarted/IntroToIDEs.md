@@ -4,8 +4,8 @@ Writing code can be a huge pain. Computers are the ultimate pedants, and it's ea
 In the bad old days, people didn't have tools to help them write their code, and it can be a fun exercise to write code without them, just to see the kind of mental strain it requires.
 We're not going to do that, though.
 Tools are your friend and we're going to use them so that we can spend more time doing science and less time writing code.
-The main tool we're going to use is an _Integrated Development Environment_ (IDE), which is a fancy name for a program that you use to edit your code that also helps you out.
-They're the bees knees. There's also a bajillion of them out there.
+The main tool we're going to use is an _integrated development environment_ (IDE), which is a fancy name for a program that you use to edit your code that also helps you out.
+IDEs are the bees knees. There's also a bajillion of them out there.
 We're going to make our recommendation, but as with all things, you should do what works best for you.
 
 ## PyCharm
@@ -43,11 +43,11 @@ For the most part, you shouldn't need any of their "Featured Plugins" until you 
 
 ### Configuring PyCharm after Installation
 
-_JetBrains has [documented this](https://www.jetbrains.com/help/pycharm/configuring-project-and-ide-settings.html) for us. We're putting this here to give you a "kinder" intro.__
+_JetBrains has [documented this](https://www.jetbrains.com/help/pycharm/configuring-project-and-ide-settings.html) for us. We're putting this here to give you a "kinder" intro._
 
 PyCharm expects us to put our different bits of code in various "projects".
-To start out, we'll just make one called "Basic Testing" or (your choice) some devastatingly witty and clever name.
-Being neither witty nor clever, we can't suggest one of those to you.
+To start out, we'll just make one called either "Basic Testing" or some devastatingly witty and clever name.
+Being neither witty nor clever, we can only suggest the former to you.
 
 You can put the project directory anywhere. Good practice would have you make a folder that holds all of your coding-related work and put the project inside there.
 It will ask for an interpreter, which is just their way of asking which version of python to use.
@@ -81,14 +81,40 @@ In the same way that PyCharm calls folders it manages "Projects", Git calls them
 So to tell `git` to track changes in our PyCharm project we click `VCS » Import into Version Control » Create Git Repository`.
 Once we've done this, we'll see three buttons appear in the top-right of the PyCharm window
 
-![buttons](../img/git_buttons.png){:width="165px"}
+![buttons](../img/git_buttons.png){:width="330px"}
 
 These will let us do stuff like "commit" changes and check the history of a file.
 As with voting in Chicago, _commit early and commit often_.
 You don't want to break something and then only realize after the fact that you never saved the version where it worked.
 
+## Installing Packages
+
+It's good practice to try to write introductory things and things pertinent to your understanding on your own.
+It's also good practice to outsource unnecessary bits to other people.
+Python encourages code reuse by making it easy for people to share their packages.
+
+We've got two main ways to install other packages.
+If the person who wrote it put in the necessary work, PyCharm provides us with the ability to install from the "official" package source.
+
+For most group-related code, we'll use `git` to install it off of [GitHub](https://github.com/). GitHub is just a site for people to share/store/display code they've managed using `git`.
+The group has its own [GitHub](https://github.com/McCoyGroup).
+This site itself is even hosted by GitHub. Once you're ready, you should get on GitHub, too, at the very minimum because having a documented history of developing code looks good when applying to technical positions.
+
+PyCharm lets us install packages from GitHub by allowing us to "clone" a repository into our local one.
+To do this, we go to `VCS » Git » Clone...` which opens a pop-up window in which we can specify what package we want to install and where we want to install it to
+
+![git clone](../img/git_import.png){:width="550px"}
+
+For code in one of our McCoy Group repositories, the URL to install from will look like `https://github.com/McCoyGroup/<PackageName>.git`.
+You'll want to install it somewhere that python can find it.
+The easiest thing to do, there, is to put it inside your current repository.
+
+There are lots of subtleties and things we could discuss here, but that's probably not worth it.
+At least now you should be set up to reuse what your group members have done.
+
+
 <span class="text-muted">Next:</span>
- [Your "First" Python Script](FirstPythonScript.md)<br/>
+ [Your First Python Script](FirstPythonScript.md)<br/>
 <span class="text-muted">Previous:</span>
  [An Introduction to Python/Anaconda](IntroToPython.md)
  
