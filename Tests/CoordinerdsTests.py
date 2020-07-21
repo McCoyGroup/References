@@ -2,7 +2,7 @@
 from Peeves.TestUtils import *
 from unittest import TestCase
 from McUtils.Coordinerds import *
-from McUtils.Plots import ArrayPlot, TensorPlot
+from McUtils.Plots import *
 from McUtils.Numputils import *
 import sys, numpy as np
 
@@ -55,7 +55,7 @@ class ConverterTest(TestCase):
 
     @validationTest
     def test_GetDihedrals(self):
-        from McUtils.Coordinerds.CoordinateTransformations.TransformationUtilities.VectorOps import pts_dihedrals as calc_dihed
+        from McUtils.Numputils import pts_dihedrals as calc_dihed
 
         orig = self.dihed_test_structure
 
@@ -131,13 +131,27 @@ class ConverterTest(TestCase):
     #     self.assertEqual(coords.shape, (self.n, 16, 3))
 
     #region Jacobians
-    @validationTest
+    @debugTest
     def test_CartesianToZMatrixJacobian(self):
-        coord_set = CoordinateSet(DataGenerator.coords(10))
-        jacob = coord_set.jacobian(ZMatrixCoordinates, stencil = 3)
-        # print(np.round(jacob, 2), file = sys.stderr)
-        # ArrayPlot(jacob.reshape(10*3, (10-1)*3), colorbar=True).show()
-        self.assertEquals(jacob.shape, (10*3, 10 - 1, 3)) # we always lose one atom
+        n = 15
+        coord_set = CoordinateSet(DataGenerator.coords(n))
+        internals = ZMatrixCoordinateSystem(ordering=[
+            [1, -1, -1, -1],
+            [0,  1, -1, -1],
+            [2,  0,  1, -1],
+            [3,  2,  1,  0]
+        ])
+        jacob = coord_set.jacobian(internals, stencil=3).reshape(n*3, (n-1)*3)
+
+        # g = GraphicsGrid(ncols=3, nrows=2)
+        # ArrayPlot(jacob, figure=g[0, 0])
+        # ArrayPlot(jacob2, figure=g[1, 0])
+        # ArrayPlot(bleh, figure=g[0, 1]),
+        # ArrayPlot(bleeh2, figure=g[1, 1])
+        # ArrayPlot(bleh-bleeh2, figure=g[1, 2]),
+        # ArrayPlot(bleeh2@jacob2, figure=g[0, 2])
+        # g.show()
+        self.assertEquals(jacob.shape, (n*3, (n-1)*3)) # we always lose one atom
 
     @validationTest
     def test_CartesianToZMatrixMultiJacobian(self):
@@ -273,76 +287,4 @@ class ConverterTest(TestCase):
         disp = system.displacement(.1)
         self.assertEquals(disp.shape, (3,))
 
-    #endregion
-
-class TransformationTests(TestCase):
-
-    def setUp(self):
-        super().setUp()
-        self.initialize_data()
-        self.load()
-
-    @property
-    def loaded(self):
-        return hasattr(self, "cases")
-
-    def load(self, n=10):
-        if not self.loaded:
-            self.cases = n
-            self.transforms = DataGenerator.mats(n)
-            self.shifts = DataGenerator.vecs(n)
-            self.mats = affine_matrix(self.transforms, self.shifts)
-
-    initialize_data = ConverterTest.initialize_data
-
-    #region CoordinateTests
-
-    @validationTest
-    def test_AffineMatDim(self):
-        self.assertEqual(self.mats.shape, (self.cases, 4, 4))
-
-    @debugTest
-    def test_TranslationTransform(self):
-        t = CoordinateTransform(TranslationTransform(np.array([-1, -2, -2])))
-        point = np.array([1, 5, 2])
-        self.assertEquals((0, 3, 0), tuple(t(point)))
-
-    @debugTest
-    def test_TranslationTransformMany(self):
-        t = CoordinateTransform(TranslationTransform(np.array([-1, -2, -2])))
-        point = np.array([1, 5, 2])
-        point = np.broadcast_to(point[np.newaxis], (10, 3))
-        wat = t(point)
-        self.assertEquals((0, 3, 0), tuple(wat[0]))
-
-    @debugTest
-    def test_RotationTransform(self):
-        t = CoordinateTransform(RotationTransform(np.pi/2))
-        point = np.array([1, 1, 0])
-        self.assertTrue(np.allclose(t.transformation_function.transform, [[0, -1, 0], [1, 0, 0], [0, 0, 1]]))
-        self.assertTrue(np.allclose((-1, 1, 0), t(point)))
-
-    @debugTest
-    def test_RotationTranslationTransform(self):
-        translation = TranslationTransform(np.array([-1, -2, -2]))
-        rotation = RotationTransform(np.pi / 2)
-        t = CoordinateTransform(rotation, translation)
-        point = np.array([2, 3, 2])
-        a = t.transformation_function #type: AffineTransform
-        self.assertTrue(np.allclose(CoordinateTransform(rotation)(CoordinateTransform(translation)(point)), t(point)))
-
-    @validationTest
-    def test_AffineMatMul(self):
-        vecs = DataGenerator.vecs(self.cases)
-        vec_prod = affine_multiply(self.mats, vecs)
-        vec_prod2 = np.array([a @ b for a, b in zip(self.mats, one_pad_vecs(vecs))])[:, :3]
-        self.assertAlmostEqual(np.sum(vec_prod - vec_prod2), 0.)
-
-    @validationTest
-    def test_AffineMats(self):
-        vecs = DataGenerator.vecs(self.cases)
-        vec_prod = affine_multiply(self.mats, vecs)
-        affine_inv = np.asarray([np.linalg.inv(m) for m in self.mats])
-        vecs2 = affine_multiply(affine_inv, vec_prod)
-        self.assertAlmostEqual(np.sum(vecs - vecs2), 0.)
     #endregion
