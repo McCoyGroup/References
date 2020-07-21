@@ -1,38 +1,91 @@
 # What is an IDE?
 
-insightful comments.
+Writing code can be a huge pain. Computers are the ultimate pedants, and it's easy to make subtle mistakes that are hard to catch.
+In the bad old days, people didn't have tools to help them write their code, and it can be a fun exercise to write code without them, just to see the kind of mental strain it requires.
+We're not going to do that, though.
+Tools are your friend and we're going to use them so that we can spend more time doing science and less time writing code.
+The main tool we're going to use is an _Integrated Development Environment_ (IDE), which is a fancy name for a program that you use to edit your code that also helps you out.
+They're the bees knees. There's also a bajillion of them out there.
+We're going to make our recommendation, but as with all things, you should do what works best for you.
 
-JetBrains has made a truly great python IDE called [PyCharm](https://www.jetbrains.com/pycharm/).
+## PyCharm
+
+JetBrains has made a truly great Python IDE called [PyCharm](https://www.jetbrains.com/pycharm/).
 There's a free community version and also a paid professional version. As someone with a `@uw.edu` email, you can use the pro version for free.
 
-## Why is it useful?
+It'll format your code so it's easier to read, catch any errors in your syntax, provide helpful hints and suggestions as you write, and give you a powerful _debugger_ to help you find issues once your code runs.
 
-PyCharm is a great tool mainly to make your life easier by catching syntax bugs, auto-completing (code as well as documentation), and providing a really robust debugging suite. Many IDEs do this, but we as a group have converged around PyCharm as convention, mainly because it's relatively easy to set up and use.
+Even better, it's easy to install.
 
-## How do I install PyCharm?
+### Installing on the Group Computers
 
-**Usage on the group computers**
+If you're working on Argon or Neon, we've already installed the [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/), which is just a manager for PyCharm and its sibling IDEs.
+To use it we just SSH onto the computer and run
 
-If you want to use it on the group computers, Argon and Neon currently have the "JetBrains ToolBox" installed on them. Navigate to `/opt/jetbrains-toolbox.../` and then run `./jetbrains-toolbox`. This should pop up a graphical interface where you can download PyCharm Community or Professional (As mentioned before, Pro requires a .edu address, The group doesn't use the extra features of Professional all that much). Once this is done downloading and you go through the setup, you _should_ be able to run PyCharm by simply typing `pycharm` on the command line.  If this doesn't work, talk to Ryan as this is relatively new technology in the group.
+```console
+$ cd /opt/jetbrains-toolbox.../
+$ ./jetbrains-toolbox
+```
 
-**Usage on your laptop**
+This should pop up an interface where you can download PyCharm (It'll give you the option to do the Community or Pro Editions. As mentioned before, Pro requires a .edu address, The group doesn't use the extra features of Professional all that much).
 
-Make sure you download anaconda before proceeding. You can find the installer for PyCharm [here](https://www.jetbrains.com/pycharm/). We will follow the instructions laid out by JetBrains. Use the all the recommended settings, so just keep hitting next until it's finished. Once installed, open it up and follow the configuration instructions, we don't need any of their _featured plugins_.
+Once this is done downloading and you go through the setup, you should be able to run PyCharm by simply running `pycharm` on the command line.
+If this doesn't work or you're running on one of the machines where the JetBrains Toolbox isn't installed, talk to one of the senior group members.
 
+### Installing on Your Own Computer
+
+_We recommend you install Anaconda, first._
+
+You can find the installer for PyCharm [here](https://www.jetbrains.com/pycharm/).
+Just follow the instructions laid out by JetBrains. We usually just use their recommended setting.
+Once installed, open it up and follow the configuration instructions.
+For the most part, you shouldn't need any of their "Featured Plugins" until you start to write a lot of Shell scripts or Markdown or the like.
 
 ### Configuring PyCharm after Installation
 
-Once you make your way to the main screen, to get configuration out of the way, start a new project.  You can put the project directory anywhere, as I just want you to get your anaconda installation set up here. It will ask for an interpreter, and go over to `Existing Interpreter`, then click on the `...` box on the side.  Go to `System Interpreter` in the dropdown on the left and you should be able to select your anaconda installation (Conda, symbol looks like a not-yet complete green circle). Press ok through everything and then you should see your project bar on the far left. It will take a few minutes to have your anaconda installation fully make its way into pycharm, so be patient while it's `updating skeletons` or `2 processes running` on the bottom right.
+_JetBrains has [documented this](https://www.jetbrains.com/help/pycharm/configuring-project-and-ide-settings.html) for us. We're putting this here to give you a "kinder" intro.__
 
-**Git/Github Integration**
+PyCharm expects us to put our different bits of code in various "projects".
+To start out, we'll just make one called "Basic Testing" or (your choice) some devastatingly witty and clever name.
+Being neither witty nor clever, we can't suggest one of those to you.
 
-_Note: If you are not comfortable with git, github, and/or pycharm it may be good to do this with a senior lab member near you_
+You can put the project directory anywhere. Good practice would have you make a folder that holds all of your coding-related work and put the project inside there.
+It will ask for an interpreter, which is just their way of asking which version of python to use.
+If we were real software developers, we'd need to think carefully about what we wanted to do.
+Happily, we're not, so this is straightfoward.
+Just go over to `Existing Interpreter`, then click on the `...` box on the side.
+Choose `System Interpreter` in the dropdown on the left and you should be able to select your Anaconda installation.
+Press ok through everything and then you should see your project bar on the far left.
+It will take a few minutes to have your Anaconda installation fully make its way into PyCharm, so be patient.
+As it runs, it'll say stuff like  "updating skeletons" or "2 processes running" on the bottom right.
 
-PyCharm provides a graphical interface for using git and github.  All version control settings take place in the `VCS` tab up at the top of PyCharm.  Git is already installed on the group computers, so if you are using it there you just need to add a Git repository by going to `VCS-->Enable Version Control Integration` and select Git (if you are on a laptop it will prompt you to download Git).  Then, you can add a git repository by doing `VCS-->Import into version control-->Create git repository`.  Then you can use the newly appeared icons on the top right of the pycharm window that have Git next to them to push, pull, and look at code history. You can also share the project on Github using `VCS-->Import into version control-->Share Project` on Github and then login.  This is an alternative to using command line git procedures.  
+### Git Integration
 
-_Why bother with Git and Github?? Seems like a pain in the Butt_
+As we noted earlier, writing code can be a huge pain.
+There is a 100% chance you're going to make mistakes.
+And there's also a 100% chance that, at some point, when you try to fix your mistake you end up breaking something else.
+Commonly, you manage to break something unexpectedly _and also_ fail to fix your original mistake.
+The technical term for this is _super duper annoying_.
 
-One of the most powerful aspects of using Git in PyCharm is the `Show History` (clock icon) option.  It will show you past git commits, as well as what has changed since the last commit.  You can do side-by-side mode to also see what you have changed line-by-line.  This is a great option if you broke your code and are trying to go back to the last known time it worked :).
+In the same way that people of yore made IDEs to make writing code less sucky, they also made tools to track our changes for us so that we can see what we've broken. This stuff is called _version control software_ (VCS).
+The tool that we and a majority of the programmers of the world use is called [`git`](https://git-scm.com/).
+Unfortunately, `git` is a confusing piece of software that was designed to be used on the command line.
+To get around this, people have made versions of it that have nice interfaces, like [GitHub Desktop](https://desktop.github.com/).
+
+PyCharm, the wonderful tool that it is, also includes an interface so that we never need to leave our IDE.
+JetBrains has [documented this](https://www.jetbrains.com/help/pycharm/set-up-a-git-repository.html) for us, too.
+All of these settings are in the `VCS` menu at the top of PyCharm.
+Once we've got a project set up, we just click on `VCS » Enable Version Control Integration` and select `Git`.
+
+In the same way that PyCharm calls folders it manages "Projects", Git calls them "Repositories".
+So to tell `git` to track changes in our PyCharm project we click `VCS » Import into Version Control » Create Git Repository`.
+Once we've done this, we'll see three buttons appear in the top-right of the PyCharm window
+
+![buttons](../img/git_buttons.png){:width="165px"}
+
+These will let us do stuff like "commit" changes and check the history of a file.
+As with voting in Chicago, _commit early and commit often_.
+You don't want to break something and then only realize after the fact that you never saved the version where it worked.
 
 <span class="text-muted">Next:</span>
  [Your "First" Python Script](FirstPythonScript.md)<br/>
