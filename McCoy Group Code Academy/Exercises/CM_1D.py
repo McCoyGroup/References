@@ -170,15 +170,18 @@ if __name__ == '__main__':
     H2PotOptsDict = { "mass": 918.59073,  # mass electron
                       "frequency" : 0.0200534,  # Hartree
                       "re" : 1.40112,  # bohr
-                      "alpha" : ...,
-                      "De" : ...,
+                      "alpha" : 1.00779,  # 1/bohr
+                      "De" : 0.18186,  # Hartree
                     }
     
     run(domain=(-5, 5), NumGP=100, potential_function='HarmonicOscillator', potential_options=H2PotOptsDict)
     
-    # Now that you know your code is working, play around with it!
-    # Find parameters appropriate for, e.g., HCl, HF, or other simple diatomics! 
-    # The idea is to build intution, so play around with the parameters (domain and number of grid points) and the potential (harmonic, morse, 
+    # If this is working, for the harmonic oscillator you should have energies: [0.0098886  0.02883656 0.04667887 0.06341553 0.07904654] (Hartree)
+    # and for the Morse oscillator the energies should look like: [0.0100267  0.0300801  0.05013349 0.07018689 0.09024029] (Hartree)
+    
+    # Once code is working, play around with it!
+    # Find some suggestions for "exploring the parameter space" in the DVR Reference!
+    # Basically, the idea is to build intution, so play around with the parameters (domain and number of grid points) and the potential (harmonic, morse, 
     # or electonic structure) and see what happens. 
     
  
