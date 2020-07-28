@@ -51,7 +51,7 @@ class VPTTests(TestCase):
               ))
               )
 
-    @debugTest
+    @inactiveTest
     def test_WaterVPT(self):
 
         hammer = PerturbationTheoryHamiltonian.from_fchk(TestManager.test_data("HOD_freq.fchk"), n_quanta=5)
