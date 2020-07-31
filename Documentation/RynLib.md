@@ -94,6 +94,9 @@ Both NeRSC and the local University of Washington cluster use the SLURM schedule
 
 Some sample scripts are [here](RynLib/SubmittingWithSBatch.md)
 
+## Examples
+
+We're collecting examples to provide concrete use cases. You can find them [here](RynLib/Examples).
 
 ### Modules:
 
