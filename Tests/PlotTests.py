@@ -17,10 +17,19 @@ class PlotsTests(TestCase):
         plot = Plot(grid, np.sin(grid))
         # plot.show()
 
+    @debugTest
+    def test_PlotStyling(self):
+        grid = np.linspace(0, 2 * np.pi, 100)
+        plot = Plot(grid, np.sin(grid),
+                    theme='dark'
+                    )
+        # plot.show()
+
     @validationTest
     def test_Scatter(self):
         pts = np.random.rand(50, 2)
         plot = ScatterPlot(*pts.T)
+        plot.show()
 
     @validationTest
     def test_ListContourPlot(self):
@@ -65,7 +74,7 @@ class PlotsTests(TestCase):
                           "cmap" : colormaps.get_cmap('viridis')
                       },
                       axes_labels = ['dogs', 'cats',
-                                     Graphics.modified('rats', color='red')
+                                     Styled('rats', color='red')
                                      ],
                       plot_label = 'my super cool 3D plot',
                       plot_range = [(-5, 5)]*3,
@@ -90,13 +99,13 @@ class PlotsTests(TestCase):
                                   )
         # plot.show()
 
-    @validationTest
+    @inactiveTest
     def test_VTK(self):
         plot = Graphics3D(backend="VTK", image_size=[1500, 500])
         Sphere().plot(plot)
         # plot.show()
 
-    # @debugTest
+    # @validationTest
     # def test_Plot3D_adaptive(self):
     #     f = lambda pt: np.sin(pt[0]) + np.cos(pt[1])
     #     plot = Plot3D(f, [0, 2*np.pi], [0, 2*np.pi])

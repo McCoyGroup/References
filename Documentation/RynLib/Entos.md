@@ -27,3 +27,6 @@ pm = PotentialManager()
 entos = pm.load_potential("entos")
 entos(coordinates, atoms, False)
 ```
+
+---
+[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/RynLib/Entos.md)

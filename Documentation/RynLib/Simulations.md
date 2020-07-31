@@ -142,3 +142,6 @@ this reports
 * the overall runtime
 
 The log file isn't intended to be used as a serious data source, but rather as a way to check in on your simulation as it runs to make sure that everything is going smoothly.
+
+---
+[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/RynLib/Simulations.md)

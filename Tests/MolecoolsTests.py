@@ -197,7 +197,7 @@ class MolecoolsTests(TestCase):
     @validationTest
     def test_VisualizeNormalModes(self):
 
-        from Psience.Molecools.Vibrations import VibrationalModes, NormalModeCoordinates
+        from Psience.Molecools.Vibrations import MolecularVibrations, NormalModeCoordinates
         from McUtils.Plots import GraphicsGrid, Graphics3D
 
         m = Molecule.from_file(self.test_fchk, bonds = [[0, 1, 1], [0, 2, 1]])
@@ -209,7 +209,7 @@ class MolecoolsTests(TestCase):
         test_freqs = parse["VibrationalData"]["Frequencies"]
 
         nms = m.normal_modes
-        realvibs = VibrationalModes(m, basis=NormalModeCoordinates(modes, freqs=test_freqs))
+        realvibs = MolecularVibrations(m, basis=NormalModeCoordinates(modes, freqs=test_freqs))
 
         plot_vibrations = False
         if plot_vibrations:

@@ -308,3 +308,5 @@ After doing that we need to
 
 None of this requires much thought, so I've provided some helpful boilerplate [here](https://github.com/McCoyGroup/RynLib/tree/master/RynUtils/C%2B%2B%20Common/Boilerplate). There are a number of places where you will need to Find/Replace stuff, though.
 
+---
+[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/RynLib/Potentials.md)

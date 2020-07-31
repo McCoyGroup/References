@@ -44,6 +44,13 @@ class VPTTests(TestCase):
         energies = h2w * sum(corrs)
         corrs = [h2w * x for x in corrs]
 
+        print("Target:\n",
+              """
+ 0 0 0  4053  3995     0     0
+ 0 0 1     -     -  3874  3685
+ 0 1 0     -     -  2810  2706
+ 1 0 0     -     -  1422  1383
+ """)
         print("State Energies:\n",
               *(
                   "{:<1.0f} {:<1.0f} {:<1.0f} {:>5.0f} {:>5.0f} {:>5.0f} {:>5.0f}\n".format(*x) for x in np.round(
@@ -99,6 +106,14 @@ class VPTTests(TestCase):
                   "{:<1.0f} {:<1.0f} {:<1.0f} {:>5.0f} {:>5.0f} {:>5.0f} {:>5.0f}\n".format(*x) for x in np.round(
                   np.column_stack((states, corrs[0], energies, corrs[0] - corrs[0][0], (energies - energies[0])))
               ))
+              )
+        print("Target:\n",
+              """
+ 0 0 0  4053  3995     0     0
+ 0 0 1     -     -  3874  3685
+ 0 1 0     -     -  2810  2706
+ 1 0 0     -     -  1422  1383
+ """
               )
 
         # print(h2w*hammer.martin_test())

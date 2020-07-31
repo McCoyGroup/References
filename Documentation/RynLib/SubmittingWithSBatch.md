@@ -46,3 +46,6 @@ With Shifter we have a slight subtlety in that `sbatch` has been set up to take 
 ```
 
 and I think on Shifter systems we can use `srun` instead of `mpirun`...
+
+---
+[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/RynLib/SubmittingWithSBatch.md)
