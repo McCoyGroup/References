@@ -92,16 +92,19 @@ An implementation of importance sampling is baked into the package, but this req
 A core use case for all of this is High-Performance Computing environments. 
 Both NeRSC and the local University of Washington cluster use the SLURM scheduler for jobs, so I can only detail how this works with `sbatch`, not sure about other schedulers.
 
-Some sample scripts are [here](RynLib/SubmittingWithSBatch.md)
+Some sample scripts are [here](RynLib/SubmittingWithSBatch.md).
 
 ## Examples
 
 We're collecting examples to provide concrete use cases. You can find them [here](RynLib/Examples).
 
-### Modules:
+### Modules
 
   - [Interface](RynLib/Interface.md)
   - [DoMyCode](RynLib/DoMyCode.md)
   - [Dumpi](RynLib/Dumpi.md)
   - [PlzNumbers](RynLib/PlzNumbers.md)
   - [RynUtils](RynLib/RynUtils.md)
+
+---
+[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/RynLib.md)
