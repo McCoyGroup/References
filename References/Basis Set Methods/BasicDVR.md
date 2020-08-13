@@ -142,8 +142,9 @@ and so
 
 $$
 \begin{align}
-\omega_e &= \sqrt{\frac{1}{\mu} \frac{\partial^2}{\partial r^2} V(r_e)} \\
-\omega_ex_e &= \frac{1}{16} \frac{1}{\mu^2\omega_e^2} \frac{\partial^4}{\partial r^4} V(r_e) - \frac{30}{288} \frac{1}{\mu^2\omega_e^2} \left( \frac{\partial^3}{\partial r^3} V(r_e) \right)^2 \left( \frac{\partial^2}{\partial r^2} V(r_e) \right)^{-1}
+\omega_e &= \sqrt{\frac{1}{\mu} \frac{\partial^2V}{\partial r^2} (r_e)} \\
+\omega_ex_e &= \frac{1}{16} \frac{1}{\mu^2\omega_e^2} \frac{\partial^4V}{\partial r^4}(r_e) - \frac{30}{288} \frac{1}{\mu^2\omega_e^2} \left( \frac{\partial^3V}{\partial r^3}(r_e) \right)^2 \left( \frac{\partial^2V}{\partial r^2}(r_e) \right)^{-1}
+\end{align}
 $$
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
