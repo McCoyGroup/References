@@ -125,22 +125,25 @@ Some suggestions:
 
 ### A Note on Parameters from the NIST Webbook
 While the _Constants of Diatomic Molecules_ Table may seem large and daunting at first hopefull keeping these hints in mind will help!
-1. The data your after is listed as an $X^1$ state. 
+1. The data you're after is listed as the $X^1$ state (look for the _ground electronic state_)
 2. While the table has parameters $D_e$ and $\alpha_e$ these are not equivalent to the parameters $D_e$ and $\alpha$ of the Morse Oscillator. It goes something like  "These aren't the droids you are looking for..." right? 
 3. INSTEAD, you will need to derive the values of $D_e$ and $\alpha$ from the parameters $\omega_e$ and $\omega_ex_e$.
 
-These 2nd and 3rd bullet points are CRITICAL and turns out leads to an important discussion on everyone's favorite topic: _units_
-So, take this as a "right of passage" persay and work out how to solve for these parameters. Just takes some algebra and a conversation with oneself about _units_ or come to a group member to get you started (think about what the units need to be to make the answer have to correct units). For now we will say, from perturbation theory: 
+As you do this, you'll need to wrangle everyone's favorite thing: _units_
+So, take this as a "right of passage" and work out how to solve for these parameters on your own. It takes some algebra and a good think about what the units need to be to make the answer have to correct units. If you'd like some advice on where to start, ask a group member.
 
-$$
-\omega_e = \sqrt{\frac{1}{\mu} \frac{\partial^2}{\partial r^2} V(r_e)}
-\omega_ex_e = \frac{1}{16} \frac{1}{\mu^2\omega_e^2} \frac{\partial^4}{\partial r^4} V(r_e) - \frac{30}{288} \frac{1}{\mu^2\omega_e^2} \left( \frac{\partial^3}{\partial r^3} V(r_e) \right)^2 \left( \frac{\partial^2}{\partial r^2} V(r_e) \right)^{-1}
-$$
-
-and using a Taylor Series expansion:
+Here's a bit of necessary background info. Using a Taylor expansion we have
 
 $$
 V(r_e) = \alpha^2D_e\Delta r^2 - \alpha^3D_e\Delta r^3 + \frac{7}{12}\alpha^4D_e\Delta r^4 + O(\Delta r^5)
+$$
+
+and so
+
+$$
+\begin{align}
+\omega_e &= \sqrt{\frac{1}{\mu} \frac{\partial^2}{\partial r^2} V(r_e)} \\
+\omega_ex_e &= \frac{1}{16} \frac{1}{\mu^2\omega_e^2} \frac{\partial^4}{\partial r^4} V(r_e) - \frac{30}{288} \frac{1}{\mu^2\omega_e^2} \left( \frac{\partial^3}{\partial r^3} V(r_e) \right)^2 \left( \frac{\partial^2}{\partial r^2} V(r_e) \right)^{-1}
 $$
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
