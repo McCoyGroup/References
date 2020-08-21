@@ -30,4 +30,8 @@ discrete time steps as to achieve the following solution:
 
 ![Discrete_timestep_solutions](Implementing DMC/img/Discrete_timestep_solutions.PNG)
 
+When we operate with our kinetic operator and our potential operator, we've stepped forward in time!
+
 ![Long_time_lim](Implementing DMC/img/Long_time_lim.PNG)
+
+When we take the long τ limit, the exponent in the exponential term becomes a large negative number, causing most terms to go to 0. As Eref goes to E0, the n=0 term's exponential goes to 1 (as the exponent will go to 0) meaning that at long τ we will get the ground state solution.
