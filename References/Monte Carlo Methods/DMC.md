@@ -24,14 +24,79 @@ Diffusion Monte Carlo (DMC) is a way to solve the time-dependent Schrodinger equ
 
 As is shown in [Anderson et. al.](https://aip.scitation.org/doi/10.1063/1.432868) and is discussed
 in [Suhm and Watts](https://doi.org/10.1016/0370-1573(91)90136-A), the ground state solution to the
-TDSE is solved in this method first through a Wick rotation into imaginary time. The energy is shifted  
+TDSE is solved in this method first through a Wick rotation into imaginary time. The energy is shifted
 by some reference energy (This is similar to shifting our energy to redefine zero). It is then solved for
 discrete time steps as to achieve the following solution:
 
 ![Discrete_timestep_solutions](Implementing DMC/img/Discrete_timestep_solutions.PNG)
 
-When we operate with our kinetic operator and our potential operator, we've stepped forward in time!
+When we operate with our kinetic operator and our potential operator, we've stepped forward in time! The time-dependent wave function
+can always be written as a linear combination of eigenstates of the Hamiltonian multiplied by a time-dependent part like the following:
+
+![Summy_boi](Implementing DMC/img/Summy_boi.PNG)
+
+When we take the long τ limit, the exponent in the exponential term becomes a large negative number,
+causing most terms to go to 0. The ground state will decay the slowest.
 
 ![Long_time_lim](Implementing DMC/img/Long_time_lim.PNG)
 
-When we take the long τ limit, the exponent in the exponential term becomes a large negative number, causing most terms to go to 0. As Eref goes to E0, the n=0 term's exponential goes to 1 (as the exponent will go to 0) meaning that at long τ we will get the ground state solution.
+As E<sub>ref</sub> goes to E<sub>0</sub>, the n=0 term's exponential goes to 1 (as the exponent
+will go to 0) meaning that at long τ we will get the ground state solution! :)
+
+### The Algorithm
+
+Now let's talk about how we can actually implement this to obtain our ground state solution.
+On a simple level, this algorithm boils down to four steps.
+
+* Displace the coordinates of your walkers
+* Calculate the potential energy of your walkers
+* Birth and death of the walkers
+* Calculate E<sub>ref</sub>
+
+These steps are repeated until the end of the simulation. The exception is for the first step
+where the E<sub>ref</sub> has not been calculated yet, which is essential in the birth and death step.
+So, for the first step, what is usually done is the potential energy of the walkers is calculated, followed
+by a calculation of E<sub>ref</sub>, then the four steps are looped until the end of the simulation.
+
+So, for the first step where we displace the coordinates, this comes from the action of the kinetic
+energy operator operating on our wave function. This is a good exercise that will left to the reader
+where the result of operating on our localized function is that we get a gaussian distribution with width equal
+to  (τ/m)<sup>1/2</sup> where m is the mass associated with our system (all in atomic units). How this plays out algorithmically is that we will displace our walkers
+randomly according to this Gaussian distribution.
+
+The next step is using those displaced coordinates to evaluate the potential energy of our 
+ensemble. The potential depends on our system and is a function you will be providing the simulation.
+
+The third step we are comparing the potential energy of our walkers to the value of E<sub>ref</sub> from
+the previous step. If the energy is larger than this value, there is a probability that this walker will be 
+removed from the simulation. If the energy is lower than this value, there is a probability that this walker will
+spawn replicates into our simulation. To do this, we calculate the following exponential for each walker:
+
+![Exponential_comparison](Implementing DMC/img/Exponential_comparison.PNG)
+
+Following the procedure outlined in Anne's paper [here](https://doi.org/10.1080/01442350600679347), for each walker we will
+take the integer value of this exponential and make that many copies into a new array. Then the fractional part is taken
+as a probability to create one extra copy of that walker. For example, if this exponential value for one walker is 4.7, 4 copies
+of that walker get put into the new array and that is a 70% chance for a fifth. If this exponential is 0.4, then there is 
+only a 40% chance that the walker will stick around.
+
+The last step is calculating E<sub>ref</sub>. This is done with the following equation:
+
+![Eref_discrete](Implementing DMC/img/Eref_discrete.PNG)
+
+Where the first term is the average potential energy of our ensemble and the second term ensure
+that the number of walkers remain roughly constant. That alpha term is equal to 1/(2τ) and the N is equal
+to the number of walkers.
+
+### Differences Between Discrete and Continuous Weighting
+The biggest difference between these two types of simulations is that discrete weighting has a fluctuating population where
+the weight of each walker is 1, while in continuous weighting the population is held constant while the weight of each walker is allowed
+to fluctuate. How this works in our algorithm is that for the birth and death step, the probability for a walker's birth and death becomes equal
+to the weight that walker contributes to the total ensemble. This means that instead of a walker replicating itself when it is in favorable regions
+of the potential, the weight of the walker increases. One consequence with this method is that a walker could stay in a favorable region
+of the potential and have a weight so large that it dominates the ensemble. In order to mitigate this, we replace walkers whose weight falls
+below a certain threshold with a replicate of the highest weight walker. These two walkers' weights are then cut in half.
+
+The second difference is that E<sub>ref</sub> is calculated using the sum of the weights of the walkers instead of the number of walkers.
+This is technically the same equation since in the discrete weighting case, the weight of each walker is 1, so the sum of the weights of the walkers
+is equal to the number of walkers.
