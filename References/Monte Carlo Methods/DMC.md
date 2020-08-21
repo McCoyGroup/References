@@ -28,6 +28,6 @@ TDSE is solved in this method first through a Wick rotation into imaginary time.
 by some reference energy (This is similar to shifting our energy to redefine zero). It is then solved for
 discrete time steps as to achieve the following solution:
 
-![Discrete_timestep_solutions](Implementing DMC/img/Discrete_timstep_solutions.PNG)
+![Discrete_timestep_solutions](Implementing DMC/img/Discrete_timestep_solutions.PNG)
 
 ![Long_time_lim](Implementing DMC/img/Long_time_lim.PNG)
