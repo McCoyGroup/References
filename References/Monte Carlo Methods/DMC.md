@@ -85,7 +85,7 @@ The last step is calculating E<sub>ref</sub>. This is done with the following eq
 ![Eref_discrete](Implementing DMC/img/Eref_discrete.PNG)
 
 Where the first term is the average potential energy of our ensemble and the second term ensure
-that the number of walkers remain roughly constant. That alpha term is equal to 1/(2τ) and the N is equal
+that the number of walkers remain roughly constant. That α term is equal to 1/(2τ) and the N is equal
 to the number of walkers.
 
 ### Differences Between Discrete and Continuous Weighting
