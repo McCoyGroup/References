@@ -1,20 +1,16 @@
 # Basic Diffusion Monte Carlo
 
 ### Introduction
-Diffusion Monte Carlo (DMC) is a way to solve the time-dependent Schrodinger equation (TDSE)
+Diffusion Monte Carlo (DMC) is a way to solve the time-dependent Schrödinger equation (TDSE)
  using Monte Carlo sampling of a potential energy surface. The implementation that we use in the group is
  based on Anderson et. al. in [this paper](https://aip.scitation.org/doi/10.1063/1.432868). At the end of the simulation we will have a wavefunction
  and a zero point vibrational energy.  The way we will do this is by representing our
  wavefunciton as an ensemble of localized functions, or "Walkers", each of which represents a configuration
- of the molecule/system of interest. One can think of these as an ensemble of localized functions, taking up one point of 3N
- configuration space as so:
+ of the molecule/system of interest. One can think of these as an ensemble of localized functions, where a function has amplitude in one geometry and zero elsewhere:
 
  ![Localized_func](Implementing DMC/img/Localized_func.PNG)
 
- We discretize time into "time steps", and we will displace each walker at every time step, the displacement is based on
- a normal distribution (Gaussian), which is parametrized by the mass and the step size. We can think about it in terms of
- moving an object. The bigger the object, the harder it is to move and the less time we have to move object, the shorter
- the distance we can move it will be.
+ We discretize time into "time steps", and we will displace each of the coordinates of each walker at every time step, the displacement is based on a normal distribution (Gaussian), which is parametrized inversely proportionally to the mass and proportional to the step size. We can think about it in terms of moving an object. The bigger the object, the harder it is to move and the less time we have to move object, the shorter the distance we can move it will be.
 
  We will need to check the energy of each walker after it makes its step to see if it was an energetically favorable
  or unfavorable move.  If it was too unfavorable, the walker might be removed from the simulation.  If it was very
@@ -40,7 +36,7 @@ causing most terms to go to 0. The ground state will decay the slowest.
 
 ![Long_time_lim](Implementing DMC/img/Long_time_lim.PNG)
 
-As E<sub>ref</sub> goes to E<sub>0</sub>, the n=0 term's exponential goes to 1 (as the exponent
+As E<sub>ref</sub> = E<sub>0</sub>, the n=0 term's exponential goes to 1 (as the exponent
 will go to 0) meaning that at long τ we will get the ground state solution! :)
 
 ### The Algorithm
@@ -61,10 +57,10 @@ by a calculation of E<sub>ref</sub>, then the four steps are looped until the en
 So, for the first step where we displace the coordinates, this comes from the action of the kinetic
 energy operator operating on our wave function. This is a good exercise that will left to the reader
 where the result of operating on our localized function is that we get a gaussian distribution with width equal
-to  (τ/m)<sup>1/2</sup> where m is the mass associated with our system (all in atomic units). How this plays out algorithmically is that we will displace our walkers
+to  (τ/m)<sup>1/2</sup> where m is the mass associated with our system (all in atomic units). If we were modeling an OH stretch, the mass would be the reduced mass. How this plays out algorithmically is that we will displace our walkers
 randomly according to this Gaussian distribution.
 
-The next step is using those displaced coordinates to evaluate the potential energy of our 
+The next step is using those displaced coordinates to evaluate the average potential energy of our 
 ensemble. The potential depends on our system and is a function you will be providing the simulation.
 
 The third step we are comparing the potential energy of our walkers to the value of E<sub>ref</sub> from
@@ -75,10 +71,8 @@ spawn replicates into our simulation. To do this, we calculate the following exp
 ![Exponential_comparison](Implementing DMC/img/Exponential_comparison.PNG)
 
 Following the procedure outlined in Anne's paper [here](https://doi.org/10.1080/01442350600679347), for each walker we will
-take the integer value of this exponential and make that many copies into a new array. Then the fractional part is taken
-as a probability to create one extra copy of that walker. For example, if this exponential value for one walker is 4.7, 4 copies
-of that walker get put into the new array and that is a 70% chance for a fifth. If this exponential is 0.4, then there is 
-only a 40% chance that the walker will stick around.
+take the integer value of this exponential and make that many clones into a new array. Then the fractional part is taken
+as a probability to create one extra copy of that walker. For example, if this exponential value for one walker is 4.7, 4 identical copies of that walker get put into the new array and that is a 70% chance for a fifth. If this exponential is 0.4, then there is only a 40% chance that the walker will stick around.
 
 The last step is calculating E<sub>ref</sub>. This is done with the following equation:
 
