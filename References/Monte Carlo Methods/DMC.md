@@ -104,4 +104,4 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 
 ---
 
-[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Basis%20Set%20Methods/MultidimBasis.md)
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Monte%20Carlo%20Methods/DMC.md)
