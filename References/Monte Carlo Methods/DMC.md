@@ -99,9 +99,6 @@ is equal to the number of walkers.
 
 [Link to Exercises](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/Exercises/)
 
-[EDIT](https://github.com/McCoyGroup/References/edit/gh-pages/References/Monte%20Carlo%20Methods/DMC.md)
-{: .alert .alert-warning}
-
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
 
