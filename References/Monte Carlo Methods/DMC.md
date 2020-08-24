@@ -77,7 +77,7 @@ removed from the simulation. If the energy is lower than this value, there is a 
 spawn replicates into our simulation. To do this, we calculate the following exponential for each walker:
 
 $$
-e^{-(V(x_j)-E_{ref})\Delta\tau
+e^{-(V(x_j)-E_{ref})\Delta\tau}
 $$
 
 Following the procedure outlined in Anne's paper [here](https://doi.org/10.1080/01442350600679347), for each walker we will
