@@ -1,7 +1,7 @@
 # Basic Diffusion Monte Carlo
 
 ### Introduction
-Diffusion Monte Carlo (DMC) is a way to solve the time-dependent Schrödinger equation (TDSE)
+Diffusion Monte Carlo (DMC) is a way to solve the time-independent Schrödinger equation (TDSE)
  using Monte Carlo sampling of a potential energy surface. The implementation that we use in the group is
  based on Anderson et. al. in [this paper](https://aip.scitation.org/doi/10.1063/1.432868). At the end of the simulation we will have a wavefunction
  and a zero point vibrational energy.  The way we will do this is by representing our
