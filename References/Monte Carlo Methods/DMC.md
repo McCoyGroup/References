@@ -27,18 +27,21 @@ by some reference energy (This is similar to shifting our energy to redefine zer
 discrete time steps as to achieve the following solution:
 
 $$
-\Psi(x, \tau + \Delta\tau) \approx e^{-(\hatV - E_{ref})\Delta\tau}e^{-\hatT\Delta\tau}\Psi(x, \tau)
+\Psi(x, \tau + \Delta\tau) \approx e^{-(\hat{V} - E_{ref})\Delta\tau}e^{-\hat{T}\Delta\tau}\Psi(x, \tau)
 $$
 
 When we operate with our kinetic operator and our potential operator, we've stepped forward in time! The time-dependent wave function
 can always be written as a linear combination of eigenstates of the Hamiltonian multiplied by a time-dependent part like the following:
 
-![Summy_boi](Implementing DMC/img/Summy_boi.PNG)
+$$
+\Psi(x, \tau) = \sum_n c_n (\tau = 0)\psi_n(x)e^{-(E_n-E_{ref}(\tau))\tau}
+$$
 
 When we take the long τ limit, the exponent in the exponential term becomes a large negative number,
 causing most terms to go to 0. The ground state will decay the slowest.
 
-![Long_time_lim](Implementing DMC/img/Long_time_lim.PNG)
+$$
+\lim_{\tau \to \infty} \Psi(x, \tau) \approx c_0(\tau=0) \psi_0(x)e^{-(E_0-E_{ref})\tau}
 
 As E<sub>ref</sub> = E<sub>0</sub>, the n=0 term's exponential goes to 1 (as the exponent
 will go to 0) meaning that at long τ we will get the ground state solution! :)
@@ -72,7 +75,9 @@ the previous step. If the energy is larger than this value, there is a probabili
 removed from the simulation. If the energy is lower than this value, there is a probability that this walker will
 spawn replicates into our simulation. To do this, we calculate the following exponential for each walker:
 
-![Exponential_comparison](Implementing DMC/img/Exponential_comparison.PNG)
+$$
+e^{-(V(x_j)-E_{ref})\Delta\tau
+$$
 
 Following the procedure outlined in Anne's paper [here](https://doi.org/10.1080/01442350600679347), for each walker we will
 take the integer value of this exponential and make that many clones into a new array. Then the fractional part is taken
@@ -80,7 +85,9 @@ as a probability to create one extra copy of that walker. For example, if this e
 
 The last step is calculating E<sub>ref</sub>. This is done with the following equation:
 
-![Eref_discrete](Implementing DMC/img/Eref_discrete.PNG)
+$$
+E_{ref}(\tau) = \bar{V}(\tau) - \alpha \frac{N(\tau) - N(\tau_0)}{N(\tau_0)}
+$$
 
 Where the first term is the average potential energy of our ensemble and the second term ensure
 that the number of walkers remain roughly constant. That α term is equal to 1/(2τ) and the N is equal
