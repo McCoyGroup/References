@@ -8,7 +8,9 @@ Diffusion Monte Carlo (DMC) is a way to solve the time-dependent Schrödinger eq
  wavefunciton as an ensemble of localized functions, or "Walkers", each of which represents a configuration
  of the molecule/system of interest. One can think of these as an ensemble of localized functions, where a function has amplitude in one geometry and zero elsewhere:
 
- ![Localized_func](Implementing DMC/img/Localized_func.PNG)
+$$
+\Psi (x, \tau) = \sum_j w_j g(x - x_j(\tau)
+$$
 
  We discretize time into "time steps", and we will displace each of the coordinates of each walker at every time step, the displacement is based on a normal distribution (Gaussian), which is parametrized inversely proportionally to the mass and proportional to the step size. We can think about it in terms of moving an object. The bigger the object, the harder it is to move and the less time we have to move object, the shorter the distance we can move it will be.
 
