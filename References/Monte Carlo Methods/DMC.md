@@ -42,6 +42,7 @@ causing most terms to go to 0. The ground state will decay the slowest.
 
 $$
 \lim_{\tau \to \infty} \Psi(x, \tau) \approx c_0(\tau=0) \psi_0(x)e^{-(E_0-E_{ref})\tau}
+$$
 
 As E<sub>ref</sub> = E<sub>0</sub>, the n=0 term's exponential goes to 1 (as the exponent
 will go to 0) meaning that at long τ we will get the ground state solution! :)
