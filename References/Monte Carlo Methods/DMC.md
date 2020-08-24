@@ -9,7 +9,7 @@ Diffusion Monte Carlo (DMC) is a way to solve the time-dependent Schrödinger eq
  of the molecule/system of interest. One can think of these as an ensemble of localized functions, where a function has amplitude in one geometry and zero elsewhere:
 
 $$
-\Psi (x, \tau) = \sum_j w_j g(x - x_j(\tau)
+\Psi (x, \tau) = \sum_j w_j g(x - x_j(\tau))
 $$
 
  We discretize time into "time steps", and we will displace each of the coordinates of each walker at every time step, the displacement is based on a normal distribution (Gaussian), which is parametrized inversely proportionally to the mass and proportional to the step size. We can think about it in terms of moving an object. The bigger the object, the harder it is to move and the less time we have to move object, the shorter the distance we can move it will be.
@@ -26,7 +26,9 @@ TDSE is solved in this method first through a Wick rotation into imaginary time.
 by some reference energy (This is similar to shifting our energy to redefine zero). It is then solved for
 discrete time steps as to achieve the following solution:
 
-![Discrete_timestep_solutions](Implementing DMC/img/Discrete_timestep_solutions.PNG)
+$$
+\Psi(x, \tau + \Delta\tau) \approx e^{-(\hatV - E_{ref})\Delta\tau}e^{-\hatT\Delta\tau}\Psi(x, \tau)
+$$
 
 When we operate with our kinetic operator and our potential operator, we've stepped forward in time! The time-dependent wave function
 can always be written as a linear combination of eigenstates of the Hamiltonian multiplied by a time-dependent part like the following:
