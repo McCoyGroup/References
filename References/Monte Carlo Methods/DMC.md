@@ -94,3 +94,5 @@ below a certain threshold with a replicate of the highest weight walker. These t
 The second difference is that E<sub>ref</sub> is calculated using the sum of the weights of the walkers instead of the number of walkers.
 This is technically the same equation since in the discrete weighting case, the weight of each walker is 1, so the sum of the weights of the walkers
 is equal to the number of walkers.
+
+[Link to Exercises](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/Exercises/)
