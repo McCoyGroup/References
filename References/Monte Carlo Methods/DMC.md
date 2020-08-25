@@ -1,7 +1,7 @@
 # Basic Diffusion Monte Carlo
 
 ### Introduction
-Diffusion Monte Carlo (DMC) is a way to solve the time-independent Schrödinger equation (TDSE)
+Diffusion Monte Carlo (DMC) is a way to solve the time-independent Schrödinger equation (TISE)
  using Monte Carlo sampling of a potential energy surface. The implementation that we use in the group is
  based on Anderson et. al. in [this paper](https://aip.scitation.org/doi/10.1063/1.432868). At the end of the simulation we will have a wavefunction
  and a zero point vibrational energy.  The way we will do this is by representing our
@@ -37,7 +37,8 @@ $$
 \Psi(x, \tau) = \sum_n c_n (\tau = 0)\psi_n(x)e^{-(E_n-E_{ref}(\tau))\tau}
 $$
 
-When we take the long τ limit, the exponent in the exponential term becomes a large negative number,
+When we take the long 
+limit, the exponent in the exponential term becomes a large negative number,
 causing most terms to go to 0. The ground state will decay the slowest.
 
 $$
@@ -65,7 +66,7 @@ by a calculation of E<sub>ref</sub>, then the four steps are looped until the en
 So, for the first step where we displace the coordinates, this comes from the action of the kinetic
 energy operator operating on our wave function. This is a good exercise that will left to the reader
 where the result of operating on our localized function is that we get a gaussian distribution with width equal
-to  (τ/m)<sup>1/2</sup> where m is the mass associated with our system (all in atomic units). If we were modeling an OH stretch, the mass would be the reduced mass. How this plays out algorithmically is that we will displace our walkers
+to  (Δτ/m)<sup>1/2</sup> where m is the mass associated with our system (all in atomic units). If we were modeling an OH stretch, the mass would be the reduced mass. How this plays out algorithmically is that we will displace our walkers
 randomly according to this Gaussian distribution.
 
 The next step is using those displaced coordinates to evaluate the average potential energy of our 
@@ -91,7 +92,7 @@ E_{ref}(\tau) = \bar{V}(\tau) - \alpha \frac{N(\tau) - N(\tau_0)}{N(\tau_0)}
 $$
 
 Where the first term is the average potential energy of our ensemble and the second term ensure
-that the number of walkers remain roughly constant. That α term is equal to 1/(2τ) and the N is equal
+that the number of walkers remain roughly constant. That α term is equal to 1/(2Δτ) and the N is equal
 to the number of walkers.
 
 ### Differences Between Discrete and Continuous Weighting
