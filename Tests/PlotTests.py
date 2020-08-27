@@ -17,13 +17,69 @@ class PlotsTests(TestCase):
         plot = Plot(grid, np.sin(grid))
         # plot.show()
 
-    @debugTest
+    @validationTest
+    def test_Plot3D(self):
+        import matplotlib.cm as colormaps
+
+        f = lambda pt: np.sin(pt[0]) + np.cos(pt[1])
+        plot = Plot3D(f, np.arange(0, 2 * np.pi, .1), np.arange(0, 2 * np.pi, .1),
+                      plot_style={
+                          "cmap": colormaps.get_cmap('viridis')
+                      },
+                      axes_labels=['dogs', 'cats',
+                                   Styled('rats', color='red')
+                                   ],
+                      plot_label='my super cool 3D plot',
+                      plot_range=[(-5, 5)] * 3,
+                      plot_legend='i lik turtle',
+                      colorbar=True
+                      )
+
+    @validationTest
+    def test_GraphicsGrid(self):
+
+        main = GraphicsGrid(ncols=3, nrows=1)
+        grid = np.linspace(0, 2 * np.pi, 100)
+        grid_2D = np.meshgrid(grid, grid)
+        main[0, 0] = ContourPlot(grid_2D[1], grid_2D[0], np.sin(grid_2D[0]), figure=main[0, 0])
+        main[0, 1] = ContourPlot(grid_2D[1], grid_2D[0], np.sin(grid_2D[0]) * np.cos(grid_2D[1]), figure=main[0, 1])
+        main[0, 2] = ContourPlot(grid_2D[1], grid_2D[0], np.cos(grid_2D[1]), figure=main[0, 2])
+        # main.show()
+
+    @validationTest
     def test_PlotStyling(self):
         grid = np.linspace(0, 2 * np.pi, 100)
+        # file = '~/Desktop/y.png'
         plot = Plot(grid, np.sin(grid),
-                    theme='dark'
+                    aspect_ratio=1.3,
+                    theme='dark_background',
+                    ticks_style={'color':'red', 'labelcolor':'red'},
+                    plot_label='bleh',
+                    padding=((30, 0), (20, 20))
                     )
+        # plot.savefig(file)
+        # plot = Image.from_file(file)
         # plot.show()
+
+    @debugTest
+    def test_PlotGridStyling(self):
+        main = GraphicsGrid(ncols=3, nrows=1, theme='Solarize_Light2', figure_label='my beuatufil triptych',
+                            padding=((35, 60), (35, 40)))
+        grid = np.linspace(0, 2 * np.pi, 100)
+        grid_2D = np.meshgrid(grid, grid)
+        x = grid_2D[1];
+        y = grid_2D[0]
+        main[0, 0] = ContourPlot(x, y, np.sin(y), plot_label='$sin(x)$',
+                                 axes_labels=[None, "cats (cc)"],
+                                 figure=main[0, 0]
+                                 )
+        main[0, 1] = ContourPlot(x, y, np.sin(x) * np.cos(y),
+                                 plot_label='$sin(x)cos(y)$',
+                                 axes_labels=[Styled("dogs (arb.)", {'color': 'red'}), None],
+                                 figure=main[0, 1])
+        main[0, 2] = ContourPlot(x, y, np.cos(y), plot_label='$cos(y)$', figure=main[0, 2])
+        main.colorbar = {"graphics": main[0, 1].graphics}
+        main.show()
 
     @validationTest
     def test_Scatter(self):
@@ -63,24 +119,6 @@ class PlotsTests(TestCase):
         ptss = np.concatenate((pts, np.reshape(sins*coses, sins.shape + (1,))), axis=1)
         plot = ListTriContourPlot(ptss)
         plot.add_colorbar()
-
-    @validationTest
-    def test_Plot3D(self):
-        import matplotlib.cm as colormaps
-
-        f = lambda pt: np.sin(pt[0]) + np.cos(pt[1])
-        plot = Plot3D(f, np.arange(0, 2*np.pi, .1), np.arange(0, 2*np.pi, .1),
-                      plot_style = {
-                          "cmap" : colormaps.get_cmap('viridis')
-                      },
-                      axes_labels = ['dogs', 'cats',
-                                     Styled('rats', color='red')
-                                     ],
-                      plot_label = 'my super cool 3D plot',
-                      plot_range = [(-5, 5)]*3,
-                      plot_legend = 'i lik turtle',
-                      colorbar = True
-                      )
 
     @validationTest
     def test_Animation(self):
@@ -130,20 +168,3 @@ class PlotsTests(TestCase):
                 [-2 + 4/3*i, -2 + 4/3*(i+1)],
                 color = c)
         # p.show()
-
-    @validationTest
-    def test_GraphicsGrid(self):
-
-        main = GraphicsGrid(ncols=3, nrows=1)
-        grid = np.linspace(0, 2 * np.pi, 100)
-        grid_2D = np.meshgrid(grid, grid)
-        main[0, 0] = ContourPlot(grid_2D[1], grid_2D[0], np.sin(grid_2D[0]), figure=main[0, 0])
-        main[0, 1] = ContourPlot(grid_2D[1], grid_2D[0], np.sin(grid_2D[0])*np.cos(grid_2D[1]), figure=main[0, 1])
-        main[0, 2] = ContourPlot(grid_2D[1], grid_2D[0], np.cos(grid_2D[1]), figure=main[0, 2])
-        main.colorbar = { "graphics" : main[0, 1].graphics } # the spec
-        main[0, 1].axes_labels = ["dogs (arb.)", "cats (cc)"]
-        # main.show()
-        # fig_path = os.path.expanduser("~/Desktop/test.png")
-        # main.figure.savefig(fig_path)
-        # import subprocess
-        # subprocess.call(["open", fig_path])

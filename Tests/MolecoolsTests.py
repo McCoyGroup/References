@@ -1,7 +1,7 @@
 
 from Peeves.TestUtils import *
 from unittest import TestCase
-from Psience.Molecools import Molecule, NormalModeCoordinates
+from Psience.Molecools import Molecule, MolecularNormalModes
 from Psience.Molecools.Transformations import MolecularTransformation
 from Psience.Data import DipoleSurface # this will be leaving Zachary very soon I think...
 from McUtils.GaussianInterface import GaussianFChkReader, GaussianLogReader
@@ -95,7 +95,7 @@ class MolecoolsTests(TestCase):
         fcs = parse["ForceConstants"].array
         masses = parse["AtomicMasses"]
 
-        nms = NormalModeCoordinates.from_force_constants(fcs, masses)
+        nms = MolecularNormalModes.from_force_constants(fcs, masses)
         # ArrayPlot(nms.matrix).show()
         self.assertEquals(nms.matrix.shape, (3*n, 3*n))
 
@@ -197,7 +197,7 @@ class MolecoolsTests(TestCase):
     @validationTest
     def test_VisualizeNormalModes(self):
 
-        from Psience.Molecools.Vibrations import MolecularVibrations, NormalModeCoordinates
+        from Psience.Molecools.Vibrations import MolecularVibrations, MolecularNormalModes
         from McUtils.Plots import GraphicsGrid, Graphics3D
 
         m = Molecule.from_file(self.test_fchk, bonds = [[0, 1, 1], [0, 2, 1]])
@@ -209,7 +209,7 @@ class MolecoolsTests(TestCase):
         test_freqs = parse["VibrationalData"]["Frequencies"]
 
         nms = m.normal_modes
-        realvibs = MolecularVibrations(m, basis=NormalModeCoordinates(modes, freqs=test_freqs))
+        realvibs = MolecularVibrations(m, basis=MolecularNormalModes(modes, freqs=test_freqs))
 
         plot_vibrations = False
         if plot_vibrations:

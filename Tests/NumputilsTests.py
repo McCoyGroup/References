@@ -6,7 +6,7 @@ import numpy as np
 
 class NumputilsTests(TestCase):
 
-    @debugTest
+    @validationTest
     def test_SparseArray(self):
         array = SparseArray([
             [
@@ -39,3 +39,9 @@ class NumputilsTests(TestCase):
         td = array.tensordot(array, axes=[1, 1])
         self.assertEquals(td.shape, (4, 3, 4, 3))
         self.assertEquals(array.tensordot(array, axes=[[1, 2], [1, 2]]).shape, (4, 4))
+
+    @debugTest
+    def test_AngleDeriv(self):
+        np.random.seed(0)
+        coords = np.random.rand(16, 3)
+        raise Exception(angle_deriv(coords, [5], [4], [6]))
