@@ -16,18 +16,31 @@ then we make use of one of the fundamentals of our flavor of linear algebra, whi
 
 Why do we care about having the best basis for coordinate-only operators?
 Really just because the potential is this kind of operator and the potential is the hardest thing to deal with in a traditional basis set calculation.
-By choosing the best basis for the potential, we can dramatically decrease the amount of work we need to do. (add points about multiplicative operators)
+By choosing the best basis for the potential, we can dramatically decrease the amount of work we need to do. In fact, as we'll see, for _multiplicative operators_ like the potential, we won't have to do any integrals at all.
 
 ## Grid Points and the DVR Transformation
 
-Diagonalization is something computers can do quickly and easily.
+[Diagonalization](https://mathworld.wolfram.com/MatrixDiagonalization.html) is something computers can do quickly and easily.
 In general it means finding matrices $Q$ and $X^D$ such that $X^D$ is diagonal and
 
 $$
-X^D = Q^{T}XQ
+X^D = Q^{-1}XQ
 $$
 
-$Q$ here is what we'll call our DVR transformation, it is also Hermitian so $Q^{T} = Q^{-1}$. (Just in case you had a mathematician on your shoulder who was upset by this notation) It takes operators represented in our original basis and transforms them to the DVR basis.
+we deal with very nice systems[<sup>2</sup>], and so for everything we do we have the nice property that
+
+$$
+Q^{T} = Q^{-1}
+$$
+
+therefore we'll write
+
+$$
+X^D = Q^{-1}XQ
+$$
+
+
+$Q$ here is what we'll call our DVR transformation, it is also Hermitian so $Q^{T} = Q^{-1}$. It takes operators represented in our original basis and transforms them to the DVR basis.
 How is the DVR basis the "best" basis for coordinate-only operators? Well $X^D$ is the representation of our coordinate operator in the basis defined by $Q$, and this representation is diagonal.
 We can't really hope to do better than that.
 
@@ -36,10 +49,10 @@ It turns out that our DVR transformation does something very special, too.
 Calling our DVR basis functions $\phi_i^{\text{(DVR)}}$ and our grid points $x_i$, we get that
 
 $$
-\phi_j^{\text{(DVR)}}(x_i) = f_i \delta_{i,j}
+\phi_j^{\text{(DVR)}}(x) = f_i \delta_{i,j}
 $$
 
-where $f_i$ is just a real number.
+where $f_i$ is just a normalization factor.
 
 This means that these DVR functions are localized around their grid points and zero at all the others.
 That property will lead to some very useful results when setting up our Hamiltonian/using the resultant wavefunctions.
@@ -70,7 +83,7 @@ The end result of this is that their DVR basis functions are shifted $\frac{\sin
 
 ![leg funcs](../img/dvr_basis.png){:width="650px"}
 
-_Note_: In this graph we are only showing 5 of the basis functions, but if we were to keep plotting more we would see a peak at every discretized point.  
+_Note_: In this graph we are only showing 5 of the basis functions, but if we were to keep plotting more we would see a peak at every discretized point. 
 
 We recommend looking at Appendix A of Colbert and Miller's [paper](https://aip.scitation.org/doi/10.1063/1.462100) for the equations, starting with the (- $\infty$, $\infty$) interval! (i.e. your kinetic energy is described by Equation A7) But note you will need some potential function to run this all the way through. Seems like the perfect place for a harmonic oscillator!
 
@@ -106,6 +119,45 @@ and our basis functions now look like
 ![leg funcs](../img/leg_dvr_basis.png){:width="650px"}
 
 For periodic problems on a $[0, 2\pi]$ range, there are different types of DVRs out there, like [this one](https://aip.scitation.org/doi/pdf/10.1063/1.1673259) by Meyer.
+
+### Evaluation of Properties
+
+Just as for a representation in a more "traditional" basis, if we want to get the expected value of an observable, $\hat{O}$, between states $\phi_n$ and $\phi_m$, we have
+
+$$
+\langleO\rangle_{n,m} = c^{n}\textbf{O}c^{m}
+$$
+
+where $\textbf{O}$ is the matrix representation of $\hat{O}$ in our DVR basis and $c^{n}$ and $c^{m}$ are the coefficient vectors that come out of diagonalizing our Hamiltonian.
+
+At this point, though, we'll recall that for any multiplicative operator we have 
+
+$$
+\begin{align}
+\textbf{O}_{i,j} &= \left\langle \phi^{\text{DVR}}_i \lvert \hat{O} \rvert \phi^{\text{DVR}}_j \right\rangle \\
+                 &= \hat{O}(x_i) \delta_{i,j}
+\end{align}
+$$
+
+therefore assuming $\hat{O}$ is multiplicative (like the dipole moment or an internal coordinate) $\textbf{O}$ is _diagonal_, which means we can write
+
+$$
+\begin{align}
+{\langle O \rangle}_{n,m} &= \sum_i \hat{O}(x_i)c^{n}_{i}c^{m}_i \\
+                      &= \hat{O}(\textbf{x})\cdot(c^{n}c^{m})
+\end{align}
+$$
+
+where $c^{n}c^{m}$ are multiplied element-wise. Computationally, this can be efficient, but even more than that this can be a nice _conceptual_ way to think about these evaluation as we can build something akin to a probability density function for the _transition_ by
+
+$$
+\rho_{n,m} &= \phi_{n}\phi_{m}
+$$
+
+and then in the point-wise representation $c^{n}c^{m}$ _is_ this probability density.
+
+If that does nothing for you conceptually, that's cool too. Algorithmically it's still a convenient way to write things.
+
 
 ## Sample Applications
 
@@ -151,8 +203,11 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 {: .alert .alert-info}
 
 ---
-<a id="#fn1">&nbsp;</a> Nothing requires this operator to just be something like $\hat{x}$. In a curvilinear system, we can just as easily use $cos(\theta)$ as $\theta$, should that be a more convenient choice.
+1. <a id="#fn1">&nbsp;</a> Nothing requires this operator to just be something like $\hat{x}$. In a curvilinear system, we can just as easily use $cos(\theta)$ as $\theta$, should that be a more convenient choice.
+2. <a id="#fn2">&nbsp;</a> Technically we deal with [normal matrices](https://mathworld.wolfram.com/NormalMatrix.html)
 
 [<sup>1</sup>]:#fn1
+[<sup>2</sup>]:#fn2
+
 
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Basis%20Set%20Methods/BasicDVR.md)

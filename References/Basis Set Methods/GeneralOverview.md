@@ -139,14 +139,52 @@ $$
 where the $C^{n}_{i}$ coefficients come from the diagonalization.
 
 Usually, we don't try to create an analytic representation of our $\psi_n$ terms, though, and instead mostly work by doing things like representing physical quantities of interest like dipole moments or bond lengths in the same basis.
-Once we have that, we can do some matrix multiplications and get the quantities that we care about without much extra effort.
-That discussion, however, is for another day.
+
+### Evaluation of Properties
+
+Now that we have our wavefunctions, we can move onto getting physical information from them. The usual way we do this is by defining some property or _observable_, $\hat{O}$, that we care about (usually stuff like dipole moments and structural info like bond distances) and then getting _expectation values_ for a single state or _matrix elements_ between states, where both are given by
+
+$$
+\langle O \rangle_{n,m} = \left\langle \psi_n \lvert \hat{O} \rvert \psi_m \right\rangle
+$$
+
+and the only difference is that for an expectation value $n=m$. 
+
+It's worth taking a second to talk briefly about _why_ this is a meaningful quantity. 
+We can imagine that our $\hat{O}$ is something physically meaningful, like the dipole operator. 
+And then "applying" the dipole operator to $ \rvert \psi_m \rangle $ is basically asking the question "how does an interaction with the molecular dipole change our system?"
+Finally, the application of $ \langle \psi_n \lvert $ allows us to probe that change by asking "how much does the changed system resemble $\psi_n$?"
+For Hermitian operators (i.e. observables), whether we apply $\hat{O}$ to $\rvert \psi_m \rangle$ and then apply $\langle \psi_n \lvert$ or apply $\hat{O}$ to $\rvert \psi_n \rangle$ and then apply $\langle \psi_m \lvert$ we'll get the same value out.
+
+From the algorithmic point of view, to first figure out how the system changes, we expand our $\psi_m$, giving us
+
+$$
+\langle O \rangle_{n,m} = \sum_{j} C^{m}_{j} \hat{O} \rvert \phi_j \rangle
+$$
+
+then we expand $\psi_n$ giving us
+
+$$
+\langle O \rangle_{n,m} = \sum_{i,j} C^{m}_{i}C^{m}_{j} \left\langle \phi_i \lvert \hat{O} \rvert \phi_j \right\rangle
+$$
+
+Looking at this, we see we have a component that's just the matrix representation of \hat{O} in the original basis
+
+$$
+\textbf{O}_{i,j} = \left\langle \phi_i \lvert \hat{O} \rvert \phi_j \right\rangle
+$$
+
+and then project onto the wave function basis by 
+
+$$
+\langle O \rangle_{n,m} = C^{m}\textbf{O}C^{n}
+$$
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
 
 ---
-<a id="#fn1">&nbsp;</a> The mathematical literature on these polynomials (which are closely related to the _special functions_) is pretty dense, but interesting. Unfortunately I've never found a good intro for people without an undergrad math background :| If you've got questions about them, ask on the the SO and I'd be delighted to answer.
+1. <a id="#fn1">&nbsp;</a> The mathematical literature on these polynomials (which are closely related to the _special functions_) is pretty dense, but interesting. Unfortunately I've never found a good intro for people without an undergrad math background :| If you've got questions about them, ask on the the SO and I'd be delighted to answer.
 
 [<sup>1</sup>]:#fn1
 
