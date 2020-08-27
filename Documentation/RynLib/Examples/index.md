@@ -9,4 +9,4 @@ This is a compilation of examples of common workflows for working with RynLib.
 - [Running on Hyak](RunningHyak.md)
 
 ---
-[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/RynLib/index.md)
+[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/RynLib/Examples/index.md)
