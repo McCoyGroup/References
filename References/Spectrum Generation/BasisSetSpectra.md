@@ -95,6 +95,7 @@ we get
 $$
 \langle i \lvert \mu(r)^{(1)} \rvert j \rangle =
     \begin{cases}
+     \mu_0 & j=i \\
      \sqrt{\frac{i+1}{2}} \mu_0^{\prime} & j=i+1 \\
      \sqrt{\frac{i}{2}} \mu_0^{\prime} & j=i-1 \\
      0 & \text{else}
@@ -107,11 +108,28 @@ For many systems, this is actually a very good approximation. For what we tend t
 One thing we often want to account for is the non-linearity in the dipole moment.
 That means truncating our Taylor expansion at some higher order, say at second order
 
+$$
+\mu(r)^{(2)} = \mu_0 + \mu_0^{\prime} r + \frac{\mu_0^{\prime\prime}}{2} r^2
+$$
 
+then when we evaluate matrix elements, writing $r^2 = rr$, we get (try showing this for yourself)
 
+$$
+\langle i \lvert \mu(r)^{(2)} \rvert j \rangle =
+    \begin{cases}
+     \mu_0 + \frac{(2i + 1)}{2} \frac{\mu_0^{\prime\prime}}{2} & j=i \\
+     \sqrt{\frac{i+1}{2}} \mu_0^{\prime} & j=i+1 \\
+     \sqrt{\frac{i}{2}} \mu_0^{\prime} & j=i-1 \\
+     \sqrt{\frac{i+1}{2}}\sqrt{\frac{i+2}{2}} \frac{\mu_0^{\prime\prime}}{2} & j=i+2 \\
+     \sqrt{\frac{i-1}{2}}\sqrt{\frac{i}{2}} \frac{\mu_0^{\prime\prime}}{2} & j=i-2 \\
+     0 & \text{else}
+    \end{cases}
+$$
 
+What is noteworthy about this is that _transitions are allowed for states that differ by one or two quanta_. In general, we find that if we want to use harmonic oscillators to see transition with up to $n$ quanta of excitation, we need to expand our dipole moment out the the $n^{th}$ order. 
 
-
+Obviously, real systems are not perfectly harmonic and real dipoles aren't perfectly linear. 
+To investigate real world systems like that, we'll often move to something like a [discrete variable representation](DVRSpectra.md) approach.
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
