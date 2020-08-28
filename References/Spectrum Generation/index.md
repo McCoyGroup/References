@@ -5,7 +5,7 @@ One of the fundamental ways (maybe _the_ fundamental way) we theorists make sure
 Of course, this means that we need to be able to theoretically model the kinds of light-matter interactions that are going on in the experiments. That modelling process is what we're calling _spectrum generation_. There are many approaches to this, but the ones we use center on the relationship
 
 $$
-I_{n,m} \propto \nu_{n,m} \left\langle \psi_n | \mu | \psi_m \right\rangle
+I_{n,m} \propto \nu_{n,m} {\left\lvert \left\langle \psi_n | \mu | \psi_m \right\rangle \right\rvert}^{2}
 $$
 
 where $I_{n,m}$ is the _intensity_ of the transition from state $\psi_n$ to state $\psi_m$. This is akin to the probability that a given photon of energy $\nu_{n,m}$ will interact with a molecule in state $\psi_n$ (assuming there is one). We see two contributions to this relationship
