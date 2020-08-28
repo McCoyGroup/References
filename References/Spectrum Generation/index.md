@@ -1,6 +1,6 @@
 # Spectrum Generation
 
-One of the fundamental ways (maybe _the_ fundamental way) we theorists make sure that the physics we model actually maps on to reality is through the generation of spectra. Our experimental <s>servants</s> colleagues go to great lengths in the lab to hit stuff with light and see what comes back. At that point, we/they can compare the collected signal to theoretical predictions to understand what kind of physics is going on.
+One of the fundamental ways (maybe _the_ fundamental way) we theorists make sure that the physics we model actually maps on to reality is through the generation of spectra. Our experimental colleagues go to great lengths in the lab to hit stuff with light and see what comes back. At that point, we/they can compare the collected signal to theoretical predictions to understand what kind of physics is going on.
 
 Of course, this means that we need to be able to theoretically model the kinds of light-matter interactions that are going on in the experiments. That modelling process is what we're calling _spectrum generation_. There are many approaches to this, but the ones we use center on the relationship
 
