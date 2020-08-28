@@ -27,7 +27,7 @@ $$
 X^D = Q^{-1}XQ
 $$
 
-we deal with very nice systems[<sup>2</sup>], and so for everything we do we have the nice property that
+We deal with very nice systems and matrices[<sup>2</sup>], and so for everything we do we have the nice property that
 
 $$
 Q^{T} = Q^{-1}
@@ -125,7 +125,7 @@ For periodic problems on a $[0, 2\pi]$ range, there are different types of DVRs 
 Just as for a representation in a more "traditional" basis, if we want to get the expected value of an observable, $\hat{O}$, between states $\phi_n$ and $\phi_m$, we have
 
 $$
-\langleO\rangle_{n,m} = c^{n}\textbf{O}c^{m}
+\langle O\rangle_{n,m} = c^{n}\textbf{O}c^{m}
 $$
 
 where $\textbf{O}$ is the matrix representation of $\hat{O}$ in our DVR basis and $c^{n}$ and $c^{m}$ are the coefficient vectors that come out of diagonalizing our Hamiltonian.
@@ -135,7 +135,7 @@ At this point, though, we'll recall that for any multiplicative operator we have
 $$
 \begin{align}
 \textbf{O}_{i,j} &= \left\langle \phi^{\text{DVR}}_i \lvert \hat{O} \rvert \phi^{\text{DVR}}_j \right\rangle \\
-                 &= \hat{O}(x_i) \delta_{i,j}
+                 &= O(x_i) \delta_{i,j}
 \end{align}
 $$
 
@@ -143,15 +143,15 @@ therefore assuming $\hat{O}$ is multiplicative (like the dipole moment or an int
 
 $$
 \begin{align}
-{\langle O \rangle}_{n,m} &= \sum_i \hat{O}(x_i)c^{n}_{i}c^{m}_i \\
-                      &= \hat{O}(\textbf{x})\cdot(c^{n}c^{m})
+{\langle O \rangle}_{n,m} &= \sum_i O(x_i)c^{n}_{i}c^{m}_i \\
+                      &= O(\textbf{x})\cdot(c^{n}c^{m})
 \end{align}
 $$
 
 where $c^{n}c^{m}$ are multiplied element-wise. Computationally, this can be efficient, but even more than that this can be a nice _conceptual_ way to think about these evaluation as we can build something akin to a probability density function for the _transition_ by
 
 $$
-\rho_{n,m} &= \phi_{n}\phi_{m}
+\rho_{n,m} = \phi_{n}\phi_{m}
 $$
 
 and then in the point-wise representation $c^{n}c^{m}$ _is_ this probability density.

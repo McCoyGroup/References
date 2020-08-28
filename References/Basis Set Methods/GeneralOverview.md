@@ -159,7 +159,7 @@ For Hermitian operators (i.e. observables), whether we apply $\hat{O}$ to $\rver
 From the algorithmic point of view, to first figure out how the system changes, we expand our $\psi_m$, giving us
 
 $$
-\langle O \rangle_{n,m} = \sum_{j} C^{m}_{j} \hat{O} \rvert \phi_j \rangle
+\hat{O} \rvert \psi_m \rangle = \sum_{j} C^{m}_{j} \hat{O} \rvert \phi_j \rangle
 $$
 
 then we expand $\psi_n$ giving us
@@ -168,13 +168,14 @@ $$
 \langle O \rangle_{n,m} = \sum_{i,j} C^{m}_{i}C^{m}_{j} \left\langle \phi_i \lvert \hat{O} \rvert \phi_j \right\rangle
 $$
 
-Looking at this, we see we have a component that's just the matrix representation of \hat{O} in the original basis
+Looking at this, we can see that it's possible to write wholly in terms of matrix multiplications. 
+First we see we have a component that's just the matrix representation of \hat{O} in the original basis
 
 $$
 \textbf{O}_{i,j} = \left\langle \phi_i \lvert \hat{O} \rvert \phi_j \right\rangle
 $$
 
-and then project onto the wave function basis by 
+and then transform this representation the wave function basis by 
 
 $$
 \langle O \rangle_{n,m} = C^{m}\textbf{O}C^{n}
@@ -184,7 +185,7 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 {: .alert .alert-info}
 
 ---
-1. <a id="#fn1">&nbsp;</a> The mathematical literature on these polynomials (which are closely related to the _special functions_) is pretty dense, but interesting. Unfortunately I've never found a good intro for people without an undergrad math background :| If you've got questions about them, ask on the the SO and I'd be delighted to answer.
+1. <a id="#fn1">&nbsp;</a> The mathematical literature on these polynomials (which are closely related to the _special functions_) is pretty dense, but interesting. Unfortunately I've never found a good intro for people without an undergrad math background... If you've got questions about them, ask on the the SO and I'd be delighted to answer.
 
 [<sup>1</sup>]:#fn1
 
