@@ -1,4 +1,5 @@
-""" Goal: The goal of this exercise is to write a implementation of the Particle on a Ring Basis Set Representation
+"""
+Goal: The goal of this exercise is to write a implementation of the Particle on a Ring Basis Set Representation
 using Fourier series expansion coefficients.
 We will use ideas from: Numpy101, Expanding a Function as a Fourier Series, ...
 Related Exercises: Calculate POR wavefunctions, ...

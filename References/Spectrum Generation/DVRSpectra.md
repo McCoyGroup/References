@@ -19,7 +19,7 @@ As we noted in the general basis set spectrum section, the dipole moment actuall
 
 ### Applications and Exercises
 
-We've provided an exercise to give you practice with this on the [McCode Academy Exercises](../../McCoy%20Group%20Code%20Academy/Exercises) page.
+We've provided an exercise to give you practice with this on the [McCode Academy Exercises](../../McCoy%20Group%20Code%20Academy/Exercises) page. Check it out, play around with it, and develop some intuition.
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}

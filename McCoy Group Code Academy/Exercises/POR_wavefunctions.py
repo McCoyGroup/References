@@ -1,4 +1,5 @@
-""" Goal: The goal of this exercise is to calculate and plot Particle on a Ring Wavefunctions
+"""
+Goal: The goal of this exercise is to calculate and plot Particle on a Ring Wavefunctions
 We will use ideas from: Particle on A Ring Basis Set Representation
 After this, recommended next steps are: ...
 """
@@ -7,6 +8,7 @@ After this, recommended next steps are: ...
 import numpy as np
 import matplotlib.pyplot as plt
 import POR_Representation
+
 # here we will import the script we have for the POR Representation so we can calculate the eigenvectors
 
 def PORwavefunctions(eigenvectors, theta):

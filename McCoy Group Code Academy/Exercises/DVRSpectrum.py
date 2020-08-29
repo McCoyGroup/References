@@ -1,68 +1,40 @@
 """
-Goal: To be able to ingest the data stored in a
-Fundamentals: Making a Class, Interpolating a 1D Function
+Goal: To be able to ingest the data stored in a file and use it to plot a DVR spectrum, using DVR
+Fundamentals: Making a Class
 Related Exercises: Colbert-Miller DVR
 """
 
 ## Imports: put all import statments here
 
 import numpy as np
-import matplotlib.pyplot as plt
+from Helpers.PlottingData import Plotter # We'll use the Plotter object from the PlottingData fundamental
+# The `from Fundamentals.PlottingData` is just here to indicate that PlottingData is in the Fundamentals folder
+# Download it to the same directory as this file and change that import line to `from PlottingData import Plotter`
+from Helpers.Interpolating1D import Interpolator1D
+from Helpers.FittingToAPolynomial import FittedPolynomial
+
 
 ## Exports: put all the names things we might want to use in other scripts here
 
 __all__ = [
-    "Plotter",
     "DVRSpectrumGenerator"
 ]
 
 ## Objects: put all the classes we're defining here
-class Plotter:
-    """
-    A very simple plotter that makes the object-oriented matplotlib interface
-    a little bit cleaner to work with.
-    We've filled in most of this for you, but you get to figure out how the
-    `plot_lines` method should work
-    """
-    def __init__(self):
-        self.figure, self.axes = plt.subplots()
-    def plot_curve(self, x_data, y_data, **styles):
-        """
-        :param x_data: the x points for your curve
-        :param y_data: the y points for your curve
-        :param styles: curve styling, if you want it
-        """
-        self.axes.plot(x_data, y_data, **styles)
-    def plot_points(self, x_data, y_data, **styles):
-        """
-        :param x_data: the x points for your curve
-        :param y_data: the y points for your curve
-        :param styles: point styling, if you want it
-        """
-        self.axes.scatter(x_data, y_data, **styles)
-    def plot_lines(self, x_data, y_data, **styles):
-        """
-        Plots a bunch of vertical lines. You get to implement this one yourself
 
-        :param x_data: the x points for your curve
-        :param y_data: the y points for your curve
-        :param styles: point styling, if you want it
-        """
-        ...
-    def show(self):
-        plt.show()
 
 class DVRSpectrumGenerator:
     """
     An object that should take an inputs file and a set of results
     and provide you with a way to calculate intensities
     """
-    def __init__(self, inputs_file, dvr_results):
+    def __init__(self, inputs_file, dvr_results, dipole_type='interpolated'):
         """
         :param inputs_file: npz file with inputs for a DVR calculation; has keys 'coords', 'potential', 'mu_x', 'mu_y', 'mu_z'
         :type inputs_file: str
         :param dvr_results: npz file with results from a DVR calculation; has keys 'energies', 'wavefunctions', 'params'
         :type dvr_results: str
+        :param dipole_type: the kind of dipole moment we want to use; possible values 'interpolated', 'linear', 'quadratic'
         """
         # Here's an an example of how you can store the files you're loading from
         self.inputs_file = inputs_file
@@ -70,12 +42,36 @@ class DVRSpectrumGenerator:
         # Now it's up to you to do actually attach the data you'll need to your object
         ...
 
+    def get_interpolated_dipole_moment(self):
+        """
+        :return: the interpolated dipole moment function
+        :rtype: Interpolator1D
+        """
+        # Hint: the Interpolator1D object we've loaded in is built for this
+        ...
+
+    def get_linear_dipole_moment(self):
+        """
+        :return: a linear approximated dipole moment function
+        :rtype: FittedPolynomial
+        """
+        # Hint: the FittedPolynomial object we've loaded in is built for this
+        ...
+
+    def get_quadratic_dipole_moment(self):
+        """
+        :return: a quadratic approximated dipole moment function
+        :rtype: FittedPolynomial
+        """
+        # Hint: the FittedPolynomial object we've loaded in is built for this
+        ...
+
     def get_transition_moments(self):
         """
         :return: the transition moments from the ground state calculated from the data we loaded in
         :rtype: np.ndarray
         """
-        # Hint: recall that the transition moment can be calculateed
+        # Hint: recall that the transition moment can be calculated
         #       as a simple dot product for a DVR
         ...
 

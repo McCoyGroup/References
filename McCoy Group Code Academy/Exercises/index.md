@@ -35,9 +35,10 @@ Each exercise is just a `.py` file and downloads automatically, but if you'd pre
 These will be referenced inside the exercises, but don't feel like you need to work through all of them right now.
 {: .alert .alert-warning}
 
-* [Filling out a Matrix](FillingAMatrix.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/FillingAMatrix.py))
-* [Turning a Piecewise Formula into a Matrix](PiecewiseToMatrix.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/PiecewiseToMatrix.py))
-* [Performing a Change of Basis](ChoB.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/ChoB.py))
+* [Filling out a Matrix](Fundamentals/FillingAMatrix.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/FillingAMatrix.py))
+* [Turning a Piecewise Formula into a Matrix](Fundamentals/PiecewiseToMatrix.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/PiecewiseToMatrix.py))
+* [Performing a Change of Basis](Fundamentals/ChoB.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/ChoB.py))
+* [Fitting to a Fourier Expansion](Fundamentals/FourierExpansion.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/FourierExpansion.py))
 
 ### Basis Set Methods
 
@@ -53,9 +54,9 @@ These will be referenced inside the exercises, but don't feel like you need to w
 
 ### Spectrum Generation
 
-* [General Basis Set Intensities](BasisSetIntensities.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/BasisSetIntensities.py))
-* [Adiabatic Intensities](AdiabaticIntensities.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/AdiabaticIntensities.py))
-* [Franck-Condon Intensities](FranckCondonIntensitie.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/FranckCondonIntensitie.py))
+* [General Basis Set Spectra](BasisSetSpectrum.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/BasisSetSpectrum.py))
+* [DVR Spectra](DVRSpectrum.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/DVRSpectrum.py))
+* [Adiabatic Spectra](AdiabaticSpectrum.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/AdiabaticIntensities.py))
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
