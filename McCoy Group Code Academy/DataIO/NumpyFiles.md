@@ -3,6 +3,9 @@
 Okay, so by now you have probably figured out that we are all _pretty big_ fans of Python. So it shouldn't a big surprise that we pass along/save/archive data in Python specific files. 
 There are two types `*.npy` and `*.npz` that we commonly use. 
 
+Just to make sure we are clear, these types of files can only be written/read in Python. 
+{: .alert .alert-info}
+
 ## .npy Files 
 
 A `*.npy` is a file extensition specifically for storing NumPy arrays. 
