@@ -251,6 +251,7 @@ DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.6)
   jekyll-include-cache (~> 0.2.0)
+  jekyll-seo-tag
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.0)
