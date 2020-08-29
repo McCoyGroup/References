@@ -62,7 +62,7 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "post"
-      image: "/img/logo_m.png"
+      image: "https://mccoygroup.github.io/References/img/logo_m.png"
   - scope:
       path: "index.html|about.html|404.html|search.html"
     values:
