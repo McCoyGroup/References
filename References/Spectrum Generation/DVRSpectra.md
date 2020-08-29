@@ -13,9 +13,20 @@ $$
 \left\langle \psi_n \lvert \mu \rvert \psi_m \right\rangle = \sum_i \mu(r_i) \psi_n(r_i)\psi_m(r_i)
 $$
 
-_Note: one very important thing to keep in mind with this is that you must evaluate $\mu(r_i)$ at your DVR points, you can't do the reverse and evaluate your DVR wavefunctions at the points where you already have the dipole moment_
+_Note: one very important thing to keep in mind with this is that you must evaluate $\mu(r_i)$ at your DVR points, you can't do the reverse and evaluate your DVR wavefunctions at the points where you already have the dipole moment. If you were to evaluate the DVR wavefunction at different gridpoints, it will cause your DVR wavefunctions to no longer be normalized._
 
 As we noted in the general basis set spectrum section, the dipole moment actually has an _x_, _y_, and _z_ component to it and we've got to take that into account when we calculate intensities.
+
+## From Transition Moment to Intensity
+
+Once you feel good about the Transition Moment, you are two steps away from having an Intensity! 
+First, recall the intensity formula
+
+$$ I_{n,m} \propto \nu_{n,m} {\left\lvert \left\langle \psi_n | \mu | \psi_m \right\rangle \right\rvert}^{2} $$
+
+we have half of this, but to get a proper intensity we need to multiply by $\nu_{n,m}$ and of course, make sure you are tracking your units. (Wavenumbers is probably a good place to start.) If you choose to stick with this, you will probably want to convert it to a _relative intensity_ where your transistion are normalized so that either the sum is 1 or one of the fundamental transitions is 1. 
+
+Second, if don't want a _relative intensity_, you can implement one of the unit conversions described [here](https://mccoygroup.github.io/References/References/Spectrum%20Generation/StickSpectra.html#a-note-on-units). 
 
 ### Applications and Exercises
 
