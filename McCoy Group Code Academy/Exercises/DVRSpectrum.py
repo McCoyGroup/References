@@ -30,7 +30,7 @@ class DVRSpectrumGenerator:
     """
     def __init__(self, inputs_file, dvr_results, dipole_type='interpolated'):
         """
-        :param inputs_file: npz file with inputs for a DVR calculation; has keys 'coords', 'potential', 'mu_x', 'mu_y', 'mu_z'
+        :param inputs_file: npz file with inputs for a DVR calculation; has keys 'coords', 'potential', 'dipoles'
         :type inputs_file: str
         :param dvr_results: npz file with results from a DVR calculation; has keys 'energies', 'wavefunctions', 'params'
         :type dvr_results: str
