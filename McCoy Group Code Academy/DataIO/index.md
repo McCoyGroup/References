@@ -14,5 +14,10 @@ Here's the roadmap:
 * [Getting Data into your Program](LoadingDataIn.md)
 * [Getting Data out of your Program](ExportingDataOut.md)
 
+Now that you have the basics down, let's dig into some particular cases:
+* [.npy and .npz Files](NumpyFiles.md)
+* [Setting Up Gaussian Jobs](GaussianIntro.md)
+* [Pulling Data out of Gaussian Jobs](GaussianParsing.md)
+
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/DataIO/index.md)
