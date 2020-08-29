@@ -17,6 +17,10 @@ _Note: one very important thing to keep in mind with this is that you must evalu
 
 As we noted in the general basis set spectrum section, the dipole moment actually has an _x_, _y_, and _z_ component to it and we've got to take that into account when we calculate intensities.
 
+### Applications and Exercises
+
+We've provided an exercise to give you practice with this on the [McCode Academy Exercises](../../McCoy%20Group%20Code%20Academy/Exercises) page.
+
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
 

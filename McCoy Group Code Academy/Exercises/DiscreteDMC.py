@@ -1,7 +1,7 @@
 """
 Goal: The goal of this is to write a basic Discrete-weighted DMC code for an OH-stretch
-Fundamentals: ... (Comma-separated list)
-Related Exercises: ... (Comma-separated list)
+Fundamentals: ...
+Related Exercises: Continuous DMC
 """
 
 ## Imports: put all import statments here
