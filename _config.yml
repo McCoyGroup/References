@@ -1,6 +1,5 @@
 # Setup McCoy Group config
 title: McCoy Group References
-logo: /img/logo_m.png
 description: References, resources, and tutorials for the study of large amplitude molecular motions
 url: "https://mccoygroup.github.io/References" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  McCoyGroup
@@ -63,6 +62,7 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "post"
+      image: "/img/logo_m.png"
   - scope:
       path: "index.html|about.html|404.html|search.html"
     values:
