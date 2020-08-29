@@ -53,7 +53,7 @@ $$
 \varepsilon_{n m} = 5.33049 \times 10^6 (\text{km}\ \text{mol}^{-1}) \times f_{n m}
 $$
 
-Finally, we experimentalists also sometimes report absorptions in terms of the _integrated cross section_, $\sigma$, which is essentially the interaction probability normalized by the number of particles. The units we like for this are $\text{cm}\ \text{molecule}^{-1}$ and can be gotten from the oscillator strength by[<sup>3</sup>]
+Finally, experimentalists also report absorptions in terms of the _integrated cross section_, $\sigma$, which is essentially the interaction probability normalized by the number of particles. The units we like for this are $\text{cm}\ \text{molecule}^{-1}$ and can be gotten from the oscillator strength by[<sup>3</sup>]
 
 $$
 \sigma_{n m} = 8.85 \times 10^{-13} (\text{cm}\ \text{molecule}^{-1}) \times f_{n m}
@@ -72,4 +72,4 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 [<sup>2</sup>]: #fn2
 [<sup>3</sup>]: #fn3
 
-[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Spectrum%20Generation/BasisSetSpectra.md)
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Spectrum%20Generation/StickSpectra.md)
