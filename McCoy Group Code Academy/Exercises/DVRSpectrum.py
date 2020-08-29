@@ -8,8 +8,8 @@ Related Exercises: Colbert-Miller DVR
 
 import numpy as np
 from Helpers.PlottingData import Plotter # We'll use the Plotter object from the PlottingData fundamental
-# The `from Fundamentals.PlottingData` is just here to indicate that PlottingData is in the Fundamentals folder
-# Download it to the same directory as this file and change that import line to `from PlottingData import Plotter`
+# The `from Helpers.PlottingData` is just here to indicate that PlottingData is in the Helpers folder
+# If you download it to the same directory as this file, you will have to change that import line to `from PlottingData import Plotter`
 from Helpers.Interpolating1D import Interpolator1D
 from Helpers.FittingToAPolynomial import FittedPolynomial
 
@@ -84,7 +84,8 @@ class DVRSpectrumGenerator:
 
     def get_intensities(self):
         """
-        :return: the transition frequencies calculated from the data we loaded in
+        :return: the intensities calculated from the results of get_transition_moments() and get_frequencies().
+                 You may want to add a argument here for calculating intensities with different units. 
         :rtype: np.ndarray
         """
         ...
