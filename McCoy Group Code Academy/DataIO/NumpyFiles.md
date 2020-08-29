@@ -3,8 +3,8 @@
 Okay, so by now you have probably figured out that we are all _pretty big_ fans of Python. So it shouldn't a big surprise that we pass along/save/archive data in Python specific files. 
 There are two types `*.npy` and `*.npz` that we commonly use. 
 
-Just to make sure we are clear, these types of files can only be written/read in Python. 
-{: .alert .alert-info}
+Note: these types of files can only be written/read by NumPy. If you want to exchange data between languages, look into using a standard text format like [JSON](https://docs.python.org/3/library/json.html).
+{: .alert .alert-warning}
 
 ## .npy Files 
 
