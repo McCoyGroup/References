@@ -131,6 +131,17 @@ What is noteworthy about this is that _transitions are allowed for states that d
 Obviously, real systems are not perfectly harmonic and real dipoles aren't perfectly linear. 
 To investigate real world systems like that, we'll often move to something like a [discrete variable representation](DVRSpectra.md) approach.
 
+## From Transition Moment to Intensity
+
+It is importnant to note that these methods outline how to get a _dipole moment vector_ and not a proper intesity. Not to worry though, the dipole moment vector is the tricky part.  
+First, recall the intensity formula
+
+$$ I_{n,m} \propto \nu_{n,m} {\left\lvert \left\langle \psi_n | \mu | \psi_m \right\rangle \right\rvert}^{2} $$
+
+we have half of this, but to get a proper intensity we need to multiply by $\nu_{n,m}$ and of course, make sure you are tracking your units. (Wavenumbers is probably a good place to start.) If you choose to stick with this, you will probably want to convert it to a _relative intensity_ where your transistions are normalized so that either the sum is 1 or one of the fundamental transitions is 1. 
+
+Second, if don't want a _relative intensity_, you can implement one of the unit conversions described [here](https://mccoygroup.github.io/References/References/Spectrum%20Generation/StickSpectra.html#a-note-on-units). 
+
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
 
