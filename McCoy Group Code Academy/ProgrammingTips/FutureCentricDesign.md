@@ -1,7 +1,7 @@
 # Writing for the Future
 
 The second of the ideas that we want to highlight with this is the need to write with the future in mind.
-In programming speaks, this means your code needs to be [maintainable](https://softwareengineering.stackexchange.com/questions/134855/what-characteristics-or-features-make-code-maintainable) and [extensible](http://whats-in-a-game.com/coding-for-the-future-readability-and-extensibility/).
+In programming speak, this means your code needs to be [maintainable](https://softwareengineering.stackexchange.com/questions/134855/what-characteristics-or-features-make-code-maintainable) and [extensible](http://whats-in-a-game.com/coding-for-the-future-readability-and-extensibility/).
 Incidentally, both of these actually heavily play into our previous argument that you should write as if other people will read your code.
 
 ## Maintainability
@@ -219,6 +219,99 @@ And as long as the error message is reasonable, this will definitely help the pe
 
 #### Usage examples & expected results must be provided
 
+Our guess is that _why_ we'd want this is relatively straightforward, so instead we'll just point you to a few resources found from a quick Google search.
+* [Testing in python](https://realpython.com/python-testing/)
+* [Tests as documentation](https://capgemini.github.io/development/unit-tests-as-documentation/#unit-tests-are-better)
+* [Tips for writing tests](https://medium.com/better-programming/13-tips-for-writing-useful-unit-tests-ca20706b5368)
+
+If there's anything you think should be added here, go ahead and add it.
+
+## Extensibility
+
+The flip-side of the need for code to be maintainable is that it needs to be extensible. Science isn't static. You'll need to repurpose code to do new things.
+One way to do that is always to start from scratch. This gets expensive and you run into the same bugs multiple time.
+Another way is to take existing code and rewrite parts of that. 
+This is okay, but rewriting can be dangerous, both in terms of accidentally overwriting old work as well as not quite understanding what the old code was doing in the first place.
+As long as you're using [git]() and, yes, [you should use it](https://www.nobledesktop.com/blog/what-is-git-and-why-should-you-use-it), you don't run as big a risk of overwriting old work.
+The second of scenario is very, very difficult to debug. 
+If it turns out you didn't understand the old code in the first place, you can get results that seem plausible, but turn out to be incorrect.
+You really, really don't want to be in that boat.
+
+So what's the better path? Well it's two-fold. 
+First, write your code to be extensible. 
+Then rather than rewriting, use the extension mechanisms you already wrote in to add new functionality. 
+This won't fix all issues, but it'll fix many of them.
+
+Learning how to write extensible code is a bit of an art, and, again, we're not computer scientists so we don't have a good, formal prescription for you.
+But we can make some suggestions based on our experience.
+
+1. Look for the underlying structure of your problem
+2. Write in a modular fashion and expose hooks to allow components to be swapped in and out
+3. Use object-oriented programming and [inheritance](https://www.w3schools.com/python/python_inheritance.asp)
+
+At this point, our hope is that people know about object-oriented programming & we're hopeful that they can also learn about modular programming (the two are very closely related) on their own.
+
+Instead we're going to talk about identifying the underlying structure of our problem.
+This is by far that hardest thing to do, and it'll take practice for sure, but it's very broadly helpful.
+The crux of the idea is that nothing we do stands on its own. 
+Everything is going to reuse remix ideas that other people have worked on & simply arrange them into a new whole.
+
+As an example, let's think about how a [vibrational adiabatic separation](https://doi.org/10.1063/1.451775) works. 
+If you read about it in most papers, it'll be couched in highly problem-specific language rife with implementation details. 
+But that disguises it's underlying generality. It's really a 5-step process.
+
+1. Identify separable high- and low-frequency vibrations
+2. Discretize a coordinate range of interest in the low-frequency vibrations
+3. Compute high-frequency wavefunctions and energies over this grid with low-frequency coordinates fixed
+4. Build adiabatic potential energy surfaces for the low-frequency vibrations
+5. Compute wavefunctions and energies for the low-frequency vibrations on these surfaces
+
+Is this simple? Not necessarily. But by breaking it down into this series of steps we'll be better able to implement it in an exensible way.
+
+First off,
+
+> _Identify separable high- and low-frequency vibrations_
+
+We can either feed these in as a parameters or use a cheap approximate method like normal modes to determine these. 
+The code shouldn't assume a set of coordinates, but instead should allow people to specify them on their own.
+
+> _Discretize a coordinate range of interest in the low-frequency vibrations_
+
+If we've ever implemented a DVR before, we know how to do discretize. 
+On the other hand that "range of interest" is subtle, and again we either allow our users to specify it or we do 1D calculations (say along as minimum-energy path).
+There should be a default method for this, but, again, users should be allowed to override that default to extend and apply to future systems.
+
+> _Compute high-frequency wavefunctions and energies over this grid with low-frequency coordinates fixed_
+
+Again, we'll want defaults (e.g. DVR), but the user should be able to supply their own method of choice to get these energies and wavefunctions. 
+If we assume they'll always want one thing, they'll have to go in an modify our code by hand in the future, likely breaking it in the process.
+All we'll want to do is tell the user how the energies and wavefunctions should come back so that we can make use of them (defining [base classes](https://docs.python.org/3/glossary.html#term-abstract-base-class) for them to subclass is super helpful for this).
+
+> _Build adiabatic potential energy surfaces for the low-frequency vibrations_
+
+We can do this with interpolation and the expectation is that 90% of the time, that's what the user wants. But maybe they have a specific form they want to fit the surfaces to. We can't be certain interpolation will always be sufficient, so we give the user the option to overload this as well.
+
+> _Compute wavefunctions and energies for the low-frequency vibrations on these surfaces_
+
+See step 3
+
+Hopefully you saw the theme: _provide defaults, but allow them to be overridden_.
+Giving people the ability to swap parts in an out is super powerful and makes your code useful far beyond the use case you developed it for.
+
+We also think this has a deeper benefit, though: it decouples implementation from ideas.
+Instead of saying 
+
+> _Compute high-frequency wavefunctions and energies over this grid with low-frequency coordinates fixed_
+
+we could have said
+
+> _Use a discrete variable representation to get wavefunctions and energies in the high-frequency motion by making a grid of points where the high-frequency coordinates vary and the low-frequency coordinates are fixed and evaluating an interpolated potential energy surface on these points_
+
+but that's all _details_. The core idea is to get wavefunctions and energies. 
+It doesn't matter how, and in fact using different approximate methods to do so can teach you things about your system.
+It's easy to get lost in the details and it's easy to get lost in how the code operationally works. 
+Our hope is that by identifying the core structure of your problem, not only will you write your code in a more exensible way, but it will also help you understand the science you're doing more deeply.
+Or maybe this is obvious to you and our belaboring it is unhelpful. That's valid too.
 
 
 <span class="text-muted">Next:</span>
