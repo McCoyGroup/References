@@ -11,7 +11,7 @@ sitemap_roots:
     listing:
       - name: Getting Started
         url: /McCoy%20Group%20Code%20Academy/GettingStarted/
-      - name: NumPy/
+      - name: NumPy
         url: /McCoy%20Group%20Code%20Academy/NumPy/
       - name: Data & IO
         url: /McCoy%20Group%20Code%20Academy/DataIO/
