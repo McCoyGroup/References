@@ -239,7 +239,7 @@ with zipfile.ZipFile('my_dvr_results.zip') as file:
             file_data[name] = arr.reshape(shp)
 ```
 
-just for interest's sake, memory-wise the first format seems to be a bit more compact, but the latter obviously has the benefit that it is easier to decompose.
+just for interest's sake, memory-wise the first format seems to be a bit more compact, but the latter obviously has the benefit that it is easier to decompose. The second can also potentially benefit from changing up the `compression` and `compressionlevel` on the `ZipFile` object.
 
 #### HDF5
 
