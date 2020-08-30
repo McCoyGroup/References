@@ -45,6 +45,6 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 {: .alert .alert-info}
 
 ---
-[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/UsefulTools.md)
+[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/TipsAndTricks/UsefulTools.md)
 
 
