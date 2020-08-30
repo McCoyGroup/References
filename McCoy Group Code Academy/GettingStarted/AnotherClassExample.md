@@ -199,10 +199,9 @@ Our `__exit__` method is also pretty spare. If we ignore the docstring, we have
 
 the `end` function here records the actual timing, and the `if self.print` block prints the latest timing, assuming we didn't pass `print=False` to our `Timer`.
 
-### __repr__
+### `__repr__`
 
-In the last example, you might also have noticed that the output from that looks like `Timer(...)`, rather than the default `
-<__main__.Timer object at 0x10b24eeb8>`.
+In the last example, you might also have noticed that the output from that looks like `Timer(...)`, rather than the default `<__main__.Timer object at 0x10b24eeb8>`.
 That's because we set up a `__repr__` method. This should return a string that python uses as the display form for our object.
 It's also what would be returned by the `repr` function, if you were to call that.
 
@@ -258,4 +257,4 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 {: .alert .alert-info}
 
 ---
-[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/FunctionsToClasses.md)
+[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/AnotherClassExample.md)
