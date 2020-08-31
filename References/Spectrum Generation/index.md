@@ -13,9 +13,9 @@ where $I_{n,m}$ is the _intensity_ of the transition from state $\psi_n$ to stat
 * $\nu_{n,m}$: the _transition frequency_, given by $E_m - E_n$
 * $  \left\langle \psi_n \lvert \mu \rvert \psi_m \right\rangle$: the _transition moment_, where $\mu$ is the dipole moment function for the system
 
-We can understand this from a phenomenological point of view. First, a photon is composed of an oscillating electric and magnetic field. Therefore, for a photon to interact with matter, it has to interact via an electrostatic or magnetic interaction. 
-From the molecular perspective, the dominant contributor to these kinds of interactions is the molecular dipole moment, and from the quantum mechanical perspective, we need the average dipole for the transition, or the _transition moment_. 
-Finally, the electric field on the photon is constantly oscillating, and the faster it oscillates, the more often the electric field will be aligned with the molecular dipole, hence the higher the _frequency_ of the oscillation the more likely an interaction is to occur. Recalling that, quantum mechanically, a transition from $\psi_n$ to $\psi_m$ can only happen when the energy of the incident photon is exactly $E_m - E_n$, this means that our will be linearly dependent on that energy difference, or the _transition frequency_.
+Beyond a very rough phenomenological perspective of light interacting with the dipole of the molecule, there's nothing really to be gained from going through a derivation of this.
+There are many details, but little insight.
+If you're interested, [Schatz and Ratner](https://books.google.com/books/about/Quantum_Mechanics_in_Chemistry.html?id=T9KBlS-bj0sC) have a discussion of this in their textbook, but it's not clear to us that there's a benefit to buying a textbook just for this (or for that matter, for much else). [This LibreTexts](https://phys.libretexts.org/Bookshelves/Astronomy__Cosmology/Book%3A_Stellar_Atmospheres_(Tatum)/09%3A_Oscillator_Strengths_and_Related_Topics/9.02%3A_Oscillator_Strength._(die_Oszillatorenst%C3%A4rke)) description probably gives just as much insight as you'd get from a book.
 
 In the McCoy group, we're mostly interested in modeling how molecular vibrations interact with light. This means our frequencies will usually correspond to those of infrared radiation and our $\psi_n$ and $\psi_m$ will always be vibrational wave functions.
 Beyond that, everything we've said here is entirely applicable to rotational or electronic spectroscopy as well.

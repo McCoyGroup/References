@@ -29,9 +29,9 @@ class DVRSpectrumGenerator:
     """
     def __init__(self, inputs_file, dvr_results, num_wfns=5, dipole_type='interpolated'):
         """
-        :param inputs_file: npz file with inputs for a DVR calculation; has keys 'coords', 'potential', 'dipoles'
+        :param inputs_file: npz file with inputs for a DVR calculation; has keys 'coords', 'potential', 'dipoles' (column-oriented)
         :type inputs_file: str
-        :param dvr_results: npz file with results from a DVR calculation; has keys 'energy', 'wavefunctions', 'params'
+        :param dvr_results: npz file with results from a DVR calculation; has keys 'energy', 'wavefunctions' (column-oriented), 'params'
         :type dvr_results: str
         :param num_wfns: the number of wavefunctions to calculate transition intensities for
         :param dipole_type: the kind of dipole moment we want to use; possible values 'interpolated', 'linear', 'quadratic'
@@ -76,12 +76,21 @@ class DVRSpectrumGenerator:
             return self.get_linear_dipole_moment()
         else:
             raise ValueError("bad dipole type '{}'".format(self.dipole_mode))
-    def get_transition_moments(self):
+
+    def get_transition_moment_between_states(self, n, m):
         """
-        :return: the transition moments from the ground state calculated from the data we loaded in
+        :return: the transition moments from state n to state m from the data we loaded in
         :rtype: np.ndarray
         """
-        # Hint: recall that the transition moment can be calculated as a  dot product for a DVR
+        # Hint: recall that the transition moment can be calculated as a dot product for a DVR
+        ...
+
+    def get_transition_moments(self):
+        """
+        :return: the transition moments from the ground state calculated up to state `num_wfns` from the data we loaded in
+        :rtype: np.ndarray
+        """
+        # Hint: use get_transition_moment_between_states to get the transitions between two states
         ...
 
     def get_frequencies(self):
