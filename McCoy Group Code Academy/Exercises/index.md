@@ -28,7 +28,11 @@ If we look at the file we see it's got basically five chunks to it
 We've split our list of exercises up so that they roughly match the layout we have in our [References](../../References).
 If you'd like to brush up on your python or object-oriented programming, give the [Getting Started](../GettingStarted) guide a look.
 Most of these will make use of `numpy`, so if you aren't totally comfortable with that check out our [Numpy 101](../NumPy) intro.
-Each exercise is just a `.py` file and downloads automatically, but if you'd prefer you can also view them on GitHub.
+
+We recommend downloading the whole set of exercises [here](https://github.com/McCoyGroup/References/raw/gh-pages/McCoy%20Group%20Code%20Academy/Exercises.zip) so that you can use the [Helpers]() and [Data]() we've included for you.
+If you just want to look at an individual exercise, though, each one is just a `.py` file that downloads automatically, but if you'd prefer you can also view them on GitHub.
+{: .alert .alert-success}
+
 
 ### Fundamentals
 

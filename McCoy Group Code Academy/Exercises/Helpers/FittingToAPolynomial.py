@@ -19,6 +19,14 @@ class FittedPolynomial:
     A simple class that represents a 1D fitted polynomial.
     All you need to fill in is the function `get_polynomial_fit`, everything else
     exists to make this a convenient function for you to work with.
+
+    We'll build our polynomial like
+
+        poly = FittedPolynomial(x_data, y_data, order)
+
+    then call it on a different set of x values (say the grid points from a DVR calculation) like
+
+        vals = poly(new_x_vals)
     """
     def __init__(self, x_data, y_data, order):
         self.fit_coefficients = self.get_polynomial_fit(x_data, y_data, order)

@@ -19,8 +19,8 @@ class Plotter:
     """
     A very simple plotter that makes the object-oriented matplotlib interface
     a little bit cleaner to work with.
-    We've filled in most of this for you, but you get to figure out how the
-    `plot_lines` method should work
+
+    We use it by first making a Plotter() and then calling that object's `plot_*` methods
     """
     def __init__(self):
         self.figure, self.axes = plt.subplots()
