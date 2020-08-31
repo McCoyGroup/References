@@ -26,6 +26,8 @@ This website is actually hosted through GitHub and the underlying content is ver
 
 Both of these will give you peace of mind that if something breaks, you can figure out where it broke.
 
+All of the lab computers `Argon`, `Neon`, `Krypton`, and `Helium` all have `git` installed and is accessible through the command line. 
+
 ## Science Tools
 
 These are tools we use to help with our science and check the results we're getting and inputs we're feeding in.
