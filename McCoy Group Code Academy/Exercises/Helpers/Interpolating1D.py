@@ -22,8 +22,14 @@ class Interpolator1D:
     We leave it here since you can extend it _beyond_ what's already in scipy.interpolate
     to support stuff like extrapolation, getting derivatives, etc.
     """
-    def __init__(self, x_data, y_data, method=interp.interp1d):
-        self.interp_function = method(x_data, y_data)
+    def __init__(self, x_data, y_data, method=None, **kwargs):
+        if method is None:
+            method = self.interp1d
+        self.kw = kwargs
+        self.interp_function = method(x_data, y_data, **kwargs)
+    @classmethod
+    def interp1d(cls, x_data, y_data, fill_value = 0, bounds_error = False, **kwargs):
+        return interp.interp1d(x_data, y_data, fill_value=fill_value, bounds_error=bounds_error, **kwargs)
     def __call__(self, x_points):
         return self.interp_function(x_points)
 

@@ -2,6 +2,10 @@
 
 *.DS_Store
 
+# Exercise Files
+
+McCoy\ Group\ Code\ Academy/ExercisesDebug/*
+
 # DVR Files
 
 Implementing DVR/*.nb

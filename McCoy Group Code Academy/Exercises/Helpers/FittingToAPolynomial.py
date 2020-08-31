@@ -21,14 +21,14 @@ class FittedPolynomial:
     exists to make this a convenient function for you to work with.
     """
     def __init__(self, x_data, y_data, order):
-        self.fit_coefficients, self.fit_error = self.get_polynomial_fit(x_data, y_data, order)
+        self.fit_coefficients = self.get_polynomial_fit(x_data, y_data, order)
     def get_polynomial_fit(self, x_data, y_data, order):
         """
         :param x_data: the x values for your data
         :param y_data: the y values for your data
         :param order: the order of the fit (i.e. 1 for linear)
         """
-        ...
+        return np.polyfit(x_data, y_data, order)
     def evaluate_polynomial(self, x_points):
         """
         Evaluates the fitted polynomial at the passed points
