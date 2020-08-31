@@ -26,6 +26,8 @@ This website is actually hosted through GitHub and the underlying content is ver
 
 Both of these will give you peace of mind that if something breaks, you can figure out where it broke.
 
+All of the lab computers all have `git` installed and is accessible through the command line. 
+
 ## Science Tools
 
 These are tools we use to help with our science and check the results we're getting and inputs we're feeding in.
@@ -33,7 +35,7 @@ These are tools we use to help with our science and check the results we're gett
 ### JMol and Avogadro
 
 A common thing we need to do when debugging is visualize our molecules. You can write code to do this or you can use an existing tool.
-JMol and Avogadro are the most common applications we use in the group to do this.
+JMol and Avogadro are the most common applications we use in the group to do this. JMol is accessible on the lab computers through the command `jmol` in the linux terminal.
 
 
 <span class="text-muted">Next:</span>
