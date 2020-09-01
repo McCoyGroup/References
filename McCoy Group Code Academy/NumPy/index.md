@@ -1,6 +1,6 @@
 # Python and its Place in the World
 
-Python, as a programming language, isn't fast compared to petal-to-the metal languages like C, C++, and Fortran. Briefly, Python is an "interpreted" language, as opposed to a "compiled" language, which means that Python requires a lot more (under the hood) machine code to run when compared to the compiled machine code that C/C++/Fortran output in their executables.  A lot of the time, this is not an issue, and we choose to use Python over compiled languages as our go-to language because there are a lot of programming perks that come along with Python, making it not only suitable for large-scale software development but also easy to code for beginners.
+Python, as a programming language, isn't fast compared to petal-to-the metal languages like C, C++, and Fortran. Briefly, Python is an "interpreted" language, as opposed to a "compiled" language, which means that Python requires a lot more (under the hood) machine code to run when compared to the compiled machine code that C/C++/Fortran output in their executables.  A lot of the time, this is not an issue, and many of us choose to use Python over compiled languages as our go-to language because there are a lot of programming perks that come along with Python, making it not only suitable for large-scale software development but also easy to code for beginners.
 
 # Numpy
 
