@@ -87,9 +87,19 @@ Go to the [Anaconda downloads page](https://www.anaconda.com/products/individual
 Follow the installer's instructions and recommended installation instructions.
 You may be asked if you want to download `PyCharm` along the way, which is the group's recommended Integrated Development Environment (IDE) for coding and debugging in Python.
 
+If you have a Mac, you can add 
+
+`export PATH=/opt/anaconda3/bin:$PATH`
+
+to your ~/.bashrc as shown above to use anaconda on the command line when you type `python`.
+
+If you have a PC, you can use the `Anaconda Powershell` to access anaconda on the command line, or you can download [Windows Susbsystem for Linux](https://lifehacker.com/how-to-get-started-with-the-windows-subsystem-for-linux-1828952698) and do the Mac-like installation of it in your subsystem.
+
+
+
 ### Installing Python 3
 
-If for some reason you prefer to use the standard distribution Python over the Anaconda one, that works too.
+If for some reason you prefer to use the standard distribution Python over the Anaconda one (this is discouraged), that works too.
 To do this, go to the [Python Organization downloads page](https://www.python.org/downloads/) and download whichever version they're saying is the latest (as of writing this that's currently 3.8).
 That should download an installer and we'll just do what the python.org people tell us to do to get it installed.
 
