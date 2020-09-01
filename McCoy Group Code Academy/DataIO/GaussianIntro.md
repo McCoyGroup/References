@@ -9,7 +9,7 @@ _Most importantly for us, though, we've already got it installed and the group h
 
 ### Using Gaussian
 
-What does actually using it look like? Well the first thing we need to do is make a [Gaussian job file (`.gjf`)](http://gaussian.com/input/).
+What does actually using it look like ? Well the first thing we need to do is make a [Gaussian job file (`.gjf`)](http://gaussian.com/input/).
 This is a file with a structure like (`!` indicates a comment in a `.gjf`)
 
 ```lang-none

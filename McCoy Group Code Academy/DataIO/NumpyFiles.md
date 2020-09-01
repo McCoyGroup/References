@@ -49,7 +49,7 @@ print(params_dict)
 ```
 
 <span class="text-muted">Next:</span>
- [Gaussian Intro](GaussianIntro.md)<br/>
+ [Gaussian, an Intro](GaussianIntro.md)<br/>
 <span class="text-muted">Previous:</span>
  [Exporting Data Out](GaussianIntro.md)
  
