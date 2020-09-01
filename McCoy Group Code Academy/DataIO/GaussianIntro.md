@@ -40,7 +40,7 @@ Gaussian also has some info on [running jobs](http://gaussian.com/running/), whi
 
 ### Running Gaussian
 
-Running Gaussian on the group computers and hyak is something that we've discussed briefly [on the group StackOverflow](https://stackoverflow.com/c/mccoygroup/questions/21), so give that a look and let us know if you've got lingering questions.
+Running Gaussian on the group computers and hyak is something that we've discussed briefly [on the group StackOverflow](https://stackoverflow.com/c/mccoygroup/questions/96), so give that a look and let us know if you've got lingering questions.
 
 <span class="text-muted">Next:</span>
  [Getting Data out of Gaussian](GaussianParsing.md)<br/>
