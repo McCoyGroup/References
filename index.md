@@ -23,6 +23,11 @@ References written up to help explain topics that are common to our research [»
 
 ![refs banner](img/references_banner.png){:width="100%"}
 
+### [Contributing](Contributing.md)
+
+If you are interested in contributing to this site, please read our contributing note [»](Contributing.md) <br/>
+If you are having issues with the site, please visit our issues page [»](https://github.com/McCoyGroup/References/issues)
+
 ### [Documentation](Documentation)
 
 Documentation for some of the python projects that we work on. Primarily
