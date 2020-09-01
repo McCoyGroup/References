@@ -8,7 +8,7 @@ Most of what programmers want to do doesn't have to be blazingly fast.  If one o
 
 Since people still love Python for all its perks, back in the Dark Ages (i.e. 2005) people saw the writing on the wall and started writing [NumPy](https://numpy.org/), a Python package devoted entirely to numerical programming and handling high-dimensional arrays. There are tons of NumPy tutorials out there, like [this](https://numpy.org/devdocs/user/quickstart.html), [this](https://www.tutorialspoint.com/numpy/index.htm), [this](https://cs231n.github.io/python-numpy-tutorial/), [this](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54), etc.
 New ones come out every day and we've got no real desire to write our own when the resources already exist.
-The tutorials can be dense, and they may not go over the relevant information that we use in the McCoy group every day. So, we're going to work through the basics and some examples that are relevant to the research we do.
+That said, the tutorials can be dense, and they may not go over the relevant information that we use in the McCoy group every day. So, we're going to work through the basics and some examples that are relevant to the research we do.
 
 Here's the road map:
 * [Numpy 101](numpy101.md)
