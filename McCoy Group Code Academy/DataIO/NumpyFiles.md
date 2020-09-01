@@ -48,6 +48,12 @@ params_dict = data["params"]
 print(params_dict)
 ```
 
+<span class="text-muted">Next:</span>
+ [Gaussian Intro](GaussianIntro.md)<br/>
+<span class="text-muted">Previous:</span>
+ [Exporting Data Out](GaussianIntro.md)
+ 
+
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
 
