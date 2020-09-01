@@ -12,11 +12,10 @@ Here's a basic road map we think you might find useful:
 * [Programming Best-Practices](ProgrammingTips): writing code that other people can read and reuse
 * [Assorted Tips and Tricks](TipsAndTricks): we don't have time to cover everything we do, but here are some of the common things
 
-## Exercises
+## [Exercises](Exercises)
 
 There's no better way to get good at something than practice, so we've created a number of exercises that you can work through that'll hopefully help you build up your self-confidence and prepare you for tackling your own research problems. 
-We've written them to follow good programming practices (remember: comments are your friends) that'll help make your code easier to debug, share with others, or revisit after a few weeks.
-Give them a look [here](Exercises).
+We've written them to follow good programming practices (remember: comments are your friends) that'll help make your code easier to debug, share with others, or revisit after a few weeks. [»](Exercises)
 
 Feel free to let us know if you run into [any issues](https://github.com/McCoyGroup/References/issues) or if you [want to contribute](Contributing.md).<br/>
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
