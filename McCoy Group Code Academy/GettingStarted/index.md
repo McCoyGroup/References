@@ -21,10 +21,14 @@ So we're gonna walk through the basics of what'll be needed to get through this 
 * [An Extended Class Example](AnotherClassExample.md)
 
 ### Next, Look at How to
-* [Use NumPy and SciPy](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/NumPy/)
+* [Use NumPy](../NumPy/)
+* [Manage Data](../DataIO/)
+* [Plot Results](../Plotting/)
+
+Or get some practice in with some [Exercises](../Exercises)
 
 Already know about some of this? Prefer to work through it in a different order? All good by us. Do what's best for you.
-{: .alert .alert-warning}
+{: .alert .alert-success}
 
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/index.md)

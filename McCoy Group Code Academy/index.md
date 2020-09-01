@@ -10,7 +10,6 @@ Here's a basic road map we think you might find useful:
 * [Data/IO](DataIO): getting data into your programs and writing it back out
 * [Plotting](Plotting): finding ways to plot what you've done
 * [Programming Best-Practices](ProgrammingTips): writing code that other people can read and reuse
-* [Assorted Tips and Tricks](TipsAndTricks): we don't have time to cover everything we do, but here are some of the common things
 
 ## Exercises
 

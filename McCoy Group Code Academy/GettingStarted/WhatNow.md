@@ -10,6 +10,8 @@ Got anything you'd like to add to this? Feel free. [We welcome contributions](..
 
 Otherwise good luck & don't forget to have fun.
 
+<span class="text-muted">Next:</span>
+ [Useful Tools](UsefulTools.md)<br/>
 <span class="text-muted">Previous:</span>
  [Another Example of Classes](AnotherClassExample.md)
 

@@ -37,9 +37,6 @@ These are tools we use to help with our science and check the results we're gett
 A common thing we need to do when debugging is visualize our molecules. You can write code to do this or you can use an existing tool.
 JMol and Avogadro are the most common applications we use in the group to do this. JMol is accessible on the lab computers through the command `jmol` in the linux terminal.
 
-
-<span class="text-muted">Next:</span>
- [Common Issues](CommonIssues.md)<br/>
 <span class="text-muted">Previous:</span>
  [What Now?](WhatNow.md)
 
@@ -47,6 +44,6 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 {: .alert .alert-info}
 
 ---
-[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/TipsAndTricks/UsefulTools.md)
+[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/UsefulTools.md)
 
 
