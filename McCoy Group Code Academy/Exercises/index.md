@@ -44,7 +44,7 @@ These will be referenced inside the exercises, but don't feel like you need to w
 * [Turning a Piecewise Formula into a Matrix](Fundamentals/PiecewiseToMatrix.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/PiecewiseToMatrix.py))
 * [Performing a Change of Basis](Fundamentals/ChoB.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/ChoB.py))
 * [Fitting to a Fourier Expansion](Fundamentals/FourierExpansion.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/FourierExpansion.py))
-* [Intro to NumPy](Fundamentals/IntroToNumpy.py) ([View on GitHub] (https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/IntroToNumpy.py))
+* [Intro to NumPy](Fundamentals/IntroToNumpy.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/IntroToNumpy.py))
 
 
 
