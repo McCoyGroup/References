@@ -38,13 +38,14 @@ If you just want to look at an individual exercise, though, each one is just a `
 
 These will be referenced inside the exercises, but don't feel like you need to work through all of them right now.
 {: .alert .alert-warning}
+* [Intro to NumPy](Fundamentals/IntroToNumpy.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/IntroToNumpy.py))
 * [Intro to npy/npz Files](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/DataIO/NumpyFiles.html)
 * [Reading/Writing an XYZ file](Fundamentals/XYZWriter.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/XYZWriter.py))
 * [Filling out a Matrix](Fundamentals/FillingAMatrix.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/FillingAMatrix.py))
 * [Turning a Piecewise Formula into a Matrix](Fundamentals/PiecewiseToMatrix.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/PiecewiseToMatrix.py))
 * [Performing a Change of Basis](Fundamentals/ChoB.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/ChoB.py))
 * [Fitting to a Fourier Expansion](Fundamentals/FourierExpansion.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/FourierExpansion.py))
-* [Intro to NumPy](Fundamentals/IntroToNumpy.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/IntroToNumpy.py))
+
 
 
 
