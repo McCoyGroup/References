@@ -21,7 +21,7 @@ Beyond that, everything we've said here is entirely applicable to rotational or 
 
 Here's a road map for the methods we use:
 
-* [An Introduction to Stick Spectra](StickSpectra.md)
+* [Comparing to Experiment](StickSpectra.md)
 * [Basis Set Spectra](BasisSetSpectra.md)
 * [Discrete Variable Representation Spectra](DVRSpectra.md)
 * [The Difficulty with DMC](DMCSpectraDifficulties.md)
