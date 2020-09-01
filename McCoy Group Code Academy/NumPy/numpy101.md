@@ -93,7 +93,9 @@ res_array = np.add(example_array, example_array2)
 
 Not only is the NumPy way less coding and less error prone, it also will perform much, much faster than the pure Python way. If you are coming from another programming language, you may be weary of the fact that `res_array` was not initialized before we allocated an array to it.  This is a subtle, important point about NumPy: a lot of memory management happens under the hood. Keep this in mind while coding.
 
-There is an *exhaustive* list of NumPy functions that will make your life easier.  If you need to code up something, make sure there isn't a NumPy function that can already do it! To see a list that the McCoy group finds useful, check out this [List of NumPy Functions](numpyFunctions.md). Next, we suggest doing the [Intro to NumPy]() exercise. 
+There is an *exhaustive* list of NumPy functions that will make your life easier.  If you need to code up something, make sure there isn't a NumPy function that can already do it! To see a list that the McCoy group finds useful, check out this [List of NumPy Functions](numpyFunctions.md). 
+
+Next, we suggest doing the [Intro to NumPy](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/Exercises/) Fundamental exercise. 
 
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
