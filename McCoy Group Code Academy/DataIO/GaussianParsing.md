@@ -8,7 +8,13 @@ Let's start with the workable one.
 #### `.chk` and `.fchk` files
 If you recall from the [previous section](GaussianIntro.md), when you made your `.gjf` file you set an option called `%Chk` to indicate where to store the check-pointing data.
 This file is in a totally inscrutable binary format, basically a dump of Gaussian's internals as it goes.
-On the other hand, bundled with Gaussian is a program called [formcheck](https://gaussian.com/formchk/) that takes this inscrutable binary data and converts it into something looking like
+On the other hand, bundled with Gaussian is a program called [formcheck](https://gaussian.com/formchk/) that we call like
+
+```lang-none
+formchk checkpoint_file.chk formatted_file.fchk
+```
+
+and which takes the inscrutable binary data and gives a file that looks something looking like
 
 ```lang-none
 title                                                                   
