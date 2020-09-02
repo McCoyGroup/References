@@ -9,6 +9,12 @@ And so how do we want to do this?
 Well, to reiterate what we've been saying, if you can, [use NumPy](NumpyFiles.md).
 If you can't that's where things get interesting.
 
+### A Note on `np.savetxt()`
+
+Sometimes, when debugging a chunk of code it becomes neccessary to send data to someone else. If possible, [NumPy files](NumpyFiles.md) are great for this but _sometimes_ you are about 5 minutes away from throwing something and just need some sort of direction with where the bug is. In this case, [`np.savetxt()`](https://numpy.org/doc/stable/reference/generated/numpy.savetxt.html) can be a really good thing to keep in your back pocket. This is really the simpliest way to save a quick data set and move it between people or programs (ie you just need to do a quick excel calculation for a reality check). We wouldn't really suggest using txt, csv, or dat files for much more than xy data, but it's a quick and dirty way to get things out of python and hopefully keep everything on your desk and no tables from being flipped. In addition, these files are easily human read (just saying). 
+
+`np.savetxt()` also has `header` and `footer` arguments which allow you to add a string before or after your data. By default it is written into the file with a `#` (the python comment character) preceding it. Allow this character can be changed using the `comment` argument. This is something that would be useful to get comfortable with because it will be incredibly useful to keep track of units. *hint hint* 
+
 ### Just Use JSON
 
 The theme of pretty much everything we've been saying up until now is that if you can't use NumPy, just use JSON.
