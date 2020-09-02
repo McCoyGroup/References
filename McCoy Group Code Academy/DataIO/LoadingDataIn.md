@@ -33,6 +33,10 @@ It's not the world's most efficient format, but we also don't work with all that
 
 The one thing we'll want to make sure of is that when we load in our data we convert that `"energies"` array to a proper NumPy array so we can work with it more easily.
 
+### A Note on `np.loadtxt()`
+
+Sometimes, you aren't starting from anything _fancy_ and are just trying to get a txt, csv, or dat file into your program. In this case, you probably just have xy data or something of the sort. In this case, using [`np.loadtxt()`](https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html) is the quickest way to start working up your data. Although we are really stressing best practices of using the utility of NumPy and JSON, keeping these simple cammands in your back pocket is good if you find yourself in a pinch. 
+
 ## Dirty Data
 
 Unfortunately, not all data is clean. Many people started writing code in 1980, when [Fortran's 80 character line length](https://softwareengineering.stackexchange.com/a/148729) was hip & cool. 
@@ -250,6 +254,10 @@ which will convert to the rather less-readable regular expression
 ```
 
 and allow you to get the three numbers out. If you'd like to learn more, we're happy to share.
+
+## A Final note on Data Formats
+
+Python is a pretty extensive language and it has a lot of features we dont even know about. So if you find yourself with a lot of data in a weird format, before you spend days writing a parser for it, take a few minutes and google if python has any kind of native support for it. 
 
 <span class="text-muted">Next:</span>
  [Getting Data out of your Program](ExportingDataOut.md)<br/>
