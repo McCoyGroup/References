@@ -13,5 +13,6 @@ That said, the tutorials can be dense, and they may not go over the relevant inf
 Here's the road map:
 * [Numpy 101](numpy101.md)
 * [List of Helpful NumPy Functions](numpyFunctions.md)
+
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/NumPy/index.md)
