@@ -1,8 +1,8 @@
 # Writing for Someone Else
 
-One of the corner stones of good code is writing for other people.
-What does this mean? In essence, always write as if someone else will use, if not read, your code.
-It doesn't matter if you're 100% sure no one else will use what you're doing (and that is probably a bad bet), still write as if someone will.
+One of the cornerstones of good code is writing for other people.
+What does this mean? In essence, always write as if someone else will use, and probably read, your code.
+It doesn't matter if you're 100% sure no one else will use what you're doing (and that is probably a bad bet). Still, write as if someone will.
 Even better, write as if someone who knows _less_ than you will use it.
 That alone will encourage good practices, even if you don't know what good practices are.
 Most of "good practice" comes naturally to people, as long as they're willing to do it.
@@ -15,8 +15,8 @@ So here are some basic guiding principles and we'll show some concrete examples 
 1. It should be clear to your user what can be used
 2. No single thing should do too much
 3. When possible, an object-oriented style should be used
-4. Names should indicate of function
-5. The user shouldn't need to know about details of implementation
+4. Names should indicate function
+5. The user shouldn't need to know about the details of the implementation
 
 
 These aren't complete and keep in mind [all](https://engineering.intenthq.com/2015/03/what-is-good-code-a-scientific-definition/) [sorts](https://www.toptal.com/software/six-commandments-of-good-code) [of](https://developerzen.com/how-do-you-define-good-code-c8a383c207a4) [people](https://medium.com/better-programming/good-code-vs-bad-code-35624b4e91bc) [have](https://www.freecodecamp.org/news/the-junior-developers-guide-to-writing-super-clean-and-readable-code-cd2568e08aae/) [ideas](https://blog.pragmaticengineer.com/readable-code/) [about](https://jasonmccreary.me/articles/practices-write-readable-code-less-complex/) [good](https://gist.github.com/peterhurford/3ad9f48071bd2665a8af) [code](https://medium.com/swlh/writing-highly-readable-code-94da94d5d636).
