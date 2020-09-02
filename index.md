@@ -47,3 +47,8 @@ THIS IS YOUR PROCEED-WITH-CAUTION WARNING.
 Try this: [Introduction to Quantum Chemistry](https://mccoygroup.github.io/References/References/Intro%20To%20Quantum/)
 or this: [Getting Started with McCode Academy](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/GettingStarted/)
 or ask someone!
+
+If you're interested in contributing to the site [we welcome that too](Contributing.md)
+
+---
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/index.md)

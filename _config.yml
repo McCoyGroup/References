@@ -34,8 +34,6 @@ sitemap_roots:
         url: /References/Monte%20Carlo%20Methods/
       - name: Spectrum Generation
         url: /References/Spectrum%20Generation/
-  - name: Contributing
-    url: /References/Contributing.html
   - name: Documentation
     depth: 2
 links:
