@@ -1,7 +1,3 @@
-# What is a Function?
-
-Coming Soon?
-
 ## What are Signs of a Good Function?
 
 A good function has a clear objective while still maintaining _flexibility_. This is really important as you build up a code base. You want to write functions that do a specific task and usually just one or two operations. This relates back to the Hierarchical View of Problem Solving mentioned [here](https://mccoygroup.github.io/References/References/Intro%20To%20Quantum/AHierarchicalViewOfProblemSolving.html). This makes your code easier to debug too because it breaks everything up into smaller chunks. We like functions because they make our code _flexible_ which makes it easy to move between molecules and systems. Previously, in our `wave_to_au.py` script we wrote it so that we could convert one specific value. If we took that script and rewrote it into a function, we could make the function argument the `frequency` variable which would make it much more _flexible_ and we could convert any frequency we want!  
@@ -63,7 +59,7 @@ Another fun thing about f-strings is that they can even evaluate a simple functi
   print(f"{test_freq} wavenumbers is {wave_to_au(test_freq)} in Hartree")
 ```
 
-By now, you will have noticed that the function does the same exact thing our previous script did. But now it is _flexible_. For example, if I wanted to convert the three IR frequencies of a water molecule, I could by calling to the function three seperate times like so: 
+By now, you will have noticed that the function does the same exact thing our previous script did. But now it is _flexible_. For example, if I wanted to convert the three IR frequencies of a water molecule[<sup>1</sup>], I could by calling to the function three seperate times like so: 
 
 ```python
    asym_stretch = 3490
@@ -112,6 +108,10 @@ print(f"The average frequency of an OH bend in water is {wave_to_au(testFreq):.5
 ### What else can we do with this?
 Now that we took our script and organized it into functions, is there another layer of organization we can add? Yep! The next step from here is writing code into object-orientated structures called *Classes*. Spend some time playing with functions and when you are ready move on to [From Functions to Classes](FunctionsToClasses.md)
 
+1. <a id="fn1"></a> Frequencies from [NIST Webbook](https://webbook.nist.gov/cgi/inchi/InChI%3D1S/H2O/h1H2). 
+
+[<sup>1</sup>]: #fn1
+
 <span class="text-muted">Next:</span>
  [From Functions to Classes](FunctionsToClasses.md)<br/>
 <span class="text-muted">Previous:</span>
@@ -121,4 +121,4 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 {: .alert .alert-info}
 
 ---
-[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/FunctionsAndBeyond.md)
+[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/HowToWriteAFunction.md)
