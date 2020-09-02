@@ -108,6 +108,7 @@ print(f"The average frequency of an OH bend in water is {wave_to_au(testFreq):.5
 ### What else can we do with this?
 Now that we took our script and organized it into functions, is there another layer of organization we can add? Yep! The next step from here is writing code into object-orientated structures called *Classes*. Spend some time playing with functions and when you are ready move on to [From Functions to Classes](FunctionsToClasses.md)
 
+---
 1. <a id="fn1"></a> Frequencies from [NIST Webbook](https://webbook.nist.gov/cgi/inchi/InChI%3D1S/H2O/h1H2). 
 
 [<sup>1</sup>]: #fn1
