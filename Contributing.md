@@ -3,9 +3,19 @@
 
 # Contributing
 
-If you'd like to contribute, first off, thanks!
+If you'd like to contribute, first off, thanks! But, before you hop in: 
 
-This page exists to hopefully make it easier for you to add to the site / make your content look the way you want
+1. Remember we’re writing for a ~1st year graduate student. What this means in terms of programming & math background is pretty variable, so be kind to your readers. There’s no need to baby them, but keep the language supportive.
+
+2. Visuals never hurt, either, and you should almost always have at least some kind of example on your pages.
+
+3. Proof-reading would be great. Comments and places for improvement would also be great. Our [issues page](https://github.com/McCoyGroup/References/issues) is a good place to leave comments & you can even tag a specific grad student as the person who should look into the topic (if you know who to tag).
+
+4. If you run into a blank page, but think you can write the reference, write it! Then let other people know so they can proof-read what you wrote, too. No one has perfect first drafts.
+
+5. If you think something is missing you would like to add, let us know! and ask around for how/when/where is best to add it. 
+
+Finally, this page exists to hopefully make it easier for you to add to the site / make your content look the way you want
 
 We'll keep adding more details on how everything should be set up as we work through it.
 

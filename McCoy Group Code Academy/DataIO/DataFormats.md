@@ -63,6 +63,8 @@ H       -0.180226841     -1.796059882     -0.917077970
 That first line tells you how many atoms you have. The second is a general-purpose comment line. The rest is the list of atoms and their coordinates. We can make sense of it as humans. 
 Computers can read this very easily. And given that if we're looking at molecular structures, we probably want to [visualize them](https://en.wikipedia.org/wiki/List_of_molecular_graphics_systems), it matters more that the computer can easily read it than we can, since that means the computer can plot it for us.
 
+Find an exercise in reading and writing your own `.xyz` files [here](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/Exercises/) 
+
 ### Binary vs. Text Formats
 
 We can go even further with this, though. Computers, since they work in binary (`1`/`0`), don't store their data in words. 

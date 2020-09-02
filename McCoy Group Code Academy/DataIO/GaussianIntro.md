@@ -9,8 +9,10 @@ _Most importantly for us, though, we've already got it installed and the group h
 
 ### Using Gaussian
 
-What does actually using it look like ? Well the first thing we need to do is make a [Gaussian job file (`.gjf`)](http://gaussian.com/input/).
-This is a file with a structure like (`!` indicates a comment in a `.gjf`)
+What does actually using it look like? Maybe you are familiar with GaussView or know the name Gaussian from previous theoreticcal experience. In the group, we most often  interact with the Gaussian software using the command line. This means we create our own _input files (with the file extension .gjf)_ and parse through the data outputted in files with either the extension _log (referred to as log file)_ or _chk (which get formatted to an fchk file)_. More on outputs later, let's focus on the gjf file now.  
+
+First thing we need to do is make a [Gaussian job file (`.gjf`)](http://gaussian.com/input/).
+This is a file with a structure like where `!` indicates a comment in a `.gjf`
 
 ```lang-none
 ! Memory / Storage Settings
@@ -40,7 +42,7 @@ Gaussian also has some info on [running jobs](http://gaussian.com/running/), whi
 
 ### Running Gaussian
 
-Running Gaussian on the group computers and hyak is something that we've discussed briefly [on the group StackOverflow](https://stackoverflow.com/c/mccoygroup/questions/21), so give that a look and let us know if you've got lingering questions.
+Running Gaussian on the group computers and hyak is something that we've discussed briefly [on the group StackOverflow](https://stackoverflow.com/c/mccoygroup/questions/96), so give that a look and let us know if you've got lingering questions.
 
 <span class="text-muted">Next:</span>
  [Getting Data out of Gaussian](GaussianParsing.md)<br/>

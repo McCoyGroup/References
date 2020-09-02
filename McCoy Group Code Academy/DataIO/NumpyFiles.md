@@ -33,25 +33,32 @@ These files are essentially "zipped" `.npy` files where the file name of the npy
 ## An Example
 If I wanted to store the results of a [DVR](https://mccoygroup.github.io/References/References/Basis%20Set%20Methods/BasicDVR.html) calculation along with the parameters to make it easily reproducible, I would do something like: 
 ```
+grid = np.array()
 wfns = np.array()
 energies = np.array()
 params = dict() 
 
-np.savez("myDVRcalculation.npz", wfns=wfns, energies=energies, params=params)
+np.savez("DVRSpectrum_harmonic.npz", grid=grid, energies=energies, wavefunctions=wfns, params=params)
 ```
 
-Alternatively, if I recieved the file `myDVRcalculation.npz` and wanted to read the parameters, I could access them like so:
+Alternatively, if I recieved the file `DVRSpectrum_harmonic.npz` and wanted to read the parameters, I could access them like so:
 ```
-data = np.load("myDVRcalculation.npz")
+data = np.load("DVRSpectrum_harmonic.npz")
+
+# if I wasn't sure about what was in the file i could do 
+print(data.files) 
+
+# this would show me the keys that are attached to the various objects saved in the npz.
+# In this case, it returns: ['grid', 'energies', 'wavefunctions', 'params']
+
+# Therefore, to get out the parameters I need:
 params_dict = data["params"]
-
-print(params_dict)
 ```
 
 <span class="text-muted">Next:</span>
  [Gaussian, an Intro](GaussianIntro.md)<br/>
 <span class="text-muted">Previous:</span>
- [Exporting Data Out](GaussianIntro.md)
+ [Exporting Data Out](ExportingDataOut.md)
  
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)

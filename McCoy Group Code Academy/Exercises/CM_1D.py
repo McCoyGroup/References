@@ -2,12 +2,17 @@
 This guide contains three different options for evaluating the potential. It's not neccessary to write them all out immediately, 
 but always good to lay out your options. Note: You will want all of this to be set up to work in ATOMIC UNITS. 
 
-We will use ideas from: Numpy 101, Data&I/O, ...
-After this, recommended next steps are: Other Basis Set Representations, Multi Dimensional DVR, Spectrum Generation, ...  
+Fundamentals: Intro to npy/npz Files, Filling out a Matrix, and the NumPy 101 Section. 
+Related Exercises: Other Basis Set Representations, Multi Dimensional DVR, or Spectrum Generation. 
 """
-# As with any script we will start by using import statements for any necessary packages
+
+# Imports: put all import statments here
 import numpy as np
 import matplotlib.pyplot as plt
+
+## Exports: put all the names of things we might want to use in other scripts here
+
+__all__ = [run_DVR]
 
 def dvr_grid(domain, NumGP):
     """ Here we will set up the grid for our DVR. 
@@ -103,7 +108,7 @@ def evaluateHam(kinE, potE):
     """
     # Remember np.eigh() ? Remind yourself how to index into the outputs!
     # How will you set up your key/value pairs for your results dictionary?
-    # First suggestion would be: {"energies":eigenvalues, "wavefunctions":eigenvectors}
+    # First suggestion would be: {"grid":grid, "energies":eigenvalues, "wavefunctions":eigenvectors}
     # If something else feels more logical, add more key/value pairs!
     return results
 
@@ -124,7 +129,7 @@ def plot_wavefunctions(grid, potE, results):
     # If you've previously written a Converter class now might be a good time to bring that in! (an import inside a function perhaps?)
     # what matplotlib tricks do you remember to make this nice? (and have axis labels)
 
-def run(domain, NumGP, mu, potential_function, potential_options):
+def runDVR(domain, NumGP, mu, potential_function, potential_options):
     """ You can use this function to gather all your functions to calculate the results in such a way that you only need
         to call this function. We've added some suggested arguments and tips, but feel free to make it your own!
         As you are doing so, think about what would make it easiest to use in other scripts?
@@ -151,10 +156,14 @@ def run(domain, NumGP, mu, potential_function, potential_options):
     else:
         raise Exception("I can't evaluate that potential energy function.")
     # now that you have a grid and potential set up, what's  next?
+    results = ...
     # returning results is good when you are passing this to oher functions, but if you just need to run the DVR once and then 
-    # manipulate the data (more likely), you probably just want to save the results. We suggest something like: 
-    np.savetxt("energies.txt", results["energies"])
-    np.savetxt("wavefunctions.txt", results["wavefunctions"])
+    # manipulate the data (more likely), you probably just want to save the results. In order to keep this clean, we want to use
+    # an npz file, and also save the parameters so we can recreate it. Here is a suggestion, but make what feels right for you.
+    param_dict = {"domain": domain, 
+                  "numberpoints": NumGP, 
+                  "mass": mu}
+    np.savez("myDVRresults.npz", params=param_dict, grid=results["grid"], energies=results["energies"], wavefunctions=results["wavefunctions"])
     # Can you think of a way (maybe adding parameters to run function and using format strings *hint hint*) to make these
     # data file names more descriptive? Probably add a system name, maybe some of the parameters or the units used in the file?
     return results
