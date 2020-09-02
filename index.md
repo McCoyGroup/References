@@ -23,11 +23,6 @@ References written up to help explain topics that are common to our research [»
 
 ![refs banner](img/references_banner.png){:width="100%"}
 
-### [Contributing](Contributing.md)
-
-If you are interested in contributing to this site, please read our contributing note [»](Contributing.md) <br/>
-If you are having issues with the site, please visit our issues page [»](https://github.com/McCoyGroup/References/issues)
-
 ### [Documentation](Documentation)
 
 Documentation for some of the python projects that we work on. Primarily
@@ -48,7 +43,8 @@ Try this: [Introduction to Quantum Chemistry](https://mccoygroup.github.io/Refer
 or this: [Getting Started with McCode Academy](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/GettingStarted/)
 or ask someone!
 
-If you're interested in contributing to the site [we welcome that too](Contributing.md)
+If you're interested in contributing to the site [we welcome that too](Contributing.md).
+If you found a typo or think something should be changed, [let us know](https://github.com/McCoyGroup/References/issues).
 
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/index.md)
