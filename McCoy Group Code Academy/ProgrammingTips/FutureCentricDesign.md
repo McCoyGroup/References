@@ -6,7 +6,7 @@ Incidentally, both of these actually heavily play into our previous argument tha
 
 ## Maintainability
 
-But, honestly, bother of these concepts are a bit subjective, so what do we mean when we say "code should be maintainable"?
+Both of these concepts are a bit subjective, so what do we mean when we say "code should be maintainable"?
 We are not professional computer scientists, so we have no good, formal prescription for what will make your code easier to debug in the future.
 On the other hand, here are the three things we think are most important
 1. Code should be self-documenting and complemented with minimal, but complete documentation
@@ -42,8 +42,6 @@ What are the characteristics of self-documenting code? We're going to claim ther
 * Individual functions are kept small
 * Names indicate intent and operation
 * There are no magic parameters
-
-We'll walk through these one-by-one
 
 > *All functionality is written in functions and classes*
 
@@ -86,19 +84,25 @@ This is only a five line program, but we can make it even cleaner by splitting t
 ```python
 def get_initial_walkers():
     return np.zeros(500)
+    
 def get_displacements():
     return np.random.rand(500)
+    
 def get_energy(walkers):
     return 1/2*200*(walkers)**2
+    
 def get_vref(energy):
     return np.average(energy)
+    
 def propagate(walkers):
     walkers += get_displacements()
     energies = get_energy(walkers)
     reference_energy = get_vref(energies)
     return walkers, reference_energy
+    
 def run_simulation(n_steps):
     walkers = get_initial_walkers()
+    
     for x in range(n_steps):
        walkers, reference_energy = propagate(walkers)
     return walkers, reference_energy
@@ -158,7 +162,7 @@ That might look like
 
 ```python
 """
-my_simple_simulation computes the average energy of a set of harmonic oscillators as they randomly.
+my_simple_simulation computes the average energy of a set of harmonic oscillators as they randomly displace.
 `run_simulation` runs a simulation out for a specified number of time steps and gives back the oscillator positions and average energy.
 This can be extended by changing up the potential function.
 """
@@ -190,10 +194,9 @@ if __name__ == "__main__":
 
 This one is a bit hard to get concrete examples of, but we can give some more general examples of what often happens.
 Let's say you've been developing a new method call `Floopation`, or maybe just implementing it in a new context. 
-Let's further say that the function you wrote to do it is called `floopate_wavefunctions`.
+Let's then say that the function you wrote to do it is called `floopate_wavefunctions`.
 We'll assume your first implementation of it was designed to take in 1D systems. This is a common, good starting place.
 Then you had to go deal with other projects and someone else comes on later to use your code.
-Hopefully you'll agree this is a plausible scenario.
 
 Now we need to make the calling of `floopate_wavefunctions` a bit more concrete. Maybe the call signature looks like
 
@@ -229,13 +232,12 @@ If there's anything you think should be added here, go ahead and add it.
 ## Extensibility
 
 The flip-side of the need for code to be maintainable is that it needs to be extensible. Science isn't static. You'll need to repurpose code to do new things.
-One way to do that is always to start from scratch. This gets expensive and you run into the same bugs multiple time.
+One way to do that is always to start from scratch. This gets expensive and you run into the same bugs multiple times.
 Another way is to take existing code and rewrite parts of that. 
 This is okay, but rewriting can be dangerous, both in terms of accidentally overwriting old work as well as not quite understanding what the old code was doing in the first place.
+
 As long as you're using [git]() and, yes, [you should use it](https://www.nobledesktop.com/blog/what-is-git-and-why-should-you-use-it), you don't run as big a risk of overwriting old work.
-The second of scenario is very, very difficult to debug. 
 If it turns out you didn't understand the old code in the first place, you can get results that seem plausible, but turn out to be incorrect.
-You really, really don't want to be in that boat.
 
 So what's the better path? Well it's two-fold. 
 First, write your code to be extensible. 
@@ -277,8 +279,8 @@ The code shouldn't assume a set of coordinates, but instead should allow people 
 
 > _Discretize a coordinate range of interest in the low-frequency vibrations_
 
-If we've ever implemented a DVR before, we know how to do discretize. 
-On the other hand that "range of interest" is subtle, and again we either allow our users to specify it or we do 1D calculations (say along as minimum-energy path).
+If we've ever implemented a DVR before, we know how to discretize. 
+On the other hand, that "range of interest" is subtle, and again we either allow our users to specify it or we do 1D calculations (say along as minimum-energy path).
 There should be a default method for this, but, again, users should be allowed to override that default to extend and apply to future systems.
 
 > _Compute high-frequency wavefunctions and energies over this grid with low-frequency coordinates fixed_
