@@ -4,6 +4,9 @@ The second of the ideas that we want to highlight with this is the need to write
 In programming speak, this means your code needs to be [maintainable](https://softwareengineering.stackexchange.com/questions/134855/what-characteristics-or-features-make-code-maintainable) and [extensible](http://whats-in-a-game.com/coding-for-the-future-readability-and-extensibility/).
 Incidentally, both of these actually heavily play into our previous argument that you should write as if other people will read your code.
 
+Computer scientists have thought extensively about all these topics, including those at the Molecular Sciences Software Institute (MolSSI). Here is a tutorial on [Software Design Patterns](http://education.molssi.org/oop_and_design_patterns/).
+
+
 ## Maintainability
 
 Both of these concepts are a bit subjective, so what do we mean when we say "code should be maintainable"?
