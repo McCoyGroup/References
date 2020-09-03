@@ -111,7 +111,7 @@ In fact, if you need to implement something, it's worth checking the NumPy & Sci
 Basically, if you need to code something up, make sure there isn't a NumPy function that can already do it! 
 To see a partial set of functions that the McCoy group finds useful, check out our [List of Useful NumPy Functions](numpyFunctions.md). 
 
-Next, we suggest doing the [Intro to NumPy](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/Exercises/) Fundamental exercise. 
+Next, we suggest doing the [Intro to NumPy](../../Exercises#fundamentals) Fundamental exercise. 
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}

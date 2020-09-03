@@ -36,10 +36,11 @@ If you just want to look at an individual exercise, though, each one is just a `
 
 ### Fundamentals
 
-These will be referenced inside the exercises, but don't feel like you need to work through all of them right now.
-{: .alert .alert-warning}
+_These are shorter samples that we've written to help you build skills that will help as when you start working through the scientifically motivated exercises.
+These will be referenced inside the exercises, but don't feel like you need to work through all of them right now._
+
 * [Intro to NumPy](Fundamentals/IntroToNumpy.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/IntroToNumpy.py))
-* [Intro to npy/npz Files](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/DataIO/NumpyFiles.html)
+* [Intro to `.npy`/`.npz` Files](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/DataIO/NumpyFiles.html)
 * [Reading/Writing an XYZ file](Fundamentals/XYZWriter.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/XYZWriter.py))
 * [Plotting Harmonic and Morse Oscillator Potentials](Fundamentals/PlotOscillators.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/PlotOscillators.py))
 * [Filling out a Matrix](Fundamentals/FillingAMatrix.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/FillingAMatrix.py))
@@ -52,17 +53,23 @@ These will be referenced inside the exercises, but don't feel like you need to w
 
 ### Basis Set Methods
 
+_These are written to supplement the [basis set methods references](../../References/Basis%20Set%20Methods)_
+
 * [Particle in a Box Representation](PIBRep.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/PIBRep.py))
 * [Harmonic Oscillator Representation](HORep.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/HORep.py))
 * [Colbert-Miller 1D DVR](CM_1D.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/CM_1D.py))
 
 ### Monte Carlo Methods
 
+_These are written to supplement the [Monte Carlo methods references](../../References/Monte%20Carlo%20Methods)_
+
 * [Discrete Weighting DMC](DiscreteDMC.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/DiscreteDMC.py))
 * [Continuous Weighting DMC](ContinuousDMC.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/ContinuousDMC.py))
 * [Importance Sampling](ImpSamp.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/ImpSamp.py))
 
 ### Spectrum Generation
+
+_These are written to supplement the [spectrum generation references](../../References/Spectrum%20Generation)_
 
 * [General Basis Set Spectra](BasisSetSpectrum.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/BasisSetSpectrum.py))
 * [DVR Spectra](DVRSpectrum.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/DVRSpectrum.py))

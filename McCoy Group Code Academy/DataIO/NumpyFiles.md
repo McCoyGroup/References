@@ -32,27 +32,30 @@ These files are essentially "zipped" `.npy` files where the file name of the npy
 
 ## An Example
 If I wanted to store the results of a [DVR](https://mccoygroup.github.io/References/References/Basis%20Set%20Methods/BasicDVR.html) calculation along with the parameters to make it easily reproducible, I would do something like: 
-```
-grid = np.array()
-wfns = np.array()
-energies = np.array()
-params = dict() 
+```python
+grid = ... # type: np.ndarray
+wfns = ... # type: np.ndarray
+energies = ... # type: np.ndarray
+params = ... # type: dict
 
 np.savez("DVRSpectrum_harmonic.npz", grid=grid, energies=energies, wavefunctions=wfns, params=params)
 ```
 
-Alternatively, if I recieved the file `DVRSpectrum_harmonic.npz` and wanted to read the parameters, I could access them like so:
-```
+Alternatively, if I recieved the file `DVRSpectrum_harmonic.npz` and wanted to get the data back out, I'd load it in like
+```python
 data = np.load("DVRSpectrum_harmonic.npz")
+```
 
-# if I wasn't sure about what was in the file i could do 
-print(data.files) 
+then were I not sure what was in the file I could check the keys similarly to a `dict` by
+```console?lang=python&&prompt=>>>
+>>> print(data.keys())
+['grid', 'energies', 'wavefunctions', 'params']
+```
 
-# this would show me the keys that are attached to the various objects saved in the npz.
-# In this case, it returns: ['grid', 'energies', 'wavefunctions', 'params']
-
-# Therefore, to get out the parameters I need:
-params_dict = data["params"]
+and so if I just wanted the DVR parameters I'd access them like
+```console?lang=python&&prompt=>>>
+>>> params_dict = data["params"]
+{...}
 ```
 
 <span class="text-muted">Next:</span>

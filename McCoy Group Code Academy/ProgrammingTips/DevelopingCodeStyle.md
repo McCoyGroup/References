@@ -19,7 +19,7 @@ Our suggestion is to default to the [Python organization guide](https://www.pyth
 or want to write you own, we're open to proposals.
 
 <span class="text-muted">Next:</span>
- [Further Reading](FurtherReading.md)<br/>
+ [Further Reading](../ProgrammingTips#further-reading)<br/>
 <span class="text-muted">Previous:</span>
  [Writing for the Future](FutureCentricDesign.md)<br/>
 
