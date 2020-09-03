@@ -7,7 +7,7 @@ There are many contexts where the quality of presentation of the data is just as
 For instance, let's say you did a massive benchmarking calculation to prove one-and-for-all that the letter T is symmetric about the y-axis.
 This is obviously a groundbreaking result that will revolutionize science.
 Now imagine in your paper you only ever display an italic _T_.
-That's not gonna be immediately convincing to people.
+That's not going to be immediately convincing to people.
 
 Obviously that example is tongue-in-cheek, but this kind of thing _does_ happen.
 People will do tons of work to show something, then present their data in a way that obfuscates their conclusions.
