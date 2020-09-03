@@ -29,7 +29,10 @@ We've split our list of exercises up so that they roughly match the layout we ha
 If you'd like to brush up on your python or object-oriented programming, give the [Getting Started](../GettingStarted) guide a look.
 Most of these will make use of `numpy`, so if you aren't totally comfortable with that check out our [Numpy 101](../NumPy) intro.
 
-We recommend downloading the whole set of exercises [here](https://github.com/McCoyGroup/References/raw/gh-pages/McCoy%20Group%20Code%20Academy/Exercises.zip) so that you can use the [Helpers](https://github.com/McCoyGroup/References/tree/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Helpers) and [Data](https://github.com/McCoyGroup/References/tree/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Data) we've included for you.
+We're experimenting with [binder](https://mybinder.org/) to provide an enviroment where you can try out these exercises totally online.
+[Try it out!](https://mybinder.org/v2/gh/McCoyGroup/BinderEnv/master?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252FMcCoyGroup%252FReferences%26urlpath%3Dlab%252Ftree%252FReferences%252FMcCoy%2BGroup%2BCode%2BAcademy%252FExercises%252FExercises.ipynb%26branch%3Dgh-pages)
+
+For local use, we recommend downloading the whole set of exercises [here](https://github.com/McCoyGroup/References/raw/gh-pages/McCoy%20Group%20Code%20Academy/Exercises.zip) so that you can use the [Helpers](https://github.com/McCoyGroup/References/tree/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Helpers) and [Data](https://github.com/McCoyGroup/References/tree/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Data) we've included for you.
 If you just want to look at an individual exercise, though, each one is just a `.py` file that downloads automatically, but if you'd prefer you can also view them on GitHub.
 {: .alert .alert-success}
 
