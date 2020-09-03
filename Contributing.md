@@ -86,7 +86,9 @@ We'll keep adding more details on how everything should be set up as we work thr
   <div class="col" markdown="1">
    [Images](#boostrap-images)
   </div>
-  <div class="col"></div>
+  <div class="col" markdown="1">
+   [Collapses](#collapsible-content)
+  </div>
  </div>
  <div class="row">
   <div class="col">
@@ -99,12 +101,14 @@ We'll keep adding more details on how everything should be set up as we work thr
    [Footer](#footer)
   </div>
   <div class="col" markdown="1">
+   [In/Out](#inputoutput)
+  </div>
+  <div class="col" markdown="1">
    [Unfinished](#unfinished-content)
   </div>
   <div class="col" markdown="1">
    [Jumps](#jump-links)
   </div>
-  <div class="col"></div>
  </div>
  <div class="row">
   <div class="col">
@@ -175,41 +179,60 @@ All pages on the site are written in [Markdown](https://www.markdownguide.org/ge
 Markdown is a miniature mark-up language that tries to include 90% of what people need to do when writing content for the web.
 Here's the brief overview.
 
-<a id="Markdown_headers"></a>
-* `#`, `##`, and `###` generate headers
+`#`, `##`, and `###` generate headers
+<div class="card in-out-block" markdown="1" id="Markdown_headers">
 
-# This is a main header
-## This is a subheader
-### This is a subsubheader
-```
+```markdown
 # This is a main header
 ## This is a subheader
 ### This is a subsubheader
 ```
 
-<a id="Markdown_links"></a>
-[This is a link](https://thisisalink.fake)<br/>
-![This tries to load an image](https://thisisanimage.fake)
-```
+<div class="card-body out-block" markdown="1">
+
+# This is a main header
+## This is a subheader
+### This is a subsubheader
+
+</div>
+</div>
+
+
+<div class="card in-out-block" markdown="1" id="Markdown_links">
+
+```markdown
 [This is a link](https://thisisalink.fake)
 ![This tries to load an image](https://thisisanimage.fake)
 ```
 
-<a id="Markdown_font-styles"></a>
-_this is italic_<br/>
-**this is bold**
-```
+<div class="card-body out-block" markdown="1">
+
+[This is a link](https://thisisalink.fake)<br/>
+![This tries to load an image](https://thisisanimage.fake)
+
+</div>
+</div>
+
+<div class="card in-out-block" markdown="1" id="Markdown_font-styles">
+
+```markdown
 _this is italic_
 **this is bold**
 ```
 
-<a id="Markdown_code"></a>
+<div class="card-body out-block" markdown="1">
+
+_this is italic_<br/>
+**this is bold**
+
+</div>
+</div>
+
 You can create inline code blocks using backticks, e.g `this` comes from the Markdown ``\`this\```.
 You can create code blocks using three backticks + a language, e.g.
-```python
-def this_is_a_python_block():
-   ...
-```
+
+<div class="card in-out-block" markdown="1" id="Markdown_code">
+
 ````lang-none
 ```python
 def this_is_a_python_block():
@@ -217,25 +240,37 @@ def this_is_a_python_block():
 ```
 ````
 
-<a id="Markdown_quotes"></a>
+<div class="card-body out-block" markdown="1">
+
+```python
+def this_is_a_python_block():
+   ...
+```
+
+</div>
+</div>
+
 You can create block quotes using `>`, like
-> this is a quote
-> and it continues
-```lang-none
+<div class="card in-out-block" markdown="1" id="Markdown_quotes">
+
+```markdown
 > this is a quote
 > and it continues
 ```
 
-<a id="Markdown_lists"></a>
-You can create lists quotes using `* ` or numbers like `1.`
-* this is
-* a list
-  * with a sublist
-1. this is
-2. a numbered list
-   * with a regular sublist
-3. but the regular one continues
-```lang-none
+<div class="card-body out-block" markdown="1">
+
+> this is a quote
+> and it continues
+
+</div>
+</div>
+
+You can create lists using `* ` or numbers like `1.`
+
+<div class="card in-out-block" markdown="1" id="Markdown_lists">
+
+```markdown
 * this is 
 * a list
   * with a sublist
@@ -244,6 +279,19 @@ You can create lists quotes using `* ` or numbers like `1.`
    * with a regular sublist
 3. but the regular one continues
 ```
+
+<div class="card-body out-block" markdown="1">
+
+* this is
+* a list
+  * with a sublist
+1. this is
+2. a numbered list
+   * with a regular sublist
+3. but the regular one continues
+
+</div>
+</div>
 
 As you want to do more and more stuff, there are tons of Markdown resources out there so definitely give them a look.
 
@@ -259,12 +307,25 @@ There are lots of ways to add more intricate content to your pages. Here are a f
 If you want to add footnotes, you can do that too.
 For an example, see [this](https://github.com/McCoyGroup/References/edit/gh-pages/References/Intro%20To%20Quantum/PracticalQuantumMechanics.md).
 To do that, you'll first put a link inside the text like
-```
+
+<div class="card in-out-block" markdown="1">
+
+```markdown
 This is my contentious statement.[<sup>1</sup>]
 ```
 
+<div class="card-body out-block" markdown="1">
+
+This is my contentious statement.[<sup>1</sup>]
+
+</div>
+</div>
+
 Then in the footer you'll put a link to `#fn1` and the browser will scroll to the bottom of the page when clicked. So something like
-```
+
+<div class="card in-out-block" markdown="1">
+
+```markdown
 This is my contentious statement.[<sup>1</sup>]
 This is another contentious statement.[<sup>2</sup>]
 
@@ -280,6 +341,25 @@ This is another contentious statement.[<sup>2</sup>]
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/McCoy%20Group%20Code%20Academy/<Path/To/Page.md>)
 ```
 
+<div class="card-body out-block" markdown="1">
+
+This is my contentious statement.[<sup>1</sup>]
+This is another contentious statement.[<sup>2</sup>]
+
+...
+
+---
+[<sup>1</sup>]: #fn1
+[<sup>2</sup>]: #fn2
+
+1. <a id="fn1"></a> This is my justification for the first contentious statement.
+2. <a id="fn2"></a> This is my justification for the second contentious statement.
+
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/McCoy%20Group%20Code%20Academy/<Path/To/Page.md>)
+
+</div>
+</div>
+
 ### Styling
 
 If you're comfortable with the languages of web programming, here are some helpful hints.
@@ -290,22 +370,40 @@ Our config file for this is [here](../_config.yml).
 As of when I write this, we're using [Kramdown](https://kramdown.gettalong.org/quickref.html) as our Markdown renderer. The theme is one I developed specifically for this, which you can find [here](https://github.com/McCoyGroup/finx).
 
 This is important, because Kramdown supports a non-standard syntax to add styling to elements which looks like
-```lang-none
+
+<div class="card in-out-block" markdown="1">
+
+```markdown
 This is a test
 {: .test-class}
 ```
+
+<div class="card-body out-block" markdown="1">
+
+This is a test
+{: .test-class}
+
+</div>
+</div>
 
 where `test-class` is a CSS class.
 
 Now combining that with the fact that the theme builds off of [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/) we can make use of their huge library of styling classes to add stuff to our text, e.g.
 
-You can do this too!
-{: .alert-primary .rounded-pill .p-3}
+<div class="card in-out-block" markdown="1">
 
-```lang-none
+```markdown
 You can do this too!
 {: .alert-primary .rounded-pill .p-3}
 ```
+
+<div class="card-body out-block" markdown="1">
+
+You can do this too!
+{: .alert-primary .rounded-pill .p-3}
+
+</div>
+</div>
 
 I also wrote a syntax layer for doing pattern matching and adding annotations on the generated HTML. You can see an example of that [here](https://github.com/b3m2a1/annotateMD/blob/master/annotations/simple_transforms.ts). That's all done in TypeScript, so feel free to dive into it if you want to add more complex interactions to the pages.
 This will definitely be a steeper learning curve than the Bootstrap CSS, though.
@@ -314,7 +412,7 @@ This will definitely be a steeper learning curve than the Bootstrap CSS, though.
 
 All modern browsers support a URL syntax like
 
-```lang-none
+```markdown
 https://path.to/site#Header_In_Site
 ```
 
@@ -322,9 +420,21 @@ where `Header_In_Site` is attached to the `id` attribute of the header. The brow
 
 Headers on this site automatically get an `id` tag associated with them, so you can directly link to them. On the other hand, you can make your own custom element, by adding a tag like
 
-```lang-none
+<div class="card in-out-block" markdown="1">
+
+```markdown
 <a id="name-of-link"></a>
+Some content that will be linked to automatically
 ```
+
+<div class="card-body out-block" markdown="1">
+
+<a id="name-of-link"></a>
+Some content that will be linked to automatically
+
+</div>
+</div>
+
 
 at any point in your content and then you can link to it by adding `#name-of-link` to the URL you link to.
 
@@ -335,17 +445,165 @@ Since we're using Kramdown and Bootstrap, we can leverage the power of Bootstrap
 
 If we want a little [thumbnail image](https://getbootstrap.com/docs/4.0/content/images/#image-thumbnails), that means we can do
 
+<div class="card in-out-block" markdown="1">
+
 ```lang-none
 ![logo](../img/logo_m.png){:.img-thumbnail width="100px"}
 ```
+
+<div class="card-body out-block" markdown="1">
+
 ![logo](../img/logo_m.png){:.img-thumbnail width="100px"}
+
+</div>
+</div>
 
 or if we want a big banner we can do
 
-```lang-none
+<div class="card in-out-block" markdown="1">
+
+```markdown
 ![logo](../img/logo_banner.png){:.img-fluid}
 ```
+
+<div class="card-body out-block" markdown="1">
+
 ![logo](../img/logo_banner.png){:.img-fluid}
+
+</div>
+</div>
+
+### Collapsible Content
+
+Sometimes when you have asides, footnotes, alternatives, or whatever, you don't want the content to display by default. 
+In this case we can make use of the fact that Boostrap provides a set of [collapse](https://getbootstrap.com/docs/4.3/components/collapse/) classes to make this easy
+
+The Markdown for a single collapse looks like
+
+<div class="card in-out-block" markdown="1">
+
+```markdown
+<div class="card">
+ <div class="card card-header" markdown="1">
+##### This is the header of my section
+ <a class="float-right" data-toggle="collapse" href="#some-tag-for-this-note"><i class="fa fa-chevron-down"></i></a>
+ </div>
+ <div class="card card-body collapse show" id="some-tag-for-this-note" markdown="1">
+This is the body for the notes. Click on the little arrow to make this content disappear up.
+If you didn't have `show` in the class line above, this would be hidden by default 
+ </div>
+</div>
+```
+<div class="card-body out-block" markdown="1">
+
+<div class="card">
+ <div class="card card-header" markdown="1">
+##### This is the header of my section
+ <a class="float-right" data-toggle="collapse" href="#some-tag-for-this-note"><i class="fa fa-chevron-down"></i></a>
+ </div>
+ <div class="card card-body collapse show" id="some-tag-for-this-note" markdown="1">
+This is the body for the notes. Click on the little arrow to make this content disappear up.
+If you didn't have `show` in the class line above, this would be hidden by default 
+ </div>
+</div>
+
+</div>
+</div>
+
+here's the same, but with the `show` element removed
+
+<div class="card">
+ <div class="card card-header" markdown="1">
+##### This is the header of my hidden section
+ <a class="float-right" data-toggle="collapse" href="#some-default-hidden-section"><i class="fa fa-chevron-down"></i></a>
+ </div>
+ <div class="card card-body collapse" id="some-default-hidden-section" markdown="1">
+This is the body for the notes. Click on the little arrow to make this content disappear up.
+Since you don't have `show` in the class line above, this is hidden by default 
+ </div>
+</div>
+
+
+Sometimes you want multiple sections to appear as one block. In that case, we wrap the different `collapse` objects in the [accordion](https://getbootstrap.com/docs/4.3/components/collapse/#accordion-example) class.
+
+<div class="card in-out-block" markdown="1">
+
+```markdown
+<div class="accordion">
+<div class="card">
+ <div class="card card-header" markdown="1">
+##### This is the header of my first section
+ <a class="float-right" data-toggle="collapse" href="#collapse-number-1"><i class="fa fa-chevron-down"></i></a>
+ </div>
+ <div class="card card-body collapse show" id="collapse-number-1" markdown="1">
+This is the body for the notes. Click on the little arrow to make this content disappear up.
+If you didn't have `show` in the class line above, this would be hidden by default 
+ </div>
+</div>
+
+<div class="card">
+ <div class="card card-header" markdown="1">
+##### This is the header of my hidden alternative section
+ <a class="float-right" data-toggle="collapse" href="#collapse-number-2"><i class="fa fa-chevron-down"></i></a>
+ </div>
+ <div class="card card-body collapse" id="collapse-number-2" markdown="1">
+This is the body for the notes. Click on the little arrow to make this content disappear up.
+Since you don't have `show` in the class line above, this is hidden by default 
+ </div>
+</div>
+
+<div class="card">
+ <div class="card card-header" markdown="1">
+##### This is some third section...
+ <a class="float-right" data-toggle="collapse" href="#collapse-number-3"><i class="fa fa-chevron-down"></i></a>
+ </div>
+ <div class="card card-body collapse" id="collapse-number-3" markdown="1">
+This is the body for the notes. Click on the little arrow to make this content disappear up.
+Since you don't have `show` in the class line above, this is hidden by default 
+ </div>
+</div>
+</div>
+```
+
+<div class="card-body out-block" markdown="1">
+
+<div class="accordion">
+<div class="card">
+ <div class="card card-header" markdown="1">
+##### This is the header of my first section
+ <a class="float-right" data-toggle="collapse" href="#collapse-number-1"><i class="fa fa-chevron-down"></i></a>
+ </div>
+ <div class="card card-body collapse show" id="collapse-number-1" markdown="1">
+This is the body for the notes. Click on the little arrow to make this content disappear up.
+If you didn't have `show` in the class line above, this would be hidden by default 
+ </div>
+</div>
+
+<div class="card">
+ <div class="card card-header" markdown="1">
+##### This is the header of my hidden alternative section
+ <a class="float-right" data-toggle="collapse" href="#collapse-number-2"><i class="fa fa-chevron-down"></i></a>
+ </div>
+ <div class="card card-body collapse" id="collapse-number-2" markdown="1">
+This is the body for the notes. Click on the little arrow to make this content disappear up.
+Since you don't have `show` in the class line above, this is hidden by default 
+ </div>
+</div>
+
+<div class="card">
+ <div class="card card-header" markdown="1">
+##### This is some third section...
+ <a class="float-right" data-toggle="collapse" href="#collapse-number-3"><i class="fa fa-chevron-down"></i></a>
+ </div>
+ <div class="card card-body collapse" id="collapse-number-3" markdown="1">
+This is the body for the notes. Click on the little arrow to make this content disappear up.
+Since you don't have `show` in the class line above, this is hidden by default 
+ </div>
+</div>
+</div>
+
+</div>
+</div>
 
 ---
 
@@ -363,16 +621,25 @@ We'll move stuff to the theme when we can, though.
 
 In lots of our content we introduce pagination, where we have Next/Previous links. For these we're introducing a syntax that looks like
 
-<span class="text-muted">Next:</span>
- [Next Page](NextPage.md)<br/>
-<span class="text-muted">Previous:</span>
- [Previous Page](PreviousPage.md)
-```lang-none
+<div class="card in-out-block" markdown="1">
+
+```markdown
 <span class="text-muted">Next:</span>
  [Next Page](NextPage.md)<br/>
 <span class="text-muted">Previous:</span>
  [Previous Page](PreviousPage.md)
 ```
+
+<div class="card-body out-block" markdown="1">
+
+<span class="text-muted">Next:</span>
+ [Next Page](NextPage.md)<br/>
+<span class="text-muted">Previous:</span>
+ [Previous Page](PreviousPage.md)
+
+</div>
+</div>
+
 
 This just helps separate the links from the content that came before it.
 
@@ -380,36 +647,219 @@ This just helps separate the links from the content that came before it.
 
 To make it easy to edit files, we're providing a standardized footer at the bottom of our pages, which in Markdown looks like
 
----
-[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/McCoy%20Group%20Code%20Academy/<Path/To/Page.md>)
-```lang-none
+<div class="card in-out-block" markdown="1">
+
+```markdown
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/McCoy%20Group%20Code%20Academy/<Path/To/Page.md>)
 ```
+
+<div class="card-body out-block" markdown="1">
+
+---
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/McCoy%20Group%20Code%20Academy/<Path/To/Page.md>)
+
+</div>
+</div>
 
 For pages where we can foresee questions, we're putting a link above the `---` so that it looks like
 
+<div class="card in-out-block" markdown="1">
+
+```markdown
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask).
 {: .alert .alert-info}
 
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/McCoy%20Group%20Code%20Academy/<Path/To/Page.md>)
 ```
+
+<div class="card-body out-block" markdown="1">
+
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask).
 {: .alert .alert-info}
 
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/McCoy%20Group%20Code%20Academy/<Path/To/Page.md>)
-```
+
+</div>
+</div>
 
 If we want to give external people places to report issues, we can provide a link to the GitHub issues page
 
+<div class="card in-out-block" markdown="1">
+
+```markdown
 Find an issue? [Report it!](https://github.com/McCoyGroup/References/issues/new)
 {: .alert .alert-warning}
 ```
+<div class="card-body out-block" markdown="1">
+
 Find an issue? [Report it!](https://github.com/McCoyGroup/References/issues/new)
 {: .alert .alert-warning}
+
+</div>
+</div>
+
+### Input/Output
+
+Most of the time when we put code blocks into pages, we'll just use Markdown's fenced code blocks & call it a day.
+Sometimes, however, we want to also show output. When that's the case, we recommend doing this for python code
+
+<div class="card in-out-block" markdown="1">
+
+`````lang-none
+```console?lang=python&prompt=>>>
+>>> import numpy as np
+>>> example_array = np.zeros((2,5,3))
+>>> print(example_array)
+
+[[[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]
+
+ [[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]]
 ```
+`````
+
+<div class="card-body out-block" markdown="1">
+
+```console?lang=python&prompt=>>
+>>> import numpy as np
+>>> example_array = np.zeros((2,5,3))
+>>> print(example_array)
+
+[[[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]
+
+ [[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]]
+```
+</div>
+</div>
+
+You'll note, though, that this hides the coloring of our output & makes the input block harder to copy. 
+If that's an issue, we suggest that you do this 
+
+<div class="card in-out-block" markdown="1">
+
+`````lang-none
+```python
+# In:
+import numpy as np
+example_array = np.zeros((2,5,3))
+print(example_array)
+# Out:
+[[[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]
+
+ [[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]]
+```
+`````
+<div class="card-body out-block" markdown="1">
+
+```python
+# In:
+import numpy as np
+example_array = np.zeros((2,5,3))
+print(example_array)
+# Out:
+[[[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]
+
+ [[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]]
+```
+</div>
+</div>
+
+
+Finally, if you've got non-code output (e.g. an image or a block of Markdown), we've include our on `in-block` and `out-block` classes to wrap on our card classes. You've seen this output format throughout this document.
+
+This looks like
+
+<div class="card in-out-block" markdown="1">
+
+`````markdown
+<div class="card in-out-block" markdown="1">
+```python
+import numpy as np
+example_array = np.zeros((2,5,3))
+print(example_array)
+```
+<div class="card-body out-block" markdown="1">
+
+```python
+[[[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]
+
+ [[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]]
+```
+</div>
+</div>
+`````
+
+<div class="card-body out-block" markdown="1">
+
+<div class="card in-out-block" markdown="1">
+
+```python
+import numpy as np
+example_array = np.zeros((2,5,3))
+print(example_array)
+```
+<div class="card-body out-block" markdown="1">
+
+```python
+[[[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]
+
+ [[0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]
+  [0. 0. 0.]]]
+```
+</div>
+</div>
+
+</div>
+</div>
 
 ### Unfinished Content
 
@@ -417,15 +867,21 @@ We're also adding a standard way to show that a segment still needs to be finish
 
 This will look like
 
-...<br/>
-[EDIT](https://github.com/McCoyGroup/References/edit/gh-pages/path/to/file.md)
-{: .alert .alert-warning}
+<div class="card in-out-block" markdown="1">
 
-```
+```markdown
 ...<br/>
 [EDIT](https://github.com/McCoyGroup/References/edit/gh-pages/path/to/file.md)
 {: .alert .alert-warning}
 ```
+<div class="card-body out-block" markdown="1">
+
+...<br/>
+[EDIT](https://github.com/McCoyGroup/References/edit/gh-pages/path/to/file.md)
+{: .alert .alert-warning}
+</div>
+</div>
+
 
 ### Jump Links
 
@@ -478,40 +934,7 @@ It's a little confusing at first, but surprisingly easier to maintain than a Mar
 
 Admittedly you'll probably have no more than one row... If you don't want the links to stretch, you can make "empty" columns. Here's a good example. I've personally found that a 6-column layout isn't bad.
 
-<div class="container alert alert-secondary bg-light">
- <div class="row">
-  <div class="col" markdown="1">
-   [Header 1](#Header_1)
-  </div>
-  <div class="col" markdown="1">
-   [Header 2](#Header_2)
-  </div>
-  <div class="col" markdown="1">
-   [Header 3](#Header_3)
-  </div>
-  <div class="col" markdown="1">
-   [Header 4](#Header_4)
-  </div>
-  <div class="col"></div>
-  <div class="col"></div>
- </div>
- <div class="row">
-  <div class="col" markdown="1">
-   [Header 1](#Header_1)
-  </div>
-  <div class="col" markdown="1">
-   [Header 2](#Header_2)
-  </div>
-  <div class="col" markdown="1">
-   [Header 3](#Header_3)
-  </div>
-  <div class="col" markdown="1">
-   [Header 4](#Header_4)
-  </div>
-  <div class="col"></div>
-  <div class="col"></div>
- </div>
-</div>
+<div class="card in-out-block" markdown="1">
 
 ```html
 <div class="container alert alert-secondary bg-light">
@@ -534,6 +957,47 @@ Admittedly you'll probably have no more than one row... If you don't want the li
  ...
 </div>
 ```
+<div class="card-body out-block" markdown="1">
+
+<div class="container alert alert-secondary bg-light">
+ <div class="row">
+  <div class="col" markdown="1">
+   [Header 1](#Header_1)
+  </div>
+  <div class="col" markdown="1">
+   [Header 2](#Header_2)
+  </div>
+  <div class="col" markdown="1">
+   [Header 3](#Header_3)
+  </div>
+  <div class="col" markdown="1">
+   [Header 4](#Header_4)
+  </div>
+  <div class="col"></div>
+  <div class="col"></div>
+ </div>
+ <div class="row">
+  <div class="col" markdown="1">
+   [Header 1](#Header_1)
+  </div>
+  <div class="col" markdown="1">
+   [Header 2](#Header_2)
+  </div>
+  <div class="col" markdown="1">
+   [Header 3](#Header_3)
+  </div>
+  <div class="col" markdown="1">
+   [Header 4](#Header_4)
+  </div>
+  <div class="col"></div>
+  <div class="col"></div>
+ </div>
+</div>
+
+</div>
+</div>
+
+
 
 ---
 
@@ -551,4 +1015,8 @@ This thing is super useful, and allows you to specify an image, or description, 
 
 
 ---
+
+[<sup>1</sup>]: #fn1
+[<sup>2</sup>]: #fn2
+
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Contributing.md)

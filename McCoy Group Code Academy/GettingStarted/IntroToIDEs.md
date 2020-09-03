@@ -5,7 +5,7 @@ In the bad old days, people didn't have tools to help them write their code, and
 We're not going to do that, though.
 Tools are your friend and we're going to use them so that we can spend more time doing science and less time writing code.
 The main tool we're going to use is an _integrated development environment_ (IDE), which is a fancy name for a program that you use to edit your code that also helps you out.
-IDEs are the bees knees. There's also a bajillion of them out there.
+IDEs are the bee's knees. There's also a bajillion of them out there.
 We're going to make our recommendation, but as with all things, you should do what works best for you.
 
 ## PyCharm

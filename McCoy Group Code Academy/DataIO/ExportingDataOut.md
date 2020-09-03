@@ -106,6 +106,8 @@ where we've written the metadata out over multiple lines, but for ease of proces
 
 We can perform this like
 
+<div class="card in-out-block" markdown="1">
+
 ```python
 import json
 
@@ -125,9 +127,10 @@ with open('my_dvr_results.jsnp') as file:
     for array in [grid, engs, wfns]: # must align with what's in the meta data
         file.write("\n")
         array.flatten().tofile(file, sep=" ")
+with open('my_dvr_results.jsnp') as file: # just so we can see what's inside
+    print(file.read())
 ```
-
-and if we look at what's inside this we have
+<div class="card-body out-block" markdown="1">
 
 ```lang-none
 {"name": "my_data", "range": [-1, 1], "npoints": 50, "arrays": [{"key": "grid", "shape": [50], "dtype": "float64"}, {"key": "energies", "shape": [5], "dtype": "float64"}, {"key": "wavefunctions", "shape": [50, 5], "dtype": "float64"}]}
@@ -135,10 +138,13 @@ and if we look at what's inside this we have
 0.009001295964747488 0.027003887894241883 0.04500647982373659 0.06300907175323109 0.08101166368272575
 -1.6297059196185867e-18 -2.1238603683495063e-17 -1.9600717185203036e-16 -1.3731601478408739e-15 -8.218185917980731e-15 -4.227914540010922e-17 -5.084342248937425e-16 -4.332144517493014e-15 -3.002680951714255e-14 -1.7897819993578514e-13 -9.059740244995207e-16 -1.0543155141422734e-14 -8.611109629014152e-14 -5.698475466077956e-13 -3.2404706891417078e-12 -1.7171629954202116e-14 -1.9092558963231228e-13 -1.4889229044500666e-12 -9.40214519164098e-12 -5.098064790049858e-11 -2.846932711821115e-13 -3.018161112932004e-12 -2.2424111219488243e-11 -1.3478927106839047e-10 -6.95067122466062e-10 -4.129171172995085e-12 -4.164009671710429e-11 -2.940051363784702e-10 -1.6777664190098841e-09 -8.205015616928294e-09 -5.239333858522271e-11 -5.012599259980382e-10 -3.3540088695643536e-09 -1.8117105418786575e-08 -8.376076604111632e-08 -5.815883186681261e-10 -5.263432211396559e-09 -3.327149414785951e-08 -1.6954856246750568e-07 -7.384017445826375e-07 -5.647821592968985e-09 -4.8192586037549805e-08 -2.867863628349973e-07 -1.3735044168554768e-06 -5.611658815615956e-06 -4.79812813409137e-08 -3.846084822713215e-07 -2.146043916755955e-06 ... 1.3735044166976815e-06 -5.61165881554646e-06 -5.815882009044431e-10 5.2634320539981354e-09 -3.3271493829883616e-08 1.695485625130424e-07 -7.38401744783632e-07 -5.239331244898199e-11 5.012601383956994e-10 -3.354008387025528e-09 1.8117105545311923e-08 -8.37607662871476e-08 -4.129388444613319e-12 4.164022492814449e-11 -2.940047539953715e-10 1.6777664070224127e-09 -8.205015798783275e-09 -2.848981448658778e-13 3.018074203228939e-12 -2.2424040720969595e-11 1.347890895594096e-10 -6.95067270195125e-10 -1.720736448735197e-14 1.9076352665703666e-13 -1.4890047052317808e-12 9.402089435454086e-12 -5.098067554187757e-11 -9.335616305004049e-16 1.0374985115028238e-14 -8.613933684963118e-14 5.699183398999688e-13 -3.2405077703636008e-12 -7.337023374629885e-17 3.9588334188743134e-16 -4.302858625647169e-15 3.011676891027034e-14 -1.7903129531564725e-13 1.423766939174147e-17 -1.5833142601610604e-17 -1.778352319409878e-16 1.4410574036154364e-15 -8.225059630431985e-15
 ```
+</div></div>
 
 When we ingest this, we'll do so using NumPy's [`fromfile`](https://numpy.org/doc/stable/reference/generated/numpy.fromfile.html) method as well as the `readline` method of a file.
 
 This will look like
+
+<div class="card in-out-block" markdown="1">
 
 ```python
 import json, numpy as np
@@ -151,9 +157,10 @@ with open('my_dvr_results.jsnp') as file:
         num_elements = int(np.prod(shp))
         arr = np.fromfile(file, dtype=arr_spec['dtype'], count=num_elements, sep=" ")
         file_data[arr_spec['key']] = arr.reshape(shp)
+print(file_data) # just so we can confirm the right stuff is coming out
 ```
 
-and afterwards `file_data` will look like
+<div class="card-body out-block" markdown="1">
 
 ```python
 {'name': 'my_data',
@@ -191,6 +198,7 @@ and afterwards `file_data` will look like
         [ 1.42376694e-17, -1.58331426e-17, -1.77835232e-16,
           1.44105740e-15, -8.22505963e-15]])}
 ```
+</div></div>
 
 Another option, and one that will also help cut down on the size of all of the files, is to use the fact that all modern languages support reading `.zip` files, either natively or, for Fortran, through a DLL.
 Rather than put all of these arrays in the same `.txt` file, we can put them in separate ones which can be loaded with NumPy's [`loadtxt`](https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html#numpy.loadtxt) method and whose names are defined in a `data.json` file inside the ZIP. 

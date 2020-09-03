@@ -164,17 +164,13 @@ class FileSearcher:
 
 which we can then use like
 
-```python
-with FileSearcher('my_amazing_calc.log') as file:
-    block = file.read_block(
-        "Dipole moment (field-independent basis, Debye):",
-        "Quadrupole moment (field-independent basis, Debye-Ang):"
-        )
-```
-
-which will give us the string
-
-```python
+```console?lang=python&prompt=>>>
+>>> with FileSearcher('my_amazing_calc.log') as file:
+>>>    block = file.read_block(
+>>>        "Dipole moment (field-independent basis, Debye):",
+>>>        "Quadrupole moment (field-independent basis, Debye-Ang):"
+>>>        )
+>>> print(block)
 """
     X=              0.8917    Y=             -0.4708    Z=              1.6277  Tot=              1.9147
  """
@@ -190,16 +186,11 @@ The way we'll do this is by splitting the string every time we see `=`. Python s
 
 So we'd do
 
-```python
-dip_block = """
-    X=              0.8917    Y=             -0.4708    Z=              1.6277  Tot=              1.9147
- """
-dip_chunks = dip_block.split("=")
-```
-
-now `dip_chunks` will look like
-
-```python
+```console?lang=python&prompt=>>>
+>>> dip_block = """
+>>>    X=              0.8917    Y=             -0.4708    Z=              1.6277  Tot=              1.9147
+>>> """
+>>> dip_chunks = dip_block.split("="); print(dip_chunks)
 ["""
     X""", "              0.8917    Y", "             -0.4708    Z", "              1.6277  Tot", """              1.9147
  """]
@@ -207,21 +198,23 @@ now `dip_chunks` will look like
 
 and we'll note first that we only want the middle three of these and second that for each of these we can then split on the whitespace and pick the _second_ component. So to get out the real dipole components we'd do
 
-```python
-real_dip_chunks = [chunk.split("=")[1] for chunk in dip_chunks[1:-2]]
+```console?lang=python&prompt=>>>
+>>> real_dip_chunks = [chunk.split()[1] for chunk in dip_chunks[1:-2]]; print(real_dip_chunks)
+["0.8917", "-0.4708", "1.6277"]
 ```
 
 and finally to get our dipole moment we use the python `float` function to convert these to python numbers like
 
-```python
-dip_mom = [float(num) for num in real_dip_chunks]
+```console?lang=python&prompt=>>>
+>>> dip_mom = [float(num) for num in real_dip_chunks]; print(dip_mom)
+[0.8917, -0.4708, 1.6277]
 ```
 
 Now imagine you want a different property from that log file. You get to figure this process out all over again for that one. And for the next. And the next.
 
 Hopefully this makes it clear why we've got such a preference for _clean_ data formats. 
 
-Just remember, _if you can't use NumPy, just use JSON_. 
+Just keep in mind, _if you can't use NumPy, just use JSON_. But really, [if you can use NumPy use NumPy](NumpyFiles.md).
 
 ### A Note on Regular Expressions
 
@@ -250,6 +243,20 @@ which will convert to the rather less-readable regular expression
 ```
 
 and allow you to get the three numbers out. If you'd like to learn more, we're happy to share.
+
+### Grep
+
+If you're working outside of python, you can also use the program [grep](https://man7.org/linux/man-pages/man1/grep.1.html) to do searches. 
+This can be highly efficient, but grep does its pattern matching based on regular expressions, too.
+If you do want to use grep, you use it like
+
+```shell
+grep <pattern> <file>
+```
+
+and `grep` will spit out the matches for you. 
+Some people like to just use grep and manual cleaning in Excel to get their data out of files. 
+We're pretty lazy, so we tend to stick to the programmatic way, as we can write the code once and keep on reusing it.
 
 <span class="text-muted">Next:</span>
  [Getting Data out of your Program](ExportingDataOut.md)<br/>
