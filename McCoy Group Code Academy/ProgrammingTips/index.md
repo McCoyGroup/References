@@ -24,7 +24,7 @@ They have tutorials on:
 * [Code Style](https://education.molssi.org/python-package-best-practices/04-function-style/index.html)
 * [Git](https://education.molssi.org/python-package-best-practices/02-git/index.html) and [Github](https://education.molssi.org/python-package-best-practices/03-github/index.html)
 * [Testing](https://education.molssi.org/python-package-best-practices/07-testing/index.html), 
-* [Software Design Patterns](http://education.molssi.org/oop_and_design_patterns/))  
+* [Software Design Patterns](http://education.molssi.org/oop_and_design_patterns/)
 
 Second, Google has many useful resources for their own developers:
 * [Exercises for Python](https://developers.google.com/edu/python)
