@@ -1,7 +1,7 @@
 # There Are Too Many Tools
 
 One of the first issues you might run into when trying to plot your data is that you can't figure out what you should use to plot it.
-Like, you could coerce your data into an Excel spreadsheet and do some manual work to plot it there.
+You could coerce your data into an Excel spreadsheet and do some manual work to plot it there.
 If you're command-line oriented, you can use a tool like [gnuplot](http://www.gnuplot.info/) to do all sorts of stuff.
 Or if you've got the familiarity, software like Mathematica has all sorts of [plotting features](https://reference.wolfram.com/language/guide/DataVisualization.html).
 
