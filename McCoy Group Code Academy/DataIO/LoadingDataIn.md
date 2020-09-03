@@ -33,7 +33,8 @@ It's not the world's most efficient format, but we also don't work with all that
 
 The one thing we'll want to make sure of is that when we load in our data we convert that `"energies"` array to a proper NumPy array so we can work with it more easily.
 
-### A Note on `np.loadtxt()` and `np.savetxt()`
+<div class="alert alert-warning" markdown="1">
+##### A Note on `np.loadtxt()`
 
 Sometimes you can't work with JSON, but instead someone (probably using Fortran) gave you a `.txt`, `.csv`, or `.dat` file that looks like
 
@@ -43,14 +44,8 @@ Sometimes you can't work with JSON, but instead someone (probably using Fortran)
 ...
 ```
 
-and you just need to load that in.
-
-In this case, using [`loadtxt`](https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html) is the quickest way to get the data into python, and then you can save _that_ as in one of the [NumPy formats](NumpyFiles.md).
-
-Another common thing, unfortunately, is that someone using Fortran or some crusty old language like that wants you to give them numbers in a tabular format like this.
-In this case, where you obviously can't use one of the NumPy formats & your collaborator doesn't want to do the small amount of work to load a JSON parsing library in Fortran, the function [`savetxt`](https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html) is your friend.
-
-We do want to stress the power and flexibility of NumPy and JSON, but keeping these two functions in your back pocket is good if you find yourself in a pinch.
+and you just need to load that in. In this case, using [`loadtxt`](https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html) is the quickest way to get the data into python, and then you can save _that_ as in one of the [NumPy formats](NumpyFiles.md).
+</div>
 
 ## Dirty Data
 

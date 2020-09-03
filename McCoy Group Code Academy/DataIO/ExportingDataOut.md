@@ -6,14 +6,16 @@ Maybe you'd like to use the results of this calculation as an intermediate in ot
 The possibilities are myriad.
 And so how do we want to do this?
 
-Well, to reiterate what we've been saying, if you can, [use NumPy](NumpyFiles.md).
+Well, as we've been saying, [if you can, use NumPy](NumpyFiles.md).
 If you can't that's where things get interesting.
 
-### A Note on `np.savetxt()`
+<div class="alert alert-warning" markdown="1">
+##### A Note on `np.savetxt()`
 
-Sometimes, when debugging a chunk of code it becomes neccessary to send data to someone else. If possible, [NumPy files](NumpyFiles.md) are great for this but _sometimes_ you are about 5 minutes away from throwing something and just need some sort of direction with where the bug is. In this case, [`np.savetxt()`](https://numpy.org/doc/stable/reference/generated/numpy.savetxt.html) can be a really good thing to keep in your back pocket. This is really the simpliest way to save a quick data set and move it between people or programs (ie you just need to do a quick excel calculation for a reality check). We wouldn't really suggest using txt, csv, or dat files for much more than xy data, but it's a quick and dirty way to get things out of python and hopefully keep everything on your desk and no tables from being flipped. In addition, these files are easily human read (just saying). 
+As we noted [before](LoadingDataIn.md#a-note-on-nploadtxt), sometimes life throws a wrench in your plans to do the right thing, and someone (usually using Fortran) needs tabular data.
+If that's the case, the NumPy [`savetxt`](https://numpy.org/doc/stable/reference/generated/numpy.savetxt.html) function is going to be your friend.
+</div>
 
-`np.savetxt()` also has `header` and `footer` arguments which allow you to add a string before or after your data. By default it is written into the file with a `#` (the python comment character) preceding it. Although this character can be changed using the `comment` argument. This is something that would be useful to get comfortable with because it will be incredibly useful to keep track of units. *hint hint* Refer to the [documentation](https://numpy.org/doc/stable/reference/generated/numpy.savetxt.html) on this command for more on this idea. 
 
 ### Just Use JSON
 
@@ -267,7 +269,7 @@ A table for a paper shouldn't be how you save your results.
 If you _do_ want to learn about data presentation, we've got a section on [plotting](../Plotting) that you should check out.
 
 <span class="text-muted">Next:</span>
- [NumPy Data Files](NumpyFiles.md)</br>
+ [NumPy Data Files](NumpyFiles.md)<br/>
 <span class="text-muted">Previous:</span>
  [Getting Data into your Program](LoadingDataIn.md)
 
