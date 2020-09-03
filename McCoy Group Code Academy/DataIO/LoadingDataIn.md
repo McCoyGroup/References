@@ -1,7 +1,7 @@
 # Getting Data in to Your Code
 
 We've already talked a bit about the power of good data formatting. It makes everyone's life better.
-We think it'd be good to get a bit more concrete about what that means for us, though. 
+We think it'd be good to get a bit more concrete about what that means for us, though.
 We also know that you're not always going to have clean data to work with, and being able to deal with the mess is a useful skill.
 
 But let's start with the first one.
@@ -28,14 +28,33 @@ And it looks almost exactly like a python dictionary. Here's how we could store 
 }
 ```
 
-The python [`json` module](https://docs.python.org/3/library/json.html) can load this in easily. You can extend it to add units, coordinates, etc. 
+The python [`json` module](https://docs.python.org/3/library/json.html) can load this in easily. You can extend it to add units, coordinates, etc.
 It's not the world's most efficient format, but we also don't work with all that much data. If we need a speed boost, there's a hybrid JSON/data table format that we'll talk about in the next section.
 
 The one thing we'll want to make sure of is that when we load in our data we convert that `"energies"` array to a proper NumPy array so we can work with it more easily.
 
+### A Note on `np.loadtxt()` and `np.savetxt()`
+
+Sometimes you can't work with JSON, but instead someone (probably using Fortran) gave you a `.txt`, `.csv`, or `.dat` file that looks like
+
+```lang-none
+ 1.213123  3.294932 -2.321323 ...
+-2.321323  0.349876  5.193273 ...
+...
+```
+
+and you just need to load that in.
+
+In this case, using [`loadtxt`](https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html) is the quickest way to get the data into python, and then you can save _that_ as in one of the [NumPy formats](NumpyFiles.md).
+
+Another common thing, unfortunately, is that someone using Fortran or some crusty old language like that wants you to give them numbers in a tabular format like this.
+In this case, where you obviously can't use one of the NumPy formats & your collaborator doesn't want to do the small amount of work to load a JSON parsing library in Fortran, the function [`savetxt`](https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html) is your friend.
+
+We do want to stress the power and flexibility of NumPy and JSON, but keeping these two functions in your back pocket is good if you find yourself in a pinch.
+
 ## Dirty Data
 
-Unfortunately, not all data is clean. Many people started writing code in 1980, when [Fortran's 80 character line length](https://softwareengineering.stackexchange.com/a/148729) was hip & cool. 
+Unfortunately, not all data is clean. Many people started writing code in 1980, when [Fortran's 80 character line length](https://softwareengineering.stackexchange.com/a/148729) was hip & cool.
 Many people also got with the times and adapted to improvements in computation that make everyone's lives better.
 Many scientists did not.
 And particularly Gaussian, the electronic structure software makers, did not.
@@ -94,19 +113,19 @@ Mulliken charges and spin densities with hydrogens summed into heavy atoms:
 
 and in fact, we're likely to have this type of block repeated many times over a file.
 
-So what do we do with data like this? Well one option is to use copy everything out by hand. 
+So what do we do with data like this? Well one option is to use copy everything out by hand.
 If you've got thousands of calculations, I'm gonna say that's a no go.
 
-Instead, unfortunately, we're gonna be stuck doing what's called [_parsing_](https://en.wikipedia.org/wiki/Parsing) 
+Instead, unfortunately, we're gonna be stuck doing what's called [_parsing_](https://en.wikipedia.org/wiki/Parsing)
 (etym.: from the French _parser_ or _"to weep tears of frustration").
 Parsing is a very, very broad topic and there are tons of ways to do it.
 We're gonna briefly hit on two of the big ones in python
 1. File searching
 2. String splitting
 
-The first of these isn't so terrible, although this will get a little bit technical. 
+The first of these isn't so terrible, although this will get a little bit technical.
 (Don't worry if you don't follow totally, _most_ of the parsers you'll need have already been written and you just need to know how to extend them)
-We'll assume that block (and many others like it) is inside a file called `my_amazing_calc.log`. 
+We'll assume that block (and many others like it) is inside a file called `my_amazing_calc.log`.
 Let's also say we want to get that the line with dipole moment from it.
 If we could take the subsection of the string between the line
 
@@ -114,16 +133,16 @@ If we could take the subsection of the string between the line
  Dipole moment (field-independent basis, Debye):
 ```
 
-and 
+and
 
 ```lang-none
  Quadrupole moment (field-independent basis, Debye-Ang):
 ```
 
 we'd be most of the way there. So how would we do it?
-Well first we need to know how to search a file in python. 
+Well first we need to know how to search a file in python.
 We're going to work off the assumption that the file is very big and we don't want to make python read it all at once.
-And so the way we do this is by using the `.find` method on a python [memory-mapped file](https://docs.python.org/3/library/mmap.html). 
+And so the way we do this is by using the `.find` method on a python [memory-mapped file](https://docs.python.org/3/library/mmap.html).
 (I told you this would get technical)
 Basically this allows us to pretend a file is a string.
 Once we've found the our opening block, we track where in the file that was (using `.tell`), and then look for the closing tag.
@@ -149,7 +168,7 @@ class FileSearcher:
         self.fstream.close()
     def read_block(self, opening, closing):
         """reads the block between `opening` and `closing`"""
-        open_tag = opening.encode(self.encoding) # we need to encode our tag the same way we 
+        open_tag = opening.encode(self.encoding) # we need to encode our tag the same way we
         open_pos = self.stream.find(open_tag)
         new_pos = open_pos + len(open_tag)
         self.stream.seek(new_pos) # move to the end of the tag and search from there
@@ -181,7 +200,7 @@ If you want to see what that looks like, we have an example [here](https://githu
 
 Our block reader is also set up so that we can get multiple strings out just by using the same `read_block` multiple times withing the same `with` block.
 
-At this point, we get to do some nice string manipulation to get the actual dipole moment out. 
+At this point, we get to do some nice string manipulation to get the actual dipole moment out.
 The way we'll do this is by splitting the string every time we see `=`. Python strings are very kind and support a `.split` method to make this easy.
 
 So we'd do
@@ -212,13 +231,13 @@ and finally to get our dipole moment we use the python `float` function to conve
 
 Now imagine you want a different property from that log file. You get to figure this process out all over again for that one. And for the next. And the next.
 
-Hopefully this makes it clear why we've got such a preference for _clean_ data formats. 
+Hopefully this makes it clear why we've got such a preference for _clean_ data formats.
 
 Just keep in mind, _if you can't use NumPy, just use JSON_. But really, [if you can use NumPy use NumPy](NumpyFiles.md).
 
 ### A Note on Regular Expressions
 
-Python has support for [regular expressions](https://docs.python.org/3/library/re.html) (or regex). These are incredibly powerful and basically are a pattern language for strings. We wrote up a little regular expression builder so that if you the string from above 
+Python has support for [regular expressions](https://docs.python.org/3/library/re.html) (or regex). These are incredibly powerful and basically are a pattern language for strings. We wrote up a little regular expression builder so that if you the string from above
 
 ```python
 """
@@ -241,12 +260,11 @@ which will convert to the rather less-readable regular expression
 ```python
 "X=\\s+(\\d+)\\s+Y=\\s+(\\d+)\\s+Z=\\s+(\\d+)"
 ```
-
 and allow you to get the three numbers out. If you'd like to learn more, we're happy to share.
 
 ### Grep
 
-If you're working outside of python, you can also use the program [grep](https://man7.org/linux/man-pages/man1/grep.1.html) to do searches. 
+If you're working outside of python, you can also use the program [grep](https://man7.org/linux/man-pages/man1/grep.1.html) to do searches.
 This can be highly efficient, but grep does its pattern matching based on regular expressions, too.
 If you do want to use grep, you use it like
 
@@ -254,9 +272,15 @@ If you do want to use grep, you use it like
 grep <pattern> <file>
 ```
 
-and `grep` will spit out the matches for you. 
-Some people like to just use grep and manual cleaning in Excel to get their data out of files. 
+and `grep` will spit out the matches for you.
+Some people like to just use grep and manual cleaning in Excel to get their data out of files.
 We're pretty lazy, so we tend to stick to the programmatic way, as we can write the code once and keep on reusing it.
+
+## A Final note on Data Formats
+
+Python is a powerful language with native support for a surprising number of file types.
+So if you find yourself with a lot of data in a weird format, before you spend days writing a parser for it, take a few minutes and google if python has any kind of native support for it or if there's some simple library out there to help you out.
+Similarly, if you're stuck, [OpenBabel](http://openbabel.org/wiki/Babel) is always a good option to convert your data into a format you _can_ use.
 
 <span class="text-muted">Next:</span>
  [Getting Data out of your Program](ExportingDataOut.md)<br/>
