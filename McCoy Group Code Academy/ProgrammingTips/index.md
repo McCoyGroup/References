@@ -36,5 +36,6 @@ Unfortunately, Stack Overflow also has a bunch of _terrible_ examples, so to hel
 * [Martijn Peter's Answers](https://stackoverflow.com/search?q=user:100297+[python])
 * [Alex Martinelli's Answers](https://stackoverflow.com/search?q=user:95810+[python])
 * [This Person's Answers](https://stackoverflow.com/search?q=user:190597+[python])
+
 ---
 [Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/ProgrammingTips/index.md)
