@@ -267,7 +267,7 @@ A table for a paper shouldn't be how you save your results.
 If you _do_ want to learn about data presentation, we've got a section on [plotting](../Plotting) that you should check out.
 
 <span class="text-muted">Next:</span>
- [NumPy Data Files](NumpyFiles.md)
+ [NumPy Data Files](NumpyFiles.md)</br>
 <span class="text-muted">Previous:</span>
  [Getting Data into your Program](LoadingDataIn.md)
 
