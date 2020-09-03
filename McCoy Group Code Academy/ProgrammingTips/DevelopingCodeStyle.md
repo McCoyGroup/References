@@ -1,6 +1,6 @@
 # Code Style
 
-Hopefully over the course of these tutorials it's become clear that there is no single "right" way to do any programming task.
+Hopefully, over the course of these tutorials, it has become clear that there is no single "right" way to do any programming task.
 Generally, we feel that the best way to do something is the way that is clearest to you.
 And as you write more and more code, you'll start to develop a distinctive coding style, which reflects the way you logically tackle problems.
 We have no recommendations as to what this logical style should look like.
@@ -12,7 +12,7 @@ This probably seems like a meaningless thing to be writing about, but it actuall
 or when you're sharing code with someone else.
 If you follow the conventions, the intent of your code is baked into the names (much like our earlier discussion on self-documenting code).
 This makes code much, much faster to write, read, share, debug, etc. and has the added benefit of making errors less common in the first place, since pernicious, subtle issues are handle automatically by the style conventions.
-The usual way these kinds of things are codified is in a style guide. [Google has one](https://google.github.io/styleguide/pyguide.html), [this person has one](https://docs.python-guide.org/writing/style/), [the Python organization even has one](https://www.python.org/dev/peps/pep-0008/#introduction).
+The usual way these kinds of things are codified is in a style guide. [Google has one](https://google.github.io/styleguide/pyguide.html), [this person has one](https://docs.python-guide.org/writing/style/), [the Python organization even has one](https://www.python.org/dev/peps/pep-0008/#introduction). You will here software developers talking about "PEP 8", this is what they are referring to.
 
 The nice thing, and one of the things that makes Python such a shareable language, is that _most_ of the key points in all of these style guides are shared. 
 Our suggestion is to default to the [Python organization guide](https://www.python.org/dev/peps/pep-0008/#introduction), but if you've got strong opinions on this
