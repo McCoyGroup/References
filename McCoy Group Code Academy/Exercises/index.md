@@ -34,8 +34,8 @@ We're experimenting with [binder](https://mybinder.org/) to provide an enviromen
 
 For local use, we recommend downloading the whole set of exercises [here](https://github.com/McCoyGroup/References/raw/gh-pages/McCoy%20Group%20Code%20Academy/Exercises.zip) so that you can use the [Helpers](https://github.com/McCoyGroup/References/tree/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Helpers) and [Data](https://github.com/McCoyGroup/References/tree/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Data) we've included for you.
 If you just want to look at an individual exercise, though, each one is just a `.py` file that downloads automatically, but if you'd prefer you can also view them on GitHub.
+Also, **if you want to give us feedback, we really appreciate it. Leave us comments [here](https://github.com/McCoyGroup/References/issues/new?title=Exercise%20Feedback)**.
 {: .alert .alert-success}
-
 
 ### Fundamentals
 
@@ -48,10 +48,7 @@ These will be referenced inside the exercises, but don't feel like you need to w
 * [Plotting Harmonic and Morse Oscillator Potentials](Fundamentals/PlotOscillators.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/PlotOscillators.py))
 * [Filling out a Matrix](Fundamentals/FillingAMatrix.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/FillingAMatrix.py))
 * [Turning a Piecewise Formula into a Matrix](Fundamentals/PiecewiseToMatrix.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/PiecewiseToMatrix.py))
-* [Performing a Change of Basis](Fundamentals/ChoB.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/ChoB.py))
 * [Fitting to a Fourier Expansion](Fundamentals/FourierExpansion.py) ([View on GitHub](https://github.com/McCoyGroup/References/blob/gh-pages/McCoy%20Group%20Code%20Academy/Exercises/Fundamentals/FourierExpansion.py))
-
-
 
 
 ### Basis Set Methods

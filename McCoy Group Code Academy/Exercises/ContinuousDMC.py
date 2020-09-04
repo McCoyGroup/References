@@ -73,13 +73,15 @@ class Continuous_weight_DMC():
     # parameter space! Plus now we can add conditions into our run function so we can evaluate different potential types with ease!
     @staticmethod
     def HO_potE(coords, frequency=..., re=...):
-        """Here we will use a harmonic oscillator function to obtain a potential energy array for our walkers
-           :param frequency: the frequency of the vibration (atomic units)
-           :type frequency: float
-           :param re: Equilibrium distance of vibration (atomic units)
-           :type re: float
-           :return: Potential energy array
-           :rtype: np.array """
+        """
+        Here we will use a harmonic oscillator function to obtain a potential energy array for our walkers
+       :param frequency: the frequency of the vibration (atomic units)
+       :type frequency: float
+       :param re: Equilibrium distance of vibration (atomic units)
+       :type re: float
+       :return: Potential energy array
+       :rtype: np.array
+       """
         # First solve for the HO potential energy at each of the walkers' coordinates using the appropriate formula for
         # a harmonic oscillator potential
 
@@ -102,8 +104,10 @@ class Continuous_weight_DMC():
 
     @staticmethod
     def Pot_E_surface_collab(coords):
-        """Here we will use the potential energy surface from a collaborator such as the wonderful CH5 surface from the
-        Bowman group"""
+        """
+        Here we will use the potential energy surface from a collaborator such as the wonderful CH5 surface from the
+        Bowman group
+        """
         # If you need help interfacing with one of these surfaces please ask a group mate as it is likely that someone
         # else already has
 

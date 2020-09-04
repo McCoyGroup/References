@@ -1,59 +1,66 @@
-""" Goal: The goal of this exercise is to write a set of functions to flexibly expand a function using a Fourier series.
-We will use ideas from: Numpy 101
-After this, recommended next steps are: Particle on A Ring Basis Set Representation and Calculate POR wavefunctions
+"""
+Goal: To be able to expand a function as a Fourier series
+Fundamentals: None
+Related Exercises: Taylor Series, Basis Expansion
 """
 
-# As with any script we will start by using import statements for any necessary packages
+## Imports: put all import statments here
+
 import numpy as np
-import matplotlib.pyplot as plt
-from scipy import optimize
 
-def cosExpansion(theta, coeffs):
-    """
-    Here we are going to describe an expansion in cos,
-    you should think about ways to make it flexible in the order of the expansion,
-    but it is okay to start with just defining it as a specific order say 4th or 6th.
-    :param theta: x-values (probably a range of values from 0 to 2 pi)
-    :type theta: np.array
-    :param coeffs: expansion coefficents, ultimately you will use this function to calculate the expanded curve.
-    :type coeffs: np.array
-    :return: the values of the function evaluated at x
-    :rtype: np.array
-    """
-    # here we are going to implement a little trick, but note that if you want this function to do anything other than
-    # a 4th order expansion in cos, you will have to adjust it.
-    return coeffs[0] + coeffs[1]*np.sin(x) + coeffs[2]*np.sin(2*x) + coeffs[3]*np.sin(3*x) + coeffs[4]*np.sin(4*x)
+## Exports: put all the names things we might want to use in other scripts here
 
+__all__ = [
+    "FourierSeries1D"
+]
 
-def CalculateCoefficents(function_data, expansion_form):
+## Objects: put all the classes we're defining here
+class FourierSeries1D:
     """
-    Here you should use something like optimize.curve_fit
-    (https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html) in order to calculate the
-    coefficients in the expansion
-    :param function_data: a [numPts, 2] array of data to be fit
-    :type function_data: np.ndarray
-    :param expansion_form: the function defining your expansion
-    :type expansion_form: function
-    :return: expansion coefficents
-    :rtype: np.array
-    """
+    This is a class that represents a 1D Fourier series expansion of a function
+    A Fourier series is defined in terms of a reference value (r0), a length (L), & two sets of coefficients (c_k & sk_) by
 
-    return coeffs
+        f(x) = r0/2 + sum(c_k/L cos(2Pi/L  k), k=1...) + sum(s_k/L cos(2Pi/L  k), k=1...)
 
-def plot_curves(theta):
+    Construct it like
+        fun = FourierSeries1D(cos_coeffs, sin_coeffs)
+    and use it like
+        vals = fun(coords)
     """
-    What good is calculating a bunch of stuff and not looking at it? So here we are going to write out a quick
-    function to calculate and plot our expansion. Note: you could also think of this as a "run" type function.
-    :param theta: x-values (probably a range of values from 0 to 2 pi)
-    :type theta: np.array
-    :return: the values of the function evaluated at x
-    :rtype: np.array
-    """
-
-    # this will probably end with something like plt.show() or plt.savefig()
-    return values
+    def __init__(self, cos_coeffs, sin_coeffs, center=0, ref=0, length=2*np.pi):
+        """
+        :param cos_coeffs: the coefficients to multiply into the cos part of the series
+        :type cos_coeffs: Iterable[float]
+        :param sin_coeffs: the coefficients to multiply into the sin part of the series
+        :type sin_coeffs: Iterable[float]
+        :param center: the point we are expanding around
+        :type center: float
+        :param ref: the value of the function at the point we're expanding around
+        :type ref: float
+        :param length: the length of the pox in the series
+        :type length: float
+        """
+        ...
+    def evaluate(self, coords):
+        """
+        Takes a set of coords and returns a Fourier series approximation of it
+        :param coords:
+        :type coords:
+        :return:
+        :rtype:
+        """
+        ...
+    def __call__(self, coords):
+        return self.evaluate(coords)
 
 if __name__ == '__main__':
-    # adding this makes it so you can get the plots/values if you chose to run the script in the command line
-    theta = np.arange()  # don't forget to fill this in!
-    plot_curves(theta)
+    # We'll perform a Fourer series expansion of some function based off of a set of randomly chosen coefficients
+    c_k = [0, 1, 2, 3]
+    s_k = [-0, -1, -2, -3]
+    center = 1
+    ref = 0
+    length = 5*np.pi
+    series = FourierSeries1D(c_k, s_k, center=center, ref=ref, length=length)
+
+    coords = np.linspace(0, 5, 100)
+    print(series(coords))
