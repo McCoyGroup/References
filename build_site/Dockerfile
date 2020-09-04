@@ -12,7 +12,7 @@ LABEL "com.github.actions.color"="orange"
 
 RUN \
     echo $PWD && \
-    ls
+    echo $(ls)
 
 COPY ./build_site/build_site.sh ../build_site.sh
 WORKDIR ..

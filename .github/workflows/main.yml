@@ -7,7 +7,7 @@ name: McBuild site
 jobs:
   mcbuild_site:
     runs-on: ubuntu-latest
-    name: Build out group webstite
+    name: Build out group woobstoot
     steps:
       # To use this repository's private action,
       # you must check out the repository

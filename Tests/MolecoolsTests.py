@@ -52,10 +52,11 @@ class MolecoolsTests(TestCase):
             # m.guess_bonds = False
             # new_mol.guess_bonds = False
             # m = m #type: Molecule
-            # g1, a, b = m.plot()
-            # ref.plot(figure=g1)
+            # g1, a, b = ref.plot()
+            # # ref.plot(figure=g1)
+            # rot_ref.plot(figure=g1)
             # g, a, b = new_mol.plot()
-            # rot_ref.plot(figure=g)
+            # rot_ref.plot(figure=g, atom_style=dict(color='black'))
             # g.show()
             fuckup = np.linalg.norm(new_mol.coords[sel] - rot_ref.coords[sel])
             self.assertLess(fuckup/len(sel), .1)
