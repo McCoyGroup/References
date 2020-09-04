@@ -1,0 +1,37 @@
+## <a id="Psience.Molecools.Vibrations.MolecularVibrations">MolecularVibrations</a>
+
+
+### Properties and Methods
+```python
+basis: property
+molecule: property
+coords: property
+```
+<a id="Psience.Molecools.Vibrations.MolecularVibrations.__init__">&nbsp;</a>
+```python
+__init__(self, molecule, basis, freqs=None, init=None): 
+```
+Sets up a vibration for a Molecule object over the CoordinateSystem basis
+- `molecule`: `Molecule`
+    >No description...
+- `init`: `None | CoordinateSet`
+    >No description...
+- `basis`: `MolecularNormalModes`
+    >No description...
+
+<a id="Psience.Molecools.Vibrations.MolecularVibrations.__len__">&nbsp;</a>
+```python
+__len__(self): 
+```
+
+<a id="Psience.Molecools.Vibrations.MolecularVibrations.displace">&nbsp;</a>
+```python
+displace(self, displacements=None, amt=0.1, n=1, which=0): 
+```
+
+<a id="Psience.Molecools.Vibrations.MolecularVibrations.visualize">&nbsp;</a>
+```python
+visualize(self, step_size=0.1, steps=(5, 5), which=0, anim_opts=None, mode='fast', **plot_args): 
+```
+
+### Examples

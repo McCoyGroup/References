@@ -32,7 +32,7 @@ add_simulation(self, name, data=None, config_file=None, **opts):
 
 <a id="RynLib.DoMyCode.SimulationManager.SimulationManager.edit_simulation">&nbsp;</a>
 ```python
-edit_simulation(self, name, **opts): 
+edit_simulation(self, name, optfile=None, **opts): 
 ```
 
 <a id="RynLib.DoMyCode.SimulationManager.SimulationManager.simulation_config">&nbsp;</a>
@@ -55,6 +55,11 @@ simulation_ran(self, name):
 load_simulation(self, name): 
 ```
 
+<a id="RynLib.DoMyCode.SimulationManager.SimulationManager.copy_simulation">&nbsp;</a>
+```python
+copy_simulation(self, name, new_name): 
+```
+
 <a id="RynLib.DoMyCode.SimulationManager.SimulationManager.restart_simulation">&nbsp;</a>
 ```python
 restart_simulation(self, name): 
@@ -62,7 +67,7 @@ restart_simulation(self, name):
 
 <a id="RynLib.DoMyCode.SimulationManager.SimulationManager.run_simulation">&nbsp;</a>
 ```python
-run_simulation(self, name): 
+run_simulation(self, name, restart=False): 
 ```
 
 <a id="RynLib.DoMyCode.SimulationManager.SimulationManager.export_simulation">&nbsp;</a>

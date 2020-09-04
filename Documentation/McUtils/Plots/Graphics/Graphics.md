@@ -3,32 +3,29 @@ A mini wrapper to matplotlib.pyplot to create a unified interface I know how to 
 
 ### Properties and Methods
 ```python
+default_style: dict
 plot_label: property
 plot_legend: property
 axes_labels: property
+frame: property
 plot_range: property
 ticks: property
 ticks_style: property
+scale: property
 aspect_ratio: property
 image_size: property
+padding: property
+padding_left: property
+padding_right: property
+padding_top: property
+padding_bottom: property
+spacings: property
 background: property
-frame: property
 colorbar: property
-scale: property
 ```
-<a id="McUtils.Plots.Graphics.Graphics.__init__">&nbsp;</a>
-```python
-__init__(self, *args, figure=None, axes=None, frame=((True, False), (True, False)), subplot_kw=None, event_handlers=None, animate=None, axes_labels=None, plot_label=None, plot_range=None, plot_legend=None, ticks=None, scale=None, image_size=None, background='white', aspect_ratio=1, colorbar=None, **kwargs): 
-```
-
 <a id="McUtils.Plots.Graphics.Graphics.set_options">&nbsp;</a>
 ```python
-set_options(self, axes_labels=None, plot_label=None, plot_range=None, plot_legend=None, frame=None, ticks=None, scale=None, ticks_style=None, image_size=None, aspect_ratio=None, background=None, colorbar=None, prolog=None, epilog=None, **parent_opts): 
-```
-
-<a id="McUtils.Plots.Graphics.Graphics.add_colorbar">&nbsp;</a>
-```python
-add_colorbar(self, graphics=None, norm=None, cmap=None, **kw): 
+set_options(self, axes_labels=None, plot_label=None, plot_range=None, plot_legend=None, frame=None, ticks=None, scale=None, padding=None, spacings=None, ticks_style=None, image_size=None, aspect_ratio=None, background=None, colorbar=None, prolog=None, epilog=None, **parent_opts): 
 ```
 
 ### Examples

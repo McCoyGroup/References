@@ -26,7 +26,7 @@ compiled: property
 ```
 <a id="McUtils.Parsers.RegexPatterns.RegexPattern.__init__">&nbsp;</a>
 ```python
-__init__(self, pat, name=None, children=None, parents=None, dtype=None, repetitions=None, key=None, joiner='', join_function=None, wrapper_function=None, suffix=None, prefix=None, parser=None, handler=None, capturing=None, allow_inner_captures=False): 
+__init__(self, pat, name=None, children=None, parents=None, dtype=None, repetitions=None, key=None, joiner='', join_function=None, wrapper_function=None, suffix=None, prefix=None, parser=None, handler=None, default_value=None, capturing=None, allow_inner_captures=False): 
 ```
 
 - `pat`: `str | callable`
@@ -149,7 +149,7 @@ Combines self and other
 
 <a id="McUtils.Parsers.RegexPatterns.RegexPattern.__call__">&nbsp;</a>
 ```python
-__call__(self, other, *args, name=None, dtype=None, repetitions=None, key=None, joiner=None, join_function=None, wrap_function=None, suffix=None, prefix=None, multiline=None, parser=None, handler=None, capturing=None, allow_inner_captures=None, **kwargs): 
+__call__(self, other, *args, name=None, dtype=None, repetitions=None, key=None, joiner=None, join_function=None, wrap_function=None, suffix=None, prefix=None, multiline=None, parser=None, handler=None, capturing=None, default=None, allow_inner_captures=None, **kwargs): 
 ```
 Wraps self around other
 - `other`: `RegexPattern`

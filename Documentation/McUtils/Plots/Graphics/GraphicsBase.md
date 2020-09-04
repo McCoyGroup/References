@@ -9,12 +9,11 @@ event_handlers: property
 animated: property
 prolog: property
 epilog: property
-modified: type
 opts: property
 ```
 <a id="McUtils.Plots.Graphics.GraphicsBase.__init__">&nbsp;</a>
 ```python
-__init__(self, *args, figure=None, axes=None, subplot_kw=None, parent=None, non_interactive=None, **opts): 
+__init__(self, *args, figure=None, tighten=False, axes=None, subplot_kw=None, parent=None, image_size=None, padding=None, aspect_ratio=None, non_interactive=None, mpl_backend=None, theme=None, prop_manager=<class 'McUtils.Plots.Properties.GraphicsPropertyManager'>, theme_manager=<class 'McUtils.Plots.Styling.ThemeManager'>, managed=None, **opts): 
 ```
 
 - `args`: `Any`
@@ -83,6 +82,11 @@ Creates a copy of the object with new axes and a new figure
 - `:returns`: `_`
     >No description...
 
+<a id="McUtils.Plots.Graphics.GraphicsBase.prep_show">&nbsp;</a>
+```python
+prep_show(self): 
+```
+
 <a id="McUtils.Plots.Graphics.GraphicsBase.show">&nbsp;</a>
 ```python
 show(self, reshow=True): 
@@ -93,9 +97,19 @@ show(self, reshow=True):
 clear(self): 
 ```
 
+<a id="McUtils.Plots.Graphics.GraphicsBase.savefig">&nbsp;</a>
+```python
+savefig(self, where, format='png', **kw): 
+```
+
 <a id="McUtils.Plots.Graphics.GraphicsBase.to_png">&nbsp;</a>
 ```python
 to_png(self): 
+```
+
+<a id="McUtils.Plots.Graphics.GraphicsBase.add_colorbar">&nbsp;</a>
+```python
+add_colorbar(self, graphics=None, norm=None, cmap=None, size=(20, 200), tick_padding=40, **kw): 
 ```
 
 ### Examples

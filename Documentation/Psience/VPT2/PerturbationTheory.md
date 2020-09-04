@@ -5,7 +5,6 @@
 ### Members:
 
   - [PerturbationTheoryWavefunctions](PerturbationTheory/PerturbationTheoryWavefunctions.md)
-  - [PerturbationTheoryException](PerturbationTheory/PerturbationTheoryException.md)
   - [PerturbationTheoryHamiltonian](PerturbationTheory/PerturbationTheoryHamiltonian.md)
 
 ### Examples:

@@ -14,6 +14,7 @@ All of the McUtils packages stand mostly on their own, but there will be little 
   - [Plots](McUtils/Plots.md)
   - [Zachary](McUtils/Zachary.md)
   - [Coordinerds](McUtils/Coordinerds.md)
+  - [ExternalPrograms](McUtils/ExternalPrograms.md)
 
 ### Examples:
 

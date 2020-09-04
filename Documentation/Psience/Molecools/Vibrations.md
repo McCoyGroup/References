@@ -1,11 +1,11 @@
 # <a id="Psience.Molecools.Vibrations">Psience.Molecools.Vibrations</a>
     
-
+Provides classes that manage molecular vibrations
 
 ### Members:
 
-  - [VibrationalModes](Vibrations/VibrationalModes.md)
-  - [NormalModeCoordinates](Vibrations/NormalModeCoordinates.md)
+  - [MolecularVibrations](Vibrations/MolecularVibrations.md)
+  - [MolecularNormalModes](Vibrations/MolecularNormalModes.md)
 
 ### Examples:
 

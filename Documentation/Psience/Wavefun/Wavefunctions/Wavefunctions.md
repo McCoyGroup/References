@@ -5,7 +5,7 @@ An object representing a set of wavefunctions.
 ### Properties and Methods
 <a id="Psience.Wavefun.Wavefunctions.Wavefunctions.__init__">&nbsp;</a>
 ```python
-__init__(self, energies=None, wavefunctions=None, wavefunction_class=None, **opts): 
+__init__(self, energies=None, wavefunctions=None, indices=None, wavefunction_class=None, **opts): 
 ```
 
 <a id="Psience.Wavefun.Wavefunctions.Wavefunctions.get_wavefunctions">&nbsp;</a>

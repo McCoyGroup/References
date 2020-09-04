@@ -24,7 +24,7 @@ filled_to: property
 ```
 <a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__init__">&nbsp;</a>
 ```python
-__init__(self, stype, num_elements=50): 
+__init__(self, stype, num_elements=50, padding_mode='fill', padding_value=None): 
 ```
 
 - `stype`: `StructuredType`

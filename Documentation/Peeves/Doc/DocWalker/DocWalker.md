@@ -4,7 +4,7 @@
 ### Properties and Methods
 <a id="Peeves.Doc.DocWalker.DocWalker.__init__">&nbsp;</a>
 ```python
-__init__(self, objects, out=None, module_writer=None, class_writer=None, function_writer=None, object_writer=None): 
+__init__(self, objects, out=None, module_writer=None, class_writer=None, function_writer=None, object_writer=None, ignore_paths=None): 
 ```
 
 <a id="Peeves.Doc.DocWalker.DocWalker.write_object">&nbsp;</a>

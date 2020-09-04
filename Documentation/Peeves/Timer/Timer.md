@@ -25,6 +25,11 @@ start(self):
 stop(self): 
 ```
 
+<a id="Peeves.Timer.Timer.log">&nbsp;</a>
+```python
+log(self): 
+```
+
 <a id="Peeves.Timer.Timer.__enter__">&nbsp;</a>
 ```python
 __enter__(self): 

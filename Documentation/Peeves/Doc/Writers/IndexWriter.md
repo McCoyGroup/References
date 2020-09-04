@@ -5,6 +5,11 @@
 ```python
 template: str
 ```
+<a id="Peeves.Doc.Writers.IndexWriter.get_identifier">&nbsp;</a>
+```python
+get_identifier(cls, o): 
+```
+
 <a id="Peeves.Doc.Writers.IndexWriter.get_file_paths">&nbsp;</a>
 ```python
 get_file_paths(self): 

@@ -5,7 +5,6 @@ Provides classes for adding importance sampling to a simulation / managing impor
 ### Members:
 
   - [ImportanceSampler](ImportanceSampler/ImportanceSampler.md)
-  - [ImportanceSamplerManager](ImportanceSampler/ImportanceSamplerManager.md)
 
 ### Examples:
 

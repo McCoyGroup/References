@@ -4,12 +4,12 @@ Represents a single wavefunction object
 ### Properties and Methods
 <a id="Psience.Wavefun.Wavefunctions.Wavefunction.__init__">&nbsp;</a>
 ```python
-__init__(self, energy, data, parent=None, **opts): 
+__init__(self, energy, data, parent=None, index=None, **opts): 
 ```
 
 <a id="Psience.Wavefun.Wavefunctions.Wavefunction.plot">&nbsp;</a>
 ```python
-plot(self, figure=None, **opts): 
+plot(self, figure=None, index=None, **opts): 
 ```
 Uses McUtils to plot the wavefunction on the passed figure (makes a new one if none)
 - `figure`: `Graphics | Graphics3D`

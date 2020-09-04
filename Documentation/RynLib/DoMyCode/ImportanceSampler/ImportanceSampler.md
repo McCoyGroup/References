@@ -3,11 +3,12 @@ A general-purpose importance sampler that applies acceptance/rejection criteria 
 
 ### Properties and Methods
 ```python
+mpi_manager: property
 psi: property
 ```
 <a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.__init__">&nbsp;</a>
 ```python
-__init__(self, trial_wavefunctions, derivs=None, name=None): 
+__init__(self, trial_wavefunctions, derivs=None, name=None, dx=0.001): 
 ```
 
 <a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.__repr__">&nbsp;</a>
@@ -17,7 +18,7 @@ __repr__(self):
 
 <a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.init_params">&nbsp;</a>
 ```python
-init_params(self, sigmas, time_step, mpi_manager, atoms, *extra_args): 
+init_params(self, sigmas, time_step, mpi_manager, atoms, *extra_args, atomic_units=False): 
 ```
 
 - `sigmas`: `Any`
@@ -42,6 +43,11 @@ clean_up(self):
 ```python
 setup_psi(self, crds): 
 ```
+Sets up
+- `crds`: `Any`
+    >No description...
+- `:returns`: `_`
+    >No description...
 
 <a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.accept">&nbsp;</a>
 ```python
@@ -62,7 +68,7 @@ accept_step(self, step_no, coords, disp):
 
 <a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.drift">&nbsp;</a>
 ```python
-drift(self, coords, dx=0.001): 
+drift(self, coords, dx=None): 
 ```
 Calcuates the drift term by doing a numerical differentiation
 - `coords`: `Any`
@@ -74,7 +80,7 @@ Calcuates the drift term by doing a numerical differentiation
 
 <a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.psi_calc">&nbsp;</a>
 ```python
-psi_calc(self, coords, dx=0.001): 
+psi_calc(self, coords, dx=None): 
 ```
 Calculates the trial wavefunction over the three displacements that are used in numerical differentiation
 - `coords`: `Any`
@@ -108,7 +114,7 @@ Computes the metropolis step
 
 <a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.local_kin">&nbsp;</a>
 ```python
-local_kin(self, coords, dx=0.001): 
+local_kin(self, coords, dx=None): 
 ```
 Calculates the local kinetic energy
 - `time_step`: `Any`

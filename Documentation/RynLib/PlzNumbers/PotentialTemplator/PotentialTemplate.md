@@ -4,7 +4,7 @@ A `TemplateWriter` that handles most of the necessary boiler plate to get a C++ 
 ### Properties and Methods
 <a id="RynLib.PlzNumbers.PotentialTemplator.PotentialTemplate.__init__">&nbsp;</a>
 ```python
-__init__(self, *ignored, lib_name=None, function_name=None, potential_source=None, raw_array_potential=None, arguments=(), linked_libs=None, static_source=False, extra_functions=(), fortran_potential=False, shim_script='', conversion=None): 
+__init__(self, *ignored, lib_name=None, function_name=None, potential_source=None, raw_array_potential=None, arguments=None, linked_libs=None, static_source=False, extra_functions=(), fortran_potential=False, shim_script=None, conversion=None): 
 ```
 
 - `lib_name`: `str`

@@ -7,7 +7,6 @@ and pertubation theory computations
 ### Members:
 
   - [PerturbationTheoryWavefunctions](VPT2/PerturbationTheory/PerturbationTheoryWavefunctions.md)
-  - [PerturbationTheoryException](VPT2/PerturbationTheory/PerturbationTheoryException.md)
   - [PerturbationTheoryHamiltonian](VPT2/PerturbationTheory/PerturbationTheoryHamiltonian.md)
 
 ### Examples:

@@ -3,6 +3,7 @@ Defines all of the overall RynLib config things
 
 ### Properties and Methods
 ```python
+VERSION_NUMBER: str
 root: str
 config_file: str
 mpi_dir: str

@@ -6,6 +6,7 @@ Defines all of the CLI options for working with simulations
 list_simulations: method
 add_simulation: method
 remove_simulation: method
+copy_simulation: method
 simulation_status: method
 edit_simulation: method
 export_simulation: method
@@ -21,6 +22,7 @@ list_samplers: method
 add_sampler: method
 remove_sampler: method
 test_sampler: method
+test_sampler_mpi: method
 ```
 
 

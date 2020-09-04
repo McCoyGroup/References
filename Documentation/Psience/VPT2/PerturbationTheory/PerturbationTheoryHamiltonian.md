@@ -1,39 +1,22 @@
 ## <a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian">PerturbationTheoryHamiltonian</a>
-Represents the main handler used in the perturbation theory calculation
-    I probably want it to rely on a Molecule object...
-- `coords`: `np.ndarray | CoordinateSet`
-    >The current coordinates of the system (used for computing the Jacobians)
-- `masses`: `Any`
-    >The masses of the coordinate system (used for computing the G-matrix and friends)
-- `pot_derivs`: `Any`
-    >The Cartesian derivatives of the potential
-- `modes`: `NormalModeCoordinates`
-    >The Cartesian coordinate normal modes and the corresponding inverse
-- `internals`: `CoordinateSystem`
-    >The internal coordinate normal modes
-- `numbers_of_quanta`: `np.ndarray | Iterable[int]`
+Represents the main Ha,o; used in the perturbation theory calculation
+- `molecule`: `Molecule`
+    >The molecule we're doing the perturbation theory on
+- `n_quanta`: `int | np.ndarray | Iterable[int]`
     >The numbers of quanta of excitation to use for every mode
+- `basis`: `RepresentationBasis | None`
+    >The basis used for representing, e.g., pQp and QQQ
 
 ### Properties and Methods
 ```python
 from_fchk: method
-ExpansionTerms: type
-PotentialTerms: type
-KineticTerms: type
-SubHamiltonian: type
 H0: property
 H1: property
 H2: property
-ProductOperator: type
 ```
 <a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.__init__">&nbsp;</a>
 ```python
-__init__(self, *ignore, coords=None, masses=None, pot_derivs=None, modes=None, internals=None, n_quanta=3, undimensionalize=True): 
-```
-
-<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.undimensionalize">&nbsp;</a>
-```python
-undimensionalize(self, masses, modes): 
+__init__(self, molecule=None, n_quanta=3, basis=None): 
 ```
 
 <a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.get_state_indices">&nbsp;</a>
@@ -62,7 +45,9 @@ get_corrections(self, states=15, coupled_states=None, coeff_threshold=None, ener
 ```python
 get_wavefunctions(self, states=15, coupled_states=None, coeff_threshold=None, energy_threshold=None): 
 ```
-Computes perturbation expansion of the wavefunctions and energies
+Computes perturbation expansion of the wavefunctions and energies.
+            We're pushing all higher-level stuff into the wavefunctions, so this is
+              usually the function we want
 - `states`: `int | iterable[int] | None`
     >the states to target
 - `:returns`: `np.ndarray`

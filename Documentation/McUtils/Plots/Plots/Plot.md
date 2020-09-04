@@ -9,7 +9,7 @@ plot_style: property
 ```
 <a id="McUtils.Plots.Plots.Plot.__init__">&nbsp;</a>
 ```python
-__init__(self, *params, method='plot', figure=None, axes=None, subplot_kw=None, plot_style=None, **opts): 
+__init__(self, *params, method='plot', figure=None, axes=None, subplot_kw=None, plot_style=None, theme=None, **opts): 
 ```
 
 - `params`: `Any`

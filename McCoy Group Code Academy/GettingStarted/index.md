@@ -3,9 +3,10 @@
 ## Introduction
 The goal of **McCode Academy** (and this whole website honestly) is to get people comfortable with the ways that math, code, and chemical intuition intersect. In order to do that, we (the McCoy Group circa 2020) are documenting some of the most important things and most common stumbling blocks we found while getting started ourselves. We hope that in this way, we can help you avoid some headaches and feel more confident diving into your first research project. 
 
-Through these pages, we have attempted to *hit the highlights* and lay a nice ground work for using Python in a quantum chemistry setting. You will find lists of helpful functions, common issues we've faced (and solutions to them), and some guiding exercises for applying these tools. 
+Through these pages, we have attempted to *hit the highlights* and lay a nice ground work for using Python in a quantum chemistry setting. 
+You will find lists of helpful functions, common issues we've faced (and solutions to them), and some guiding exercises for applying these tools.
 
-**Note:** The biggest hurdle to overcome when starting out isn't the kind of abstract thinking coding requires, nor is it needing to understand the syntax of the language, and it's definitely not needing to know how computers do what they do--very few programmers actually know that.
+The biggest hurdle to overcome when starting out isn't the kind of abstract thinking coding requires, nor is it needing to understand the syntax of the language, and it's definitely not needing to know how computers do what they do--very few programmers actually know that.
 Instead, it's literally just getting everything installed and playing nicely together.
 So we're gonna walk through the basics of what'll be needed to get through this tutorial.
 

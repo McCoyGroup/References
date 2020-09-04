@@ -9,7 +9,7 @@ The core package that handles the DMC simulation algorithms
   - [SimulationManager](DoMyCode/SimulationManager/SimulationManager.md)
   - [WalkerSet](DoMyCode/WalkerSet/WalkerSet.md)
   - [ImportanceSampler](DoMyCode/ImportanceSampler/ImportanceSampler.md)
-  - [ImportanceSamplerManager](DoMyCode/ImportanceSampler/ImportanceSamplerManager.md)
+  - [ImportanceSamplerManager](DoMyCode/ImportanceSamplerManager/ImportanceSamplerManager.md)
 
 ### Examples:
 

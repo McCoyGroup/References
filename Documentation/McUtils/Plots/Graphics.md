@@ -8,7 +8,6 @@ Provides Graphics base classes that can be extended upon
   - [Graphics](Graphics/Graphics.md)
   - [Graphics3D](Graphics/Graphics3D.md)
   - [GraphicsGrid](Graphics/GraphicsGrid.md)
-  - [modified](Graphics/GraphicsBase/modified.md)
 
 ### Examples:
 

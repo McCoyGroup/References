@@ -15,7 +15,7 @@ param_template: str
 ```
 <a id="Peeves.Doc.Writers.DocWriter.__init__">&nbsp;</a>
 ```python
-__init__(self, obj, out_file, template=None, root=None): 
+__init__(self, obj, out_file, template=None, root=None, ignore_paths=None): 
 ```
 
 - `obj`: `Any`
