@@ -17,9 +17,7 @@ git clone https://github.com/McCoyGroup/Psience.git
 git clone https://github.com/McCoyGroup/RynLib.git
 ## run the docs script
 
-echo $(ls /home)
-echo $(ls /home/References)
-python3 References/docs.py
+PYTHONPATH=/home python3 References/docs.py
 ### push back to main
 #git add -A && git commit -m "Built out site"
 #git push -u origin master HEAD
