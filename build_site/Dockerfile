@@ -10,11 +10,6 @@ LABEL "com.github.actions.description"="Builds the McCoy group references websit
 LABEL "com.github.actions.icon"="git"
 LABEL "com.github.actions.color"="orange"
 
-RUN \
-    echo $PWD && \
-    echo $(ls)
+COPY build_site.sh /build_site.sh
 
-COPY ./build_site/build_site.sh ../build_site.sh
-WORKDIR ..
-
-ENTRYPOINT ["sh", "build_site.sh"]
+ENTRYPOINT ["sh", "/build_site.sh"]
