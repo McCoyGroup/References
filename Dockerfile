@@ -23,4 +23,4 @@ LABEL "com.github.actions.color"="orange"
 
 COPY . /home/References
 
-ENTRYPOINT ["sh", "/home/References/build_site.sh"]
+ENTRYPOINT ["sh", "/home/References/build_site/build_site.sh"]
