@@ -13,5 +13,5 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Hello world action step
+      - name: McBuild site
         uses: ./build_site # Uses an action in the root directory
