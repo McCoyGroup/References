@@ -21,7 +21,6 @@ LABEL "com.github.actions.description"="Builds the McCoy group references websit
 LABEL "com.github.actions.icon"="git"
 LABEL "com.github.actions.color"="orange"
 
-COPY /home/runner/work/References/References /home/References
-COPY build_site.sh /build_site.sh
+COPY . /home/References
 
-ENTRYPOINT ["sh", "/build_site.sh"]
+ENTRYPOINT ["sh", "/home/References/build_site.sh"]

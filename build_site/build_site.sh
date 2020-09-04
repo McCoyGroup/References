@@ -6,8 +6,6 @@ set -e
 ##
 
 # get into the parent folder?
-echo $(ls /)
-echo $(ls /home)
 cd /home
 # configure git
 git config --global user.name '${GITHUB_ACTOR}'

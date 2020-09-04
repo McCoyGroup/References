@@ -68,8 +68,11 @@ class MolecoolsTests(TestCase):
 
         scan = Molecule.from_file(scan_file)
         ref = Molecule.from_file(ref_file)
+        sel = np.where(ref.masses>3)[0]
+        pax_rot = ref.principle_axis_frame(sel=sel, inverse=True)  # type: MolecularTransformation
+        rot_ref = pax_rot.apply(ref)
 
-        transf = scan.eckart_frame(ref, sel=np.where(ref.masses>3)[0])
+        transf = scan.eckart_frame(rot_ref, sel=sel)
 
         carts, dips = DipoleSurface.get_log_values(scan_file, keys=("StandardCartesianCoordinates", "OptimizedDipoleMoments"))
         rot_dips = np.array([ np.dot(t.transformation_function.transform, d) for t,d in zip(transf, dips) ])
@@ -85,7 +88,7 @@ class MolecoolsTests(TestCase):
         p2= Plot(dists, dips[:, 0], figure=g[0, 1])
         Plot(dists, dips[:, 1], figure=p2)
         Plot(dists, dips[:, 2], figure=p2)
-        # g.show()
+        g.show()
 
 
     @validationTest
