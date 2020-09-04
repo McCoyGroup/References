@@ -19,5 +19,5 @@ git clone https://github.com/McCoyGroup/RynLib.git
 
 PYTHONPATH=/home python3 References/docs.py
 ### push back to main
-#git add -A && git commit -m "Built out site"
-#git push -u origin master HEAD
+git add -A && git commit -m "Built out site"
+git push -u origin master HEAD
