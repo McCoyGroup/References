@@ -18,3 +18,9 @@ All of the McUtils packages stand mostly on their own, but there will be little 
 
 ### Examples:
 
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils.md)

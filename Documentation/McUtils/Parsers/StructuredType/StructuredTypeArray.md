@@ -1,12 +1,12 @@
 ## <a id="McUtils.Parsers.StructuredType.StructuredTypeArray">StructuredTypeArray</a>
 Represents an array of objects defined by the StructuredType spec provided
-    mostly useful as it dispatches to NumPy where things are simple enough to do so
+mostly useful as it dispatches to NumPy where things are simple enough to do so
 
-    It has a system to dispatch intelligently based on the type of array provided
-    The kinds of structures supported are: OrderedDict, list, and np.ndarray
+It has a system to dispatch intelligently based on the type of array provided
+The kinds of structures supported are: OrderedDict, list, and np.ndarray
 
-    A _simple_ StructuredTypeArray is one that can just be represented as a single np.ndarray
-    A _compound_ StructuredTypeArray requires either a list or OrderedDict of StructuredTypeArray subarrays
+A _simple_ StructuredTypeArray is one that can just be represented as a single np.ndarray
+A _compound_ StructuredTypeArray requires either a list or OrderedDict of StructuredTypeArray subarrays
 
 ### Properties and Methods
 ```python
@@ -182,3 +182,9 @@ __repr__(self):
 ```
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Parsers/StructuredType/StructuredTypeArray.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Parsers/StructuredType/StructuredTypeArray.md)

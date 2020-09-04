@@ -8,3 +8,9 @@ __init__(self, *params, plot_style=None, colorbar=None, figure=None, axes=None, 
 ```
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Plots/Plots/ArrayPlot.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Plots/Plots/ArrayPlot.md)

@@ -3,7 +3,7 @@ A writer targeted to a class
 
 ### Properties and Methods
 ```python
-template: str
+template_name: str
 ```
 <a id="Peeves.Doc.Writers.ClassWriter.load_methods">&nbsp;</a>
 ```python
@@ -21,3 +21,9 @@ template_params(self, function_writer=None):
 ```
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Peeves/Doc/Writers/ClassWriter.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves/Doc/Writers/ClassWriter.md)

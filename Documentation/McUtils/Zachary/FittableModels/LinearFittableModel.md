@@ -1,6 +1,6 @@
 ## <a id="McUtils.Zachary.FittableModels.LinearFittableModel">LinearFittableModel</a>
 Defines a class of models that can be expressed as linear expansions of basis functions.
-    We _could_ define an alternate fit function by explicitly building & fitting a design matrix, but I think we're good on that for now
+We _could_ define an alternate fit function by explicitly building & fitting a design matrix, but I think we're good on that for now
 
 ### Properties and Methods
 <a id="McUtils.Zachary.FittableModels.LinearFittableModel.__init__">&nbsp;</a>
@@ -14,3 +14,9 @@ evaluate(self, xdata):
 ```
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Zachary/FittableModels/LinearFittableModel.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Zachary/FittableModels/LinearFittableModel.md)

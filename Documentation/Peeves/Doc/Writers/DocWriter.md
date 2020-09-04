@@ -5,6 +5,8 @@ A general writer class that writes a file based off a template and filling in ob
 ```python
 template: str
 template_root: str
+template_name: str
+default_template_dir: str
 example_root: str
 outStream: type
 out: property
@@ -104,3 +106,9 @@ parse_doc(self, doc):
     >No description...
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Peeves/Doc/Writers/DocWriter.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves/Doc/Writers/DocWriter.md)

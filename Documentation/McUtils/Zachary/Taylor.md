@@ -17,3 +17,9 @@ Implements all of the Taylor-series derived functionality in Zachary (i.e. all t
 
 ### Examples:
 
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Zachary/Taylor.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Zachary/Taylor.md)

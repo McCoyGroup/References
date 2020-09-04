@@ -1,4 +1,4 @@
-### <a id="McUtils.Parsers.RegexPatterns.RegexPattern.<Instance>">Name</a>
+### <a id="McUtils.Parsers.RegexPatterns.<RegexPattern Instance>"><RegexPattern Instance></a>
 Represents a combinator structure for building more complex regexes
 
     It might be worth working with this combinator structure in a _lazy_ fashion so that we can drill down

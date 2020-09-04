@@ -35,3 +35,9 @@ visualize(self, step_size=0.1, steps=(5, 5), which=0, anim_opts=None, mode='fast
 ```
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/Molecools/Vibrations/MolecularVibrations.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/Molecools/Vibrations/MolecularVibrations.md)

@@ -1,6 +1,6 @@
 ## <a id="Psience.Wavefun.Wavefunctions.Wavefunctions">Wavefunctions</a>
 An object representing a set of wavefunctions.
-    Provides concrete, but potentially inefficient methods for doing all the wavefunction ops.
+Provides concrete, but potentially inefficient methods for doing all the wavefunction ops.
 
 ### Properties and Methods
 <a id="Psience.Wavefun.Wavefunctions.Wavefunctions.__init__">&nbsp;</a>
@@ -40,3 +40,9 @@ Plots all of the wavefunctions on one set of axes
     >No description...
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/Wavefun/Wavefunctions/Wavefunctions.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/Wavefun/Wavefunctions/Wavefunctions.md)

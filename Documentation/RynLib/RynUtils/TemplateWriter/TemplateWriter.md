@@ -1,6 +1,6 @@
 ## <a id="RynLib.RynUtils.TemplateWriter.TemplateWriter">TemplateWriter</a>
 A general class that can take a directory layout and apply template parameters to it
-    Very unsophisticated but workable
+Very unsophisticated but workable
 
 ### Properties and Methods
 ```python
@@ -45,3 +45,9 @@ Iterates through the files in the template_dir and writes them out to dir
     >No description...
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/RynLib/RynUtils/TemplateWriter/TemplateWriter.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/RynUtils/TemplateWriter/TemplateWriter.md)

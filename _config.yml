@@ -93,6 +93,7 @@ defaults:
       annotations_type: "refs"
       custom_styles: "refs"
       layout: "docs"
+      sidebar_visible: true
       breadcrumbs:
         num_links: 0
         min_depth: 1

@@ -82,3 +82,9 @@ TODO: extend to also check y coordinates... maybe add param to do x, y, or both?
     >square_grid: a structured grid of points (np.ndarray) (x, y)
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Zachary/Interpolator/Interpolator.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Zachary/Interpolator/Interpolator.md)

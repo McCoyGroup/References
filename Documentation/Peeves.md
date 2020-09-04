@@ -5,9 +5,9 @@ Peeves is a minor extension to the unittest framework that makes my life better
 ### Members:
 
   - [TestRunner](Peeves/TestUtils/TestRunner.md)
-  - [DebugTestClass](Peeves/TestUtils/DebugTestClass.md)
-  - [ValidationTestClass](Peeves/TestUtils/ValidationTestClass.md)
-  - [TimingTestClass](Peeves/TestUtils/TimingTestClass.md)
+  - [DebugTests](Peeves/TestUtils/DebugTests.md)
+  - [ValidationTests](Peeves/TestUtils/ValidationTests.md)
+  - [TimingTests](Peeves/TestUtils/TimingTests.md)
   - [LoadTests](Peeves/TestUtils/LoadTests.md)
   - [TestManagerClass](Peeves/TestUtils/TestManagerClass.md)
   - [DataGenerator](Peeves/TestUtils/DataGenerator.md)
@@ -23,3 +23,9 @@ Peeves is a minor extension to the unittest framework that makes my life better
 
 ### Examples:
 
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Peeves.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves.md)

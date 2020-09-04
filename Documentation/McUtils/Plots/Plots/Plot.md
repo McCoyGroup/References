@@ -1,6 +1,6 @@
 ## <a id="McUtils.Plots.Plots.Plot">Plot</a>
 The base plotting class to interface into matplotlib or (someday) VTK or another backend
-    Builds off of the Graphics system to make a unified and convenient interface to generating plots
+Builds off of the Graphics system to make a unified and convenient interface to generating plots
 
 ### Properties and Methods
 ```python
@@ -77,3 +77,8 @@ plot = Plot(lambda x: np.sin(15*x), [0, 2*np.pi])
 ```
 
 Any valid option to [axes.plot](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.axes.Axes.plot.html) may also be passed to `Plot`.
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Plots/Plots/Plot.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Plots/Plots/Plot.md)

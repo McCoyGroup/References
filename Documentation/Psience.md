@@ -12,3 +12,9 @@ Attempts to provide base classes and common/shared interfaces
 
 ### Examples:
 
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience.md)

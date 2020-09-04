@@ -141,3 +141,8 @@ def test_XMatrix(self):
     self.assertEquals(X[33, 26], -0.642702E-1)
 
 ```
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/GaussianInterface/GaussianImporter/GaussianLogReader.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/GaussianInterface/GaussianImporter/GaussianLogReader.md)

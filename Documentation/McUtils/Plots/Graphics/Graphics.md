@@ -57,3 +57,8 @@ g.figure is f.figure
 Usually one won't use `Graphics` on its own, but will instead use on of the
 other plotting functions, such as `Plot` or `ContourPlot` to create a
 `Graphics` object.
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Plots/Graphics/Graphics.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Plots/Graphics/Graphics.md)

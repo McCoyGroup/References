@@ -1,8 +1,8 @@
 ## <a id="Psience.DVR.DVR.DVR">DVR</a>
 This is a manager class for working with DVRs
 
-It uses files from which it loads the spec data and methods
-Currently all defaults are for 1D but the ND extension shouldn't be bad
+    It uses files from which it loads the spec data and methods
+    Currently all defaults are for 1D but the ND extension shouldn't be bad
 
 ### Properties and Methods
 ```python
@@ -66,3 +66,9 @@ run(self, **runpars):
 Runs the DVR. Resets state after the run
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/DVR/DVR/DVR.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/DVR/DVR/DVR.md)

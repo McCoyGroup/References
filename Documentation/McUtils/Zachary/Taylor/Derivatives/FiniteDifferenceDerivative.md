@@ -1,6 +1,6 @@
 ## <a id="McUtils.Zachary.Taylor.Derivatives.FiniteDifferenceDerivative">FiniteDifferenceDerivative</a>
 Provides derivatives for a function (scalar or vector valued)
-    Can be indexed into or the entire tensor of derivatives may be requested
+Can be indexed into or the entire tensor of derivatives may be requested
 
 ### Properties and Methods
 <a id="McUtils.Zachary.Taylor.Derivatives.FiniteDifferenceDerivative.__init__">&nbsp;</a>
@@ -39,3 +39,9 @@ Generates a differencer object that can be used to get derivs however your littl
     >No description...
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Zachary/Taylor/Derivatives/FiniteDifferenceDerivative.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Zachary/Taylor/Derivatives/FiniteDifferenceDerivative.md)

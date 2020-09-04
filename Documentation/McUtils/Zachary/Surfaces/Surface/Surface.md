@@ -1,6 +1,6 @@
 ## <a id="McUtils.Zachary.Surfaces.Surface.Surface">Surface</a>
 This actually isn't a concrete implementation of BaseSurface.
-    Instead it's a class that _dispatches_ to an implementation of BaseSurface to do its core evaluations (plus it does shape checking)
+Instead it's a class that _dispatches_ to an implementation of BaseSurface to do its core evaluations (plus it does shape checking)
 
 ### Properties and Methods
 ```python
@@ -40,3 +40,9 @@ __call__(self, gridpoints, **kwargs):
 ```
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Zachary/Surfaces/Surface/Surface.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Zachary/Surfaces/Surface/Surface.md)

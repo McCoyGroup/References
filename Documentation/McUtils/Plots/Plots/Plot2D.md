@@ -25,3 +25,9 @@ __init__(self, *params, plot_style=None, method='contour', colorbar=None, figure
     >options to be fed in when initializing the Graphics
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Plots/Plots/Plot2D.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Plots/Plots/Plot2D.md)

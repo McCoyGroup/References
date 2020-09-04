@@ -5,9 +5,9 @@ All of the utilities that are used in writing tests for Peeves
 ### Members:
 
   - [TestRunner](TestUtils/TestRunner.md)
-  - [DebugTestClass](TestUtils/DebugTestClass.md)
-  - [ValidationTestClass](TestUtils/ValidationTestClass.md)
-  - [TimingTestClass](TestUtils/TimingTestClass.md)
+  - [DebugTests](TestUtils/DebugTests.md)
+  - [ValidationTests](TestUtils/ValidationTests.md)
+  - [TimingTests](TestUtils/TimingTests.md)
   - [LoadTests](TestUtils/LoadTests.md)
   - [TestManagerClass](TestUtils/TestManagerClass.md)
   - [DataGenerator](TestUtils/DataGenerator.md)
@@ -21,3 +21,9 @@ All of the utilities that are used in writing tests for Peeves
 
 ### Examples:
 
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Peeves/TestUtils.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves/TestUtils.md)

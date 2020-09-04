@@ -1,6 +1,6 @@
 ## <a id="McUtils.Zachary.Surfaces.BaseSurface.LinearFitSurface">LinearFitSurface</a>
 A surface built off of a LinearExpansionSurface, but done by fitting.
-    The basis selection
+The basis selection
 
 ### Properties and Methods
 <a id="McUtils.Zachary.Surfaces.BaseSurface.LinearFitSurface.__init__">&nbsp;</a>
@@ -31,3 +31,9 @@ minimize(self, initial_guess=None, function_options=None, **opts):
 ```
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Zachary/Surfaces/BaseSurface/LinearFitSurface.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Zachary/Surfaces/BaseSurface/LinearFitSurface.md)

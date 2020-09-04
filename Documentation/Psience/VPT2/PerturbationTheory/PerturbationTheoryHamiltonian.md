@@ -1,11 +1,11 @@
 ## <a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian">PerturbationTheoryHamiltonian</a>
 Represents the main Ha,o; used in the perturbation theory calculation
 - `molecule`: `Molecule`
-    >The molecule we're doing the perturbation theory on
-- `n_quanta`: `int | np.ndarray | Iterable[int]`
-    >The numbers of quanta of excitation to use for every mode
-- `basis`: `RepresentationBasis | None`
-    >The basis used for representing, e.g., pQp and QQQ
+>The molecule we're doing the perturbation theory on
+_quanta`: `int | np.ndarray | Iterable[int]`
+>The numbers of quanta of excitation to use for every mode
+asis`: `RepresentationBasis | None`
+>The basis used for representing, e.g., pQp and QQQ
 
 ### Properties and Methods
 ```python
@@ -64,3 +64,9 @@ Applies the Martin Test to all of the specified states and returns the resulting
     >No description...
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/VPT2/PerturbationTheory/PerturbationTheoryHamiltonian.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/VPT2/PerturbationTheory/PerturbationTheoryHamiltonian.md)

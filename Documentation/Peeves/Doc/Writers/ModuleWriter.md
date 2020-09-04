@@ -3,7 +3,7 @@ A writer targeted to a module object. Just needs to write the Module metadata.
 
 ### Properties and Methods
 ```python
-template: str
+template_name: str
 get_members: method
 ```
 <a id="Peeves.Doc.Writers.ModuleWriter.template_params">&nbsp;</a>
@@ -12,3 +12,9 @@ template_params(self):
 ```
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Peeves/Doc/Writers/ModuleWriter.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves/Doc/Writers/ModuleWriter.md)

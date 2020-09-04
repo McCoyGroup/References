@@ -1,7 +1,7 @@
 ## <a id="McUtils.Zachary.FittableModels.LinearFitBasis">LinearFitBasis</a>
 Provides a container to build bases of functions for fitting.
-    Asks for a generator for each dimension, which is just a function that takes an integer and returns a basis function at that order.
-    Product functions are taken up to some max order
+Asks for a generator for each dimension, which is just a function that takes an integer and returns a basis function at that order.
+Product functions are taken up to some max order
 
 ### Properties and Methods
 ```python
@@ -35,3 +35,9 @@ construct_basis(self):
 ```
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Zachary/FittableModels/LinearFitBasis.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Zachary/FittableModels/LinearFitBasis.md)

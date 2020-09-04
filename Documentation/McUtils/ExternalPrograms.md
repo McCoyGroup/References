@@ -9,3 +9,9 @@ Mostly relevant for doing format conversions/parsing, but other utilities do exi
 
 ### Examples:
 
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/ExternalPrograms.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/ExternalPrograms.md)

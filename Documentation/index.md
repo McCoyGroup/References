@@ -28,6 +28,7 @@ or edit the existing one by going to
 https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/GaussianInterface.md
 ```
 
+We have documentation for these packages:
 
   - [McUtils](McUtils.md)
   - [Psience](Psience.md)

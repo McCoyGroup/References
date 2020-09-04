@@ -16,7 +16,6 @@ Some of these, like the MPI, are set automatically, unless there's an override o
 
 Everything has been designed to run inside a container, which adds another layer of complexity.
 
-
 The first thing we have to do is actually install the package and build it out. All changes live on GitHub, so we'll start by cloning the repository
 
 ```ignorelang

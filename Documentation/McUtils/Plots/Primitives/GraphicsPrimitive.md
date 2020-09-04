@@ -17,3 +17,9 @@ The one method that needs to be implemented, which takes the graphics and actual
     >No description...
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Plots/Primitives/GraphicsPrimitive.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Plots/Primitives/GraphicsPrimitive.md)

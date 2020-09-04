@@ -1,8 +1,8 @@
 ## <a id="RynLib.PlzNumbers.Potential.Potential">Potential</a>
 A very general wrapper to a potential:
-        Can take a potential _directory_ and compile that down
-        Can take a potential source and write the necessary template code around that for use
-    Provides a hook into PotentialCaller once the data has been loaded to directly call the potential like a function
+Can take a potential _directory_ and compile that down
+Can take a potential source and write the necessary template code around that for use
+ides a hook into PotentialCaller once the data has been loaded to directly call the potential like a function
 
 ### Properties and Methods
 ```python
@@ -92,3 +92,9 @@ __call__(self, coordinates, *extra_args, **extra_kwargs):
 ```
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/RynLib/PlzNumbers/Potential/Potential.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/PlzNumbers/Potential/Potential.md)

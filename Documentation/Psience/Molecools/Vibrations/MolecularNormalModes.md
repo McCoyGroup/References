@@ -1,6 +1,6 @@
 ## <a id="Psience.Molecools.Vibrations.MolecularNormalModes">MolecularNormalModes</a>
 A Coordinerds CoordinateSystem object that manages all of the data needed to
-     work with normal mode coordinates + some convenience functions for generating and whatnot
+work with normal mode coordinates + some convenience functions for generating and whatnot
 
 ### Properties and Methods
 ```python
@@ -29,3 +29,9 @@ embed(self, frame):
     >No description...
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/Molecools/Vibrations/MolecularNormalModes.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/Molecools/Vibrations/MolecularNormalModes.md)

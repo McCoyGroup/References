@@ -1,6 +1,6 @@
 ## <a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryWavefunctions">PerturbationTheoryWavefunctions</a>
 Represents a set of wavefunctions coming out of a VPT2 calculation.
-    Mostly just a wrapper on a PerturbationTheoryHamiltonian
+Mostly just a wrapper on a PerturbationTheoryHamiltonian
 
 ### Properties and Methods
 ```python
@@ -24,3 +24,9 @@ get_energies(self):
 ```
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/VPT2/PerturbationTheory/PerturbationTheoryWavefunctions.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/VPT2/PerturbationTheory/PerturbationTheoryWavefunctions.md)

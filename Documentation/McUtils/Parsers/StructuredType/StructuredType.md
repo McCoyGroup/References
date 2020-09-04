@@ -1,8 +1,8 @@
 ## <a id="McUtils.Parsers.StructuredType.StructuredType">StructuredType</a>
 Represents a structured type with a defined calculus to simplify the construction of combined types when writing
-    parsers that take multi-typed data
+parsers that take multi-typed data
 
-    Supports a compound StructuredType where the types are keyed
+Supports a compound StructuredType where the types are keyed
 
 ### Properties and Methods
 ```python
@@ -84,3 +84,9 @@ __repr__(self):
 ```
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Parsers/StructuredType/StructuredType.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Parsers/StructuredType/StructuredType.md)

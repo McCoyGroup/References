@@ -80,3 +80,9 @@ Parses a block by starting at tag_start and looking for tag_end and parsing what
     >No description...
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Parsers/FileStreamer/FileStreamReader.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Parsers/FileStreamer/FileStreamReader.md)

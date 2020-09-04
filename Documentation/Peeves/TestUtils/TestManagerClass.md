@@ -11,6 +11,7 @@ validation_tests: bool
 timing_tests: bool
 data_gen_tests: bool
 test_files: str
+test_name: str
 test_root: property
 base_dir: property
 test_pkg: property
@@ -46,3 +47,9 @@ run(self, exit=True):
 ```
 
 ### Examples
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Peeves/TestUtils/TestManagerClass.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves/TestUtils/TestManagerClass.md)
