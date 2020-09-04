@@ -1,5 +1,5 @@
 # GitHub Actions container to support doing and build config automatically upon a push
-FROM alpine/git:1.0.7
+FROM python:3.8-slim
 
 LABEL "name"="McCoyGroup/build-site"
 LABEL "maintainer"="Mark Boyer <b3m2a1uw.edu>"
