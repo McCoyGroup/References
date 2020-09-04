@@ -1,8 +1,6 @@
 ## <a id="Psience.DVR.DVR.DVR">DVR</a>
-This is a manager class for working with DVRs
-
-    It uses files from which it loads the spec data and methods
-    Currently all defaults are for 1D but the ND extension shouldn't be bad
+This is a manager class for working with DVRs.
+It uses files from which it loads the spec data and methods, which are placed in the `Classes` subfolder.
 
 ### Properties and Methods
 ```python
@@ -21,49 +19,67 @@ __init__(self, dvr_file='ColbertMiller1D', **kwargs):
 ```python
 domain(self): 
 ```
-Computes the domain for the DVR
+
+- `:returns`: `_`
+    >the domain for the DVR
 
 <a id="Psience.DVR.DVR.DVR.divs">&nbsp;</a>
 ```python
 divs(self): 
 ```
-Computes the divisions for the DVR
+
+- `:returns`: `tuple(int)`
+    >the number of DVR points
 
 <a id="Psience.DVR.DVR.DVR.grid">&nbsp;</a>
 ```python
 grid(self): 
 ```
-Computes the grid for the DVR
+
+- `:returns`: `np.ndarray`
+    >the grid for the DVR
 
 <a id="Psience.DVR.DVR.DVR.kinetic_energy">&nbsp;</a>
 ```python
 kinetic_energy(self): 
 ```
-Computes the kinetic_energy for the DVR
+
+- `:returns`: `np.ndarray`
+    >the kinetic energy matrix
 
 <a id="Psience.DVR.DVR.DVR.potential_energy">&nbsp;</a>
 ```python
 potential_energy(self): 
 ```
-Computes the potential_energy for the DVR
+
+- `:returns`: `np.ndarray`
+    >the potential energy matrix
 
 <a id="Psience.DVR.DVR.DVR.hamiltonian">&nbsp;</a>
 ```python
 hamiltonian(self): 
 ```
-Computes the hamiltonian for the DVR
+
+- `:returns`: `np.ndarray`
+    >the total Hamiltonian matrix
 
 <a id="Psience.DVR.DVR.DVR.wavefunctions">&nbsp;</a>
 ```python
 wavefunctions(self): 
 ```
-Computes the wavefunctions for the DVR
+
+- `:returns`: `(np.ndarray, np.ndarray)`
+    >the DVR wavefunctions
 
 <a id="Psience.DVR.DVR.DVR.run">&nbsp;</a>
 ```python
 run(self, **runpars): 
 ```
-Runs the DVR. Resets state after the run
+Runs the DVR with the passed parameters, delegating most calls to the loaded class
+- `runpars`: `Any`
+    >No description...
+- `:returns`: `DVR.Results`
+    >No description...
 
 ### Examples
 
