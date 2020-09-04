@@ -1,0 +1,16 @@
+<a id="McUtils.Numputils.VectorOps.pts_normals">&nbsp;</a>
+```python
+pts_normals(pts1, pts2, pts3, normalize=True): 
+```
+Provides the vector normal to the plane of the three points
+- `pts1`: `np.ndarray`
+    >No description...
+- `pts2`: `np.ndarray`
+    >No description...
+- `pts3`: `np.ndarray`
+    >No description...
+- `normalize`: `Any`
+    >No description...
+- `:returns`: `np.ndarray`
+    >No description...
+

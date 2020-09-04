@@ -9,6 +9,8 @@ Attempts to provide base classes and common/shared interfaces
   - [Wavefun](Psience/Wavefun.md)
   - [DVR](Psience/DVR.md)
   - [VPT2](Psience/VPT2.md)
+  - [Data](Psience/Data.md)
+  - [BasisReps](Psience/BasisReps.md)
 
 ### Examples:
 

@@ -15,6 +15,8 @@ All of the McUtils packages stand mostly on their own, but there will be little 
   - [Zachary](McUtils/Zachary.md)
   - [Coordinerds](McUtils/Coordinerds.md)
   - [ExternalPrograms](McUtils/ExternalPrograms.md)
+  - [Extensions](McUtils/Extensions.md)
+  - [Numputils](McUtils/Numputils.md)
 
 ### Examples:
 
