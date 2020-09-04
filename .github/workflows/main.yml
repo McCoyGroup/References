@@ -3,7 +3,7 @@ on:
     branches:
       - gh-pages
 
-name: build McCoy group site
+name: McBuild site
 jobs:
   mcbuild_site:
     runs-on: ubuntu-latest

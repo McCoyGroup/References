@@ -1,0 +1,6 @@
+# action.yml
+name: 'McBuild site'
+description: 'Builds the McCoy group website'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
