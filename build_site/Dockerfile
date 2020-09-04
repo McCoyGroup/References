@@ -10,7 +10,7 @@ LABEL "com.github.actions.description"="Builds the McCoy group references websit
 LABEL "com.github.actions.icon"="git"
 LABEL "com.github.actions.color"="orange"
 
-COPY build_site.sh ../build_site.sh
+COPY build_site.sh/build_site.sh ../build_site.sh
 WORKDIR ..
 
 ENTRYPOINT ["sh", "build_site.sh"]

@@ -7,7 +7,7 @@ name: McBuild site
 jobs:
   mcbuild_site:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Build out group webstite
     steps:
       # To use this repository's private action,
       # you must check out the repository
