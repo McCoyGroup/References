@@ -5,8 +5,8 @@ set -e
 ## Builds out the website
 ##
 
-# get out of the References folder
-cd ..
+# get into the parent folder?
+cd /home/runner/work/References
 # configure git
 git config --global user.name '${GITHUB_ACTOR}'
 git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
