@@ -402,4 +402,5 @@ def test_VisualizeNormalModes(self):
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/Molecools/Molecule/Molecule.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/Molecools/Molecule/Molecule.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/Molecools/Molecule/Molecule.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Psience/edit/master/Molecools/Molecule.py?message=Update%20Docs)

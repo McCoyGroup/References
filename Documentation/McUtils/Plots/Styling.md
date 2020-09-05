@@ -14,4 +14,5 @@ Defines a helper class Styled to make it easier to style plots and stuff and a T
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Plots/Styling.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Plots/Styling.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Plots/Styling.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/Plots/Styling/__init__.py?message=Update%20Docs)

@@ -14,4 +14,5 @@ Sets up a general Interpolator class that looks like Mathematica's Interpolating
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Zachary/Interpolator.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Zachary/Interpolator.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Zachary/Interpolator.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/Zachary/Interpolator/__init__.py?message=Update%20Docs)

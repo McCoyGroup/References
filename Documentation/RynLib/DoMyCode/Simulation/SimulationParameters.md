@@ -55,4 +55,5 @@ serialize(self, simulation, file, mode=None):
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/RynLib/DoMyCode/Simulation/SimulationParameters.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/DoMyCode/Simulation/SimulationParameters.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/DoMyCode/Simulation/SimulationParameters.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/RynLib/edit/master/DoMyCode/Simulation.py?message=Update%20Docs)

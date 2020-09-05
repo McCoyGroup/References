@@ -18,4 +18,5 @@ get_wavefunctions(self, which):
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/BasisReps/Wavefunctions/AnalyticWavefunctions.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/BasisReps/Wavefunctions/AnalyticWavefunctions.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/BasisReps/Wavefunctions/AnalyticWavefunctions.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Psience/edit/master/BasisReps/Wavefunctions.py?message=Update%20Docs)

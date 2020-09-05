@@ -69,4 +69,5 @@ Applies the Martin Test to all of the specified states and returns the resulting
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/VPT2/PerturbationTheory/PerturbationTheoryHamiltonian.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/VPT2/PerturbationTheory/PerturbationTheoryHamiltonian.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/VPT2/PerturbationTheory/PerturbationTheoryHamiltonian.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Psience/edit/master/VPT2/PerturbationTheory.py?message=Update%20Docs)

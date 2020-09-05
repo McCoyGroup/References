@@ -26,4 +26,5 @@ All of the utilities that are used in writing tests for Peeves
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Peeves/TestUtils.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves/TestUtils.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves/TestUtils.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Peeves/edit/master/TestUtils/__init__.py?message=Update%20Docs)

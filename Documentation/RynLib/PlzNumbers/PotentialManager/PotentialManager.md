@@ -73,4 +73,5 @@ test_potential_mpi(self, name, input_file=None, coordinates=None, parameters=Non
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/RynLib/PlzNumbers/PotentialManager/PotentialManager.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/PlzNumbers/PotentialManager/PotentialManager.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/PlzNumbers/PotentialManager/PotentialManager.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/RynLib/edit/master/PlzNumbers/PotentialManager.py?message=Update%20Docs)

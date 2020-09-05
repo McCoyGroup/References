@@ -19,6 +19,8 @@ At some point that will become part of a CI process, but we're unfortunately not
 If you want to just let us know that you added some examples so we can trigger a build, that can be done via the [issues](https://github.com/McCoyGroup/References/issues/new?title=Documentation%20Build%20Needed) page.
 Similarly, if you see something that you think should be improved, you can either edit the docstrings in the source or let us know about the deficiency [here]([issues](https://github.com/McCoyGroup/References/issues/new?title=Documentation%20Improvement%20Needed)).
 
+##### Examples
+
 To contribute an example for a page at 
 
 ```
@@ -36,4 +38,19 @@ or edit the existing one by going to
 ```
 https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/GaussianInterface.md
 ```
+
+##### Documentation
+
+For this, you'll need to navigate to the appropriate package. The breadcrumbs on the documentation pages can be very helpful for this. 
+Say you wanted to edit some docstring on the `Molecule` class.
+To do so you'd first note that in the breadcrumb we have
+
+```lang-none
+Documentation / Psience / Molecools
+```
+
+So you'd go to https://github.com/McCoyGroup/Psience/Molecools & then notice that there is a package called `Molecule.py`.
+Then, clicking on the package's edit link ( https://github.com/McCoyGroup/Psience/edit/master/Molecools/Molecule.py ) you can navigate to where `Molecule` is defined and edit that.
+Alternately, if you know the line number in the source file, you can link directly to that line in the source and then people can use the GitHub UI.
+
 

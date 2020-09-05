@@ -17,4 +17,5 @@ __init__(self, name, src, src_ext='src', load_path=None, description='A compiled
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/RynLib/PlzNumbers/PotentialLoader/PotentialLoader.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/PlzNumbers/PotentialLoader/PotentialLoader.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/PlzNumbers/PotentialLoader/PotentialLoader.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/RynLib/edit/master/PlzNumbers/PotentialLoader.py?message=Update%20Docs)

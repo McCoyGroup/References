@@ -48,4 +48,5 @@ Explicitly overrides the Surface-level evaluation because we know the Taylor sur
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/Data/Surfaces/DipoleSurface.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/Data/Surfaces/DipoleSurface.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/Data/Surfaces/DipoleSurface.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Psience/edit/master/Data/Surfaces.py?message=Update%20Docs)

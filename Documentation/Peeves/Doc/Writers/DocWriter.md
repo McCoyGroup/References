@@ -10,6 +10,7 @@ default_template_dir: str
 example_root: str
 outStream: type
 out: property
+package_path: property
 load_template: method
 get_identifier: method
 identifier: property
@@ -43,6 +44,11 @@ format(self, template=None):
 <a id="Peeves.Doc.Writers.DocWriter.write">&nbsp;</a>
 ```python
 write(self, template=None): 
+```
+
+<a id="Peeves.Doc.Writers.DocWriter.get_package_and_url">&nbsp;</a>
+```python
+get_package_and_url(self): 
 ```
 
 <a id="Peeves.Doc.Writers.DocWriter.load_examples">&nbsp;</a>
@@ -111,4 +117,5 @@ parse_doc(self, doc):
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Peeves/Doc/Writers/DocWriter.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves/Doc/Writers/DocWriter.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves/Doc/Writers/DocWriter.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Peeves/edit/master/Doc/Writers.py?message=Update%20Docs)

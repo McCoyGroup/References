@@ -64,4 +64,5 @@ Returns the representation of p in the multi-dimensional basis with every term e
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/BasisReps/Bases/SimpleProductBasis.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/BasisReps/Bases/SimpleProductBasis.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/BasisReps/Bases/SimpleProductBasis.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Psience/edit/master/BasisReps/Bases.py?message=Update%20Docs)

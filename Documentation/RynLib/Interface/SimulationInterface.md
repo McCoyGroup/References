@@ -32,4 +32,5 @@ test_sampler_mpi: method
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/RynLib/Interface/SimulationInterface.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/Interface/SimulationInterface.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/Interface/SimulationInterface.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/RynLib/edit/master/Interface.py?message=Update%20Docs)

@@ -53,4 +53,5 @@ __getattr__(self, item):
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/RynLib/RynUtils/ConfigManager/Config.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/RynUtils/ConfigManager/Config.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/RynUtils/ConfigManager/Config.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/RynLib/edit/master/RynUtils/ConfigManager.py?message=Update%20Docs)

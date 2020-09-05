@@ -44,4 +44,5 @@ Generates a differencer object that can be used to get derivs however your littl
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Zachary/Taylor/Derivatives/FiniteDifferenceDerivative.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Zachary/Taylor/Derivatives/FiniteDifferenceDerivative.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Zachary/Taylor/Derivatives/FiniteDifferenceDerivative.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/Zachary/Taylor/Derivatives.py?message=Update%20Docs)

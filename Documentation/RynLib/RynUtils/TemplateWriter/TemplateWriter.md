@@ -50,4 +50,5 @@ Iterates through the files in the template_dir and writes them out to dir
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/RynLib/RynUtils/TemplateWriter/TemplateWriter.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/RynUtils/TemplateWriter/TemplateWriter.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/RynUtils/TemplateWriter/TemplateWriter.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/RynLib/edit/master/RynUtils/TemplateWriter.py?message=Update%20Docs)

@@ -14,4 +14,5 @@ Mostly relevant for doing format conversions/parsing, but other utilities do exi
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/ExternalPrograms.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/ExternalPrograms.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/ExternalPrograms.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/ExternalPrograms/__init__.py?message=Update%20Docs)

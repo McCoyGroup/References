@@ -20,4 +20,5 @@ example files and the rest of it
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Peeves/Doc.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves/Doc.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves/Doc.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Peeves/edit/master/Doc/__init__.py?message=Update%20Docs)

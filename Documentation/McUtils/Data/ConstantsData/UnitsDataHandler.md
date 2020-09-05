@@ -52,4 +52,5 @@ Converts base unit into target using the scraped NIST data
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Data/ConstantsData/UnitsDataHandler.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Data/ConstantsData/UnitsDataHandler.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Data/ConstantsData/UnitsDataHandler.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/Data/ConstantsData.py?message=Update%20Docs)

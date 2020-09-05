@@ -28,4 +28,5 @@ Peeves is a minor extension to the unittest framework that makes my life better
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Peeves.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Peeves/edit/master/__init__.py?message=Update%20Docs)

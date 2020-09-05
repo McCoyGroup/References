@@ -85,4 +85,5 @@ Parses a block by starting at tag_start and looking for tag_end and parsing what
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Parsers/FileStreamer/FileStreamReader.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Parsers/FileStreamer/FileStreamReader.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Parsers/FileStreamer/FileStreamReader.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/Parsers/FileStreamer.py?message=Update%20Docs)

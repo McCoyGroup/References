@@ -53,4 +53,5 @@ qmatrix_ho(n):
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/BasisReps/HarmonicOscillator/HarmonicOscillatorBasis.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/BasisReps/HarmonicOscillator/HarmonicOscillatorBasis.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/BasisReps/HarmonicOscillator/HarmonicOscillatorBasis.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Psience/edit/master/BasisReps/HarmonicOscillator.py?message=Update%20Docs)

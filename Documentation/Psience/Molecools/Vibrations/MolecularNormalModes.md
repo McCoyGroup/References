@@ -34,4 +34,5 @@ embed(self, frame):
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/Molecools/Vibrations/MolecularNormalModes.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/Molecools/Vibrations/MolecularNormalModes.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/Molecools/Vibrations/MolecularNormalModes.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Psience/edit/master/Molecools/Vibrations.py?message=Update%20Docs)

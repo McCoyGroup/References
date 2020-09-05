@@ -7,7 +7,7 @@ tag_printing_times: dict
 ```
 <a id="Peeves.Timer.Timer.__init__">&nbsp;</a>
 ```python
-__init__(self, tag=None, file=<_io.TextIOWrapper name='<stderr>' mode='w' encoding='utf-8'>, rounding=5, print_times=1, number=1, **kw): 
+__init__(self, tag=None, file=<_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, rounding=5, print_times=1, number=1, **kw): 
 ```
 
 <a id="Peeves.Timer.Timer.get_time_list">&nbsp;</a>
@@ -61,4 +61,5 @@ __call__(self, fn):
 ___
 
 [Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Peeves/Timer/Timer.md) or 
-[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves/Timer/Timer.md)
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves/Timer/Timer.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Peeves/edit/master/Timer.py?message=Update%20Docs)
