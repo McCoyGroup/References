@@ -3,9 +3,9 @@
 ```python
 {name}{signature}: 
 ```
-{description}{parameters}
+{description}{parameters} 
 
-Examples: 
+### Examples: 
 {examples}
 
 ___
