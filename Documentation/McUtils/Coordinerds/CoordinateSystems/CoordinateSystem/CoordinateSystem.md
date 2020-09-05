@@ -26,48 +26,48 @@ Sets up the CoordinateSystem object
 @property
 basis(self): 
 ```
-The basis for the representation of `matrix`
+
 - `:returns`: `CoordinateSystem`
-    >No description...
+    >The basis for the representation of `matrix`
 
 <a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.origin" class="docs-object-method">&nbsp;</a>
 ```python
 @property
 origin(self): 
 ```
-The origin for the expansion defined by `matrix`
+
 - `:returns`: `np.ndarray`
-    >No description...
+    >The origin for the expansion defined by `matrix`
 
 <a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.matrix" class="docs-object-method">&nbsp;</a>
 ```python
 @property
 matrix(self): 
 ```
-The matrix representation in the CoordinateSystem.basis
-        None is shorthand for the identity matrix
+The matrix representation in the `CoordinateSystem.basis`
+        `None` is shorthand for the identity matrix
 - `:returns`: `np.ndarray`
-    >No description...
+    >mat
 
 <a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.inverse" class="docs-object-method">&nbsp;</a>
 ```python
 @property
 inverse(self): 
 ```
-The inverse of the representation in the `basis`
-        None is shorthand for the inverse or pseudoinverse of `matrix`
+The inverse of the representation in the `basis`.
+        `None` is shorthand for the inverse or pseudoinverse of `matrix`.
 - `:returns`: `np.ndarray`
-    >No description...
+    >inv
 
 <a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.dimension" class="docs-object-method">&nbsp;</a>
 ```python
 @property
 dimension(self): 
 ```
-The dimension of the coordinate system
-        None means unspecified dimension
+The dimension of the coordinate system.
+        `None` means unspecified dimension
 - `:returns`: `int or None`
-    >No description...
+    >dim
 
 <a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.converter" class="docs-object-method">&nbsp;</a>
 ```python
@@ -77,7 +77,7 @@ Gets the converter from the current system to a new system
 - `system`: `CoordinateSystem`
     >the target CoordinateSystem
 - `:returns`: `CoordinateSystemConverter`
-    >No description...
+    >converter object
 
 <a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.convert_coords" class="docs-object-method">&nbsp;</a>
 ```python
@@ -89,15 +89,16 @@ Converts coordiantes from the current coordinate system to _system_
 - `system`: `CoordinateSystem`
     >No description...
 - `kw`: `Any`
-    >No description...
-- `:returns`: `_`
-    >No description...
+    >options to be passed through to the converter object
+- `:returns`: `tuple(np.ndarray, dict)`
+    >the converted coordiantes
 
 <a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.displacement" class="docs-object-method">&nbsp;</a>
 ```python
 displacement(self, amts): 
 ```
 Generates a displacement or matrix of displacements based on the vector or matrix amts
+        The relevance of this method has become somewhat unclear...
 - `amts`: `np.ndarray`
     >No description...
 - `:returns`: `np.ndarray`
@@ -107,7 +108,8 @@ Generates a displacement or matrix of displacements based on the vector or matri
 ```python
 derivatives(self, coords, function, order=1, coordinates=None, result_shape=None, **finite_difference_options): 
 ```
-Computes derivatives for an arbitrary function with respect to this coordinate system
+Computes derivatives for an arbitrary function with respect to this coordinate system.
+        Basically a more flexible version of `jacobian`.
 - `function`: `Any`
     >No description...
 - `order`: `Any`
@@ -116,8 +118,8 @@ Computes derivatives for an arbitrary function with respect to this coordinate s
     >No description...
 - `finite_difference_options`: `Any`
     >No description...
-- `:returns`: `_`
-    >No description...
+- `:returns`: `np.ndarray`
+    >derivative tensor
 
 <a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.jacobian" class="docs-object-method">&nbsp;</a>
 ```python
@@ -136,13 +138,16 @@ Computes the Jacobian between the current coordinate system and a target coordin
     >a function for pre-validating the generated coordinate values and grids
 - `fd_options`: `Any`
     >options to be passed straight through to FiniteDifferenceFunction
-- `:returns`: `_`
-    >No description...
+- `:returns`: `np.ndarray`
+    >derivative tensor
 
 <a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.__repr__" class="docs-object-method">&nbsp;</a>
 ```python
 __repr__(self): 
 ```
+Provides a clean representation of a `CoordinateSystem` for printing
+- `:returns`: `str`
+    >No description...
 
 ### Examples
 

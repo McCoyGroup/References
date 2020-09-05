@@ -1,5 +1,6 @@
 ## <a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifference1D">FiniteDifference1D</a>
-
+A one-dimensional finite difference derivative object.
+Higher-dimensional derivatives are built by chaining these.
 
 ### Properties and Methods
 ```python
@@ -32,14 +33,16 @@ widths(self):
 ```python
 apply(self, vals, val_dim=None, axis=0, mesh_spacing=None): 
 ```
-Applies the held FiniteDifferenceMatrix to the array of values
+Applies the held `FiniteDifferenceMatrix` to the array of values
 - `vals`: `np.ndarray | sparse.csr_matrix`
     >values to do the difference over
 - `val_dim`: `int`
     >dimensions of the vals
-- `axis`: `Any`
-    >No description...
-- `:returns`: `_`
+- `axis`: `int | tuple[int]`
+    >the axis to apply along
+- `mesh_spacing`: `float`
+    >the mesh spacing for the weights
+- `:returns`: `np.ndarray`
     >No description...
 
 <a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifference1D.sparse_tensordot" class="docs-object-method">&nbsp;</a>

@@ -88,8 +88,8 @@ Builds a 1D finite difference matrix for a set of boundary weights, central weig
                  ...
                  ...
                     .... b3 b2 b1
-- `:returns`: `_`
-    >No description...
+- `:returns`: `np.ndarray | sp.csr_matrix`
+    >fd_mat
 
 ### Examples
 

@@ -29,11 +29,21 @@ __init__(self, objects, out=None, module_writer=None, class_writer=None, functio
 ```python
 write_object(self, o, written=None): 
 ```
+Writes a single object to file
+- `o`: `Any`
+    >the object we want to write
+- `written`: `None | dict`
+    >a caching dict of objects to break cyclic reference loops
+- `:returns`: `None | str`
+    >the written file
 
 <a id="Peeves.Doc.DocWalker.DocWalker.write_docs" class="docs-object-method">&nbsp;</a>
 ```python
 write_docs(self): 
 ```
+Walks through the objects supplied and writes them & their children to file
+- `:returns`: `list[str]`
+    >written files
 
 ### Examples
 
