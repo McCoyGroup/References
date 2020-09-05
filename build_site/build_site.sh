@@ -21,4 +21,4 @@ PYTHONPATH=/home python3 References/docs.py
 ### push back to main
 cd References
 git add -A && git commit -m "Built out site"
-git push -u origin master HEAD
+git push -u origin HEAD
