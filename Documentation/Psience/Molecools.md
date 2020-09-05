@@ -17,6 +17,8 @@ Molecules provides wrapper utilities for working with and visualizing molecular 
 
 ___
 
-[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/Molecools.md) or 
+[Edit Examples](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/Molecools.md) or 
 [Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/Molecools.md) <br/>
-[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Psience/edit/master/Molecools/__init__.py?message=Update%20Docs)
+[Edit Template](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/templates/Psience/Molecools.md) or 
+[Create New Template](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/templates/Psience/Molecools.md) <br/>
+[Edit Docstrings](https://github.com/McCoyGroup/Psience/edit/master/Molecools/__init__.py?message=Update%20Docs)

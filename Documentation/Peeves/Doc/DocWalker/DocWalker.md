@@ -1,11 +1,29 @@
 ## <a id="Peeves.Doc.DocWalker.DocWalker">DocWalker</a>
+A class that walks a module structure, generating .md files for every class inside it as well as for global functions,
+and a Markdown index file.
 
+Takes a set of objects & writers and walks through the objects, generating files on the way
 
 ### Properties and Methods
 <a id="Peeves.Doc.DocWalker.DocWalker.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, objects, out=None, module_writer=None, class_writer=None, function_writer=None, object_writer=None, ignore_paths=None): 
 ```
+
+- `objects`: `Iterable[Any]`
+    >the objects to write out
+- `out`: `None | str`
+    >the directory in which to write the files (`None` means `sys.stdout`)
+- `module_writer`: `type`
+    >the class to used to write module Markdown (`None` means `ModuleWriter`)
+- `class_writer`: `type`
+    >the class to used to write class Markdown(`None` means `ClassWriter`)
+- `function_writer`: `type`
+    >the class to used to write function Markdown (`None` means `FunctionWriter`)
+- `object_writer`: `type`
+    >the class to used to write object Markdown (`None` means `ObjectWriter`)
+- `ignore_paths`: `None | Iterable[str]`
+    >a set of paths not to write (passed to the objects)
 
 <a id="Peeves.Doc.DocWalker.DocWalker.write_object" class="docs-object-method">&nbsp;</a>
 ```python
@@ -22,6 +40,8 @@ write_docs(self):
 
 ___
 
-[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Peeves/Doc/DocWalker/DocWalker.md) or 
+[Edit Examples](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Peeves/Doc/DocWalker/DocWalker.md) or 
 [Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Peeves/Doc/DocWalker/DocWalker.md) <br/>
-[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Peeves/edit/master/Doc/DocWalker.py?message=Update%20Docs)
+[Edit Template](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/templates/Peeves/Doc/DocWalker/DocWalker.md) or 
+[Create New Template](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/templates/Peeves/Doc/DocWalker/DocWalker.md) <br/>
+[Edit Docstrings](https://github.com/McCoyGroup/Peeves/edit/master/Doc/DocWalker.py?message=Update%20Docs)

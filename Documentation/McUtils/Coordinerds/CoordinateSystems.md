@@ -8,11 +8,11 @@ Provides a framework for using coordinates with explicit reference to an underly
   - [CartesianCoordinateSystem](CoordinateSystems/CommonCoordinateSystems/CartesianCoordinateSystem.md)
   - [InternalCoordinateSystem](CoordinateSystems/CommonCoordinateSystems/InternalCoordinateSystem.md)
   - [CartesianCoordinateSystem3D](CoordinateSystems/CommonCoordinateSystems/CartesianCoordinateSystem3D.md)
-  - [CartesianCoordinateSystem3D](CoordinateSystems/CommonCoordinateSystems/CartesianCoordinateSystem3D.md)
+  - [CartesianCoordinates3D](CoordinateSystems/CommonCoordinateSystems/CartesianCoordinates3D.md)
   - [SphericalCoordinateSystem](CoordinateSystems/CommonCoordinateSystems/SphericalCoordinateSystem.md)
-  - [SphericalCoordinateSystem](CoordinateSystems/CommonCoordinateSystems/SphericalCoordinateSystem.md)
+  - [SphericalCoordinates](CoordinateSystems/CommonCoordinateSystems/SphericalCoordinates.md)
   - [ZMatrixCoordinateSystem](CoordinateSystems/CommonCoordinateSystems/ZMatrixCoordinateSystem.md)
-  - [ZMatrixCoordinateSystem](CoordinateSystems/CommonCoordinateSystems/ZMatrixCoordinateSystem.md)
+  - [ZMatrixCoordinates](CoordinateSystems/CommonCoordinateSystems/ZMatrixCoordinates.md)
   - [CoordinateSystem](CoordinateSystems/CoordinateSystem/CoordinateSystem.md)
   - [BaseCoordinateSystem](CoordinateSystems/CoordinateSystem/BaseCoordinateSystem.md)
   - [CoordinateSystemError](CoordinateSystems/CoordinateSystem/CoordinateSystemError.md)
@@ -25,6 +25,8 @@ Provides a framework for using coordinates with explicit reference to an underly
 
 ___
 
-[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Coordinerds/CoordinateSystems.md) or 
+[Edit Examples](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Coordinerds/CoordinateSystems.md) or 
 [Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Coordinerds/CoordinateSystems.md) <br/>
-[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/Coordinerds/CoordinateSystems/__init__.py?message=Update%20Docs)
+[Edit Template](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/templates/McUtils/Coordinerds/CoordinateSystems.md) or 
+[Create New Template](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/templates/McUtils/Coordinerds/CoordinateSystems.md) <br/>
+[Edit Docstrings](https://github.com/McCoyGroup/McUtils/edit/master/Coordinerds/CoordinateSystems/__init__.py?message=Update%20Docs)

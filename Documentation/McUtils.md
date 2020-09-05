@@ -24,6 +24,8 @@ All of the McUtils packages stand mostly on their own, but there will be little 
 
 ___
 
-[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils.md) or 
+[Edit Examples](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils.md) or 
 [Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils.md) <br/>
-[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/__init__.py?message=Update%20Docs)
+[Edit Template](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/templates/McUtils.md) or 
+[Create New Template](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/templates/McUtils.md) <br/>
+[Edit Docstrings](https://github.com/McCoyGroup/McUtils/edit/master/__init__.py?message=Update%20Docs)

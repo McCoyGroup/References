@@ -119,6 +119,8 @@ def test_FchkMasses(self):
 
 ___
 
-[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/GaussianInterface/GaussianImporter/GaussianFChkReader.md) or 
+[Edit Examples](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/GaussianInterface/GaussianImporter/GaussianFChkReader.md) or 
 [Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/GaussianInterface/GaussianImporter/GaussianFChkReader.md) <br/>
-[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/GaussianInterface/GaussianImporter.py?message=Update%20Docs)
+[Edit Template](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/templates/McUtils/GaussianInterface/GaussianImporter/GaussianFChkReader.md) or 
+[Create New Template](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/templates/McUtils/GaussianInterface/GaussianImporter/GaussianFChkReader.md) <br/>
+[Edit Docstrings](https://github.com/McCoyGroup/McUtils/edit/master/GaussianInterface/GaussianImporter.py?message=Update%20Docs)

@@ -141,6 +141,8 @@ Calculates the local kinetic energy
 
 ___
 
-[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/RynLib/DoMyCode/ImportanceSampler/ImportanceSampler.md) or 
+[Edit Examples](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/RynLib/DoMyCode/ImportanceSampler/ImportanceSampler.md) or 
 [Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/DoMyCode/ImportanceSampler/ImportanceSampler.md) <br/>
-[Edit Docstrings on GitHub](https://github.com/McCoyGroup/RynLib/edit/master/DoMyCode/ImportanceSampler.py?message=Update%20Docs)
+[Edit Template](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/templates/RynLib/DoMyCode/ImportanceSampler/ImportanceSampler.md) or 
+[Create New Template](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/templates/RynLib/DoMyCode/ImportanceSampler/ImportanceSampler.md) <br/>
+[Edit Docstrings](https://github.com/McCoyGroup/RynLib/edit/master/DoMyCode/ImportanceSampler.py?message=Update%20Docs)

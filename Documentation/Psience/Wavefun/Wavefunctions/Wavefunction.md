@@ -42,6 +42,8 @@ Computes the probability density of the current wavefunction
 
 ___
 
-[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/Wavefun/Wavefunctions/Wavefunction.md) or 
+[Edit Examples](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/Psience/Wavefun/Wavefunctions/Wavefunction.md) or 
 [Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/Psience/Wavefun/Wavefunctions/Wavefunction.md) <br/>
-[Edit Docstrings on GitHub](https://github.com/McCoyGroup/Psience/edit/master/Wavefun/Wavefunctions.py?message=Update%20Docs)
+[Edit Template](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/templates/Psience/Wavefun/Wavefunctions/Wavefunction.md) or 
+[Create New Template](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/templates/Psience/Wavefun/Wavefunctions/Wavefunction.md) <br/>
+[Edit Docstrings](https://github.com/McCoyGroup/Psience/edit/master/Wavefun/Wavefunctions.py?message=Update%20Docs)

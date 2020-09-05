@@ -30,7 +30,7 @@ https://mccoygroup.github.io/References/Documentation/McUtils/GaussianInterface.
 you'll either add the appropriate file by going to 
 
 ```
-https://github.com/McCoyGroup/References/new/gh-pages/Documentation/examples/McUtils/GaussianInterface.md
+https://github.com/McCoyGroup/References/new/gh-pages?filename=Documentation/examples/McUtils/GaussianInterface.md
 ```
 
 or edit the existing one by going to 
@@ -49,9 +49,39 @@ To do so you'd first note that in the breadcrumb we have
 Documentation / Psience / Molecools
 ```
 
-So you'd go to https://github.com/McCoyGroup/Psience/Molecools & then notice that there is a package called `Molecule.py`.
-Then, clicking on the package's edit link ( https://github.com/McCoyGroup/Psience/edit/master/Molecools/Molecule.py ) you can navigate to where `Molecule` is defined and edit that.
+So you'd go to [https://github.com/McCoyGroup/Psience/Molecools](https://github.com/McCoyGroup/Psience/Molecools) & then notice that there is a package called `Molecule.py`.
+Then, clicking on the package's edit link ( [McCoyGroup/Psience/edit/master/Molecools/Molecule.py](https://github.com/McCoyGroup/Psience/edit/master/Molecools/Molecule.py) ) you can navigate to where `Molecule` is defined and edit that.
 Alternately, if you know the line number in the source file, you can link directly to that line in the source and then people can use the GitHub UI.
 
 After editing, you'll need to rerun the site build via the [GitHub Action](https://github.com/McCoyGroup/References/actions?query=workflow%3A%22McBuild+site%22) we set up.
+
+##### Templates
+
+The documentation build makes use of a template system to generate its Markdown pages.
+In particular, it uses the files [here](https://github.com/McCoyGroup/References/tree/gh-pages/Documentation/templates) to make this work, where the following hiearchy is used:
+* `index.md` is used for this main index page
+* `module.md` is used for modules
+* `class.md` is used for classes
+* `function.md` is used for stand-alone functions
+* `method.md` is used for object methods
+* `object.md` is used for objects with a `__name__` parameter
+
+You can also add custom templates for pages, if you feel they need more information than the auto-generator can provide.
+To do so, we'll add to the file path in the [templates](https://github.com/McCoyGroup/References/tree/gh-pages/Documentation/templates) directory of the documentation.
+
+For the `McUtils.GaussianInterface` example from before, to edit the template we would have
+
+```
+https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/templates/McUtils/GaussianInterface.md
+```
+
+and or to make the file we'd use 
+
+```
+https://github.com/McCoyGroup/References/new/gh-pages?filename=Documentation/templates/McUtils/GaussianInterface.md
+```
+
+once `Peeves` has a chance to rebuild the site, the new template will be used.
+
+It's generally good to build off of the old templates, though, so that we don't lose information.
 

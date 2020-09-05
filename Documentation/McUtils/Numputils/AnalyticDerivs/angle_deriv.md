@@ -13,13 +13,15 @@ Gives the derivative of the angle between i, j, and k with respect to the Cartes
 - `k`: `int | Iterable[int]`
     >index of the other outside atom
 - `:returns`: `np.ndarray`
-    >derivatives of the angle with respect to atoms i, j, and k
+    >derivatives of the angle with respect to atoms i, j, and k 
 
-Examples: 
+### Examples: 
 
 
 ___
 
-[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Numputils/AnalyticDerivs/angle_deriv.md) or 
+[Edit Examples](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Numputils/AnalyticDerivs/angle_deriv.md) or 
 [Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Numputils/AnalyticDerivs/angle_deriv.md) <br/>
-[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/Numputils/AnalyticDerivs.py?message=Update%20Docs)
+[Edit Template](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/templates/McUtils/Numputils/AnalyticDerivs/angle_deriv.md) or 
+[Create New Template](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/templates/McUtils/Numputils/AnalyticDerivs/angle_deriv.md) <br/>
+[Edit Docstrings](https://github.com/McCoyGroup/McUtils/edit/master/Numputils/AnalyticDerivs.py?message=Update%20Docs)

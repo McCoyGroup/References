@@ -12,6 +12,8 @@ Provides a Loader object to load a potential from a C++ extension
 
 ___
 
-[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/RynLib/PlzNumbers/PotentialLoader.md) or 
+[Edit Examples](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/RynLib/PlzNumbers/PotentialLoader.md) or 
 [Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/PlzNumbers/PotentialLoader.md) <br/>
-[Edit Docstrings on GitHub](https://github.com/McCoyGroup/RynLib/edit/master/PlzNumbers/PotentialLoader/__init__.py?message=Update%20Docs)
+[Edit Template](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/templates/RynLib/PlzNumbers/PotentialLoader.md) or 
+[Create New Template](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/templates/RynLib/PlzNumbers/PotentialLoader.md) <br/>
+[Edit Docstrings](https://github.com/McCoyGroup/RynLib/edit/master/PlzNumbers/PotentialLoader/__init__.py?message=Update%20Docs)

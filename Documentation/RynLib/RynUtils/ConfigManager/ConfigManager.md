@@ -74,6 +74,8 @@ Updates a config from the known list. Requires a name.
 
 ___
 
-[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/RynLib/RynUtils/ConfigManager/ConfigManager.md) or 
+[Edit Examples](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/RynLib/RynUtils/ConfigManager/ConfigManager.md) or 
 [Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/RynLib/RynUtils/ConfigManager/ConfigManager.md) <br/>
-[Edit Docstrings on GitHub](https://github.com/McCoyGroup/RynLib/edit/master/RynUtils/ConfigManager.py?message=Update%20Docs)
+[Edit Template](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/templates/RynLib/RynUtils/ConfigManager/ConfigManager.md) or 
+[Create New Template](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/templates/RynLib/RynUtils/ConfigManager/ConfigManager.md) <br/>
+[Edit Docstrings](https://github.com/McCoyGroup/RynLib/edit/master/RynUtils/ConfigManager.py?message=Update%20Docs)
