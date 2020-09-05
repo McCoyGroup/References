@@ -100,6 +100,7 @@ defaults:
         num_links: 1
         min_depth: 0
         check_urls: false
+        url_ext: ".html"
 
 # Exclude from processing
 exclude:
