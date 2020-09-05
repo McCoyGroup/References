@@ -4,15 +4,18 @@ It takes a tensor shape and a function to compute tensor elements.
 The `compute` function should be able to take a block of indices and return all the matrix elements.
 
 ### Properties and Methods
-```python
-diag: property
-```
-<a id="Psience.BasisReps.Terms.TermComputer.__init__">&nbsp;</a>
+<a id="Psience.BasisReps.Terms.TermComputer.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, compute, n_quanta): 
 ```
 
-<a id="Psience.BasisReps.Terms.TermComputer.get_element">&nbsp;</a>
+<a id="Psience.BasisReps.Terms.TermComputer.diag" class="docs-object-method">&nbsp;</a>
+```python
+@property
+diag(self): 
+```
+
+<a id="Psience.BasisReps.Terms.TermComputer.get_element" class="docs-object-method">&nbsp;</a>
 ```python
 get_element(self, n, m): 
 ```
@@ -25,7 +28,7 @@ Computes term elements.
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.BasisReps.Terms.TermComputer.__getitem__">&nbsp;</a>
+<a id="Psience.BasisReps.Terms.TermComputer.__getitem__" class="docs-object-method">&nbsp;</a>
 ```python
 __getitem__(self, item): 
 ```

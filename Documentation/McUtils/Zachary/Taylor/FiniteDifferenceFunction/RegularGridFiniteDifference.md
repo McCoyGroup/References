@@ -5,7 +5,7 @@ Defines a 1D finite difference over a regular grid
 ```python
 finite_difference_data: method
 ```
-<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.RegularGridFiniteDifference.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.RegularGridFiniteDifference.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, order, stencil=None, accuracy=4, end_point_accuracy=2, **kw): 
 ```
@@ -21,7 +21,7 @@ __init__(self, order, stencil=None, accuracy=4, end_point_accuracy=2, **kw):
 - `kw`: `Any`
     >options passed through to the `FiniteDifferenceMatrix`
 
-<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.RegularGridFiniteDifference.get_weights">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.RegularGridFiniteDifference.get_weights" class="docs-object-method">&nbsp;</a>
 ```python
 get_weights(m, s, n): 
 ```

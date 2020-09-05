@@ -1,4 +1,5 @@
-<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.finite_difference">&nbsp;</a>
+# <a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.finite_difference">finite_difference</a>
+
 ```python
 finite_difference(grid, values, order, accuracy=2, stencil=None, end_point_accuracy=1, axes=None, dtype='float64', **kw): 
 ```
@@ -20,3 +21,11 @@ Computes a finite difference derivative for the values on the grid
 - `:returns`: `_`
     >No description...
 
+Examples: 
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Zachary/Taylor/FiniteDifferenceFunction/finite_difference.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Zachary/Taylor/FiniteDifferenceFunction/finite_difference.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/Zachary/Taylor/FiniteDifferenceFunction.py?message=Update%20Docs)

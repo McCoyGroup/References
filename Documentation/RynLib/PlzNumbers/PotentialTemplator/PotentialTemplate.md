@@ -2,7 +2,7 @@
 A `TemplateWriter` that handles most of the necessary boiler plate to get a C++ potential to play nice with DoMyCode
 
 ### Properties and Methods
-<a id="RynLib.PlzNumbers.PotentialTemplator.PotentialTemplate.__init__">&nbsp;</a>
+<a id="RynLib.PlzNumbers.PotentialTemplator.PotentialTemplate.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, *ignored, lib_name=None, function_name=None, potential_source=None, raw_array_potential=None, arguments=None, linked_libs=None, static_source=False, extra_functions=(), fortran_potential=False, shim_script=None, conversion=None): 
 ```
@@ -22,7 +22,7 @@ __init__(self, *ignored, lib_name=None, function_name=None, potential_source=Non
 - `extra_functions`: `Any`
     >Extra functions if we'll have more than the default one
 
-<a id="RynLib.PlzNumbers.PotentialTemplator.PotentialTemplate.apply">&nbsp;</a>
+<a id="RynLib.PlzNumbers.PotentialTemplator.PotentialTemplate.apply" class="docs-object-method">&nbsp;</a>
 ```python
 apply(self, out_dir): 
 ```

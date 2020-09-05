@@ -3,12 +3,10 @@ A DMC simulation class. Uses a number of subclasses to manage its methods
 
 ### Properties and Methods
 ```python
-config_string: property
 load_lib: method
 reload_lib: method
-lib: property
 ```
-<a id="RynLib.DoMyCode.Simulation.Simulation.__init__">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.Simulation.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, params): 
 ```
@@ -16,7 +14,7 @@ Initializes the simulation from the simulation parameters
 - `params`: `SimulationParameters`
     >the parameters for the simulation
 
-<a id="RynLib.DoMyCode.Simulation.Simulation.configure_simulation">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.Simulation.configure_simulation" class="docs-object-method">&nbsp;</a>
 ```python
 configure_simulation(self, name='dmc', description='a dmc simulation', walker_set=None, time_step=0, alpha=None, potential=None, atomic_units=False, steps_per_propagation=None, mpi_manager=True, importance_sampler=None, num_wavefunctions=0, ignore_errors=False, branching_threshold=1.0, energy_error_value=1000000000.0, max_weight_threshold=None, min_potential_threshold=None, branch_on_steps=False, parallelize_diffusion=True, branch_on_cores=False, random_seed=None): 
 ```
@@ -42,17 +40,23 @@ configure_simulation(self, name='dmc', description='a dmc simulation', walker_se
 - `:returns`: `_`
     >No description...
 
-<a id="RynLib.DoMyCode.Simulation.Simulation.checkpoint">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.Simulation.config_string" class="docs-object-method">&nbsp;</a>
+```python
+@property
+config_string(self): 
+```
+
+<a id="RynLib.DoMyCode.Simulation.Simulation.checkpoint" class="docs-object-method">&nbsp;</a>
 ```python
 checkpoint(self, test=True): 
 ```
 
-<a id="RynLib.DoMyCode.Simulation.Simulation.garbage_collect">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.Simulation.garbage_collect" class="docs-object-method">&nbsp;</a>
 ```python
 garbage_collect(self, test=True): 
 ```
 
-<a id="RynLib.DoMyCode.Simulation.Simulation.reload">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.Simulation.reload" class="docs-object-method">&nbsp;</a>
 ```python
 reload(self, energies_file='energies.npy', walkers_file='walkers_{n}.npz', full_weights_file='full_weights.npy', full_energies_file='full_energies.npy'): 
 ```
@@ -62,12 +66,12 @@ Reloads the core data in a Simulation object from a checkpoint file
 - `params_file`: `Any`
     >No description...
 
-<a id="RynLib.DoMyCode.Simulation.Simulation.log_print">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.Simulation.log_print" class="docs-object-method">&nbsp;</a>
 ```python
 log_print(self, *arg, allow_dummy=False, **kwargs): 
 ```
 
-<a id="RynLib.DoMyCode.Simulation.Simulation.run">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.Simulation.run" class="docs-object-method">&nbsp;</a>
 ```python
 run(self): 
 ```
@@ -75,17 +79,23 @@ Runs the DMC until we've gone through the requested number of time steps, checkp
 - `:returns`: `_`
     >No description...
 
-<a id="RynLib.DoMyCode.Simulation.Simulation.apply_branching">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.Simulation.lib" class="docs-object-method">&nbsp;</a>
+```python
+@property
+lib(self): 
+```
+
+<a id="RynLib.DoMyCode.Simulation.Simulation.apply_branching" class="docs-object-method">&nbsp;</a>
 ```python
 apply_branching(self, energies): 
 ```
 
-<a id="RynLib.DoMyCode.Simulation.Simulation.evaluate_potential_and_branch">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.Simulation.evaluate_potential_and_branch" class="docs-object-method">&nbsp;</a>
 ```python
 evaluate_potential_and_branch(self, nsteps): 
 ```
 
-<a id="RynLib.DoMyCode.Simulation.Simulation.propagate">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.Simulation.propagate" class="docs-object-method">&nbsp;</a>
 ```python
 propagate(self, nsteps=None): 
 ```
@@ -95,7 +105,7 @@ Propagates the system forward n steps
 - `:returns`: `_`
     >No description...
 
-<a id="RynLib.DoMyCode.Simulation.Simulation.update_weights">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.Simulation.update_weights" class="docs-object-method">&nbsp;</a>
 ```python
 update_weights(self, energies, weights): 
 ```
@@ -107,12 +117,12 @@ Iteratively updates the weights over a set of vectors of energies
 - `:returns`: `np.ndarray`
     >No description...
 
-<a id="RynLib.DoMyCode.Simulation.Simulation.chop_weights">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.Simulation.chop_weights" class="docs-object-method">&nbsp;</a>
 ```python
 chop_weights(eliminated_walkers, weights, parents, walkers, energies): 
 ```
 
-<a id="RynLib.DoMyCode.Simulation.Simulation.branch">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.Simulation.branch" class="docs-object-method">&nbsp;</a>
 ```python
 branch(self, energies): 
 ```
@@ -120,7 +130,7 @@ Handles branching in the system.
 - `:returns`: `_`
     >No description...
 
-<a id="RynLib.DoMyCode.Simulation.Simulation.descendent_weight">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.Simulation.descendent_weight" class="docs-object-method">&nbsp;</a>
 ```python
 descendent_weight(self): 
 ```

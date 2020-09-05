@@ -10,26 +10,41 @@ asis`: `RepresentationBasis | None`
 ### Properties and Methods
 ```python
 from_fchk: method
-H0: property
-H1: property
-H2: property
 ```
-<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.__init__">&nbsp;</a>
+<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, molecule=None, n_quanta=3, basis=None): 
 ```
 
-<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.get_state_indices">&nbsp;</a>
+<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.H0" class="docs-object-method">&nbsp;</a>
+```python
+@property
+H0(self): 
+```
+
+<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.H1" class="docs-object-method">&nbsp;</a>
+```python
+@property
+H1(self): 
+```
+
+<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.H2" class="docs-object-method">&nbsp;</a>
+```python
+@property
+H2(self): 
+```
+
+<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.get_state_indices" class="docs-object-method">&nbsp;</a>
 ```python
 get_state_indices(self, states): 
 ```
 
-<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.get_state_quantum_numbers">&nbsp;</a>
+<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.get_state_quantum_numbers" class="docs-object-method">&nbsp;</a>
 ```python
 get_state_quantum_numbers(self, states): 
 ```
 
-<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.get_corrections">&nbsp;</a>
+<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.get_corrections" class="docs-object-method">&nbsp;</a>
 ```python
 get_corrections(self, states=15, coupled_states=None, coeff_threshold=None, energy_threshold=None): 
 ```
@@ -41,7 +56,7 @@ get_corrections(self, states=15, coupled_states=None, coeff_threshold=None, ener
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.get_wavefunctions">&nbsp;</a>
+<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.get_wavefunctions" class="docs-object-method">&nbsp;</a>
 ```python
 get_wavefunctions(self, states=15, coupled_states=None, coeff_threshold=None, energy_threshold=None): 
 ```
@@ -53,7 +68,7 @@ Computes perturbation expansion of the wavefunctions and energies.
 - `:returns`: `np.ndarray`
     >coeffs
 
-<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.martin_test">&nbsp;</a>
+<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryHamiltonian.martin_test" class="docs-object-method">&nbsp;</a>
 ```python
 martin_test(self, states=15, coupled_states=None): 
 ```

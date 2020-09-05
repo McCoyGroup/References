@@ -1,4 +1,5 @@
-<a id="McUtils.Numputils.VectorOps.pts_normals">&nbsp;</a>
+# <a id="McUtils.Numputils.VectorOps.pts_normals">pts_normals</a>
+
 ```python
 pts_normals(pts1, pts2, pts3, normalize=True): 
 ```
@@ -14,3 +15,11 @@ Provides the vector normal to the plane of the three points
 - `:returns`: `np.ndarray`
     >No description...
 
+Examples: 
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Numputils/VectorOps/pts_normals.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Numputils/VectorOps/pts_normals.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/Numputils/VectorOps.py?message=Update%20Docs)

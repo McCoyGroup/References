@@ -9,7 +9,7 @@ infer_type: method
 infer_array_type: method
 inferred_type_string: method
 ```
-<a id="McUtils.Extensions.SharedLibraryManager.Argument.__init__">&nbsp;</a>
+<a id="McUtils.Extensions.SharedLibraryManager.Argument.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, name, dtype, default=None, pointer_type=None, array_type=None): 
 ```

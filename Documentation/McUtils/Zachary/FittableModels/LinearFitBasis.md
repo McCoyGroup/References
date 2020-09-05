@@ -4,12 +4,7 @@ Asks for a generator for each dimension, which is just a function that takes an 
 Product functions are taken up to some max order
 
 ### Properties and Methods
-```python
-functions: property
-names: property
-order: property
-```
-<a id="McUtils.Zachary.FittableModels.LinearFitBasis.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.FittableModels.LinearFitBasis.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, *generators, order=3): 
 ```
@@ -19,17 +14,35 @@ __init__(self, *generators, order=3):
 - `order`: `int`
     >the maximum order for the basis functions (currently turning off coupling isn't possible, but that could come)
 
-<a id="McUtils.Zachary.FittableModels.LinearFitBasis.construct_basis">&nbsp;</a>
+<a id="McUtils.Zachary.FittableModels.LinearFitBasis.functions" class="docs-object-method">&nbsp;</a>
+```python
+@property
+functions(self): 
+```
+
+<a id="McUtils.Zachary.FittableModels.LinearFitBasis.names" class="docs-object-method">&nbsp;</a>
+```python
+@property
+names(self): 
+```
+
+<a id="McUtils.Zachary.FittableModels.LinearFitBasis.order" class="docs-object-method">&nbsp;</a>
+```python
+@property
+order(self): 
+```
+
+<a id="McUtils.Zachary.FittableModels.LinearFitBasis.construct_basis" class="docs-object-method">&nbsp;</a>
 ```python
 construct_basis(self): 
 ```
 
-<a id="McUtils.Zachary.FittableModels.LinearFitBasis.<lambda>">&nbsp;</a>
+<a id="McUtils.Zachary.FittableModels.LinearFitBasis.<lambda>" class="docs-object-method">&nbsp;</a>
 ```python
 <lambda>(x, k): 
 ```
 
-<a id="McUtils.Zachary.FittableModels.LinearFitBasis.<lambda>">&nbsp;</a>
+<a id="McUtils.Zachary.FittableModels.LinearFitBasis.<lambda>" class="docs-object-method">&nbsp;</a>
 ```python
 <lambda>(x, n): 
 ```

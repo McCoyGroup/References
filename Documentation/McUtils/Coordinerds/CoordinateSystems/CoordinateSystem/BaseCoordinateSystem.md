@@ -3,7 +3,7 @@ A CoordinateSystem object that can't be reduced further.
 A common choice might be Cartesian coordinates or internal coordinates
 
 ### Properties and Methods
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.BaseCoordinateSystem.__init__">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.BaseCoordinateSystem.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, name, dimension=None, matrix=None, coordinate_shape=None, converter_options=None): 
 ```

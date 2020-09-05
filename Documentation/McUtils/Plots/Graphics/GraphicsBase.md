@@ -5,13 +5,8 @@ Defines the common parts of the interface with some calling into matplotlib
 ### Properties and Methods
 ```python
 opt_keys: set
-event_handlers: property
-animated: property
-prolog: property
-epilog: property
-opts: property
 ```
-<a id="McUtils.Plots.Graphics.GraphicsBase.__init__">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, *args, figure=None, tighten=False, axes=None, subplot_kw=None, parent=None, image_size=None, padding=None, aspect_ratio=None, non_interactive=None, mpl_backend=None, theme=None, prop_manager=<class 'McUtils.Plots.Properties.GraphicsPropertyManager'>, theme_manager=<class 'McUtils.Plots.Styling.ThemeManager'>, managed=None, **opts): 
 ```
@@ -29,17 +24,29 @@ __init__(self, *args, figure=None, tighten=False, axes=None, subplot_kw=None, pa
 - `opts`: `Any`
     >No description...
 
-<a id="McUtils.Plots.Graphics.GraphicsBase.bind_events">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.event_handlers" class="docs-object-method">&nbsp;</a>
+```python
+@property
+event_handlers(self): 
+```
+
+<a id="McUtils.Plots.Graphics.GraphicsBase.animated" class="docs-object-method">&nbsp;</a>
+```python
+@property
+animated(self): 
+```
+
+<a id="McUtils.Plots.Graphics.GraphicsBase.bind_events" class="docs-object-method">&nbsp;</a>
 ```python
 bind_events(self, *handlers, **events): 
 ```
 
-<a id="McUtils.Plots.Graphics.GraphicsBase.create_animation">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.create_animation" class="docs-object-method">&nbsp;</a>
 ```python
 create_animation(self, *args, **opts): 
 ```
 
-<a id="McUtils.Plots.Graphics.GraphicsBase.set_options">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.set_options" class="docs-object-method">&nbsp;</a>
 ```python
 set_options(self, event_handlers=None, animated=None, prolog=None, epilog=None, **opts): 
 ```
@@ -53,12 +60,24 @@ Sets options for the plot
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Plots.Graphics.GraphicsBase.__getattr__">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.prolog" class="docs-object-method">&nbsp;</a>
+```python
+@property
+prolog(self): 
+```
+
+<a id="McUtils.Plots.Graphics.GraphicsBase.epilog" class="docs-object-method">&nbsp;</a>
+```python
+@property
+epilog(self): 
+```
+
+<a id="McUtils.Plots.Graphics.GraphicsBase.__getattr__" class="docs-object-method">&nbsp;</a>
 ```python
 __getattr__(self, item): 
 ```
 
-<a id="McUtils.Plots.Graphics.GraphicsBase.copy_axes">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.copy_axes" class="docs-object-method">&nbsp;</a>
 ```python
 copy_axes(self): 
 ```
@@ -66,7 +85,7 @@ Copies the axes object
 - `:returns`: `matplotlib.axes.Axes`
     >No description...
 
-<a id="McUtils.Plots.Graphics.GraphicsBase.refresh">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.refresh" class="docs-object-method">&nbsp;</a>
 ```python
 refresh(self): 
 ```
@@ -74,7 +93,13 @@ Refreshes the axes
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Plots.Graphics.GraphicsBase.copy">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.opts" class="docs-object-method">&nbsp;</a>
+```python
+@property
+opts(self): 
+```
+
+<a id="McUtils.Plots.Graphics.GraphicsBase.copy" class="docs-object-method">&nbsp;</a>
 ```python
 copy(self): 
 ```
@@ -82,32 +107,32 @@ Creates a copy of the object with new axes and a new figure
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Plots.Graphics.GraphicsBase.prep_show">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.prep_show" class="docs-object-method">&nbsp;</a>
 ```python
 prep_show(self): 
 ```
 
-<a id="McUtils.Plots.Graphics.GraphicsBase.show">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.show" class="docs-object-method">&nbsp;</a>
 ```python
 show(self, reshow=True): 
 ```
 
-<a id="McUtils.Plots.Graphics.GraphicsBase.clear">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.clear" class="docs-object-method">&nbsp;</a>
 ```python
 clear(self): 
 ```
 
-<a id="McUtils.Plots.Graphics.GraphicsBase.savefig">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.savefig" class="docs-object-method">&nbsp;</a>
 ```python
 savefig(self, where, format='png', **kw): 
 ```
 
-<a id="McUtils.Plots.Graphics.GraphicsBase.to_png">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.to_png" class="docs-object-method">&nbsp;</a>
 ```python
 to_png(self): 
 ```
 
-<a id="McUtils.Plots.Graphics.GraphicsBase.add_colorbar">&nbsp;</a>
+<a id="McUtils.Plots.Graphics.GraphicsBase.add_colorbar" class="docs-object-method">&nbsp;</a>
 ```python
 add_colorbar(self, graphics=None, norm=None, cmap=None, size=(20, 200), tick_padding=40, **kw): 
 ```

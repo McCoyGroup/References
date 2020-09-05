@@ -3,10 +3,7 @@ Represents a set of wavefunctions coming out of a VPT2 calculation.
 Mostly just a wrapper on a PerturbationTheoryHamiltonian
 
 ### Properties and Methods
-```python
-energies: property
-```
-<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryWavefunctions.__init__">&nbsp;</a>
+<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryWavefunctions.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, states, hamiltonian): 
 ```
@@ -18,7 +15,13 @@ __init__(self, states, hamiltonian):
 - `hamiltonian`: `Any`
     >No description...
 
-<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryWavefunctions.get_energies">&nbsp;</a>
+<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryWavefunctions.energies" class="docs-object-method">&nbsp;</a>
+```python
+@property
+energies(self): 
+```
+
+<a id="Psience.VPT2.PerturbationTheory.PerturbationTheoryWavefunctions.get_energies" class="docs-object-method">&nbsp;</a>
 ```python
 get_energies(self): 
 ```

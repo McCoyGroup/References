@@ -2,12 +2,12 @@
 Represents wavefunctions with analytic forms, most commonly harmonic oscillators
 
 ### Properties and Methods
-<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunctions.__init__">&nbsp;</a>
+<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunctions.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, coeffs, basis_wavefunctions, **ops): 
 ```
 
-<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunctions.get_wavefunctions">&nbsp;</a>
+<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunctions.get_wavefunctions" class="docs-object-method">&nbsp;</a>
 ```python
 get_wavefunctions(self, which): 
 ```

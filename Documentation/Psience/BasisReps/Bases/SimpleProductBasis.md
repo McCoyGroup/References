@@ -3,10 +3,7 @@ Defines a direct product basis from a simpler basis.
 Mixed product bases aren't currently supported
 
 ### Properties and Methods
-```python
-quanta: property
-```
-<a id="Psience.BasisReps.Bases.SimpleProductBasis.__init__">&nbsp;</a>
+<a id="Psience.BasisReps.Bases.SimpleProductBasis.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, basis_type, n_quanta): 
 ```
@@ -16,17 +13,23 @@ __init__(self, basis_type, n_quanta):
 - `n_quanta`: `Iterable[int]`
     >the number of quanta for the representations
 
-<a id="Psience.BasisReps.Bases.SimpleProductBasis.get_function">&nbsp;</a>
+<a id="Psience.BasisReps.Bases.SimpleProductBasis.quanta" class="docs-object-method">&nbsp;</a>
+```python
+@property
+quanta(self): 
+```
+
+<a id="Psience.BasisReps.Bases.SimpleProductBasis.get_function" class="docs-object-method">&nbsp;</a>
 ```python
 get_function(self, idx): 
 ```
 
-<a id="Psience.BasisReps.Bases.SimpleProductBasis.operator">&nbsp;</a>
+<a id="Psience.BasisReps.Bases.SimpleProductBasis.operator" class="docs-object-method">&nbsp;</a>
 ```python
 operator(self, *terms): 
 ```
 
-<a id="Psience.BasisReps.Bases.SimpleProductBasis.representation">&nbsp;</a>
+<a id="Psience.BasisReps.Bases.SimpleProductBasis.representation" class="docs-object-method">&nbsp;</a>
 ```python
 representation(self, *terms): 
 ```
@@ -36,7 +39,7 @@ Provides a representation of a product operator specified by 'terms'
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.BasisReps.Bases.SimpleProductBasis.x">&nbsp;</a>
+<a id="Psience.BasisReps.Bases.SimpleProductBasis.x" class="docs-object-method">&nbsp;</a>
 ```python
 x(self, n): 
 ```
@@ -47,7 +50,7 @@ Returns the representation of x in the multi-dimensional basis with every term e
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.BasisReps.Bases.SimpleProductBasis.p">&nbsp;</a>
+<a id="Psience.BasisReps.Bases.SimpleProductBasis.p" class="docs-object-method">&nbsp;</a>
 ```python
 p(self, n): 
 ```

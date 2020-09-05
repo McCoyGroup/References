@@ -2,32 +2,45 @@
 Defines a general data loader class that we can use for AtomData and any other data classes we might find useful
 
 ### Properties and Methods
-```python
-data_file: property
-data: property
-source: property
-```
-<a id="McUtils.Data.CommonData.DataHandler.__init__">&nbsp;</a>
+<a id="McUtils.Data.CommonData.DataHandler.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, data_name, data_key=None, source_key=None, data_dir=None, data_pkg=None, alternate_keys=None, getter=None): 
 ```
 
-<a id="McUtils.Data.CommonData.DataHandler.load">&nbsp;</a>
+<a id="McUtils.Data.CommonData.DataHandler.data_file" class="docs-object-method">&nbsp;</a>
+```python
+@property
+data_file(self): 
+```
+
+<a id="McUtils.Data.CommonData.DataHandler.load" class="docs-object-method">&nbsp;</a>
 ```python
 load(self): 
 ```
 
-<a id="McUtils.Data.CommonData.DataHandler.__getitem__">&nbsp;</a>
+<a id="McUtils.Data.CommonData.DataHandler.data" class="docs-object-method">&nbsp;</a>
+```python
+@property
+data(self): 
+```
+
+<a id="McUtils.Data.CommonData.DataHandler.source" class="docs-object-method">&nbsp;</a>
+```python
+@property
+source(self): 
+```
+
+<a id="McUtils.Data.CommonData.DataHandler.__getitem__" class="docs-object-method">&nbsp;</a>
 ```python
 __getitem__(self, key): 
 ```
 
-<a id="McUtils.Data.CommonData.DataHandler.__len__">&nbsp;</a>
+<a id="McUtils.Data.CommonData.DataHandler.__len__" class="docs-object-method">&nbsp;</a>
 ```python
 __len__(self): 
 ```
 
-<a id="McUtils.Data.CommonData.DataHandler.__iter__">&nbsp;</a>
+<a id="McUtils.Data.CommonData.DataHandler.__iter__" class="docs-object-method">&nbsp;</a>
 ```python
 __iter__(self): 
 ```

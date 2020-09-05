@@ -6,7 +6,7 @@ Instead it's a class that _dispatches_ to an implementation of BaseSurface to do
 ```python
 detect_base: method
 ```
-<a id="McUtils.Zachary.Surfaces.Surface.Surface.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.Surfaces.Surface.Surface.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, data, dimension=None, base=None, **metadata): 
 ```
@@ -20,7 +20,7 @@ __init__(self, data, dimension=None, base=None, **metadata):
 - `metadata`: `Any`
     >No description...
 
-<a id="McUtils.Zachary.Surfaces.Surface.Surface.minimize">&nbsp;</a>
+<a id="McUtils.Zachary.Surfaces.Surface.Surface.minimize" class="docs-object-method">&nbsp;</a>
 ```python
 minimize(self, initial_guess=None, function_options=None, **opts): 
 ```
@@ -34,7 +34,7 @@ Provides a uniform interface for minimization, basically just dispatching to the
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Zachary.Surfaces.Surface.Surface.__call__">&nbsp;</a>
+<a id="McUtils.Zachary.Surfaces.Surface.Surface.__call__" class="docs-object-method">&nbsp;</a>
 ```python
 __call__(self, gridpoints, **kwargs): 
 ```

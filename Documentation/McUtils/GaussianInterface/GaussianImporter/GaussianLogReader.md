@@ -33,7 +33,7 @@ default_keys: tuple
 default_ordering: dict
 job_default_keys: dict
 ```
-<a id="McUtils.GaussianInterface.GaussianImporter.GaussianLogReader.parse">&nbsp;</a>
+<a id="McUtils.GaussianInterface.GaussianImporter.GaussianLogReader.parse" class="docs-object-method">&nbsp;</a>
 ```python
 parse(self, keys=None, num=None, reset=False): 
 ```
@@ -45,7 +45,7 @@ The main function we'll actually use. Parses bits out of a .log file.
 - `:returns`: `dict`
     >the data pulled from the log file, strung together as a `dict` and keyed by the _keys_
 
-<a id="McUtils.GaussianInterface.GaussianImporter.GaussianLogReader.get_default_keys">&nbsp;</a>
+<a id="McUtils.GaussianInterface.GaussianImporter.GaussianLogReader.get_default_keys" class="docs-object-method">&nbsp;</a>
 ```python
 get_default_keys(self): 
 ```

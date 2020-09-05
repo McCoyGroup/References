@@ -4,9 +4,8 @@ An object that provides a way to call into a shared library function
 ### Properties and Methods
 ```python
 InDir: type
-lib: property
 ```
-<a id="McUtils.Extensions.SharedLibraryManager.SharedLibraryFunction.__init__">&nbsp;</a>
+<a id="McUtils.Extensions.SharedLibraryManager.SharedLibraryFunction.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, shared_library, function, signature, call_directory=None, docstring=None): 
 ```
@@ -22,12 +21,18 @@ __init__(self, shared_library, function, signature, call_directory=None, docstri
 - `docstring`: `str`
     >the docstring for the function
 
-<a id="McUtils.Extensions.SharedLibraryManager.SharedLibraryFunction.initialize">&nbsp;</a>
+<a id="McUtils.Extensions.SharedLibraryManager.SharedLibraryFunction.lib" class="docs-object-method">&nbsp;</a>
+```python
+@property
+lib(self): 
+```
+
+<a id="McUtils.Extensions.SharedLibraryManager.SharedLibraryFunction.initialize" class="docs-object-method">&nbsp;</a>
 ```python
 initialize(self): 
 ```
 
-<a id="McUtils.Extensions.SharedLibraryManager.SharedLibraryFunction.call_single">&nbsp;</a>
+<a id="McUtils.Extensions.SharedLibraryManager.SharedLibraryFunction.call_single" class="docs-object-method">&nbsp;</a>
 ```python
 call_single(self, **kwargs): 
 ```

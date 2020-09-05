@@ -5,9 +5,8 @@ Requires concrete implementations of the position and momentum operators.
 ### Properties and Methods
 ```python
 name: str
-operator_mapping: property
 ```
-<a id="Psience.BasisReps.Bases.RepresentationBasis.__init__">&nbsp;</a>
+<a id="Psience.BasisReps.Bases.RepresentationBasis.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, function_generator, n_quanta): 
 ```
@@ -17,17 +16,17 @@ __init__(self, function_generator, n_quanta):
 - `n_quanta`: `int`
     >numbers of quanta
 
-<a id="Psience.BasisReps.Bases.RepresentationBasis.__getitem__">&nbsp;</a>
+<a id="Psience.BasisReps.Bases.RepresentationBasis.__getitem__" class="docs-object-method">&nbsp;</a>
 ```python
 __getitem__(self, item): 
 ```
 
-<a id="Psience.BasisReps.Bases.RepresentationBasis.__repr__">&nbsp;</a>
+<a id="Psience.BasisReps.Bases.RepresentationBasis.__repr__" class="docs-object-method">&nbsp;</a>
 ```python
 __repr__(self): 
 ```
 
-<a id="Psience.BasisReps.Bases.RepresentationBasis.p">&nbsp;</a>
+<a id="Psience.BasisReps.Bases.RepresentationBasis.p" class="docs-object-method">&nbsp;</a>
 ```python
 p(self, n): 
 ```
@@ -44,7 +43,7 @@ Generates the momentum matrix up to n-quanta
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.BasisReps.Bases.RepresentationBasis.x">&nbsp;</a>
+<a id="Psience.BasisReps.Bases.RepresentationBasis.x" class="docs-object-method">&nbsp;</a>
 ```python
 x(self, n): 
 ```
@@ -54,12 +53,18 @@ Generates the coordinate matrix up to n-quanta
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.BasisReps.Bases.RepresentationBasis.operator">&nbsp;</a>
+<a id="Psience.BasisReps.Bases.RepresentationBasis.operator_mapping" class="docs-object-method">&nbsp;</a>
+```python
+@property
+operator_mapping(self): 
+```
+
+<a id="Psience.BasisReps.Bases.RepresentationBasis.operator" class="docs-object-method">&nbsp;</a>
 ```python
 operator(self, *terms): 
 ```
 
-<a id="Psience.BasisReps.Bases.RepresentationBasis.representation">&nbsp;</a>
+<a id="Psience.BasisReps.Bases.RepresentationBasis.representation" class="docs-object-method">&nbsp;</a>
 ```python
 representation(self, *terms): 
 ```

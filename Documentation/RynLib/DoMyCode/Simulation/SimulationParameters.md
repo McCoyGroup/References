@@ -2,7 +2,7 @@
 A parameters class that manages the data for a DMC simulation
 
 ### Properties and Methods
-<a id="RynLib.DoMyCode.Simulation.SimulationParameters.__init__">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.SimulationParameters.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, **params): 
 ```
@@ -44,7 +44,7 @@ Sets up all the necessary simulation data to run a DMC
 - `world_rank`: `int`
     >the world_rank of the processor in an MPI call
 
-<a id="RynLib.DoMyCode.Simulation.SimulationParameters.serialize">&nbsp;</a>
+<a id="RynLib.DoMyCode.Simulation.SimulationParameters.serialize" class="docs-object-method">&nbsp;</a>
 ```python
 serialize(self, simulation, file, mode=None): 
 ```

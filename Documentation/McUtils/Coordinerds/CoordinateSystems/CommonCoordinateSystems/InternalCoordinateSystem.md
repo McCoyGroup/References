@@ -5,7 +5,7 @@ Represents Internal coordinates generally
 ```python
 name: str
 ```
-<a id="McUtils.Coordinerds.CoordinateSystems.CommonCoordinateSystems.InternalCoordinateSystem.__init__">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CommonCoordinateSystems.InternalCoordinateSystem.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, dimension=None, coordinate_shape=None, converter_options=None, **opts): 
 ```

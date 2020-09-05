@@ -5,9 +5,19 @@
 ```python
 template_name: str
 ```
-<a id="Peeves.Doc.Writers.FunctionWriter.template_params">&nbsp;</a>
+<a id="Peeves.Doc.Writers.FunctionWriter.get_signature" class="docs-object-method">&nbsp;</a>
+```python
+get_signature(self): 
+```
+
+<a id="Peeves.Doc.Writers.FunctionWriter.template_params" class="docs-object-method">&nbsp;</a>
 ```python
 template_params(self): 
+```
+
+<a id="Peeves.Doc.Writers.FunctionWriter.get_package_and_url" class="docs-object-method">&nbsp;</a>
+```python
+get_package_and_url(self): 
 ```
 
 ### Examples

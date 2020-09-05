@@ -7,17 +7,17 @@ Usually used through the `UnitsData` object.
 prefix_map: OrderedDict
 postfix_map: OrderedDict
 ```
-<a id="McUtils.Data.ConstantsData.UnitsDataHandler.__init__">&nbsp;</a>
+<a id="McUtils.Data.ConstantsData.UnitsDataHandler.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self): 
 ```
 
-<a id="McUtils.Data.ConstantsData.UnitsDataHandler.load">&nbsp;</a>
+<a id="McUtils.Data.ConstantsData.UnitsDataHandler.load" class="docs-object-method">&nbsp;</a>
 ```python
 load(self): 
 ```
 
-<a id="McUtils.Data.ConstantsData.UnitsDataHandler.find_conversion">&nbsp;</a>
+<a id="McUtils.Data.ConstantsData.UnitsDataHandler.find_conversion" class="docs-object-method">&nbsp;</a>
 ```python
 find_conversion(self, unit, target): 
 ```
@@ -29,12 +29,12 @@ Attempts to find a conversion between two sets of units. Currently only implemen
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Data.ConstantsData.UnitsDataHandler.add_conversion">&nbsp;</a>
+<a id="McUtils.Data.ConstantsData.UnitsDataHandler.add_conversion" class="docs-object-method">&nbsp;</a>
 ```python
 add_conversion(self, unit, target, value): 
 ```
 
-<a id="McUtils.Data.ConstantsData.UnitsDataHandler.convert">&nbsp;</a>
+<a id="McUtils.Data.ConstantsData.UnitsDataHandler.convert" class="docs-object-method">&nbsp;</a>
 ```python
 convert(self, unit, target): 
 ```

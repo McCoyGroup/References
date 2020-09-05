@@ -2,7 +2,7 @@
 An ExtensionLoader creates a Loader object that can load a python module from a file path
 
 ### Properties and Methods
-<a id="RynLib.RynUtils.ModuleLoader.ModuleLoader.__init__">&nbsp;</a>
+<a id="RynLib.RynUtils.ModuleLoader.ModuleLoader.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, rootdir='', rootpkg=None): 
 ```
@@ -12,22 +12,22 @@ __init__(self, rootdir='', rootpkg=None):
 - `rootpkg`: `str or None`
     >root package to look for files off of
 
-<a id="RynLib.RynUtils.ModuleLoader.ModuleLoader.get_data">&nbsp;</a>
+<a id="RynLib.RynUtils.ModuleLoader.ModuleLoader.get_data" class="docs-object-method">&nbsp;</a>
 ```python
 get_data(self, file): 
 ```
 
-<a id="RynLib.RynUtils.ModuleLoader.ModuleLoader.get_filename">&nbsp;</a>
+<a id="RynLib.RynUtils.ModuleLoader.ModuleLoader.get_filename" class="docs-object-method">&nbsp;</a>
 ```python
 get_filename(self, fullname): 
 ```
 
-<a id="RynLib.RynUtils.ModuleLoader.ModuleLoader.get_spec">&nbsp;</a>
+<a id="RynLib.RynUtils.ModuleLoader.ModuleLoader.get_spec" class="docs-object-method">&nbsp;</a>
 ```python
 get_spec(self, file, pkg=None): 
 ```
 
-<a id="RynLib.RynUtils.ModuleLoader.ModuleLoader.load">&nbsp;</a>
+<a id="RynLib.RynUtils.ModuleLoader.ModuleLoader.load" class="docs-object-method">&nbsp;</a>
 ```python
 load(self, file, pkg=None): 
 ```

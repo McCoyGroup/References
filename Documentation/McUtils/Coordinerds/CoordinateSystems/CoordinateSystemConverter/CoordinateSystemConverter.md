@@ -2,10 +2,14 @@
 A base class for type converters
 
 ### Properties and Methods
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystemConverter.CoordinateSystemConverter.types" class="docs-object-method">&nbsp;</a>
 ```python
-types: property
+@property
+types(self): 
 ```
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystemConverter.CoordinateSystemConverter.convert_many">&nbsp;</a>
+The types property of a converter returns the types the converter converts
+
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystemConverter.CoordinateSystemConverter.convert_many" class="docs-object-method">&nbsp;</a>
 ```python
 convert_many(self, coords_list, **kwargs): 
 ```
@@ -17,7 +21,7 @@ Converts many coordinates. Used in cases where a CoordinateSet has higher dimens
 - `kwargs`: `Any`
     >No description...
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystemConverter.CoordinateSystemConverter.convert">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystemConverter.CoordinateSystemConverter.convert" class="docs-object-method">&nbsp;</a>
 ```python
 convert(self, coords, **kwargs): 
 ```
@@ -28,7 +32,7 @@ The main necessary implementation method for a converter class.
 - `kwargs`: `Any`
     >No description...
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystemConverter.CoordinateSystemConverter.register">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystemConverter.CoordinateSystemConverter.register" class="docs-object-method">&nbsp;</a>
 ```python
 register(self): 
 ```

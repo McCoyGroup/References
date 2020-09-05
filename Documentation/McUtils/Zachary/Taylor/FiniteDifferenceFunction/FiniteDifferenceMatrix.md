@@ -2,18 +2,7 @@
 Defines a matrix that can be applied to a regular grid of values to take a finite difference
 
 ### Properties and Methods
-```python
-weights: property
-order: property
-npts: property
-mesh_spacing: property
-only_core: property
-only_center: property
-mode: property
-dtype: property
-matrix: property
-```
-<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceMatrix.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceMatrix.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, finite_difference_data, npts=None, mesh_spacing=None, only_core=False, only_center=False, mode='sparse', dtype='float64'): 
 ```
@@ -31,7 +20,61 @@ __init__(self, finite_difference_data, npts=None, mesh_spacing=None, only_core=F
 - `mode`: `Any`
     >No description...
 
-<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceMatrix.fd_matrix">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceMatrix.weights" class="docs-object-method">&nbsp;</a>
+```python
+@property
+weights(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceMatrix.order" class="docs-object-method">&nbsp;</a>
+```python
+@property
+order(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceMatrix.npts" class="docs-object-method">&nbsp;</a>
+```python
+@property
+npts(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceMatrix.mesh_spacing" class="docs-object-method">&nbsp;</a>
+```python
+@property
+mesh_spacing(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceMatrix.only_core" class="docs-object-method">&nbsp;</a>
+```python
+@property
+only_core(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceMatrix.only_center" class="docs-object-method">&nbsp;</a>
+```python
+@property
+only_center(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceMatrix.mode" class="docs-object-method">&nbsp;</a>
+```python
+@property
+mode(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceMatrix.dtype" class="docs-object-method">&nbsp;</a>
+```python
+@property
+dtype(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceMatrix.matrix" class="docs-object-method">&nbsp;</a>
+```python
+@property
+matrix(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceMatrix.fd_matrix" class="docs-object-method">&nbsp;</a>
 ```python
 fd_matrix(self): 
 ```

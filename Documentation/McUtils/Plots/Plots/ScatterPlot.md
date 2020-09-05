@@ -2,7 +2,7 @@
 Plots a bunch of x values against a bunch of y values
 
 ### Properties and Methods
-<a id="McUtils.Plots.Plots.ScatterPlot.__init__">&nbsp;</a>
+<a id="McUtils.Plots.Plots.ScatterPlot.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, *args, **kwargs): 
 ```

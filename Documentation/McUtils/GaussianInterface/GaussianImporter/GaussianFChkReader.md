@@ -10,7 +10,7 @@ to_common_name: dict
 fchk_re_pattern: str
 fchk_re: Pattern
 ```
-<a id="McUtils.GaussianInterface.GaussianImporter.GaussianFChkReader.read_header">&nbsp;</a>
+<a id="McUtils.GaussianInterface.GaussianImporter.GaussianFChkReader.read_header" class="docs-object-method">&nbsp;</a>
 ```python
 read_header(self): 
 ```
@@ -18,7 +18,7 @@ Reads the header and skips the stream to where we want to be
 - `:returns`: `str`
     >the header
 
-<a id="McUtils.GaussianInterface.GaussianImporter.GaussianFChkReader.get_next_block_params">&nbsp;</a>
+<a id="McUtils.GaussianInterface.GaussianImporter.GaussianFChkReader.get_next_block_params" class="docs-object-method">&nbsp;</a>
 ```python
 get_next_block_params(self): 
 ```
@@ -27,7 +27,7 @@ Pulls the tag of the next block, the type, the number of bytes it'll be,
 - `:returns`: `dict`
     >No description...
 
-<a id="McUtils.GaussianInterface.GaussianImporter.GaussianFChkReader.get_block">&nbsp;</a>
+<a id="McUtils.GaussianInterface.GaussianImporter.GaussianFChkReader.get_block" class="docs-object-method">&nbsp;</a>
 ```python
 get_block(self, name=None, dtype=None, byte_count=None, value=None): 
 ```
@@ -35,7 +35,7 @@ Pulls the next block by first pulling the block tag
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.GaussianInterface.GaussianImporter.GaussianFChkReader.skip_block">&nbsp;</a>
+<a id="McUtils.GaussianInterface.GaussianImporter.GaussianFChkReader.skip_block" class="docs-object-method">&nbsp;</a>
 ```python
 skip_block(self, name=None, dtype=None, byte_count=None, value=None): 
 ```
@@ -43,7 +43,7 @@ Skips the next block
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.GaussianInterface.GaussianImporter.GaussianFChkReader.parse">&nbsp;</a>
+<a id="McUtils.GaussianInterface.GaussianImporter.GaussianFChkReader.parse" class="docs-object-method">&nbsp;</a>
 ```python
 parse(self, keys=None): 
 ```

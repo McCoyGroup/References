@@ -2,12 +2,12 @@
 Defines a filter that uses StringMatcher to specifically match files
 
 ### Properties and Methods
-<a id="RynLib.RynUtils.FileMatcher.FileMatcher.__init__">&nbsp;</a>
+<a id="RynLib.RynUtils.FileMatcher.FileMatcher.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, match_patterns, negative_match=False, use_basename=False): 
 ```
 
-<a id="RynLib.RynUtils.FileMatcher.FileMatcher.matches">&nbsp;</a>
+<a id="RynLib.RynUtils.FileMatcher.FileMatcher.matches" class="docs-object-method">&nbsp;</a>
 ```python
 matches(self, f): 
 ```

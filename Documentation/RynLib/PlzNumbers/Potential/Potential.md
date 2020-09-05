@@ -5,12 +5,7 @@ Can take a potential source and write the necessary template code around that fo
 ides a hook into PotentialCaller once the data has been loaded to directly call the potential like a function
 
 ### Properties and Methods
-```python
-caller: property
-mpi_manager: property
-args: property
-```
-<a id="RynLib.PlzNumbers.Potential.Potential.__init__">&nbsp;</a>
+<a id="RynLib.PlzNumbers.Potential.Potential.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, name=None, potential_source=None, atom_pattern=None, working_directory=None, wrap_potential=None, function_name=None, raw_array_potential=None, arguments=None, shim_script='', conversion=None, potential_directory=None, static_source=False, extra_functions=(), src_ext='src', description='An extension module', verion='1.0.0', include_dirs=None, linked_libs=None, macros=None, source_files=None, build_script=None, requires_make=False, out_dir=None, cleanup_build=True, python_potential=False, pointer_name=None, fortran_potential=False, bad_walker_file='bad_walkers.txt', mpi_manager=None, vectorized_potential=False, error_value=10000000000.0, transpose_call=None): 
 ```
@@ -66,27 +61,45 @@ __init__(self, name=None, potential_source=None, atom_pattern=None, working_dire
 - `error_value`: `Any`
     >No description...
 
-<a id="RynLib.PlzNumbers.Potential.Potential.__repr__">&nbsp;</a>
+<a id="RynLib.PlzNumbers.Potential.Potential.__repr__" class="docs-object-method">&nbsp;</a>
 ```python
 __repr__(self): 
 ```
 
-<a id="RynLib.PlzNumbers.Potential.Potential.clean_up">&nbsp;</a>
+<a id="RynLib.PlzNumbers.Potential.Potential.caller" class="docs-object-method">&nbsp;</a>
+```python
+@property
+caller(self): 
+```
+
+<a id="RynLib.PlzNumbers.Potential.Potential.mpi_manager" class="docs-object-method">&nbsp;</a>
+```python
+@property
+mpi_manager(self): 
+```
+
+<a id="RynLib.PlzNumbers.Potential.Potential.clean_up" class="docs-object-method">&nbsp;</a>
 ```python
 clean_up(self): 
 ```
 
-<a id="RynLib.PlzNumbers.Potential.Potential.bind_atoms">&nbsp;</a>
+<a id="RynLib.PlzNumbers.Potential.Potential.bind_atoms" class="docs-object-method">&nbsp;</a>
 ```python
 bind_atoms(self, atoms): 
 ```
 
-<a id="RynLib.PlzNumbers.Potential.Potential.bind_arguments">&nbsp;</a>
+<a id="RynLib.PlzNumbers.Potential.Potential.bind_arguments" class="docs-object-method">&nbsp;</a>
 ```python
 bind_arguments(self, args): 
 ```
 
-<a id="RynLib.PlzNumbers.Potential.Potential.__call__">&nbsp;</a>
+<a id="RynLib.PlzNumbers.Potential.Potential.args" class="docs-object-method">&nbsp;</a>
+```python
+@property
+args(self): 
+```
+
+<a id="RynLib.PlzNumbers.Potential.Potential.__call__" class="docs-object-method">&nbsp;</a>
 ```python
 __call__(self, coordinates, *extra_args, **extra_kwargs): 
 ```

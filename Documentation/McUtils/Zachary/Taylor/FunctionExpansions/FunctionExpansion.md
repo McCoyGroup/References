@@ -5,11 +5,10 @@ Uses Cartesian derivative matrices and the Cartesian <-> Internal normal mode Ja
 ### Properties and Methods
 ```python
 expand_function: method
-tensors: property
 CoordinateTransforms: type
 FunctionDerivatives: type
 ```
-<a id="McUtils.Zachary.Taylor.FunctionExpansions.FunctionExpansion.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FunctionExpansions.FunctionExpansion.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, derivatives, transforms=None, center=None, ref=0, weight_coefficients=True): 
 ```
@@ -25,7 +24,13 @@ __init__(self, derivatives, transforms=None, center=None, ref=0, weight_coeffici
 - `weight_coefficients`: `bool`
     >whether the derivative terms need to be weighted or not
 
-<a id="McUtils.Zachary.Taylor.FunctionExpansions.FunctionExpansion.get_expansions">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FunctionExpansions.FunctionExpansion.tensors" class="docs-object-method">&nbsp;</a>
+```python
+@property
+tensors(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FunctionExpansions.FunctionExpansion.get_expansions" class="docs-object-method">&nbsp;</a>
 ```python
 get_expansions(self, coords, squeeze=True): 
 ```
@@ -35,7 +40,7 @@ get_expansions(self, coords, squeeze=True):
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Zachary.Taylor.FunctionExpansions.FunctionExpansion.expand">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FunctionExpansions.FunctionExpansion.expand" class="docs-object-method">&nbsp;</a>
 ```python
 expand(self, coords, squeeze=True): 
 ```
@@ -45,12 +50,12 @@ Returns a numerical value for the expanded coordinates
 - `:returns`: `float | np.ndarray`
     >No description...
 
-<a id="McUtils.Zachary.Taylor.FunctionExpansions.FunctionExpansion.__call__">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FunctionExpansions.FunctionExpansion.__call__" class="docs-object-method">&nbsp;</a>
 ```python
 __call__(self, coords, **kw): 
 ```
 
-<a id="McUtils.Zachary.Taylor.FunctionExpansions.FunctionExpansion.get_tensor">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FunctionExpansions.FunctionExpansion.get_tensor" class="docs-object-method">&nbsp;</a>
 ```python
 get_tensor(self, i): 
 ```

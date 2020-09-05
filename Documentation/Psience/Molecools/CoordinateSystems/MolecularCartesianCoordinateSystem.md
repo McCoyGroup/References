@@ -5,7 +5,7 @@ Mirrors the standard Cartesian coordinate system in _almost_ all regards, but fo
 ```python
 name: str
 ```
-<a id="Psience.Molecools.CoordinateSystems.MolecularCartesianCoordinateSystem.__init__">&nbsp;</a>
+<a id="Psience.Molecools.CoordinateSystems.MolecularCartesianCoordinateSystem.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, molecule, converter_options=None, **opts): 
 ```

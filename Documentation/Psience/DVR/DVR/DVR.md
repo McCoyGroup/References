@@ -10,12 +10,12 @@ dvr_file: method
 load_dvr: method
 Results: type
 ```
-<a id="Psience.DVR.DVR.DVR.__init__">&nbsp;</a>
+<a id="Psience.DVR.DVR.DVR.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, dvr_file='ColbertMiller1D', **kwargs): 
 ```
 
-<a id="Psience.DVR.DVR.DVR.domain">&nbsp;</a>
+<a id="Psience.DVR.DVR.DVR.domain" class="docs-object-method">&nbsp;</a>
 ```python
 domain(self): 
 ```
@@ -23,7 +23,7 @@ domain(self):
 - `:returns`: `_`
     >the domain for the DVR
 
-<a id="Psience.DVR.DVR.DVR.divs">&nbsp;</a>
+<a id="Psience.DVR.DVR.DVR.divs" class="docs-object-method">&nbsp;</a>
 ```python
 divs(self): 
 ```
@@ -31,7 +31,7 @@ divs(self):
 - `:returns`: `tuple(int)`
     >the number of DVR points
 
-<a id="Psience.DVR.DVR.DVR.grid">&nbsp;</a>
+<a id="Psience.DVR.DVR.DVR.grid" class="docs-object-method">&nbsp;</a>
 ```python
 grid(self): 
 ```
@@ -39,7 +39,7 @@ grid(self):
 - `:returns`: `np.ndarray`
     >the grid for the DVR
 
-<a id="Psience.DVR.DVR.DVR.kinetic_energy">&nbsp;</a>
+<a id="Psience.DVR.DVR.DVR.kinetic_energy" class="docs-object-method">&nbsp;</a>
 ```python
 kinetic_energy(self): 
 ```
@@ -47,7 +47,7 @@ kinetic_energy(self):
 - `:returns`: `np.ndarray`
     >the kinetic energy matrix
 
-<a id="Psience.DVR.DVR.DVR.potential_energy">&nbsp;</a>
+<a id="Psience.DVR.DVR.DVR.potential_energy" class="docs-object-method">&nbsp;</a>
 ```python
 potential_energy(self): 
 ```
@@ -55,7 +55,7 @@ potential_energy(self):
 - `:returns`: `np.ndarray`
     >the potential energy matrix
 
-<a id="Psience.DVR.DVR.DVR.hamiltonian">&nbsp;</a>
+<a id="Psience.DVR.DVR.DVR.hamiltonian" class="docs-object-method">&nbsp;</a>
 ```python
 hamiltonian(self): 
 ```
@@ -63,7 +63,7 @@ hamiltonian(self):
 - `:returns`: `np.ndarray`
     >the total Hamiltonian matrix
 
-<a id="Psience.DVR.DVR.DVR.wavefunctions">&nbsp;</a>
+<a id="Psience.DVR.DVR.DVR.wavefunctions" class="docs-object-method">&nbsp;</a>
 ```python
 wavefunctions(self): 
 ```
@@ -71,7 +71,7 @@ wavefunctions(self):
 - `:returns`: `(np.ndarray, np.ndarray)`
     >the DVR wavefunctions
 
-<a id="Psience.DVR.DVR.DVR.run">&nbsp;</a>
+<a id="Psience.DVR.DVR.DVR.run" class="docs-object-method">&nbsp;</a>
 ```python
 run(self, **runpars): 
 ```

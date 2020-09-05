@@ -11,7 +11,7 @@ load_converter: method
 get_converter: method
 register_converter: method
 ```
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystemConverter.CoordinateSystemConverters.__init__">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystemConverter.CoordinateSystemConverters.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self): 
 ```

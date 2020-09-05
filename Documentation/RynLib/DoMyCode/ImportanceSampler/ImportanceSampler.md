@@ -2,21 +2,17 @@
 A general-purpose importance sampler that applies acceptance/rejection criteria and computes local energies
 
 ### Properties and Methods
-```python
-mpi_manager: property
-psi: property
-```
-<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.__init__">&nbsp;</a>
+<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, trial_wavefunctions, derivs=None, name=None, dx=0.001): 
 ```
 
-<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.__repr__">&nbsp;</a>
+<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.__repr__" class="docs-object-method">&nbsp;</a>
 ```python
 __repr__(self): 
 ```
 
-<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.init_params">&nbsp;</a>
+<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.init_params" class="docs-object-method">&nbsp;</a>
 ```python
 init_params(self, sigmas, time_step, mpi_manager, atoms, *extra_args, atomic_units=False): 
 ```
@@ -34,12 +30,24 @@ init_params(self, sigmas, time_step, mpi_manager, atoms, *extra_args, atomic_uni
 - `:returns`: `_`
     >No description...
 
-<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.clean_up">&nbsp;</a>
+<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.clean_up" class="docs-object-method">&nbsp;</a>
 ```python
 clean_up(self): 
 ```
 
-<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.setup_psi">&nbsp;</a>
+<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.mpi_manager" class="docs-object-method">&nbsp;</a>
+```python
+@property
+mpi_manager(self): 
+```
+
+<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.psi" class="docs-object-method">&nbsp;</a>
+```python
+@property
+psi(self): 
+```
+
+<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.setup_psi" class="docs-object-method">&nbsp;</a>
 ```python
 setup_psi(self, crds): 
 ```
@@ -49,7 +57,7 @@ Sets up
 - `:returns`: `_`
     >No description...
 
-<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.accept">&nbsp;</a>
+<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.accept" class="docs-object-method">&nbsp;</a>
 ```python
 accept(self, coords, disp): 
 ```
@@ -61,12 +69,12 @@ Acceptance/Rejection of a step based on the drift term
 - `:returns`: `_`
     >No description...
 
-<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.accept_step">&nbsp;</a>
+<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.accept_step" class="docs-object-method">&nbsp;</a>
 ```python
 accept_step(self, step_no, coords, disp): 
 ```
 
-<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.drift">&nbsp;</a>
+<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.drift" class="docs-object-method">&nbsp;</a>
 ```python
 drift(self, coords, dx=None): 
 ```
@@ -78,7 +86,7 @@ Calcuates the drift term by doing a numerical differentiation
 - `:returns`: `_`
     >No description...
 
-<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.psi_calc">&nbsp;</a>
+<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.psi_calc" class="docs-object-method">&nbsp;</a>
 ```python
 psi_calc(self, coords, dx=None): 
 ```
@@ -92,7 +100,7 @@ Calculates the trial wavefunction over the three displacements that are used in 
 - `:returns`: `_`
     >No description...
 
-<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.metropolis">&nbsp;</a>
+<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.metropolis" class="docs-object-method">&nbsp;</a>
 ```python
 metropolis(self, Fqx, Fqy, x, y, psi1, psi2): 
 ```
@@ -112,7 +120,7 @@ Computes the metropolis step
 - `:returns`: `_`
     >No description...
 
-<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.local_kin">&nbsp;</a>
+<a id="RynLib.DoMyCode.ImportanceSampler.ImportanceSampler.local_kin" class="docs-object-method">&nbsp;</a>
 ```python
 local_kin(self, coords, dx=None): 
 ```

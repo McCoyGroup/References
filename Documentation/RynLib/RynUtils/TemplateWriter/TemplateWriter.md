@@ -5,14 +5,19 @@ Very unsophisticated but workable
 ### Properties and Methods
 ```python
 ignored_files: list
-replacements: property
 ```
-<a id="RynLib.RynUtils.TemplateWriter.TemplateWriter.__init__">&nbsp;</a>
+<a id="RynLib.RynUtils.TemplateWriter.TemplateWriter.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, template_dir, replacements=None, file_filter=None, **opts): 
 ```
 
-<a id="RynLib.RynUtils.TemplateWriter.TemplateWriter.apply_replacements">&nbsp;</a>
+<a id="RynLib.RynUtils.TemplateWriter.TemplateWriter.replacements" class="docs-object-method">&nbsp;</a>
+```python
+@property
+replacements(self): 
+```
+
+<a id="RynLib.RynUtils.TemplateWriter.TemplateWriter.apply_replacements" class="docs-object-method">&nbsp;</a>
 ```python
 apply_replacements(self, string): 
 ```
@@ -22,7 +27,7 @@ Applies the defined replacements to the
 - `:returns`: `_`
     >No description...
 
-<a id="RynLib.RynUtils.TemplateWriter.TemplateWriter.write_file">&nbsp;</a>
+<a id="RynLib.RynUtils.TemplateWriter.TemplateWriter.write_file" class="docs-object-method">&nbsp;</a>
 ```python
 write_file(self, template_file, out_dir, apply_template=True, template_dir=None): 
 ```
@@ -36,7 +41,7 @@ writes a single _file_ to _dir_ and fills the template from the parameters passe
 - `:returns`: `_`
     >No description...
 
-<a id="RynLib.RynUtils.TemplateWriter.TemplateWriter.iterate_write">&nbsp;</a>
+<a id="RynLib.RynUtils.TemplateWriter.TemplateWriter.iterate_write" class="docs-object-method">&nbsp;</a>
 ```python
 iterate_write(self, out_dir, apply_template=True, src_dir=None, template_dir=None): 
 ```

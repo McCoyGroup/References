@@ -9,16 +9,13 @@ template_name: str
 default_template_dir: str
 example_root: str
 outStream: type
-out: property
-package_path: property
 load_template: method
 get_identifier: method
-identifier: property
 param_template: str
 ```
-<a id="Peeves.Doc.Writers.DocWriter.__init__">&nbsp;</a>
+<a id="Peeves.Doc.Writers.DocWriter.__init__" class="docs-object-method">&nbsp;</a>
 ```python
-__init__(self, obj, out_file, template=None, root=None, ignore_paths=None): 
+__init__(self, obj, out_file, obj_name=None, parent_obj=None, template=None, root=None, ignore_paths=None): 
 ```
 
 - `obj`: `Any`
@@ -26,52 +23,75 @@ __init__(self, obj, out_file, template=None, root=None, ignore_paths=None):
 - `out_file`: `Any`
     >No description...
 
-<a id="Peeves.Doc.Writers.DocWriter.write_string">&nbsp;</a>
+<a id="Peeves.Doc.Writers.DocWriter.get_name" class="docs-object-method">&nbsp;</a>
+```python
+get_name(self): 
+```
+
+<a id="Peeves.Doc.Writers.DocWriter.out" class="docs-object-method">&nbsp;</a>
+```python
+@property
+out(self): 
+```
+
+<a id="Peeves.Doc.Writers.DocWriter.write_string" class="docs-object-method">&nbsp;</a>
 ```python
 write_string(self, txt): 
 ```
 
-<a id="Peeves.Doc.Writers.DocWriter.template_params">&nbsp;</a>
+<a id="Peeves.Doc.Writers.DocWriter.template_params" class="docs-object-method">&nbsp;</a>
 ```python
 template_params(self): 
 ```
 
-<a id="Peeves.Doc.Writers.DocWriter.format">&nbsp;</a>
+<a id="Peeves.Doc.Writers.DocWriter.format" class="docs-object-method">&nbsp;</a>
 ```python
 format(self, template=None): 
 ```
 
-<a id="Peeves.Doc.Writers.DocWriter.write">&nbsp;</a>
+<a id="Peeves.Doc.Writers.DocWriter.write" class="docs-object-method">&nbsp;</a>
 ```python
 write(self, template=None): 
 ```
 
-<a id="Peeves.Doc.Writers.DocWriter.get_package_and_url">&nbsp;</a>
+<a id="Peeves.Doc.Writers.DocWriter.get_package_and_url" class="docs-object-method">&nbsp;</a>
 ```python
 get_package_and_url(self): 
 ```
 
-<a id="Peeves.Doc.Writers.DocWriter.load_examples">&nbsp;</a>
+<a id="Peeves.Doc.Writers.DocWriter.package_path" class="docs-object-method">&nbsp;</a>
+```python
+@property
+package_path(self): 
+```
+
+<a id="Peeves.Doc.Writers.DocWriter.identifier" class="docs-object-method">&nbsp;</a>
+```python
+@property
+identifier(self): 
+```
+
+<a id="Peeves.Doc.Writers.DocWriter.load_examples" class="docs-object-method">&nbsp;</a>
 ```python
 load_examples(self): 
 ```
 
-<a id="Peeves.Doc.Writers.DocWriter.format_item">&nbsp;</a>
+<a id="Peeves.Doc.Writers.DocWriter.format_item" class="docs-object-method">&nbsp;</a>
 ```python
 format_item(self, item, item_level=0): 
 ```
 
-<a id="Peeves.Doc.Writers.DocWriter.format_link">&nbsp;</a>
+<a id="Peeves.Doc.Writers.DocWriter.format_link" class="docs-object-method">&nbsp;</a>
 ```python
 format_link(self, alt, link): 
 ```
 
-<a id="Peeves.Doc.Writers.DocWriter.format_obj_link">&nbsp;</a>
+<a id="Peeves.Doc.Writers.DocWriter.format_obj_link" class="docs-object-method">&nbsp;</a>
 ```python
 format_obj_link(self, spec): 
 ```
 
-<a id="Peeves.Doc.Writers.DocWriter.format_inline_code">&nbsp;</a>
+<a id="Peeves.Doc.Writers.DocWriter.format_inline_code" class="docs-object-method">&nbsp;</a>
 ```python
 format_inline_code(self, arg): 
 ```
@@ -81,7 +101,7 @@ format_inline_code(self, arg):
 - `:returns`: `_`
     >No description...
 
-<a id="Peeves.Doc.Writers.DocWriter.format_code_block">&nbsp;</a>
+<a id="Peeves.Doc.Writers.DocWriter.format_code_block" class="docs-object-method">&nbsp;</a>
 ```python
 format_code_block(self, arg): 
 ```
@@ -91,7 +111,7 @@ format_code_block(self, arg):
 - `:returns`: `_`
     >No description...
 
-<a id="Peeves.Doc.Writers.DocWriter.format_quote_block">&nbsp;</a>
+<a id="Peeves.Doc.Writers.DocWriter.format_quote_block" class="docs-object-method">&nbsp;</a>
 ```python
 format_quote_block(self, arg): 
 ```
@@ -101,7 +121,7 @@ format_quote_block(self, arg):
 - `:returns`: `_`
     >No description...
 
-<a id="Peeves.Doc.Writers.DocWriter.parse_doc">&nbsp;</a>
+<a id="Peeves.Doc.Writers.DocWriter.parse_doc" class="docs-object-method">&nbsp;</a>
 ```python
 parse_doc(self, doc): 
 ```

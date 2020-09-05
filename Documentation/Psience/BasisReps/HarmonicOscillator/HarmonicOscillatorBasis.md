@@ -7,17 +7,17 @@ Currently 1D, need to make multidimensional in the future.
 ```python
 name: str
 ```
-<a id="Psience.BasisReps.HarmonicOscillator.HarmonicOscillatorBasis.__init__">&nbsp;</a>
+<a id="Psience.BasisReps.HarmonicOscillator.HarmonicOscillatorBasis.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, n_quanta, m=None, re=None, dimensionless=True): 
 ```
 
-<a id="Psience.BasisReps.HarmonicOscillator.HarmonicOscillatorBasis.p">&nbsp;</a>
+<a id="Psience.BasisReps.HarmonicOscillator.HarmonicOscillatorBasis.p" class="docs-object-method">&nbsp;</a>
 ```python
 p(self, n): 
 ```
 
-<a id="Psience.BasisReps.HarmonicOscillator.HarmonicOscillatorBasis.pmatrix_ho">&nbsp;</a>
+<a id="Psience.BasisReps.HarmonicOscillator.HarmonicOscillatorBasis.pmatrix_ho" class="docs-object-method">&nbsp;</a>
 ```python
 pmatrix_ho(n): 
 ```
@@ -32,12 +32,12 @@ There's one big subtlety to what we're doing here, which is that
 - `:returns`: `sp.csr_matrix`
     >No description...
 
-<a id="Psience.BasisReps.HarmonicOscillator.HarmonicOscillatorBasis.x">&nbsp;</a>
+<a id="Psience.BasisReps.HarmonicOscillator.HarmonicOscillatorBasis.x" class="docs-object-method">&nbsp;</a>
 ```python
 x(self, n): 
 ```
 
-<a id="Psience.BasisReps.HarmonicOscillator.HarmonicOscillatorBasis.qmatrix_ho">&nbsp;</a>
+<a id="Psience.BasisReps.HarmonicOscillator.HarmonicOscillatorBasis.qmatrix_ho" class="docs-object-method">&nbsp;</a>
 ```python
 qmatrix_ho(n): 
 ```

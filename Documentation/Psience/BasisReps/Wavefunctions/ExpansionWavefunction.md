@@ -2,21 +2,29 @@
 Wrapper that takes an expansion alongside its basis
 
 ### Properties and Methods
-```python
-coeffs: property
-basis: property
-```
-<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunction.__init__">&nbsp;</a>
+<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunction.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, energy, coefficients, analytic_wavefunctions): 
 ```
 
-<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunction.evaluate">&nbsp;</a>
+<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunction.coeffs" class="docs-object-method">&nbsp;</a>
+```python
+@property
+coeffs(self): 
+```
+
+<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunction.basis" class="docs-object-method">&nbsp;</a>
+```python
+@property
+basis(self): 
+```
+
+<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunction.evaluate" class="docs-object-method">&nbsp;</a>
 ```python
 evaluate(self, *args, **kwargs): 
 ```
 
-<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunction.expect">&nbsp;</a>
+<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunction.expect" class="docs-object-method">&nbsp;</a>
 ```python
 expect(self, operator): 
 ```
@@ -26,7 +34,7 @@ expect(self, operator):
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunction.expectation">&nbsp;</a>
+<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunction.expectation" class="docs-object-method">&nbsp;</a>
 ```python
 expectation(self, operator, other): 
 ```
@@ -38,7 +46,7 @@ Computes the expectation value of operator op over the wavefunction other and se
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunction.probability_density">&nbsp;</a>
+<a id="Psience.BasisReps.Wavefunctions.ExpansionWavefunction.probability_density" class="docs-object-method">&nbsp;</a>
 ```python
 probability_density(self): 
 ```

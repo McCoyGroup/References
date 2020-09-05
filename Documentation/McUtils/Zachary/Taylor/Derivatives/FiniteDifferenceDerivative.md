@@ -3,7 +3,7 @@ Provides derivatives for a function (scalar or vector valued)
 Can be indexed into or the entire tensor of derivatives may be requested
 
 ### Properties and Methods
-<a id="McUtils.Zachary.Taylor.Derivatives.FiniteDifferenceDerivative.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.Derivatives.FiniteDifferenceDerivative.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, f, function_shape=(0, 0), **fd_opts): 
 ```
@@ -15,12 +15,12 @@ __init__(self, f, function_shape=(0, 0), **fd_opts):
 - `fd_opts`: `Any`
     >the options to pass to the finite difference function
 
-<a id="McUtils.Zachary.Taylor.Derivatives.FiniteDifferenceDerivative.__call__">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.Derivatives.FiniteDifferenceDerivative.__call__" class="docs-object-method">&nbsp;</a>
 ```python
 __call__(self, *args, **opts): 
 ```
 
-<a id="McUtils.Zachary.Taylor.Derivatives.FiniteDifferenceDerivative.derivatives">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.Derivatives.FiniteDifferenceDerivative.derivatives" class="docs-object-method">&nbsp;</a>
 ```python
 derivatives(self, center, displacement_function=None, prep=None, lazy=None, mesh_spacing=None, **fd_opts): 
 ```

@@ -12,13 +12,8 @@ timing_tests: bool
 data_gen_tests: bool
 test_files: str
 test_name: str
-test_root: property
-base_dir: property
-test_pkg: property
-test_dir: property
-test_data_dir: property
 ```
-<a id="Peeves.TestUtils.TestManagerClass.__init__">&nbsp;</a>
+<a id="Peeves.TestUtils.TestManagerClass.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, test_root=None, test_dir=None, test_data=None, base_dir=None, test_pkg=None, test_data_ext='TestData'): 
 ```
@@ -36,12 +31,42 @@ __init__(self, test_root=None, test_dir=None, test_data=None, base_dir=None, tes
 - `test_data_ext`: `Any`
     >the extension from test_dir to look for data in (usually TestData)
 
-<a id="Peeves.TestUtils.TestManagerClass.test_data">&nbsp;</a>
+<a id="Peeves.TestUtils.TestManagerClass.test_root" class="docs-object-method">&nbsp;</a>
+```python
+@property
+test_root(self): 
+```
+
+<a id="Peeves.TestUtils.TestManagerClass.base_dir" class="docs-object-method">&nbsp;</a>
+```python
+@property
+base_dir(self): 
+```
+
+<a id="Peeves.TestUtils.TestManagerClass.test_pkg" class="docs-object-method">&nbsp;</a>
+```python
+@property
+test_pkg(self): 
+```
+
+<a id="Peeves.TestUtils.TestManagerClass.test_dir" class="docs-object-method">&nbsp;</a>
+```python
+@property
+test_dir(self): 
+```
+
+<a id="Peeves.TestUtils.TestManagerClass.test_data_dir" class="docs-object-method">&nbsp;</a>
+```python
+@property
+test_data_dir(self): 
+```
+
+<a id="Peeves.TestUtils.TestManagerClass.test_data" class="docs-object-method">&nbsp;</a>
 ```python
 test_data(self, filename): 
 ```
 
-<a id="Peeves.TestUtils.TestManagerClass.run">&nbsp;</a>
+<a id="Peeves.TestUtils.TestManagerClass.run" class="docs-object-method">&nbsp;</a>
 ```python
 run(self, exit=True): 
 ```

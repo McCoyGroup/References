@@ -2,18 +2,36 @@
 Defines a model that can be fit
 
 ### Properties and Methods
-```python
-parameters: property
-parameter_values: property
-parameter_names: property
-fitted: property
-```
-<a id="McUtils.Zachary.FittableModels.FittableModel.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.FittableModels.FittableModel.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, parameters, function, pre_fit=False, covariance=None): 
 ```
 
-<a id="McUtils.Zachary.FittableModels.FittableModel.fit">&nbsp;</a>
+<a id="McUtils.Zachary.FittableModels.FittableModel.parameters" class="docs-object-method">&nbsp;</a>
+```python
+@property
+parameters(self): 
+```
+
+<a id="McUtils.Zachary.FittableModels.FittableModel.parameter_values" class="docs-object-method">&nbsp;</a>
+```python
+@property
+parameter_values(self): 
+```
+
+<a id="McUtils.Zachary.FittableModels.FittableModel.parameter_names" class="docs-object-method">&nbsp;</a>
+```python
+@property
+parameter_names(self): 
+```
+
+<a id="McUtils.Zachary.FittableModels.FittableModel.fitted" class="docs-object-method">&nbsp;</a>
+```python
+@property
+fitted(self): 
+```
+
+<a id="McUtils.Zachary.FittableModels.FittableModel.fit" class="docs-object-method">&nbsp;</a>
 ```python
 fit(self, xdata, ydata=None, fitter=None, **methopts): 
 ```
@@ -25,7 +43,7 @@ Fits the model to the data using scipy.optimize.curve_fit or a function that pro
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Zachary.FittableModels.FittableModel.get_parameter">&nbsp;</a>
+<a id="McUtils.Zachary.FittableModels.FittableModel.get_parameter" class="docs-object-method">&nbsp;</a>
 ```python
 get_parameter(self, name): 
 ```
@@ -35,17 +53,17 @@ Returns the fitted value of the parameter given by 'name'
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Zachary.FittableModels.FittableModel.__getitem__">&nbsp;</a>
+<a id="McUtils.Zachary.FittableModels.FittableModel.__getitem__" class="docs-object-method">&nbsp;</a>
 ```python
 __getitem__(self, item): 
 ```
 
-<a id="McUtils.Zachary.FittableModels.FittableModel.evaluate">&nbsp;</a>
+<a id="McUtils.Zachary.FittableModels.FittableModel.evaluate" class="docs-object-method">&nbsp;</a>
 ```python
 evaluate(self, xdata): 
 ```
 
-<a id="McUtils.Zachary.FittableModels.FittableModel.__call__">&nbsp;</a>
+<a id="McUtils.Zachary.FittableModels.FittableModel.__call__" class="docs-object-method">&nbsp;</a>
 ```python
 __call__(self, xdata): 
 ```

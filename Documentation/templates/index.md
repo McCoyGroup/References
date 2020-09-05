@@ -50,4 +50,5 @@ So you'd go to https://github.com/McCoyGroup/Psience/Molecools & then notice tha
 Then, clicking on the package's edit link ( https://github.com/McCoyGroup/Psience/edit/master/Molecools/Molecule.py ) you can navigate to where `Molecule` is defined and edit that.
 Alternately, if you know the line number in the source file, you can link directly to that line in the source and then people can use the GitHub UI.
 
+After editing, you'll need to rerun the site build via the [GitHub Action](https://github.com/McCoyGroup/References/actions?query=workflow%3A%22McBuild+site%22) we set up.
 

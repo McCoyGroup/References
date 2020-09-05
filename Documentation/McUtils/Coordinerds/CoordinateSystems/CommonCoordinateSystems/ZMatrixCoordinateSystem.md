@@ -5,7 +5,7 @@ Represents ZMatrix coordinates generally
 ```python
 name: str
 ```
-<a id="McUtils.Coordinerds.CoordinateSystems.CommonCoordinateSystems.ZMatrixCoordinateSystem.__init__">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CommonCoordinateSystems.ZMatrixCoordinateSystem.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, converter_options=None, dimension=(None, None), coordinate_shape=(None, 3), **opts): 
 ```

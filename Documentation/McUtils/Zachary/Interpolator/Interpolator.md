@@ -7,7 +7,7 @@ get_interpolator: method
 get_extrapolator: method
 morse_interpolator: method
 ```
-<a id="McUtils.Zachary.Interpolator.Interpolator.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.Interpolator.Interpolator.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, grid, vals, interpolation_function=None, interpolation_order=None, extrapolator=None, extrapolation_order=1, **interpolation_opts): 
 ```
@@ -27,7 +27,7 @@ __init__(self, grid, vals, interpolation_function=None, interpolation_order=None
 - `interpolation_opts`: `Any`
     >the options to be fed into the interpolating_function
 
-<a id="McUtils.Zachary.Interpolator.Interpolator.apply">&nbsp;</a>
+<a id="McUtils.Zachary.Interpolator.Interpolator.apply" class="docs-object-method">&nbsp;</a>
 ```python
 apply(self, grid_points, **opts): 
 ```
@@ -37,12 +37,12 @@ Interpolates then extrapolates the function at the grid_points
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Zachary.Interpolator.Interpolator.__call__">&nbsp;</a>
+<a id="McUtils.Zachary.Interpolator.Interpolator.__call__" class="docs-object-method">&nbsp;</a>
 ```python
 __call__(self, *args, **kwargs): 
 ```
 
-<a id="McUtils.Zachary.Interpolator.Interpolator.regularize_mesh">&nbsp;</a>
+<a id="McUtils.Zachary.Interpolator.Interpolator.regularize_mesh" class="docs-object-method">&nbsp;</a>
 ```python
 regularize_mesh(self, interp_kind='cubic', interpolator=None, **kwargs): 
 ```
@@ -58,7 +58,7 @@ Interpolates along the different slices in the grid, building a RegularMesh over
 - `:returns`: `_`
     >square_grid: a structured grid of points (np.ndarray) (x, y)
 
-<a id="McUtils.Zachary.Interpolator.Interpolator.regular_grid">&nbsp;</a>
+<a id="McUtils.Zachary.Interpolator.Interpolator.regular_grid" class="docs-object-method">&nbsp;</a>
 ```python
 regular_grid(self, interp_kind='cubic', fillvalues=False, plot=False, **kwargs): 
 ```

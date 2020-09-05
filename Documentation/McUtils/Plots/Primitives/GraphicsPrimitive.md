@@ -2,7 +2,7 @@
 
 
 ### Properties and Methods
-<a id="McUtils.Plots.Primitives.GraphicsPrimitive.plot">&nbsp;</a>
+<a id="McUtils.Plots.Primitives.GraphicsPrimitive.plot" class="docs-object-method">&nbsp;</a>
 ```python
 plot(self, graphics, *args, **kwargs): 
 ```

@@ -5,7 +5,7 @@ As I do more work with the Surface stuff I'm sure this will get filled out more.
 One big target is to use
 
 ### Properties and Methods
-<a id="McUtils.Zachary.Interpolator.Extrapolator.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.Interpolator.Extrapolator.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, extrapolation_function, warning=False, **opts): 
 ```
@@ -17,7 +17,7 @@ __init__(self, extrapolation_function, warning=False, **opts):
 - `opts`: `Any`
     >the options to feed into the extrapolator call
 
-<a id="McUtils.Zachary.Interpolator.Extrapolator.find_extrapolated_points">&nbsp;</a>
+<a id="McUtils.Zachary.Interpolator.Extrapolator.find_extrapolated_points" class="docs-object-method">&nbsp;</a>
 ```python
 find_extrapolated_points(self, gps, vals, extrap_value=nan): 
 ```
@@ -29,7 +29,7 @@ Currently super rough heuristics to determine at which points we need to extrapo
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Zachary.Interpolator.Extrapolator.extrap2d">&nbsp;</a>
+<a id="McUtils.Zachary.Interpolator.Extrapolator.extrap2d" class="docs-object-method">&nbsp;</a>
 ```python
 extrap2d(self, gps, vals, extrap_kind='linear'): 
 ```
@@ -47,12 +47,12 @@ Takes a regular grid and creates a function for interpolation/extrapolation.
 - `:returns`: `function`
     >pf: function fit to grid points for evaluation.
 
-<a id="McUtils.Zachary.Interpolator.Extrapolator.apply">&nbsp;</a>
+<a id="McUtils.Zachary.Interpolator.Extrapolator.apply" class="docs-object-method">&nbsp;</a>
 ```python
 apply(self, gps, vals, extrap_value=nan): 
 ```
 
-<a id="McUtils.Zachary.Interpolator.Extrapolator.__call__">&nbsp;</a>
+<a id="McUtils.Zachary.Interpolator.Extrapolator.__call__" class="docs-object-method">&nbsp;</a>
 ```python
 __call__(self, *args, **kwargs): 
 ```

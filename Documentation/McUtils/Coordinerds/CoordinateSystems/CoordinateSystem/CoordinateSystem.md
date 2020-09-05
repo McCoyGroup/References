@@ -3,14 +3,7 @@ A representation of a coordinate system. It doesn't do much on its own but it *d
 to unify internal, cartesian, derived type coordinates
 
 ### Properties and Methods
-```python
-basis: property
-origin: property
-matrix: property
-inverse: property
-dimension: property
-```
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.__init__">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, name=None, basis=None, matrix=None, inverse=None, dimension=None, origin=None, coordinate_shape=None, jacobian_prep=None, converter_options=None): 
 ```
@@ -28,7 +21,55 @@ Sets up the CoordinateSystem object
 - `coordinate_shape`: `iterable[int]`
     >the actual shape of a single coordinate in the coordinate system
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.converter">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.basis" class="docs-object-method">&nbsp;</a>
+```python
+@property
+basis(self): 
+```
+The basis for the representation of `matrix`
+- `:returns`: `CoordinateSystem`
+    >No description...
+
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.origin" class="docs-object-method">&nbsp;</a>
+```python
+@property
+origin(self): 
+```
+The origin for the expansion defined by `matrix`
+- `:returns`: `np.ndarray`
+    >No description...
+
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.matrix" class="docs-object-method">&nbsp;</a>
+```python
+@property
+matrix(self): 
+```
+The matrix representation in the CoordinateSystem.basis
+        None is shorthand for the identity matrix
+- `:returns`: `np.ndarray`
+    >No description...
+
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.inverse" class="docs-object-method">&nbsp;</a>
+```python
+@property
+inverse(self): 
+```
+The inverse of the representation in the `basis`
+        None is shorthand for the inverse or pseudoinverse of `matrix`
+- `:returns`: `np.ndarray`
+    >No description...
+
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.dimension" class="docs-object-method">&nbsp;</a>
+```python
+@property
+dimension(self): 
+```
+The dimension of the coordinate system
+        None means unspecified dimension
+- `:returns`: `int or None`
+    >No description...
+
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.converter" class="docs-object-method">&nbsp;</a>
 ```python
 converter(self, system): 
 ```
@@ -38,7 +79,7 @@ Gets the converter from the current system to a new system
 - `:returns`: `CoordinateSystemConverter`
     >No description...
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.convert_coords">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.convert_coords" class="docs-object-method">&nbsp;</a>
 ```python
 convert_coords(self, coords, system, **kw): 
 ```
@@ -52,7 +93,7 @@ Converts coordiantes from the current coordinate system to _system_
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.displacement">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.displacement" class="docs-object-method">&nbsp;</a>
 ```python
 displacement(self, amts): 
 ```
@@ -62,7 +103,7 @@ Generates a displacement or matrix of displacements based on the vector or matri
 - `:returns`: `np.ndarray`
     >No description...
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.derivatives">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.derivatives" class="docs-object-method">&nbsp;</a>
 ```python
 derivatives(self, coords, function, order=1, coordinates=None, result_shape=None, **finite_difference_options): 
 ```
@@ -78,7 +119,7 @@ Computes derivatives for an arbitrary function with respect to this coordinate s
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.jacobian">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.jacobian" class="docs-object-method">&nbsp;</a>
 ```python
 jacobian(self, coords, system, order=1, coordinates=None, converter_options=None, all_numerical=False, **finite_difference_options): 
 ```
@@ -98,7 +139,7 @@ Computes the Jacobian between the current coordinate system and a target coordin
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.__repr__">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSystem.CoordinateSystem.__repr__" class="docs-object-method">&nbsp;</a>
 ```python
 __repr__(self): 
 ```

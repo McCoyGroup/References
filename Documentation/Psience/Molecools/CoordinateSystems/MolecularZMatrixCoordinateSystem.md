@@ -4,10 +4,8 @@ Mirrors the standard ZMatrix coordinate system in _almost_ all regards, but forc
 ### Properties and Methods
 ```python
 name: str
-origins: property
-axes: property
 ```
-<a id="Psience.Molecools.CoordinateSystems.MolecularZMatrixCoordinateSystem.__init__">&nbsp;</a>
+<a id="Psience.Molecools.CoordinateSystems.MolecularZMatrixCoordinateSystem.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, molecule, converter_options=None, **opts): 
 ```
@@ -18,6 +16,18 @@ __init__(self, molecule, converter_options=None, **opts):
     >No description...
 - `opts`: `Any`
     >No description...
+
+<a id="Psience.Molecools.CoordinateSystems.MolecularZMatrixCoordinateSystem.origins" class="docs-object-method">&nbsp;</a>
+```python
+@property
+origins(self): 
+```
+
+<a id="Psience.Molecools.CoordinateSystems.MolecularZMatrixCoordinateSystem.axes" class="docs-object-method">&nbsp;</a>
+```python
+@property
+axes(self): 
+```
 
 ### Examples
 

@@ -5,7 +5,7 @@ Defines a finite difference over an irregular grid
 ```python
 finite_difference_data: method
 ```
-<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.IrregularGridFiniteDifference.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.IrregularGridFiniteDifference.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, grid, order, stencil=None, accuracy=2, end_point_accuracy=2, **kw): 
 ```
@@ -23,7 +23,7 @@ __init__(self, grid, order, stencil=None, accuracy=2, end_point_accuracy=2, **kw
 - `kw`: `Any`
     >options passed through to the `FiniteDifferenceMatrix`
 
-<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.IrregularGridFiniteDifference.get_grid_slices">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.IrregularGridFiniteDifference.get_grid_slices" class="docs-object-method">&nbsp;</a>
 ```python
 get_grid_slices(grid, stencil): 
 ```
@@ -35,7 +35,7 @@ get_grid_slices(grid, stencil):
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.IrregularGridFiniteDifference.get_weights">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.IrregularGridFiniteDifference.get_weights" class="docs-object-method">&nbsp;</a>
 ```python
 get_weights(m, z, x): 
 ```

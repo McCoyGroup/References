@@ -1,4 +1,5 @@
-<a id="McUtils.Numputils.VectorOps.pts_dihedrals">&nbsp;</a>
+# <a id="McUtils.Numputils.VectorOps.pts_dihedrals">pts_dihedrals</a>
+
 ```python
 pts_dihedrals(pts1, pts2, pts3, pts4): 
 ```
@@ -12,3 +13,11 @@ Provides the dihedral angle between pts4 and the plane of the other three vector
 - `:returns`: `_`
     >No description...
 
+Examples: 
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Numputils/VectorOps/pts_dihedrals.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Numputils/VectorOps/pts_dihedrals.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/Numputils/VectorOps.py?message=Update%20Docs)

@@ -6,13 +6,10 @@ Only applies to direct product grids, but each subgrid can be regular or irregul
 
 ### Properties and Methods
 ```python
-order: property
-weights: property
-widths: property
 regular_difference: method
 from_grid: method
 ```
-<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceFunction.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceFunction.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, *diffs, axes=0, contract=False): 
 ```
@@ -24,7 +21,7 @@ Constructs an object to take finite differences derivatives of grids of data
 - `contract`: `bool`
     >Whether to reduce the shape of the returned tensor if applicable after application
 
-<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceFunction.apply">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceFunction.apply" class="docs-object-method">&nbsp;</a>
 ```python
 apply(self, vals, axes=None, mesh_spacing=None, contract=None): 
 ```
@@ -36,9 +33,27 @@ Iteratively applies the stored finite difference objects to the vals
 - `:returns`: `np.ndarray`
     >The tensor of derivatives
 
-<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceFunction.__call__">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceFunction.__call__" class="docs-object-method">&nbsp;</a>
 ```python
 __call__(self, vals, axes=None, mesh_spacing=None): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceFunction.order" class="docs-object-method">&nbsp;</a>
+```python
+@property
+order(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceFunction.weights" class="docs-object-method">&nbsp;</a>
+```python
+@property
+weights(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceFunction.widths" class="docs-object-method">&nbsp;</a>
+```python
+@property
+widths(self): 
 ```
 
 ### Examples

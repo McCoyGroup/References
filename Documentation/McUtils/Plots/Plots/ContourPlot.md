@@ -2,7 +2,7 @@
 
 
 ### Properties and Methods
-<a id="McUtils.Plots.Plots.ContourPlot.__init__">&nbsp;</a>
+<a id="McUtils.Plots.Plots.ContourPlot.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, *params, **opts): 
 ```

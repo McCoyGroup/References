@@ -7,12 +7,12 @@ Provides convenient access to dipole data + a unified interface to things like e
 from_log_file: method
 from_fchk_file: method
 ```
-<a id="Psience.Data.Surfaces.PotentialSurface.get_log_values">&nbsp;</a>
+<a id="Psience.Data.Surfaces.PotentialSurface.get_log_values" class="docs-object-method">&nbsp;</a>
 ```python
 get_log_values(log_file, keys='ScanEnergies'): 
 ```
 
-<a id="Psience.Data.Surfaces.PotentialSurface.get_fchk_values">&nbsp;</a>
+<a id="Psience.Data.Surfaces.PotentialSurface.get_fchk_values" class="docs-object-method">&nbsp;</a>
 ```python
 get_fchk_values(fchk_file): 
 ```

@@ -2,35 +2,41 @@
 A subclass of np.ndarray that lives in an explicit coordinate system and can convert between them
 
 ### Properties and Methods
-```python
-multiconfig: property
-```
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.__new__">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.__new__" class="docs-object-method">&nbsp;</a>
 ```python
 __new__(cls, coords, system=CoordinateSystem(Cartesian3D, dimension=(None, 3), matrix=None), converter_options=None): 
 ```
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.__init__">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, coords, system=CoordinateSystem(Cartesian3D, dimension=(None, 3), matrix=None), converter_options=None): 
 ```
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.__array_finalize__">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.__array_finalize__" class="docs-object-method">&nbsp;</a>
 ```python
 __array_finalize__(self, coords): 
 ```
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.__str__">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.__str__" class="docs-object-method">&nbsp;</a>
 ```python
 __str__(self): 
 ```
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.__eq__">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.__eq__" class="docs-object-method">&nbsp;</a>
 ```python
 __eq__(self, other): 
 ```
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.transform">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.multiconfig" class="docs-object-method">&nbsp;</a>
+```python
+@property
+multiconfig(self): 
+```
+Determines whether self.coords represents multiple configurations of the coordinates
+- `:returns`: `_`
+    >No description...
+
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.transform" class="docs-object-method">&nbsp;</a>
 ```python
 transform(self, tf): 
 ```
@@ -40,7 +46,7 @@ Applies a transformation to the stored coordinates
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.convert">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.convert" class="docs-object-method">&nbsp;</a>
 ```python
 convert(self, system, **kw): 
 ```
@@ -50,7 +56,7 @@ Converts across coordinate systems
 - `:returns`: `CoordinateSet`
     >new_coords
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.derivatives">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.derivatives" class="docs-object-method">&nbsp;</a>
 ```python
 derivatives(self, function, order=1, coordinates=None, result_shape=None, **fd_options): 
 ```
@@ -66,7 +72,7 @@ Takes derivatives of `function` with respect to the current geometry
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.jacobian">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CoordinateSet.CoordinateSet.jacobian" class="docs-object-method">&nbsp;</a>
 ```python
 jacobian(self, system, order=1, coordinates=None, converter_options=None, **fd_options): 
 ```

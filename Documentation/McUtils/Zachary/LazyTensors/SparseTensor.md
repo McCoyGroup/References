@@ -2,12 +2,15 @@
 Tensor class that uses SparseArray
 
 ### Properties and Methods
-```python
-array: property
-```
-<a id="McUtils.Zachary.LazyTensors.SparseTensor.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.LazyTensors.SparseTensor.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, a, shape=None): 
+```
+
+<a id="McUtils.Zachary.LazyTensors.SparseTensor.array" class="docs-object-method">&nbsp;</a>
+```python
+@property
+array(self): 
 ```
 
 ### Examples

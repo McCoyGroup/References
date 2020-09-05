@@ -2,12 +2,12 @@
 Surface base class which can be subclassed for relevant cases
 
 ### Properties and Methods
-<a id="McUtils.Zachary.Surfaces.BaseSurface.BaseSurface.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.Surfaces.BaseSurface.BaseSurface.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, data, dimension): 
 ```
 
-<a id="McUtils.Zachary.Surfaces.BaseSurface.BaseSurface.evaluate">&nbsp;</a>
+<a id="McUtils.Zachary.Surfaces.BaseSurface.BaseSurface.evaluate" class="docs-object-method">&nbsp;</a>
 ```python
 evaluate(self, points, **kwargs): 
 ```
@@ -17,7 +17,7 @@ Evaluates the function at the points based off of "data"
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Zachary.Surfaces.BaseSurface.BaseSurface.__call__">&nbsp;</a>
+<a id="McUtils.Zachary.Surfaces.BaseSurface.BaseSurface.__call__" class="docs-object-method">&nbsp;</a>
 ```python
 __call__(self, gridpoints, **kwargs): 
 ```
@@ -29,7 +29,7 @@ __call__(self, gridpoints, **kwargs):
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Zachary.Surfaces.BaseSurface.BaseSurface.minimize">&nbsp;</a>
+<a id="McUtils.Zachary.Surfaces.BaseSurface.BaseSurface.minimize" class="docs-object-method">&nbsp;</a>
 ```python
 minimize(self, initial_guess, function_options=None, **opts): 
 ```

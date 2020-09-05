@@ -3,7 +3,7 @@ The TransformationFunction class is an abstract class
 It provides the scaffolding for representing a single transformation operation
 
 ### Properties and Methods
-<a id="McUtils.Coordinerds.CoordinateTransformations.TransformationFunction.TransformationFunction.__init__">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateTransformations.TransformationFunction.TransformationFunction.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self): 
 ```
@@ -11,7 +11,7 @@ Initializes a transformation function based on the transfdata
 - `transfdata`: `Any`
     >No description...
 
-<a id="McUtils.Coordinerds.CoordinateTransformations.TransformationFunction.TransformationFunction.merge">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateTransformations.TransformationFunction.TransformationFunction.merge" class="docs-object-method">&nbsp;</a>
 ```python
 merge(self, other): 
 ```
@@ -21,7 +21,7 @@ Tries to merge with another TransformationFunction
 - `:returns`: `TransformationFunction`
     >tfunc
 
-<a id="McUtils.Coordinerds.CoordinateTransformations.TransformationFunction.TransformationFunction.operate">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateTransformations.TransformationFunction.TransformationFunction.operate" class="docs-object-method">&nbsp;</a>
 ```python
 operate(self, coords): 
 ```

@@ -3,12 +3,7 @@ Provides a (usually) _lazy_ representation of an operator, which allows things l
 QQQ and pQp to be calculated block-by-block
 
 ### Properties and Methods
-```python
-ndim: property
-shape: property
-tensor: property
-```
-<a id="Psience.BasisReps.Operators.Operator.__init__">&nbsp;</a>
+<a id="Psience.BasisReps.Operators.Operator.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, funcs, quanta): 
 ```
@@ -18,7 +13,25 @@ __init__(self, funcs, quanta):
 - `quanta`: `int | Iterable[int]`
     >The number of quanta to do the deepest-level calculations up to
 
-<a id="Psience.BasisReps.Operators.Operator.get_inner_indices">&nbsp;</a>
+<a id="Psience.BasisReps.Operators.Operator.ndim" class="docs-object-method">&nbsp;</a>
+```python
+@property
+ndim(self): 
+```
+
+<a id="Psience.BasisReps.Operators.Operator.shape" class="docs-object-method">&nbsp;</a>
+```python
+@property
+shape(self): 
+```
+
+<a id="Psience.BasisReps.Operators.Operator.tensor" class="docs-object-method">&nbsp;</a>
+```python
+@property
+tensor(self): 
+```
+
+<a id="Psience.BasisReps.Operators.Operator.get_inner_indices" class="docs-object-method">&nbsp;</a>
 ```python
 get_inner_indices(self): 
 ```
@@ -27,12 +40,12 @@ Gets the n-dimensional array of ijkl (e.g.) indices that functions will map over
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.BasisReps.Operators.Operator.__getitem__">&nbsp;</a>
+<a id="Psience.BasisReps.Operators.Operator.__getitem__" class="docs-object-method">&nbsp;</a>
 ```python
 __getitem__(self, item): 
 ```
 
-<a id="Psience.BasisReps.Operators.Operator.get_individual_elements">&nbsp;</a>
+<a id="Psience.BasisReps.Operators.Operator.get_individual_elements" class="docs-object-method">&nbsp;</a>
 ```python
 get_individual_elements(self, idx): 
 ```
@@ -42,12 +55,12 @@ TBH I can't remember what this function is supposed to do ?_?
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.BasisReps.Operators.Operator.get_elements">&nbsp;</a>
+<a id="Psience.BasisReps.Operators.Operator.get_elements" class="docs-object-method">&nbsp;</a>
 ```python
 get_elements(self, idx): 
 ```
 
-<a id="Psience.BasisReps.Operators.Operator.product_operator_tensor">&nbsp;</a>
+<a id="Psience.BasisReps.Operators.Operator.product_operator_tensor" class="docs-object-method">&nbsp;</a>
 ```python
 product_operator_tensor(self): 
 ```

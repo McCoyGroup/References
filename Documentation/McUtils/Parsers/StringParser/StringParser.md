@@ -10,12 +10,12 @@ handler_method: method
 to_array: method
 array_handler: method
 ```
-<a id="McUtils.Parsers.StringParser.StringParser.__init__">&nbsp;</a>
+<a id="McUtils.Parsers.StringParser.StringParser.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, regex): 
 ```
 
-<a id="McUtils.Parsers.StringParser.StringParser.parse">&nbsp;</a>
+<a id="McUtils.Parsers.StringParser.StringParser.parse" class="docs-object-method">&nbsp;</a>
 ```python
 parse(self, txt, regex=None, block_handlers=None, dtypes=None, out=None): 
 ```
@@ -33,17 +33,17 @@ Finds a single match for the and applies parsers for the specified regex in txt
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Parsers.StringParser.StringParser.parse_all">&nbsp;</a>
+<a id="McUtils.Parsers.StringParser.StringParser.parse_all" class="docs-object-method">&nbsp;</a>
 ```python
 parse_all(self, txt, regex=None, num_results=None, block_handlers=None, dtypes=None, out=None): 
 ```
 
-<a id="McUtils.Parsers.StringParser.StringParser.parse_iter">&nbsp;</a>
+<a id="McUtils.Parsers.StringParser.StringParser.parse_iter" class="docs-object-method">&nbsp;</a>
 ```python
 parse_iter(self, txt, regex=None, num_results=None, block_handlers=None, dtypes=None): 
 ```
 
-<a id="McUtils.Parsers.StringParser.StringParser.load_array">&nbsp;</a>
+<a id="McUtils.Parsers.StringParser.StringParser.load_array" class="docs-object-method">&nbsp;</a>
 ```python
 load_array(data, dtype='float'): 
 ```

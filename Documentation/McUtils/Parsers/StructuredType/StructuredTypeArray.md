@@ -9,20 +9,7 @@ A _simple_ StructuredTypeArray is one that can just be represented as a single n
 A _compound_ StructuredTypeArray requires either a list or OrderedDict of StructuredTypeArray subarrays
 
 ### Properties and Methods
-```python
-is_simple: property
-dict_like: property
-extension_axis: property
-shape: property
-block_size: property
-append_depth: property
-dtype: property
-stype: property
-array: property
-has_indeterminate_shape: property
-filled_to: property
-```
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__init__">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, stype, num_elements=50, padding_mode='fill', padding_value=None): 
 ```
@@ -32,7 +19,73 @@ __init__(self, stype, num_elements=50, padding_mode='fill', padding_value=None):
 - `num_elements`: `int`
     >number of default elements in dynamically sized arrays
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.axis_shape_indeterminate">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.is_simple" class="docs-object-method">&nbsp;</a>
+```python
+@property
+is_simple(self): 
+```
+Just returns wheter the core datatype is simple
+- `:returns`: `_`
+    >No description...
+
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.dict_like" class="docs-object-method">&nbsp;</a>
+```python
+@property
+dict_like(self): 
+```
+
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.extension_axis" class="docs-object-method">&nbsp;</a>
+```python
+@property
+extension_axis(self): 
+```
+Determines which axis to extend when adding more memory to the array
+- `:returns`: `_`
+    >No description...
+
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.shape" class="docs-object-method">&nbsp;</a>
+```python
+@property
+shape(self): 
+```
+
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.block_size" class="docs-object-method">&nbsp;</a>
+```python
+@property
+block_size(self): 
+```
+
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.append_depth" class="docs-object-method">&nbsp;</a>
+```python
+@property
+append_depth(self): 
+```
+
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.dtype" class="docs-object-method">&nbsp;</a>
+```python
+@property
+dtype(self): 
+```
+Returns the core data type held by the StructuredType that represents the array
+- `:returns`: `_`
+    >No description...
+
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.stype" class="docs-object-method">&nbsp;</a>
+```python
+@property
+stype(self): 
+```
+Returns the StructuredType that the array holds data for
+- `:returns`: `_`
+    >No description...
+
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.array" class="docs-object-method">&nbsp;</a>
+```python
+@property
+array(self): 
+```
+
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.axis_shape_indeterminate" class="docs-object-method">&nbsp;</a>
 ```python
 axis_shape_indeterminate(self, axis): 
 ```
@@ -42,22 +95,39 @@ Tries to determine if an axis has had any data placed into it or otherwise been 
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.set_filling">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.has_indeterminate_shape" class="docs-object-method">&nbsp;</a>
+```python
+@property
+has_indeterminate_shape(self): 
+```
+Tries to determine if the entire array has a determined shape
+- `axis`: `Any`
+    >No description...
+- `:returns`: `_`
+    >No description...
+
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.filled_to" class="docs-object-method">&nbsp;</a>
+```python
+@property
+filled_to(self): 
+```
+
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.set_filling" class="docs-object-method">&nbsp;</a>
 ```python
 set_filling(self, amt, axis=0): 
 ```
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.increment_filling">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.increment_filling" class="docs-object-method">&nbsp;</a>
 ```python
 increment_filling(self, inc=1, axis=0): 
 ```
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__len__">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__len__" class="docs-object-method">&nbsp;</a>
 ```python
 __len__(self): 
 ```
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.empty_array">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.empty_array" class="docs-object-method">&nbsp;</a>
 ```python
 empty_array(self, shape=None, num_elements=None): 
 ```
@@ -72,17 +142,17 @@ Creates empty arrays with (potentially) default elements
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.extend_array">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.extend_array" class="docs-object-method">&nbsp;</a>
 ```python
 extend_array(self, axis=None): 
 ```
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__setitem__">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__setitem__" class="docs-object-method">&nbsp;</a>
 ```python
 __setitem__(self, key, value): 
 ```
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.set_part">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.set_part" class="docs-object-method">&nbsp;</a>
 ```python
 set_part(self, key, value): 
 ```
@@ -94,12 +164,12 @@ Recursively sets parts of an array if not simple, otherwise just delegates to Nu
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__getitem__">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__getitem__" class="docs-object-method">&nbsp;</a>
 ```python
 __getitem__(self, item): 
 ```
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.get_part">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.get_part" class="docs-object-method">&nbsp;</a>
 ```python
 get_part(self, item, use_full_array=True): 
 ```
@@ -110,7 +180,7 @@ If simple, delegates to NumPy, otherwise tries to recursively get parts...?
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.add_axis">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.add_axis" class="docs-object-method">&nbsp;</a>
 ```python
 add_axis(self, which=0, num_elements=None, change_shape=True): 
 ```
@@ -123,7 +193,7 @@ Adds an axis to the array, generally used for expanding from singular or 1D data
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.can_cast">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.can_cast" class="docs-object-method">&nbsp;</a>
 ```python
 can_cast(self, val): 
 ```
@@ -133,7 +203,7 @@ Determines whether val can probably be cast to the right return type and shape w
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.append">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.append" class="docs-object-method">&nbsp;</a>
 ```python
 append(self, val, axis=0): 
 ```
@@ -143,7 +213,7 @@ Puts val in the first empty slot in the array
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.extend">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.extend" class="docs-object-method">&nbsp;</a>
 ```python
 extend(self, val, single=True, prepend=False, axis=None): 
 ```
@@ -155,7 +225,7 @@ Adds the sequence val to the array
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.fill">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.fill" class="docs-object-method">&nbsp;</a>
 ```python
 fill(self, array): 
 ```
@@ -165,7 +235,7 @@ Sets the result array to be the passed array
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.cast_to_array">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.cast_to_array" class="docs-object-method">&nbsp;</a>
 ```python
 cast_to_array(self, txt): 
 ```
@@ -176,7 +246,7 @@ Casts a string of things with a given data type to an array of that type and doe
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__repr__">&nbsp;</a>
+<a id="McUtils.Parsers.StructuredType.StructuredTypeArray.__repr__" class="docs-object-method">&nbsp;</a>
 ```python
 __repr__(self): 
 ```

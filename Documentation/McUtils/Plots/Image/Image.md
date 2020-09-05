@@ -5,7 +5,7 @@ Simple subclass of ArrayPlot that just turns off most of the unnecessary feature
 ```python
 from_file: method
 ```
-<a id="McUtils.Plots.Image.Image.__init__">&nbsp;</a>
+<a id="McUtils.Plots.Image.Image.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, data, **kwargs): 
 ```

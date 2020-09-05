@@ -3,17 +3,17 @@ Little extension to RepresentationBasis so that we can use p and x and stuff
 to evaluate out matrix elements and stuff
 
 ### Properties and Methods
-<a id="Psience.BasisReps.Wavefunctions.AnalyticWavefunction.__init__">&nbsp;</a>
+<a id="Psience.BasisReps.Wavefunctions.AnalyticWavefunction.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, energy, data, **opts): 
 ```
 
-<a id="Psience.BasisReps.Wavefunctions.AnalyticWavefunction.evaluate">&nbsp;</a>
+<a id="Psience.BasisReps.Wavefunctions.AnalyticWavefunction.evaluate" class="docs-object-method">&nbsp;</a>
 ```python
 evaluate(self, *args, **kwargs): 
 ```
 
-<a id="Psience.BasisReps.Wavefunctions.AnalyticWavefunction.plot">&nbsp;</a>
+<a id="Psience.BasisReps.Wavefunctions.AnalyticWavefunction.plot" class="docs-object-method">&nbsp;</a>
 ```python
 plot(self, figure=None, plot_class=None, domain=(-5, 5), **opts): 
 ```
@@ -23,7 +23,7 @@ Uses McUtils to plot the wavefunction on the passed figure (makes a new one if n
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.BasisReps.Wavefunctions.AnalyticWavefunction.expect">&nbsp;</a>
+<a id="Psience.BasisReps.Wavefunctions.AnalyticWavefunction.expect" class="docs-object-method">&nbsp;</a>
 ```python
 expect(self, operator): 
 ```
@@ -34,7 +34,7 @@ Provides expectation values of operators, but the operators have to be Operator 
 - `operator`: `Operator`
     >the operator to take the expectation of
 
-<a id="Psience.BasisReps.Wavefunctions.AnalyticWavefunction.expectation">&nbsp;</a>
+<a id="Psience.BasisReps.Wavefunctions.AnalyticWavefunction.expectation" class="docs-object-method">&nbsp;</a>
 ```python
 expectation(self, op, other): 
 ```
@@ -46,7 +46,7 @@ Computes the expectation value of operator op over the wavefunction other and se
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.BasisReps.Wavefunctions.AnalyticWavefunction.probability_density">&nbsp;</a>
+<a id="Psience.BasisReps.Wavefunctions.AnalyticWavefunction.probability_density" class="docs-object-method">&nbsp;</a>
 ```python
 probability_density(self): 
 ```

@@ -2,7 +2,7 @@
 A base class for 3D plots
 
 ### Properties and Methods
-<a id="McUtils.Plots.Plots.Plot3D.__init__">&nbsp;</a>
+<a id="McUtils.Plots.Plots.Plot3D.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, *params, plot_style=None, method='plot_surface', colorbar=None, figure=None, axes=None, subplot_kw=None, **opts): 
 ```
@@ -24,12 +24,12 @@ __init__(self, *params, plot_style=None, method='plot_surface', colorbar=None, f
 - `opts`: `Any`
     >options to be fed in when initializing the Graphics
 
-<a id="McUtils.Plots.Plots.Plot3D.plot">&nbsp;</a>
+<a id="McUtils.Plots.Plots.Plot3D.plot" class="docs-object-method">&nbsp;</a>
 ```python
 plot(self, *params, **plot_style): 
 ```
 
-<a id="McUtils.Plots.Plots.Plot3D.add_colorbar">&nbsp;</a>
+<a id="McUtils.Plots.Plots.Plot3D.add_colorbar" class="docs-object-method">&nbsp;</a>
 ```python
 add_colorbar(self, **kw): 
 ```

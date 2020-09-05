@@ -2,7 +2,7 @@
 A surface with an evaluator built off of a Taylor series expansion
 
 ### Properties and Methods
-<a id="McUtils.Zachary.Surfaces.BaseSurface.TaylorSeriesSurface.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.Surfaces.BaseSurface.TaylorSeriesSurface.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, *derivs, dimension=None, **opts): 
 ```
@@ -12,7 +12,7 @@ __init__(self, *derivs, dimension=None, **opts):
 - `dimension`: `Any`
     >No description...
 
-<a id="McUtils.Zachary.Surfaces.BaseSurface.TaylorSeriesSurface.evaluate">&nbsp;</a>
+<a id="McUtils.Zachary.Surfaces.BaseSurface.TaylorSeriesSurface.evaluate" class="docs-object-method">&nbsp;</a>
 ```python
 evaluate(self, points, **kwargs): 
 ```

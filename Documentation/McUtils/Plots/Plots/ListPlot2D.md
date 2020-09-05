@@ -2,7 +2,7 @@
 Convenience class that handles the interpolation first
 
 ### Properties and Methods
-<a id="McUtils.Plots.Plots.ListPlot2D.__init__">&nbsp;</a>
+<a id="McUtils.Plots.Plots.ListPlot2D.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, *params, plot_style=None, method='contour', colorbar=None, figure=None, axes=None, subplot_kw=None, interpolate=True, **opts): 
 ```

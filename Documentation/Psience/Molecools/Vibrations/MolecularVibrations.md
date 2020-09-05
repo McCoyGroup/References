@@ -2,12 +2,7 @@
 
 
 ### Properties and Methods
-```python
-basis: property
-molecule: property
-coords: property
-```
-<a id="Psience.Molecools.Vibrations.MolecularVibrations.__init__">&nbsp;</a>
+<a id="Psience.Molecools.Vibrations.MolecularVibrations.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, molecule, basis, freqs=None, init=None): 
 ```
@@ -19,17 +14,35 @@ Sets up a vibration for a Molecule object over the CoordinateSystem basis
 - `basis`: `MolecularNormalModes`
     >No description...
 
-<a id="Psience.Molecools.Vibrations.MolecularVibrations.__len__">&nbsp;</a>
+<a id="Psience.Molecools.Vibrations.MolecularVibrations.basis" class="docs-object-method">&nbsp;</a>
+```python
+@property
+basis(self): 
+```
+
+<a id="Psience.Molecools.Vibrations.MolecularVibrations.molecule" class="docs-object-method">&nbsp;</a>
+```python
+@property
+molecule(self): 
+```
+
+<a id="Psience.Molecools.Vibrations.MolecularVibrations.coords" class="docs-object-method">&nbsp;</a>
+```python
+@property
+coords(self): 
+```
+
+<a id="Psience.Molecools.Vibrations.MolecularVibrations.__len__" class="docs-object-method">&nbsp;</a>
 ```python
 __len__(self): 
 ```
 
-<a id="Psience.Molecools.Vibrations.MolecularVibrations.displace">&nbsp;</a>
+<a id="Psience.Molecools.Vibrations.MolecularVibrations.displace" class="docs-object-method">&nbsp;</a>
 ```python
 displace(self, displacements=None, amt=0.1, n=1, which=0): 
 ```
 
-<a id="Psience.Molecools.Vibrations.MolecularVibrations.visualize">&nbsp;</a>
+<a id="Psience.Molecools.Vibrations.MolecularVibrations.visualize" class="docs-object-method">&nbsp;</a>
 ```python
 visualize(self, step_size=0.1, steps=(5, 5), which=0, anim_opts=None, mode='fast', **plot_args): 
 ```

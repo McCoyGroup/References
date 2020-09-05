@@ -5,7 +5,7 @@ Represents Cartesian coordinates generally
 ```python
 name: str
 ```
-<a id="McUtils.Coordinerds.CoordinateSystems.CommonCoordinateSystems.CartesianCoordinateSystem.__init__">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateSystems.CommonCoordinateSystems.CartesianCoordinateSystem.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, dimension=None, converter_options=None, **opts): 
 ```

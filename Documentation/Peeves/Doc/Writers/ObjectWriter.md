@@ -4,14 +4,14 @@
 ### Properties and Methods
 ```python
 template_name: str
-identifier: property
 ```
-<a id="Peeves.Doc.Writers.ObjectWriter.get_name">&nbsp;</a>
+<a id="Peeves.Doc.Writers.ObjectWriter.identifier" class="docs-object-method">&nbsp;</a>
 ```python
-get_name(self): 
+@property
+identifier(self): 
 ```
 
-<a id="Peeves.Doc.Writers.ObjectWriter.template_params">&nbsp;</a>
+<a id="Peeves.Doc.Writers.ObjectWriter.template_params" class="docs-object-method">&nbsp;</a>
 ```python
 template_params(self): 
 ```

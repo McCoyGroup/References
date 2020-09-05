@@ -4,28 +4,10 @@ General purpose 'Molecule' class where the 'Molecule' need not be a molecule at 
 ### Properties and Methods
 ```python
 from_zmat: method
-num_atoms: property
-atoms: property
-masses: property
-bonds: property
-coords: property
-sys: property
-formula: property
-multiconfig: property
-name: property
-force_constants: property
-potential_derivatives: property
-potential_surface: property
-dipole_surface: property
-center_of_mass: property
-inertial_axes: property
-internal_coordinates: property
-normal_modes: property
-shape: property
 from_pybel: method
 from_file: method
 ```
-<a id="Psience.Molecools.Molecule.Molecule.__init__">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, atoms, coords, bonds=None, obmol=None, charge=None, name=None, zmatrix=None, dipole_surface=None, potential_surface=None, potential_derivatives=None, source_file=None, guess_bonds=True, **kw): 
 ```
@@ -55,12 +37,123 @@ __init__(self, atoms, coords, bonds=None, obmol=None, charge=None, name=None, zm
 - `kw`: `Any`
     >Other bound parameters that might be useful
 
-<a id="Psience.Molecools.Molecule.Molecule.__repr__">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.__repr__" class="docs-object-method">&nbsp;</a>
 ```python
 __repr__(self): 
 ```
 
-<a id="Psience.Molecools.Molecule.Molecule.take_submolecule">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.num_atoms" class="docs-object-method">&nbsp;</a>
+```python
+@property
+num_atoms(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.atoms" class="docs-object-method">&nbsp;</a>
+```python
+@property
+atoms(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.masses" class="docs-object-method">&nbsp;</a>
+```python
+@property
+masses(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.bonds" class="docs-object-method">&nbsp;</a>
+```python
+@property
+bonds(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.coords" class="docs-object-method">&nbsp;</a>
+```python
+@property
+coords(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.sys" class="docs-object-method">&nbsp;</a>
+```python
+@property
+sys(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.formula" class="docs-object-method">&nbsp;</a>
+```python
+@property
+formula(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.multiconfig" class="docs-object-method">&nbsp;</a>
+```python
+@property
+multiconfig(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.name" class="docs-object-method">&nbsp;</a>
+```python
+@property
+name(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.force_constants" class="docs-object-method">&nbsp;</a>
+```python
+@property
+force_constants(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.potential_derivatives" class="docs-object-method">&nbsp;</a>
+```python
+@property
+potential_derivatives(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.potential_surface" class="docs-object-method">&nbsp;</a>
+```python
+@property
+potential_surface(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.dipole_surface" class="docs-object-method">&nbsp;</a>
+```python
+@property
+dipole_surface(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.center_of_mass" class="docs-object-method">&nbsp;</a>
+```python
+@property
+center_of_mass(self): 
+```
+
+- `:returns`: `CoordinateSet`
+    >No description...
+
+<a id="Psience.Molecools.Molecule.Molecule.inertial_axes" class="docs-object-method">&nbsp;</a>
+```python
+@property
+inertial_axes(self): 
+```
+
+- `:returns`: `CoordinateSet`
+    >No description...
+
+<a id="Psience.Molecools.Molecule.Molecule.internal_coordinates" class="docs-object-method">&nbsp;</a>
+```python
+@property
+internal_coordinates(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.normal_modes" class="docs-object-method">&nbsp;</a>
+```python
+@property
+normal_modes(self): 
+```
+
+- `:returns`: `VibrationalModes`
+    >No description...
+
+<a id="Psience.Molecools.Molecule.Molecule.take_submolecule" class="docs-object-method">&nbsp;</a>
 ```python
 take_submolecule(self, spec): 
 ```
@@ -71,32 +164,38 @@ Takes a 'slice' of a molecule if working with Cartesian coords.
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.Molecools.Molecule.Molecule.__len__">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.shape" class="docs-object-method">&nbsp;</a>
+```python
+@property
+shape(self): 
+```
+
+<a id="Psience.Molecools.Molecule.Molecule.__len__" class="docs-object-method">&nbsp;</a>
 ```python
 __len__(self): 
 ```
 
-<a id="Psience.Molecools.Molecule.Molecule.__iter__">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.__iter__" class="docs-object-method">&nbsp;</a>
 ```python
 __iter__(self): 
 ```
 
-<a id="Psience.Molecools.Molecule.Molecule.__getitem__">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.__getitem__" class="docs-object-method">&nbsp;</a>
 ```python
 __getitem__(self, item): 
 ```
 
-<a id="Psience.Molecools.Molecule.Molecule.copy">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.copy" class="docs-object-method">&nbsp;</a>
 ```python
 copy(self): 
 ```
 
-<a id="Psience.Molecools.Molecule.Molecule.prop">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.prop" class="docs-object-method">&nbsp;</a>
 ```python
 prop(self, name, *args, **kwargs): 
 ```
 
-<a id="Psience.Molecools.Molecule.Molecule.load_force_constants">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.load_force_constants" class="docs-object-method">&nbsp;</a>
 ```python
 load_force_constants(self, file=None): 
 ```
@@ -106,7 +205,7 @@ Loads force constants from a file (or from `source_file` if set)
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.Molecools.Molecule.Molecule.load_potential_derivatives">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.load_potential_derivatives" class="docs-object-method">&nbsp;</a>
 ```python
 load_potential_derivatives(self, file=None): 
 ```
@@ -116,7 +215,7 @@ Loads potential derivatives from a file (or from `source_file` if set)
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.Molecools.Molecule.Molecule.load_normal_modes">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.load_normal_modes" class="docs-object-method">&nbsp;</a>
 ```python
 load_normal_modes(self, file=None): 
 ```
@@ -126,17 +225,17 @@ Loads potential derivatives from a file (or from `source_file` if set)
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.Molecools.Molecule.Molecule.load_potential_surface">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.load_potential_surface" class="docs-object-method">&nbsp;</a>
 ```python
 load_potential_surface(self): 
 ```
 
-<a id="Psience.Molecools.Molecule.Molecule.load_dipole_surface">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.load_dipole_surface" class="docs-object-method">&nbsp;</a>
 ```python
 load_dipole_surface(self): 
 ```
 
-<a id="Psience.Molecools.Molecule.Molecule.principle_axis_frame">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.principle_axis_frame" class="docs-object-method">&nbsp;</a>
 ```python
 principle_axis_frame(self, sel=None, inverse=False): 
 ```
@@ -150,7 +249,7 @@ Gets the principle axis frame(s) for the molecule
 - `:returns`: `MolecularTransformation | List[MolecularTransformation]`
     >No description...
 
-<a id="Psience.Molecools.Molecule.Molecule.eckart_frame">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.eckart_frame" class="docs-object-method">&nbsp;</a>
 ```python
 eckart_frame(self, mol, sel=None, inverse=False): 
 ```
@@ -164,7 +263,7 @@ Gets the Eckart frame(s) for the molecule
 - `:returns`: `_`
     >No description...
 
-<a id="Psience.Molecools.Molecule.Molecule.get_embedded_molecule">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.get_embedded_molecule" class="docs-object-method">&nbsp;</a>
 ```python
 get_embedded_molecule(self, ref=None): 
 ```
@@ -173,12 +272,12 @@ Returns a Molecule embedded in an Eckart frame if ref is not None, otherwise ret
 - `:returns`: `Molecule`
     >No description...
 
-<a id="Psience.Molecools.Molecule.Molecule.plot">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.plot" class="docs-object-method">&nbsp;</a>
 ```python
 plot(self, *geometries, figure=None, bond_radius=0.1, atom_radius_scaling=0.25, atom_style=None, bond_style=None, mode='fast', objects=False, **plot_ops): 
 ```
 
-<a id="Psience.Molecools.Molecule.Molecule.get_normal_modes">&nbsp;</a>
+<a id="Psience.Molecools.Molecule.Molecule.get_normal_modes" class="docs-object-method">&nbsp;</a>
 ```python
 get_normal_modes(self, **kwargs): 
 ```

@@ -1,4 +1,5 @@
-<a id="McUtils.Numputils.AnalyticDerivs.dihed_deriv">&nbsp;</a>
+# <a id="McUtils.Numputils.AnalyticDerivs.dihed_deriv">dihed_deriv</a>
+
 ```python
 dihed_deriv(coords, i, j, k, l): 
 ```
@@ -18,3 +19,11 @@ Gives the derivative of the dihedral between i, j, k, and l with respect to the 
 - `:returns`: `np.ndarray`
     >derivatives of the dihedral with respect to atoms i, j, k, and l
 
+Examples: 
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Numputils/AnalyticDerivs/dihed_deriv.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Numputils/AnalyticDerivs/dihed_deriv.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/Numputils/AnalyticDerivs.py?message=Update%20Docs)

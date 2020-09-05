@@ -3,7 +3,7 @@ A surface built off of a LinearExpansionSurface, but done by fitting.
 The basis selection
 
 ### Properties and Methods
-<a id="McUtils.Zachary.Surfaces.BaseSurface.LinearFitSurface.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.Surfaces.BaseSurface.LinearFitSurface.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, points, basis=None, order=4, dimension=None): 
 ```
@@ -13,7 +13,7 @@ __init__(self, points, basis=None, order=4, dimension=None):
 - `basis`: `Iterable[function] | None`
     >a basis of functions to use (defaults to power series)
 
-<a id="McUtils.Zachary.Surfaces.BaseSurface.LinearFitSurface.evaluate">&nbsp;</a>
+<a id="McUtils.Zachary.Surfaces.BaseSurface.LinearFitSurface.evaluate" class="docs-object-method">&nbsp;</a>
 ```python
 evaluate(self, points, **kwargs): 
 ```
@@ -25,7 +25,7 @@ evaluate(self, points, **kwargs):
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Zachary.Surfaces.BaseSurface.LinearFitSurface.minimize">&nbsp;</a>
+<a id="McUtils.Zachary.Surfaces.BaseSurface.LinearFitSurface.minimize" class="docs-object-method">&nbsp;</a>
 ```python
 minimize(self, initial_guess=None, function_options=None, **opts): 
 ```

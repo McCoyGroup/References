@@ -6,7 +6,7 @@ A writer targeted to a module object. Just needs to write the Module metadata.
 template_name: str
 get_members: method
 ```
-<a id="Peeves.Doc.Writers.ModuleWriter.template_params">&nbsp;</a>
+<a id="Peeves.Doc.Writers.ModuleWriter.template_params" class="docs-object-method">&nbsp;</a>
 ```python
 template_params(self): 
 ```

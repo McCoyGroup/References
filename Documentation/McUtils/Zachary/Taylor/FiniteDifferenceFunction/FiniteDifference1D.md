@@ -3,17 +3,32 @@
 
 ### Properties and Methods
 ```python
-order: property
-weights: property
-widths: property
 get_stencil: method
 ```
-<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifference1D.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifference1D.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, finite_difference_data, matrix): 
 ```
 
-<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifference1D.apply">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifference1D.order" class="docs-object-method">&nbsp;</a>
+```python
+@property
+order(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifference1D.weights" class="docs-object-method">&nbsp;</a>
+```python
+@property
+weights(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifference1D.widths" class="docs-object-method">&nbsp;</a>
+```python
+@property
+widths(self): 
+```
+
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifference1D.apply" class="docs-object-method">&nbsp;</a>
 ```python
 apply(self, vals, val_dim=None, axis=0, mesh_spacing=None): 
 ```
@@ -27,7 +42,7 @@ Applies the held FiniteDifferenceMatrix to the array of values
 - `:returns`: `_`
     >No description...
 
-<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifference1D.sparse_tensordot">&nbsp;</a>
+<a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifference1D.sparse_tensordot" class="docs-object-method">&nbsp;</a>
 ```python
 sparse_tensordot(sparse, mat, axis): 
 ```

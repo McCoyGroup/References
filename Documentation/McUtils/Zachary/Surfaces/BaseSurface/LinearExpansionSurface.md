@@ -2,7 +2,7 @@
 A surface with an evaluator built off of an expansion in some user specified basis
 
 ### Properties and Methods
-<a id="McUtils.Zachary.Surfaces.BaseSurface.LinearExpansionSurface.__init__">&nbsp;</a>
+<a id="McUtils.Zachary.Surfaces.BaseSurface.LinearExpansionSurface.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, coefficients, basis=None, dimension=None): 
 ```
@@ -12,7 +12,7 @@ __init__(self, coefficients, basis=None, dimension=None):
 - `basis`: `Iterable[function] | None`
     >a basis of functions to use (defaults to power series)
 
-<a id="McUtils.Zachary.Surfaces.BaseSurface.LinearExpansionSurface.evaluate">&nbsp;</a>
+<a id="McUtils.Zachary.Surfaces.BaseSurface.LinearExpansionSurface.evaluate" class="docs-object-method">&nbsp;</a>
 ```python
 evaluate(self, points, **kwargs): 
 ```

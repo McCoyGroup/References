@@ -2,7 +2,7 @@
 A simple TranslationTransform from the basic AffineTransformation class
 
 ### Properties and Methods
-<a id="McUtils.Coordinerds.CoordinateTransformations.TranslationTransform.TranslationTransform.__init__">&nbsp;</a>
+<a id="McUtils.Coordinerds.CoordinateTransformations.TranslationTransform.TranslationTransform.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, shift): 
 ```

@@ -1,4 +1,5 @@
-<a id="McUtils.Numputils.VectorOps.vec_sins">&nbsp;</a>
+# <a id="McUtils.Numputils.VectorOps.vec_sins">vec_sins</a>
+
 ```python
 vec_sins(vectors1, vectors2, axis=-1): 
 ```
@@ -8,3 +9,11 @@ Gets the sin of the angle between two vectors
 - `vectors2`: `np.ndarray`
     >No description...
 
+Examples: 
+
+
+___
+
+[Edit Examples on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Numputils/VectorOps/vec_sins.md) or 
+[Create New Examples](https://github.com/McCoyGroup/References/new/gh-pages/?filename=Documentation/examples/McUtils/Numputils/VectorOps/vec_sins.md) <br/>
+[Edit Docstrings on GitHub](https://github.com/McCoyGroup/McUtils/edit/master/Numputils/VectorOps.py?message=Update%20Docs)

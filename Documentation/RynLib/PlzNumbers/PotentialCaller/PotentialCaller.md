@@ -5,16 +5,23 @@ Takes a pointer to a C++ potential calls this potential on a set of geometries /
 ```python
 load_lib: method
 reload: method
-lib: property
 PoolPotential: type
-mpi_manager: property
 ```
-<a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.__init__">&nbsp;</a>
+<a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, potential, *ignore, bad_walker_file='bad_walkers.txt', mpi_manager=None, raw_array_potential=None, vectorized_potential=False, error_value=10000000000.0, fortran_potential=False, transpose_call=None): 
 ```
 
-<a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.call_single">&nbsp;</a>
+<a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.lib" class="docs-object-method">&nbsp;</a>
+```python
+@property
+lib(self): 
+```
+
+- `:returns`: `module`
+    >No description...
+
+<a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.call_single" class="docs-object-method">&nbsp;</a>
 ```python
 call_single(self, walker, atoms, extra_bools=(), extra_ints=(), extra_floats=()): 
 ```
@@ -26,12 +33,18 @@ call_single(self, walker, atoms, extra_bools=(), extra_ints=(), extra_floats=())
 - `:returns`: `_`
     >No description...
 
-<a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.clean_up">&nbsp;</a>
+<a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.mpi_manager" class="docs-object-method">&nbsp;</a>
+```python
+@property
+mpi_manager(self): 
+```
+
+<a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.clean_up" class="docs-object-method">&nbsp;</a>
 ```python
 clean_up(self): 
 ```
 
-<a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.call_multiple">&nbsp;</a>
+<a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.call_multiple" class="docs-object-method">&nbsp;</a>
 ```python
 call_multiple(self, walker, atoms, extra_bools=(), extra_ints=(), extra_floats=()): 
 ```
@@ -43,7 +56,7 @@ call_multiple(self, walker, atoms, extra_bools=(), extra_ints=(), extra_floats=(
 - `:returns`: `_`
     >No description...
 
-<a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.__call__">&nbsp;</a>
+<a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.__call__" class="docs-object-method">&nbsp;</a>
 ```python
 __call__(self, walkers, atoms, *extra_args): 
 ```

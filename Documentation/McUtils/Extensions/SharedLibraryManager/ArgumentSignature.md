@@ -2,11 +2,7 @@
 Defines an argument signature for a C-level caller
 
 ### Properties and Methods
-```python
-args: property
-return_type: property
-```
-<a id="McUtils.Extensions.SharedLibraryManager.ArgumentSignature.__init__">&nbsp;</a>
+<a id="McUtils.Extensions.SharedLibraryManager.ArgumentSignature.__init__" class="docs-object-method">&nbsp;</a>
 ```python
 __init__(self, *args, return_type=None): 
 ```
@@ -14,7 +10,7 @@ __init__(self, *args, return_type=None):
 - `args`: `Iterable[tuple]`
     >the set of argument types to be passed into the caller
 
-<a id="McUtils.Extensions.SharedLibraryManager.ArgumentSignature.build_argument">&nbsp;</a>
+<a id="McUtils.Extensions.SharedLibraryManager.ArgumentSignature.build_argument" class="docs-object-method">&nbsp;</a>
 ```python
 build_argument(self, argtup, which=None): 
 ```
@@ -23,6 +19,18 @@ Converts an argument tuple into an Argument object
     >No description...
 - `:returns`: `_`
     >No description...
+
+<a id="McUtils.Extensions.SharedLibraryManager.ArgumentSignature.args" class="docs-object-method">&nbsp;</a>
+```python
+@property
+args(self): 
+```
+
+<a id="McUtils.Extensions.SharedLibraryManager.ArgumentSignature.return_type" class="docs-object-method">&nbsp;</a>
+```python
+@property
+return_type(self): 
+```
 
 ### Examples
 
