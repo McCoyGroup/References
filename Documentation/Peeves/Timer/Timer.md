@@ -7,7 +7,7 @@ tag_printing_times: dict
 ```
 <a id="Peeves.Timer.Timer.__init__" class="docs-object-method">&nbsp;</a>
 ```python
-__init__(self, tag=None, file=<_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, rounding=5, print_times=1, number=1, **kw): 
+__init__(self, tag=None, file=<_io.TextIOWrapper name='<stderr>' mode='w' encoding='utf-8'>, rounding=5, print_times=1, number=1, **kw): 
 ```
 
 <a id="Peeves.Timer.Timer.get_time_list" class="docs-object-method">&nbsp;</a>
