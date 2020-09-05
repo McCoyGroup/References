@@ -8,8 +8,8 @@ set -e
 # get into the parent folder?
 cd /home
 # configure git
-git config --global user.name '${GITHUB_ACTOR}'
-git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
+git config --global user.name ${GITHUB_ACTOR}
+git config --global user.email ${GITHUB_ACTOR}@users.noreply.github.com
 # clone in the group repos
 git clone https://github.com/McCoyGroup/Peeves.git
 git clone https://github.com/McCoyGroup/McUtils.git
