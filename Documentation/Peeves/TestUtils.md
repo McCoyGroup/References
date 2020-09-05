@@ -9,7 +9,7 @@ All of the utilities that are used in writing tests for Peeves
   - [ValidationTests](TestUtils/ValidationTests.md)
   - [TimingTests](TestUtils/TimingTests.md)
   - [LoadTests](TestUtils/LoadTests.md)
-  - [TestManagerClass](TestUtils/TestManagerClass.md)
+  - [TestManager](TestUtils/TestManager.md)
   - [DataGenerator](TestUtils/DataGenerator.md)
   - [load_tests](TestUtils/ManagedTestLoader/load_tests.md)
   - [validationTest](TestUtils/validationTest.md)
