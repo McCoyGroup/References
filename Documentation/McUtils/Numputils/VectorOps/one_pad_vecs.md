@@ -3,9 +3,9 @@
 ```python
 one_pad_vecs(vecs): 
 ```
+ 
 
-
-Examples: 
+### Examples: 
 
 
 ___

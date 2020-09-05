@@ -12,9 +12,9 @@ Defines a version of tensordot that uses matmul to operate over stacks of things
 - `axes`: `Any`
     >No description...
 - `:returns`: `_`
-    >No description...
+    >No description... 
 
-Examples: 
+### Examples: 
 
 
 ___

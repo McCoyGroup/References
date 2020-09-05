@@ -17,9 +17,9 @@ Gives the derivative of the dihedral between i, j, k, and l with respect to the 
 - `l`: `int | Iterable[int]`
     >No description...
 - `:returns`: `np.ndarray`
-    >derivatives of the dihedral with respect to atoms i, j, k, and l
+    >derivatives of the dihedral with respect to atoms i, j, k, and l 
 
-Examples: 
+### Examples: 
 
 
 ___

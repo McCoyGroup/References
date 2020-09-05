@@ -11,9 +11,9 @@ Gives the derivative of the distance between i and j with respect to coords i an
 - `j`: `int | Iterable[int]`
     >index of the other atom
 - `:returns`: `np.ndarray`
-    >derivatives of the distance with respect to atoms i, j, and k
+    >derivatives of the distance with respect to atoms i, j, and k 
 
-Examples: 
+### Examples: 
 
 
 ___

@@ -12,9 +12,9 @@ Provides the outer product of a and b in a vectorized way.
 - `axis`: `Any`
     >No description...
 - `:returns`: `_`
-    >No description...
+    >No description... 
 
-Examples: 
+### Examples: 
 
 
 ___

@@ -3,9 +3,9 @@
 ```python
 timingTest(fn): 
 ```
+ 
 
-
-Examples: 
+### Examples: 
 
 
 ___

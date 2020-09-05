@@ -3,9 +3,9 @@
 ```python
 vec_crosses(vecs1, vecs2, normalize=False, axis=-1): 
 ```
+ 
 
-
-Examples: 
+### Examples: 
 
 
 ___

@@ -7,9 +7,9 @@ Computes the pair-wise dot product of two lists of vecs using np.matmul
 - `vecs1`: `Any`
     >No description...
 - `vecs2`: `Any`
-    >No description...
+    >No description... 
 
-Examples: 
+### Examples: 
 
 
 ___

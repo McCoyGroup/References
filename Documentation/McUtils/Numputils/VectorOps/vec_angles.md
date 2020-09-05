@@ -9,9 +9,9 @@ Gets the angles and normals between two vectors
 - `vectors2`: `np.ndarray`
     >No description...
 - `:returns`: `(np.ndarray, np.ndarray)`
-    >angles and normals between two vectors
+    >angles and normals between two vectors 
 
-Examples: 
+### Examples: 
 
 
 ___

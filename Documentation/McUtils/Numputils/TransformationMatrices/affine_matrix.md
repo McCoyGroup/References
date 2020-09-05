@@ -9,9 +9,9 @@ Creates an affine transformation matrix from a 3x3 transformation matrix or set 
 - `shift`: `Any`
     >No description...
 - `:returns`: `_`
-    >No description...
+    >No description... 
 
-Examples: 
+### Examples: 
 
 
 ___

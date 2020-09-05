@@ -9,9 +9,9 @@ Merges two transformation matrices
 - `other`: `np.ndarray`
     >No description...
 - `:returns`: `_`
-    >No description...
+    >No description... 
 
-Examples: 
+### Examples: 
 
 
 ___

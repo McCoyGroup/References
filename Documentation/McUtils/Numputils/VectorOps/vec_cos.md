@@ -7,9 +7,9 @@ Gets the cos of the angle between two vectors
 - `vectors1`: `np.ndarray`
     >No description...
 - `vectors2`: `np.ndarray`
-    >No description...
+    >No description... 
 
-Examples: 
+### Examples: 
 
 
 ___

@@ -11,9 +11,9 @@ Tensor dot but just along the final axes by default. Totally a convenience funct
 - `axes`: `Any`
     >No description...
 - `:returns`: `_`
-    >No description...
+    >No description... 
 
-Examples: 
+### Examples: 
 
 
 ___

@@ -3,9 +3,9 @@
 ```python
 rotation_matrix(axis, theta): 
 ```
+ 
 
-
-Examples: 
+### Examples: 
 
 
 ___

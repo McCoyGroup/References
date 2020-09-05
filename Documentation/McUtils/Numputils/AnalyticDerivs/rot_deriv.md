@@ -14,9 +14,9 @@ Gives a rotational derivative w/r/t some unspecified coordinate
 - `dAxis`: `np.ndarray`
     >chain rule axis deriv.
 - `:returns`: `np.ndarray`
-    >derivatives of the rotation matrices with respect to both the angle and the axis
+    >derivatives of the rotation matrices with respect to both the angle and the axis 
 
-Examples: 
+### Examples: 
 
 
 ___

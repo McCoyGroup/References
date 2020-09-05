@@ -19,9 +19,9 @@ Computes a finite difference derivative for the values on the grid
 - `axes`: `int | Iterable[int]`
     >which axes to perform the successive derivatives over (defaults to the first _n_ axes)
 - `:returns`: `_`
-    >No description...
+    >No description... 
 
-Examples: 
+### Examples: 
 
 
 ___

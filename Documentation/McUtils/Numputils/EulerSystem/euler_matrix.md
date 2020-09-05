@@ -7,9 +7,9 @@ Returns the Euler matrix for the specified angles
 - `angles`: `Any`
     >No description...
 - `ordering`: `Any`
-    >the order in which the rotations should be performed
+    >the order in which the rotations should be performed 
 
-Examples: 
+### Examples: 
 
 
 ___

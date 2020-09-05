@@ -11,9 +11,9 @@ Defines a version of tensordot that uses sparse arrays, adapted from the sparse 
 - `axes`: `int | Iterable[int]`
     >the axes to contract along
 - `:returns`: `_`
-    >No description...
+    >No description... 
 
-Examples: 
+### Examples: 
 
 
 ___

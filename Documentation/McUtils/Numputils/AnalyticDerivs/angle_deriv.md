@@ -13,9 +13,9 @@ Gives the derivative of the angle between i, j, and k with respect to the Cartes
 - `k`: `int | Iterable[int]`
     >index of the other outside atom
 - `:returns`: `np.ndarray`
-    >derivatives of the angle with respect to atoms i, j, and k
+    >derivatives of the angle with respect to atoms i, j, and k 
 
-Examples: 
+### Examples: 
 
 
 ___

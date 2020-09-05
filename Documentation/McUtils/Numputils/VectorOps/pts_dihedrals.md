@@ -11,9 +11,9 @@ Provides the dihedral angle between pts4 and the plane of the other three vector
 - `pts3`: `np.ndarray`
     >No description...
 - `:returns`: `_`
-    >No description...
+    >No description... 
 
-Examples: 
+### Examples: 
 
 
 ___

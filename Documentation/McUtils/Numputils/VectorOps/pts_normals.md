@@ -13,9 +13,9 @@ Provides the vector normal to the plane of the three points
 - `normalize`: `Any`
     >No description...
 - `:returns`: `np.ndarray`
-    >No description...
+    >No description... 
 
-Examples: 
+### Examples: 
 
 
 ___

@@ -9,9 +9,9 @@ vec_normalize(vecs, axis=-1):
 - `axis`: `int`
     >No description...
 - `:returns`: `_`
-    >No description...
+    >No description... 
 
-Examples: 
+### Examples: 
 
 
 ___
