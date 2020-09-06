@@ -150,11 +150,31 @@ Plot(grid, np.cos(.1+grid), figure=base_plot)
 </div>
 
 
-It's also possible to let `Plot` pick the number of plot points for you:
+You can also plot a function over a given range
+
+<div class="card in-out-block" markdown="1">
 
 ```python
-plot = Plot(lambda x: np.sin(15*x), [0, 2*np.pi])
+Plot(lambda x: np.sin(4*x), [0, 2*np.pi])
 ```
+<div class="card-body out-block" markdown="1">
+
+![plot](../../../img/McUtils_Plot_6.png)
+</div>
+</div>
+
+and you can also specify the step size for sampling the plotting range
+
+<div class="card in-out-block" markdown="1">
+
+```python
+Plot(lambda x: np.sin(4*x), [0, 2*np.pi, np.pi/10])
+```
+<div class="card-body out-block" markdown="1">
+
+![plot](../../../img/McUtils_Plot_7.png)
+</div>
+</div>
 
 ___
 
