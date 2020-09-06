@@ -15,8 +15,11 @@ git clone https://github.com/McCoyGroup/Peeves.git
 git clone https://github.com/McCoyGroup/McUtils.git
 git clone https://github.com/McCoyGroup/Psience.git
 git clone https://github.com/McCoyGroup/RynLib.git
+## make sure we're build off of an up to date repo
+cd References
+git pull
 ## run the docs script
-
+cd /home
 PYTHONPATH=/home python3 References/docs.py
 ### push back to main
 cd References
