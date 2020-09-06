@@ -16,7 +16,7 @@ Plot(sin_grid, np.sin(sin_grid), figure=base)
 ```
 <div class="card-body out-block" markdown="1">
 
-![plot](../../img/McUtils_Zachary_1.png)
+![plot](../img/McUtils_Zachary_1.png)
 </div>
 </div>
 
@@ -40,7 +40,7 @@ TensorPlot(np.array([vals_2D, deriv]), image_size=500)
 
 <div class="card-body out-block" markdown="1">
 
-![plot](../../img/McUtils_Zachary_2.png)
+![plot](../img/McUtils_Zachary_2.png)
 </div>
 </div>
 
@@ -68,6 +68,6 @@ for i, e in zip(range(3), (exp1, exp2, exp4)):
 
 <div class="card-body out-block" markdown="1">
 
-![plot](../../img/McUtils_Zachary_3.png)
+![plot](../img/McUtils_Zachary_3.png)
 </div>
 </div>
