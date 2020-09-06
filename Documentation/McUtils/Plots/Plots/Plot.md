@@ -1,6 +1,9 @@
 ## <a id="McUtils.Plots.Plots.Plot">Plot</a>
-The base plotting class to interface into matplotlib or (someday) VTK or another backend
-Builds off of the Graphics system to make a unified and convenient interface to generating plots
+The base plotting class to interface into matplotlib or (someday 3D) VTK.
+In the future hopefully we'll be able to make a general-purpose `PlottingBackend` class that doesn't need to be `matplotlib` .
+Builds off of the `Graphics` class to make a unified and convenient interface to generating plots.
+Some sophisticated legwork unfortunately has to be done vis-a-vis tracking constructed lines and other plotting artefacts,
+since `matplotlib` is designed to infuriate.
 
 ### Properties and Methods
 <a id="McUtils.Plots.Plots.Plot.__init__" class="docs-object-method">&nbsp;</a>
@@ -29,33 +32,43 @@ __init__(self, *params, method='plot', figure=None, axes=None, subplot_kw=None, 
 ```python
 plot(self, *params, **plot_style): 
 ```
+Plots a set of data & stores the result
+- `:returns`: `_`
+    >the graphics that matplotlib made
 
 <a id="McUtils.Plots.Plots.Plot.clear" class="docs-object-method">&nbsp;</a>
 ```python
 clear(self): 
 ```
+Removes the plotted data
 
 <a id="McUtils.Plots.Plots.Plot.restyle" class="docs-object-method">&nbsp;</a>
 ```python
 restyle(self, **plot_style): 
 ```
+Replots the data with updated plot styling
+- `plot_style`: `Any`
+    >No description...
 
 <a id="McUtils.Plots.Plots.Plot.data" class="docs-object-method">&nbsp;</a>
 ```python
 @property
 data(self): 
 ```
+The data that we plotted
 
 <a id="McUtils.Plots.Plots.Plot.plot_style" class="docs-object-method">&nbsp;</a>
 ```python
 @property
 plot_style(self): 
 ```
+The styling options applied to the plot
 
 <a id="McUtils.Plots.Plots.Plot.add_colorbar" class="docs-object-method">&nbsp;</a>
 ```python
 add_colorbar(self, graphics=None, norm=None, **kw): 
 ```
+Adds a colorbar to the plot
 
 ### Examples
 Regular `matplotlib` plotting syntax works:
