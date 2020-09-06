@@ -5,7 +5,8 @@ Mostly relevant for doing format conversions/parsing, but other utilities do exi
 
 ### Members:
 
-
+  - [OpenBabelInterface](ExternalPrograms/Babel/OpenBabelInterface.md)
+  - [OpenChemInterface](ExternalPrograms/OpenChem/OpenChemInterface.md)
 
 ### Examples:
 

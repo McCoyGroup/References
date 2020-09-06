@@ -126,11 +126,23 @@ clear(self):
 ```python
 savefig(self, where, format='png', **kw): 
 ```
+Saves the image to file
+- `where`: `Any`
+    >No description...
+- `format`: `Any`
+    >No description...
+- `kw`: `Any`
+    >No description...
+- `:returns`: `str`
+    >file it was saved to (I think...?)
 
 <a id="McUtils.Plots.Graphics.GraphicsBase.to_png" class="docs-object-method">&nbsp;</a>
 ```python
 to_png(self): 
 ```
+Used by Jupyter and friends to make a version of the image that they can display, hence the extra 'tight_layout' call
+- `:returns`: `_`
+    >No description...
 
 <a id="McUtils.Plots.Graphics.GraphicsBase.add_colorbar" class="docs-object-method">&nbsp;</a>
 ```python

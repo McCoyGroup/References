@@ -44,17 +44,26 @@ __call__(self, vals, axes=None, mesh_spacing=None):
 order(self): 
 ```
 
+- `:returns`: `tuple[int]`
+    >the order of the derivative requested
+
 <a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceFunction.weights" class="docs-object-method">&nbsp;</a>
 ```python
 @property
 weights(self): 
 ```
 
+- `:returns`: `tuple[np.array[float]]`
+    >the weights for the specified stencil
+
 <a id="McUtils.Zachary.Taylor.FiniteDifferenceFunction.FiniteDifferenceFunction.widths" class="docs-object-method">&nbsp;</a>
 ```python
 @property
 widths(self): 
 ```
+
+- `:returns`: `tuple[(int, int)]`
+    >the number of points in each dimension, left and right, for the specified stencil
 
 ### Examples
 

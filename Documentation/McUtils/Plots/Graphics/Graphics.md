@@ -7,7 +7,7 @@ default_style: dict
 ```
 <a id="McUtils.Plots.Graphics.Graphics.set_options" class="docs-object-method">&nbsp;</a>
 ```python
-set_options(self, axes_labels=None, plot_label=None, plot_range=None, plot_legend=None, frame=None, ticks=None, scale=None, padding=None, spacings=None, ticks_style=None, image_size=None, aspect_ratio=None, background=None, colorbar=None, prolog=None, epilog=None, **parent_opts): 
+set_options(self, axes_labels=None, plot_label=None, plot_range=None, plot_legend=None, frame=None, frame_style=None, ticks=None, scale=None, padding=None, spacings=None, ticks_style=None, image_size=None, aspect_ratio=None, background=None, colorbar=None, prolog=None, epilog=None, **parent_opts): 
 ```
 
 <a id="McUtils.Plots.Graphics.Graphics.plot_label" class="docs-object-method">&nbsp;</a>
@@ -32,6 +32,12 @@ axes_labels(self):
 ```python
 @property
 frame(self): 
+```
+
+<a id="McUtils.Plots.Graphics.Graphics.frame_style" class="docs-object-method">&nbsp;</a>
+```python
+@property
+frame_style(self): 
 ```
 
 <a id="McUtils.Plots.Graphics.Graphics.plot_range" class="docs-object-method">&nbsp;</a>

@@ -60,6 +60,8 @@ add_colorbar(self, graphics=None, norm=None, **kw):
 ### Examples
 Regular `matplotlib` plotting syntax works:
 
+<div class="card in-out-block" markdown="1">
+
 ```python
 import numpy as np
 from McUtils.Plots import *
@@ -68,23 +70,91 @@ grid = np.linspace(0, 2*np.pi, 100)
 plot = Plot(grid, np.sin(grid))
 plot.show()
 ```
+<div class="card-body out-block" markdown="1">
+
+![plot](../../../img/McUtils_Plot_1.png)
+</div>
+</div>
 
 You can also set a background / axes labels / other options
 
+<div class="card in-out-block" markdown="1">
+
 ```python
 plot = Plot(grid, np.sin(grid),
-    axes_labels = ['x', "sin(x)"],
-    background = "red"
-    )
+        plot_style={'color':'white'},
+        axes_labels = ['x', Styled("sin(x)", color='white', fontsize=15)],
+        frame_style={'color':'pink'},
+        ticks_style={'color':'pink', 'labelcolor':'pink'},
+        background = "rebeccapurple",
+        image_size=500,
+        aspect_ratio=.5
+        )
 ```
+<div class="card-body out-block" markdown="1">
+
+![plot](../../../img/McUtils_Plot_2.png)
+</div>
+</div>
+
+lots of styling can sometimes be easier to manage with the `theme` option, which uses matplotlib's `rcparams`:
+
+<div class="card in-out-block" markdown="1">
+
+```python
+from cycler import cycler # installed with matplotlib
+
+base_plot = Plot(grid, np.sin(grid),
+        theme = ('mccoy', 
+                 {
+                     'figure.facecolor':'rebeccapurple',
+                     'axes.facecolor':'rebeccapurple',
+                     'axes.edgecolor':'white', 
+                     'axes.prop_cycle': cycler(color=['white', 'pink', 'red']),
+                     'axes.labelcolor':'white',
+                     'xtick.color':'pink', 
+                     'ytick.color':'pink'
+                 }
+                ),
+        axes_labels = ['x', "sin(x)"],
+        image_size=500,
+        aspect_ratio=.5
+        )
+```
+<div class="card-body out-block" markdown="1">
+
+![plot](../../../img/McUtils_Plot_3.png)
+</div>
+</div>
+
+it's worth noting that these styles are "sticky" when updating the figure
+
+<div class="card in-out-block" markdown="1">
+
+```python
+Plot(grid, np.cos(grid), figure=base_plot)
+```
+<div class="card-body out-block" markdown="1">
+
+![plot](../../../img/McUtils_Plot_4.png)
+</div>
+
+```python
+Plot(grid, np.cos(.1+grid), figure=base_plot)
+```
+
+<div class="card-body out-block" markdown="1">
+
+![plot](../../../img/McUtils_Plot_5.png)
+</div>
+</div>
+
 
 It's also possible to let `Plot` pick the number of plot points for you:
 
 ```python
 plot = Plot(lambda x: np.sin(15*x), [0, 2*np.pi])
 ```
-
-Any valid option to [axes.plot](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.axes.Axes.plot.html) may also be passed to `Plot`.
 
 ___
 

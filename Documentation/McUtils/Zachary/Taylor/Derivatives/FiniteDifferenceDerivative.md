@@ -1,6 +1,8 @@
 ## <a id="McUtils.Zachary.Taylor.Derivatives.FiniteDifferenceDerivative">FiniteDifferenceDerivative</a>
-Provides derivatives for a function (scalar or vector valued)
-Can be indexed into or the entire tensor of derivatives may be requested
+Provides derivatives for a function (scalar or vector valued).
+Can be indexed into or the entire tensor of derivatives may be requested.
+The potential for optimization undoubtedly exists, but the idea is to provide as _simple_ an interface as possible.
+Robustification needs to be done, but is currently used in `CoordinateSystem.jacobian` to good effect.
 
 ### Properties and Methods
 <a id="McUtils.Zachary.Taylor.Derivatives.FiniteDifferenceDerivative.__init__" class="docs-object-method">&nbsp;</a>

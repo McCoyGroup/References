@@ -1,5 +1,5 @@
 ## <a id="McUtils.Coordinerds.CoordinateSystems.CommonCoordinateSystems.SphericalCoordinateSystem">SphericalCoordinateSystem</a>
-Represents Cartesian coordinates generally
+Represents Spherical coordinates generally
 
 ### Properties and Methods
 ```python
@@ -9,6 +9,11 @@ name: str
 ```python
 __init__(self, converter_options=None, **opts): 
 ```
+
+- `converter_options`: `None | dict`
+    >options to be passed through to a `CoordinateSystemConverter`
+- `opts`: `Any`
+    >other options, if `converter_options` is None, these are used as the `converter_options`
 
 ### Examples
 

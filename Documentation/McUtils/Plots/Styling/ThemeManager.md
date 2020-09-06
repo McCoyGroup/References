@@ -4,6 +4,7 @@ Simple manager class for plugging into themes in a semi-background agnostic way
 ### Properties and Methods
 ```python
 extra_themes: dict
+from_spec: method
 add_theme: method
 resolve_theme: method
 ```
@@ -20,6 +21,12 @@ __enter__(self):
 <a id="McUtils.Plots.Styling.ThemeManager.__exit__" class="docs-object-method">&nbsp;</a>
 ```python
 __exit__(self, exc_type, exc_val, exc_tb): 
+```
+
+<a id="McUtils.Plots.Styling.ThemeManager.theme" class="docs-object-method">&nbsp;</a>
+```python
+@property
+theme(self): 
 ```
 
 <a id="McUtils.Plots.Styling.ThemeManager.validate_theme" class="docs-object-method">&nbsp;</a>
