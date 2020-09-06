@@ -1,5 +1,8 @@
 ## <a id="McUtils.Plots.Graphics.GraphicsGrid">GraphicsGrid</a>
-
+A class for easily building sophisticated multi-panel figures.
+Robustification work still needs to be done, but the core interface is there.
+Supports themes & direct, easy access to the panels, among other things.
+Builds off of `GraphicsBase`.
 
 ### Properties and Methods
 ```python
