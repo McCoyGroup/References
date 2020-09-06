@@ -86,6 +86,10 @@ Create a convenient, low-order expansion of a (potentially expensive) function
 <div class="card in-out-block" markdown="1">
 
 ```python
+def sin_xy(pt):
+    ax = -1 if pt.ndim>1 else 0
+    return np.prod(np.sin(pt), axis=ax)
+
 point = np.array([.5, .5])
 # create the function expansions
 exp1 = FunctionExpansion.expand_function(sin_xy, point, function_shape=((2,), 0), order=1, stencil=5)
