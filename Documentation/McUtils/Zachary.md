@@ -113,6 +113,36 @@ for i, e in zip(range(3), (exp1, exp2, exp4)):
 </div>
 </div>
 
+expansions work in multiple dimensions, too
+
+<div class="card in-out-block" markdown="1">
+
+```python
+mesh = np.meshgrid(np.linspace(.4, .6, 100, dtype='float128'), np.linspace(.4, .6, 100, dtype='float128'))
+grid = np.array(mesh).T
+gg2 = GraphicsGrid(nrows=2, ncols=3, subimage_size=350)
+# plot error in linear expansion
+styles=dict(ticks_style=(False, False), plot_style={'vmin':np.min(sin_xy(grid)), 'vmax':np.max(sin_xy(grid))})
+gg2[0, 0] = ContourPlot(*mesh, sin_xy(grid), figure=gg2[0, 0], **styles)
+gg2[0, 1] = ContourPlot(*mesh, exp1(grid), figure=gg2[0, 1], **styles)
+# when we plot the error, we shift it so that it's centered around the average function value to show the scale
+# of the error
+gg2[0, 2] = ContourPlot(*mesh, 
+                        np.average([np.min(sin_xy(grid)), np.max(sin_xy(grid))]) + sin_xy(grid)-exp1(grid), 
+                        figure=gg2[0, 2], **styles)
+# plot error in quadratic expansion
+gg2[1, 0] = ContourPlot(*mesh, sin_xy(grid), figure=gg2[1, 0], **styles)
+gg2[1, 1] = ContourPlot(*mesh, exp2(grid), figure=gg2[1, 1], **styles)
+gg2[1, 2] = ContourPlot(*mesh, 
+                        np.average([np.min(sin_xy(grid)), np.max(sin_xy(grid))]) + sin_xy(grid)-exp2(grid), 
+                        figure=gg2[1, 2], **styles)
+```
+<div class="card-body out-block" markdown="1">
+
+![plot](../img/McUtils_Zachary_4.png)
+</div>
+</div>
+
 ___
 
 [Edit Examples](https://github.com/McCoyGroup/References/edit/gh-pages/Documentation/examples/McUtils/Zachary.md) or 
