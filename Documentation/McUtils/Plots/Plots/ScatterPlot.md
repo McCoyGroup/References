@@ -1,5 +1,6 @@
 ## <a id="McUtils.Plots.Plots.ScatterPlot">ScatterPlot</a>
-Plots a bunch of x values against a bunch of y values
+Inherits from `Plot`.
+Plots a bunch of x values against a bunch of y values using the `scatter` method.
 
 ### Properties and Methods
 <a id="McUtils.Plots.Plots.ScatterPlot.__init__" class="docs-object-method">&nbsp;</a>
