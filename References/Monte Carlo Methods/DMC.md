@@ -29,7 +29,7 @@ $$
 
 This exponential decay can be seen in the following figure for different values of E<sub>ref</sub>.
 
-![Exponential_dread](Implementing DMC/img/exponential_dread.PNG)
+![exponential_dread](Implementing DMC/img/exponential_dread.PNG)
 
 We see that when E<sub>ref</sub> is less than E<sub>0</sub>, all states decay to zero, but the ground state
 decays the slowest. When E<sub>ref</sub> is greater than E<sub>0</sub>, the contribution of 
