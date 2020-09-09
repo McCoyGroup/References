@@ -58,7 +58,7 @@ where the result of operating on our localized function is that we get a gaussia
 to  (Δτ/m)<sup>1/2</sup> where m is the mass associated with our system (all in atomic units). If we were modeling an OH stretch, the mass would be the reduced mass. How this plays out algorithmically is that we will displace our walkers
 randomly according to this Gaussian distribution. This can be shown in the following figure:
 
-![Move_it](Implementing DMC/img/Movin_walkers.PNG)
+![Movin_walkers](Implementing DMC/img/Movin_walkers.PNG)
 
 In the first panel we have a set of three walkers on our potential energy surface. Then according to the gaussian
 distribution discussed above, the walkers are moved randomly in the second and third panel.
@@ -82,7 +82,7 @@ as a probability to create one extra copy of that walker. For example, if this e
 4 identical copies of that walker get put into the new array and that is a 70% chance for a fifth. If this exponential 
 is 0.4, then there is only a 40% chance that the walker will stick around. This can be shown in the following figure:
 
-![Walker Birth](Implementing DMC/img/Walkers_birth.PNG)
+![Walkers_birth](Implementing DMC/img/Walkers_birth.PNG)
 
 We see that the walkers are compared to the value of E<sub>ref</sub> for this set of walkers. Since the orange walker was 
 below E<sub>ref</sub>, it had a chance to make a clone of itself and it did, making two replicates of the orange walker for
@@ -103,7 +103,7 @@ obtain our zero point energy for the system, we will take an imaginary-time aver
 point in our simulation until the end of the simulation. This can be shown in the following figure where the orange box represents
 the values of E<sub>ref</sub> that will be averaged over.
 
-![Calculate ZPE](Implementing%20DMC/img/Calculating_E0.PNG)
+![Calculating_E0](Implementing%20DMC/img/Calculating_E0.PNG)
 
 ### Differences Between Discrete and Continuous Weighting
 The biggest difference between these two types of simulations is that discrete weighting has a fluctuating population where
