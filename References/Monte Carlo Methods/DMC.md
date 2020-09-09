@@ -29,7 +29,7 @@ $$
 
 This exponential decay can be seen in the following figure for different values of E<sub>ref</sub>.
 
-![exponential_dread](Implementing DMC/img/exponential_dread.PNG)
+![exponential_dread](Implementing DMC/img/exponential_dread.PNG){:width="500px"}
 
 We see that when E<sub>ref</sub> is less than E<sub>0</sub>, all states decay to zero, but the ground state
 decays the slowest. When E<sub>ref</sub> is greater than E<sub>0</sub>, the contribution of 
@@ -58,7 +58,7 @@ where the result of operating on our localized function is that we get a gaussia
 to  (Δτ/m)<sup>1/2</sup> where m is the mass associated with our system (all in atomic units). If we were modeling an OH stretch, the mass would be the reduced mass. How this plays out algorithmically is that we will displace our walkers
 randomly according to this Gaussian distribution. This can be shown in the following figure:
 
-![Movin_walkers](Implementing DMC/img/Movin_walkers.PNG)
+![Movin_walkers](Implementing DMC/img/Movin_walkers.PNG){:width="500px"}
 
 In the first panel we have a set of three walkers on our potential energy surface. Then according to the gaussian
 distribution discussed above, the walkers are moved randomly in the second and third panel.
