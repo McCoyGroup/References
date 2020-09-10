@@ -21,7 +21,7 @@ $$
  They are written in an order of simple to more complicated.
 
 * [Basic Diffusion Monte Carlo](DMC.md)
-* [Descendant-Weighting and Wavefunction Analysis](DWAndWfns.md)
+* [Descendant-Weighting and Wavefunction Analysis](DWandWfns.md)
 * [Importance Sampling](POR.md)
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
