@@ -37,11 +37,11 @@ $$
 <A> = \frac{\sum_j d_j A}{\sum_j d_j}
 $$
 
-Where A is the operator of interest and d$_j$ is the descendant weight of the $j$th walker.
+Where $A$ is the operator of interest and $d_j$ is the descendant weight of the $j$th walker.
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
 
 ---
 
-[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Monte%20Carlo%20Methods/DMC.md)
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Monte%20Carlo%20Methods/DWandWfns.md)
