@@ -29,7 +29,7 @@ $$
 
 This exponential decay can be seen in the following figure for different values of E<sub>ref</sub>.
 
-![exponential_dread](Implementing DMC/img/exponential_dread.PNG){:width="1000px"}
+![exponential_dread](Implementing DMC/img/exponential_dread.PNG){:width="500px"}
 
 We see that when E<sub>ref</sub> is less than E<sub>0</sub>, all states decay to zero, but the ground state
 decays the slowest. When E<sub>ref</sub> is greater than E<sub>0</sub>, the contribution of 
@@ -103,7 +103,7 @@ obtain our zero point energy for the system, we will take an imaginary-time aver
 point in our simulation until the end of the simulation. This can be shown in the following figure where the orange box represents
 the values of E<sub>ref</sub> that will be averaged over.
 
-![Calculating_E0](Implementing%20DMC/img/Calculating_E0.PNG){:width="1000px"}
+![Calculating_E0](Implementing%20DMC/img/Calculating_E0.PNG){:width="500px"}
 
 ### Differences Between Discrete and Continuous Weighting
 The biggest difference between these two types of simulations is that discrete weighting has a fluctuating population where
