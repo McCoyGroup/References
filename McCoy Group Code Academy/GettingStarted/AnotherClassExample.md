@@ -245,7 +245,7 @@ with Timer("Main Block"):
 # Main Block: took 4.05038s
 ```
 
-if we were managing all of the arrays and data ourselves, we'd have a harder timer making these things 100% nestable/bug free.
+if we were managing all of the arrays and data ourselves, we'd have a harder time(r) making these things 100% nestable/bug free.
 
 
 <span class="text-muted">Next:</span>
