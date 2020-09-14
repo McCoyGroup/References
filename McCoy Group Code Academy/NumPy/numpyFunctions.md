@@ -8,9 +8,17 @@ and keep you from feeling like you're drowning in the docs.
 We've provided the broad topics, _General_, _DMC_, and _DVR_, _Optimization_
 
 ### General
-* [arange](https://numpy.org/doc/stable/reference/generated/numpy.arange.html): creates a list of evenly spaced values over a given interval
-* [average](https://numpy.org/doc/stable/reference/generated/numpy.average.html): takes the average of a list
+* [arange](https://numpy.org/doc/stable/reference/generated/numpy.arange.html): creates an array of evenly spaced values over a given interval
+* [linspace](https://numpy.org/doc/stable/reference/generated/numpy.linspace.html): creates an array of evenly spaced values of a given number over a given interval
+* [average](https://numpy.org/doc/stable/reference/generated/numpy.average.html): takes the average of an array
+* [argsort](https://numpy.org/doc/stable/reference/generated/numpy.argsort.html): returns the indices of the sorted array
+* [argmax](https://numpy.org/doc/stable/reference/generated/numpy.argmax.html): returns the indices of the maximum element
+
+### Numerical
 * [exp](https://numpy.org/doc/stable/reference/generated/numpy.exp.html): calculates the exponential
+* [power](https://numpy.org/doc/stable/reference/generated/numpy.power.html): raises a value to a given power (NumPy equivalent of `**`) 
+* [pi](https://numpy.org/doc/stable/reference/constants.html?highlight=pi#numpy.pi): returns the value of pi
+* Also look at other constants numpy knows [here](https://numpy.org/doc/stable/reference/constants.html)
 
 ### Arrays
 * [zeros](https://numpy.org/doc/stable/reference/generated/numpy.zeros.html): creates a new array full of the value `0`
@@ -19,12 +27,19 @@ We've provided the broad topics, _General_, _DMC_, and _DVR_, _Optimization_
 * [array](https://numpy.org/doc/stable/reference/generated/numpy.array.html): creates a numpy array (useful for making lists into numpy arrays)
 * [reshape](https://numpy.org/doc/stable/reference/generated/numpy.reshape.html): reshapes an array
 * [delete](https://numpy.org/doc/stable/reference/generated/numpy.delete.html): deletes specified elements of an array
-* [argmax](https://numpy.org/doc/stable/reference/generated/numpy.argmax.html): returns the indices of the maximum element
+* [transpose](https://numpy.org/doc/stable/reference/generated/numpy.transpose.html): tranposes the elements of an array
+* [diag](https://numpy.org/doc/stable/reference/generated/numpy.diag.html): either brodcasts a 1D array to the diagional of a 2D array or pulls the diagonal of a 2D array
+* [column_stack](https://numpy.org/doc/stable/reference/generated/numpy.column_stack.html): stacks 1D arrays column-wise into a 2D array
 
 ### Linear Algebra
-
+* [dot](https://numpy.org/doc/stable/reference/generated/numpy.dot.html): computes a dot product of 2 arrays
+* [inner](https://numpy.org/doc/stable/reference/generated/numpy.inner.html): computes the inner porduct of 2 arrays
+* [outer](https://numpy.org/doc/stable/reference/generated/numpy.outer.html): computes the outer product of 2 arrays
+#### numpy.linalg
+_Note: If you use `import numpy as np` in order to call these functions you will need to use `np.linalg.norm` instead of just `np.norm`_
 * [norm](https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html): gets the norm of a vector
 * [eigh](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eigh.html): computes the eigenvalues and eigenvectors of a Hermitian matrix
+* For more see [here](https://numpy.org/doc/stable/reference/routines.linalg.html)
 
 ### <Your Tag Here>
 
