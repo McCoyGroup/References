@@ -27,7 +27,7 @@ $$
 X^D = Q^{-1}XQ
 $$
 
-We deal with very nice systems and matrices[<sup>2</sup>], and so for everything we do we have the nice property that
+We typically deal with Hermitian matrices for the systems that we approach, and so for everything we do we have the nice property that
 
 $$
 Q^{T} = Q^{-1}
@@ -36,11 +36,11 @@ $$
 therefore we'll write
 
 $$
-X^D = Q^{-1}XQ
+X^D = Q^{T}XQ
 $$
 
 
-$Q$ here is what we'll call our DVR transformation, it is also Hermitian so $Q^{T} = Q^{-1}$. It takes operators represented in our original basis and transforms them to the DVR basis.
+$Q$ here is what we'll call our DVR transformation. It takes operators represented in our original basis and transforms them to the DVR basis.
 How is the DVR basis the "best" basis for coordinate-only operators? Well $X^D$ is the representation of our coordinate operator in the basis defined by $Q$, and this representation is diagonal.
 We can't really hope to do better than that.
 
@@ -204,7 +204,6 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 
 ---
 1. <a id="#fn1">&nbsp;</a> Nothing requires this operator to just be something like $\hat{x}$. In a curvilinear system, we can just as easily use $cos(\theta)$ as $\theta$, should that be a more convenient choice.
-2. <a id="#fn2">&nbsp;</a> Technically we deal with [normal matrices](https://mathworld.wolfram.com/NormalMatrix.html)
 
 [<sup>1</sup>]:#fn1
 [<sup>2</sup>]:#fn2
