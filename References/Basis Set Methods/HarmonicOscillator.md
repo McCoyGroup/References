@@ -91,7 +91,8 @@ we know how to get its matrix representation.
 
 ## Sample Applications
 
-...
+On our [McCode Academy Exercises Page](../../McCoy%20Group%20Code%20Academy/Exercises), you will find an exercise to help you implement this Basis Set representation.
+Check it out
 
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
