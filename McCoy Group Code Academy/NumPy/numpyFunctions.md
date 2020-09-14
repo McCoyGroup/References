@@ -7,7 +7,9 @@ and keep you from feeling like you're drowning in the docs.
 
 We've provided the broad topics, _General_, _DMC_, and _DVR_, _Optimization_
 
-## General
+### General
+* [arange](https://numpy.org/doc/stable/reference/generated/numpy.arange.html): creates a list of evenly spaced values over a given interval
+* [average](https://numpy.org/doc/stable/reference/generated/numpy.average.html): takes the average of a list
 
 ### Making Arrays
 * [zeros](https://numpy.org/doc/stable/reference/generated/numpy.zeros.html): creates a new array full of the value `0`
