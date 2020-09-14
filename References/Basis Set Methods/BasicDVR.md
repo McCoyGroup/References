@@ -27,7 +27,7 @@ $$
 X^D = Q^{-1}XQ
 $$
 
-We typically deal with Hermitian matrices for the systems that we approach, and so for everything we do we have the nice property that
+We typically deal with Hermitian matrices for the systems that we approach where the matrix is self-adjoint, and so for everything we do we have the nice property that
 
 $$
 Q^{T} = Q^{-1}
