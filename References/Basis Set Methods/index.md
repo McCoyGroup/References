@@ -28,7 +28,7 @@ With the exception of the [Physical Picture](ThePhysicalPicture.md) and [Mathema
 * [The Particle in a Box Basis](PIB.md)
 * [Discrete Variable Representation](BasicDVR.md)
 
-We've also got a set of more advanced references for tackling multidimensional systems that will be easiest to understand after you understand the preliminaries.
+We've also got (COMING SOON!) a set of more advanced references for tackling multidimensional systems that will be easiest to understand after you understand the preliminaries.
 
 * [Multidimensional Bases](MultidimBasis.md)
 * [Multidimensional DVR](MultidimDVR.md)
