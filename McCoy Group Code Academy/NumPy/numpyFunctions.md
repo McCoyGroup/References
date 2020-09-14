@@ -10,6 +10,7 @@ We've provided the broad topics, _General_, _DMC_, and _DVR_, _Optimization_
 ### General
 * [arange](https://numpy.org/doc/stable/reference/generated/numpy.arange.html): creates a list of evenly spaced values over a given interval
 * [average](https://numpy.org/doc/stable/reference/generated/numpy.average.html): takes the average of a list
+* [exp](https://numpy.org/doc/stable/reference/generated/numpy.exp.html): calculates the exponential
 
 ### Making Arrays
 * [zeros](https://numpy.org/doc/stable/reference/generated/numpy.zeros.html): creates a new array full of the value `0`
