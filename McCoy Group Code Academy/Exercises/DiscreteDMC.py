@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 ## Objects: put all the classes we're defining here
-class Walkers:
+class WalkerInformation:
     def __init__(self,initialCoords,initialWalkers):
         '''
         :param initialCoords: initial coordinates for each of our walkers
@@ -128,5 +128,5 @@ mass = (massH * massO) / (massH + massO)
 initialWalkers=2000
 deltaTau=1
 numTimeSteps=2000
-Walkers = Walkers(initialCoords=0,initialWalkers=initialWalkers)
+Walkers = WalkerInformation(initialCoords=0,initialWalkers=initialWalkers)
 run(initialWalkers,deltaTau,numTimeSteps, omega,mass,Walkers)
