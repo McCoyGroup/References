@@ -194,8 +194,8 @@ if __name__ == '__main__':
     sim = Continuous_weight_DMC(*params)
     sim.run('file_where_the_results_can_go')
 
-    ## If this is working, for the harmonic oscillator you should have a ground state energy = 0.0098886 Hartree
-    ## and for the Morse oscillator the energy should look like: 0.0100267 Hartree
+    ## If this is working, for the harmonic oscillator you should have a ground state energy = 0.0100267 Hartree
+    ## and for the Morse oscillator the energy should look like: 0.0098886 Hartree
 
     # Once code is working, play around with it!
     # Try varying numWalkers, numTimesteps, dtau, initialCoords, threshold
