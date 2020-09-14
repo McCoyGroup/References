@@ -11,6 +11,7 @@ Instead, it's literally just getting everything installed and playing nicely tog
 So we're gonna walk through the basics of what'll be needed to get through this tutorial.
 
 ### Let's start with...
+* [Linux Terminal Tutorial](LinuxTerminalTutorial.md): A brief introduction to the Linux Command Line.
 * [An Introduction to Python/Anaconda](IntroToPython.md): You can find download instructions here too!
 * [Interactive Python](InteractivePython.md): An Introduction to using python through the command line.
 * [What is an IDE?](IntroToIDEs.md): An Introduction to _Integrated Development Environments_ and why we like them! 
