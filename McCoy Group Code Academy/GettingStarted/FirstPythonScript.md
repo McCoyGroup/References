@@ -2,7 +2,7 @@
 
 Whether or not you've written code before, this may very well be your first dive into coding for quantum chemistry.
 We won't start out super sophisticated, as this probably is your first python script in this context.
-The idea with this tutorial is to set up some of the things we think our fundamental to writing code to handle more sophisticated problems.
+The idea with this tutorial is to set up some of the things we think are fundamental to writing code to handle more sophisticated problems.
 As you start working on your own research, we hope that you remember these steps.
 
 ## Writing a Script
@@ -67,4 +67,4 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 {: .alert .alert-info}
 
 ---
-[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/CommonIssues.md)
+[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/FirstPythonScript.md)
