@@ -20,12 +20,11 @@ This might not look like much of a simplification (and it's exactly equivalent),
 
 For instance, let's think about water, and we'll even label the atoms
 
-_**INSERT WATER GRAPHIC**_
+![Water Molecule](WaterLabelled.png){:width="300px"}
 
 A common problem we'd ask ourselves is "what is the frequency of the vibration involving the stretching and contraction of the bond between O1 and H2?"
-If this seems like a bit of a pointless question, I'm totally with you.
-The questions we ask only really take meaning when we have some experimental data we're trying to make sense of.
-On the other hand, knowing _how_ to ask these questions in a simpler context (like a bare water molecule) will be a boon when moving on to real physically-relevant systems.
+Although it may feel trivial, when we pair these questions and results with experimental data we're trying to make sense of what results can be really powerful.
+In addition, knowing _how_ to ask these questions in a simpler context (like a bare water molecule) will be beneficial when moving on to real physically-relevant systems.
 
 In any case, looking at that OH bond, other people have shown that it's _mostly_ well described by a _harmonic oscillator_ model.
 We'll get to what that is [in a bit](HarmonicOscillator.md), but it actually doesn't matter all that much.
