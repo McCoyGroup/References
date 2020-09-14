@@ -31,20 +31,19 @@ There are a ton of terminal text editors out there. The two main ones are emacs 
 There are [plenty of internet resources](https://www.educative.io/blog/bash-shell-command-cheat-sheet) that will show you helpful command line commands, but here are some that we use in the group all the time that we wanted to highlight:
 
 * [at](https://linuxize.com/post/at-command-in-linux/): The at command allows you to execute an arbitrary command at a specified time.  Here is a [stackoverflow example](https://stackoverflow.com/c/mccoygroup/a/98/2) of how to run a Gaussian job on one of the group computers using the at command
-* grep: Allows you to search for text in a file, it will automatically output the line where it is found (and the surrounding lines if specified with -A and -B) to the command line. 
-* eog: The photo client for our computers, eog <filename>.png will open up a graphics windows with the picture.
-* who: Shows who is logged on to a computer.
-* top: Show all current processes running on the computer.
-* pwd: Show current working directory
-* du -h: Get the size (MB/GB) of the data in the current directory
-* cd ~/...: cd to your home directory, and then onwards
-* cd <blankspace>: Bring you to your home directory
-* cd ..: Bring you out of the current directory, one 'upwards'
-* cd /: Go to the root filesystem (a no-no on the group computers)
-
+* `grep`: Allows you to search for text in a file, it will automatically output the line where it is found (and the surrounding lines if specified with -A and -B) to the command line. 
+* `eog`: The photo client for our computers, eog <filename>.png will open up a graphics windows with the picture.
+* `who`: Shows who is logged on to a computer.
+* `top`: Show all current processes running on the computer.
+* `pwd`: Show current working directory
+* `du -h`: Get the size (MB/GB) of the data in the current directory
+* `cd ~/...`: cd to your home directory, and then onwards
+* `cd <blankspace>`: Bring you to your home directory
+* `cd ..`: Bring you out of the current directory, one 'upwards'
+* `cd /`: Go to the root filesystem (a no-no on the group computers)
+* `ls -tlr`: list the current files in the directory (ls), in a detailed fashion (-l), while also ordering them by date modified (-t) in reverse order (r) so that the most recent ones appear at the bottom.
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
-{: .alert .alert-info}
 
 ---
 [Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/LinuxTerminalTutorial.md)
