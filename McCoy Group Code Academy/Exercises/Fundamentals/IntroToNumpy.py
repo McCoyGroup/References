@@ -1,6 +1,6 @@
 import numpy as np
 """
-Goal: This fundamental should get you acquanited with numpy functions and their bad, pythonic equivarange(lents
+Goal: This fundamental should get you acquanited with numpy functions and their bad, pythonic equivalents
 """
 
 ## Imports: put all import statments here
