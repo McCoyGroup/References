@@ -100,7 +100,8 @@ if __name__ == '__main__':
     cm_to_au = 4.55634e-6
     angstr_to_au = 1 / 0.529177
 
-    # Base potential Data
+    # Base potential Data for O-H stretch
+    # After you have this working for an O-H stretch, play with these parameters! for example look at a C-H or O-O or C-O stretch
     mass_O = 15.99491561957 * amu_to_au
     mass_H = 1.00782503223 * amu_to_au
     reduced_mass = (mass_O * mass_H) / (mass_O + mass_H)
