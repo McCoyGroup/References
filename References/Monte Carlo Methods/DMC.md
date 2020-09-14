@@ -9,7 +9,7 @@ by some reference energy. We then propagate the wave function forward in time us
 discrete time steps:
 
 $$
-\Psi(x, \tau + \Delta\tau) = e^{-(\hat{H}\Delta\tau}\Psi(x, \tau)
+\Psi(x, \tau + \Delta\tau) = e^{-(\hat{H}\Delta\tau})\Psi(x, \tau)
 $$
 
 $$
