@@ -12,12 +12,13 @@ We've provided the broad topics, _General_, _DMC_, and _DVR_, _Optimization_
 * [average](https://numpy.org/doc/stable/reference/generated/numpy.average.html): takes the average of a list
 * [exp](https://numpy.org/doc/stable/reference/generated/numpy.exp.html): calculates the exponential
 
-### Making Arrays
+### Arrays
 * [zeros](https://numpy.org/doc/stable/reference/generated/numpy.zeros.html): creates a new array full of the value `0`
 * [ones](https://numpy.org/doc/stable/reference/generated/numpy.ones.html): creates a new array full of the value `1`
 * [eye](https://numpy.org/doc/stable/reference/generated/numpy.eye.html): creates an identity matrix of whatever size you need
 * [array](https://numpy.org/doc/stable/reference/generated/numpy.array.html): creates a numpy array (useful for making lists into numpy arrays)
 * [reshape](https://numpy.org/doc/stable/reference/generated/numpy.reshape.html): reshapes an array
+* [delete](https://numpy.org/doc/stable/reference/generated/numpy.delete.html): deletes specified elements of an array
 
 ### Linear Algebra
 
