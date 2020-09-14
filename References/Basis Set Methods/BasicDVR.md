@@ -69,7 +69,7 @@ This allows us to reap the benefits of both representations, should that be some
 
 ## Colbert-Miller DVR (Particle in an Infinite Box)
 
-One particular flavor or DVR that we like to use is the one described by [Colbert and Miller](https://aip.scitation.org/doi/10.1063/1.462100) in the early 1990s.
+One particular flavor of DVR that we like to use is the one described by [Colbert and Miller](https://aip.scitation.org/doi/10.1063/1.462100) in the early 1990s.
 There are three reasons we like this one:
 
 1. There are analytic forms for the kinetic energy
@@ -162,7 +162,7 @@ If that does nothing for you conceptually, that's cool too. Algorithmically it's
 ## Sample Applications
 
 There are tons of applications for DVR out there.
-It's one the main tools that we keep in our toolbox.
+It's one of the main tools that we keep in our toolbox.
 To get you started, we've got an exercise on writing your first [Colbert & Miller-style DVR](../../McCoy%20Group%20Code%20Academy/Exercises).
 Check it out.
 
@@ -176,13 +176,13 @@ Some suggestions:
 4. How much do the two models (Harmonic and Morse Oscillator) differ from the potential given by an electronic structure calculation? Why? Do the energies change? By how much? Which states seem to be affected by this the most (hint: think higher or lower energy states).
 
 ### A Note on Parameters from the NIST Webbook
-While the _Constants of Diatomic Molecules_ Table may seem large and daunting at first hopefull keeping these hints in mind will help!
+While the _Constants of Diatomic Molecules_ Table may seem large and daunting at first hopefully keeping these hints in mind will help!
 1. The data you're after is listed as the $X^1$ state (look for the _ground electronic state_)
 2. While the table has parameters $D_e$ and $\alpha_e$ these are not equivalent to the parameters $D_e$ and $\alpha$ of the Morse Oscillator. It goes something like  "These aren't the droids you are looking for..." right? 
 3. INSTEAD, you will need to derive the values of $D_e$ and $\alpha$ from the parameters $\omega_e$ and $\omega_ex_e$.
 
 As you do this, you'll need to wrangle everyone's favorite thing: _units_
-So, take this as a "right of passage" and work out how to solve for these parameters on your own. It takes some algebra and a good think about what the units need to be to make the answer have to correct units. If you'd like some advice on where to start, ask a group member.
+So, take this as a "right of passage" and work out how to solve for these parameters on your own. It takes some algebra and a good think about what the units need to be to make the answer have the correct units. If you'd like some advice on where to start, ask a group member.
 
 Here's a bit of necessary background info. Using a Taylor expansion we have
 
