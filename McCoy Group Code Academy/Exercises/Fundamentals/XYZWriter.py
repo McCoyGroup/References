@@ -5,6 +5,7 @@ Related Exercises: See https://stackoverflow.com/c/mccoygroup/questions/81
 """
 
 ## Imports: put all import statments here
+import numpy as np 
 
 ## Exports: put all the names things we might want to use in other scripts here
 
