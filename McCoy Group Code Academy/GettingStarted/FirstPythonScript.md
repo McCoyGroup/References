@@ -21,7 +21,7 @@ print(f"{frequency} wavenumbers is {frequency_au} in Hartree")
 Now, let's break this down a little bit:
 1. Define variables, `frequency` and `conversion_factor`.
 2. Convert the frequency. 
-3. Print a _F-String_ showing the input frequency and the converted frequency.
+3. Print an _F-String_ showing the input frequency and the converted frequency.
 
 
 **A Note on F-Strings**: [A relatively new addition to python](https://realpython.com/python-f-strings/#f-strings-a-new-and-improved-way-to-format-strings-in-python), this is one of your best friends for checking values and debugging.
