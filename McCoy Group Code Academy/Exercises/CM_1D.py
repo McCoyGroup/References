@@ -185,8 +185,8 @@ if __name__ == '__main__':
     
     run(domain=(-5, 5), NumGP=100, potential_function='HarmonicOscillator', potential_options=H2PotOptsDict)
     
-    # If this is working, for the harmonic oscillator you should have energies: [0.0098886  0.02883656 0.04667887 0.06341553 0.07904654] (Hartree)
-    # and for the Morse oscillator the energies should look like: [0.0100267  0.0300801  0.05013349 0.07018689 0.09024029] (Hartree)
+    # If this is working, for the harmonic oscillator you should have energies: [0.0100267  0.0300801  0.05013349 0.07018689 0.09024029] (Hartree)
+    # and for the Morse oscillator the energies should look like: [0.0098886  0.02883656 0.04667887 0.06341553 0.07904654] (Hartree)
     
     # Once code is working, play around with it!
     # Find some suggestions for "exploring the parameter space" in the DVR Reference!
