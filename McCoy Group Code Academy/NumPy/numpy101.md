@@ -15,20 +15,10 @@ NumPy array creation is very easy, but a defining feature is that it is a fixed 
 
 ```console?lang=python&prompt=>>>
 >>> import numpy as np
->>> example_array = np.zeros((2,5,3))
+>>> example_array = np.zeros(10)
 >>> print(example_array)
 
-[[[0. 0. 0.]
-  [0. 0. 0.]
-  [0. 0. 0.]
-  [0. 0. 0.]
-  [0. 0. 0.]]
-
- [[0. 0. 0.]
-  [0. 0. 0.]
-  [0. 0. 0.]
-  [0. 0. 0.]
-  [0. 0. 0.]]]
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
 ```
 
 Note that the default data type for each element in the array is a 64-bit floating point number, also known as a `double` in other languages.  
@@ -55,7 +45,7 @@ For multidimensional arrays, you can supply a `tuple` to the `np.zeros()` functi
 
 As you can see, the first "axis", `axis=0` is the depth-wise axis, the second axis `axis=1` specifies the number of rows, and the last axis `axis=2` specifies the number of columns. There are plenty of ways to create arrays, you can see more of them [here](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/NumPy/numpyFunctions.html).
 
-Once you have an array, you can index it much a Python list, but with greater flexibility
+Once you have an array, you can index it much as a Python list, but with greater flexibility
 
 ```console?lang=python&prompt=>>>
 >>> import numpy as np
@@ -84,7 +74,7 @@ NumPy performs best when no looping is involved.  This is because, as one goes p
 
 ```python
 import numpy as np
-example_array = np.random.random((10000,50,3)) #works like np.zeros, but instead of filling the array with 0 if fills it with a random number between 0 and 1
+example_array = np.random.random((10000,50,3)) #works like np.zeros, but instead of filling the array with 0 it fills it with a random number between 0 and 1
 example_array_2 = np.random.random((10000,50,3))
 
 #pythonic way
