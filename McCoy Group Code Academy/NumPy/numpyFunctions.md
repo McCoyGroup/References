@@ -24,7 +24,7 @@ We've provided the broad topics, _General_, _DMC_, and _DVR_, _Optimization_
 
 ## DMC
 * [random](https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html): generates a random number between two inputs
-...
+
 
 ## DVR
 
