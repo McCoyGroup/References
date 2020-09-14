@@ -8,26 +8,26 @@ There are a ton of online resources and [youtube tutorials](https://youtu.be/YHF
 
 When you begin in the group, you have to talk to Anne or a senior graduate student about getting an account on the lab computers.  Once you get an account, you will have a directory that is your own in the filesystem on each computer.
 
-# SSH and SFTP
+## SSH and SFTP
 To access the filsystem, you will need a way to SSH (Secure shell) onto the lab computers (or any other Linux Machine). There is a [McCoy Group stackoverflow question detailing this](https://stackoverflow.com/c/mccoygroup/a/12/2).  You can also transfer files across Linux/MacOS machines using [SFTP](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server) (Secure File Transfer Protocol).
 
-## Windows
+### Windows
 On Windows, you may not directly SSH or SFTP using the commmand prompt :(. This is not entirely true, as, recently, you can now SSH using the Windows PowerShell terminal, but it is not the same as using a Linux Terminal.  So, we recommend to download software to do both.  To SSH onto a Linux machine, we recommend using [MobaXTerm] (https://mobaxterm.mobatek.net/), which has a lot of convenient tools built-in to it. To transfer files from Windows machines to Linux and back, we recommend using [WinSCP](https://winscp.net/eng/index.php).  It provides a nice GUI for transfering files back and forth.  
 
 There are plenty of alternative clients for these tasks, including PuTTY for SSH and FileZilla for SCP/SFTP, but we found these two do be a great combination.
 
 As a note, you may also download Windows Subsystem for Linux, and then, after downloading and installing a Linux OS like Ubuntu, you can SSH to the group computers using the WSL command line.
 
-## MacOS/Linux
+### MacOS/Linux
 If you choose to do so, you can SSH and SFTP onto remote computers purely using the command line.  If you want a graphical interface to transfer files, you can download [CyberDuck](https://cyberduck.io/)!
 
-# A Brief Note on Permissions
+## A Brief Note on Permissions
 On the group computers, you will have read-only access to other group mates' filesystems (and the system files), and you will have autonomy over your own filesystem.  You will not have super-user or root access on the group computers unless specifically given the responsibility.  The keeper of the root passwords is designated in the group, but for security purposes we are not putting whot that is here.  Ask Anne if you need root access or if you need someone to do something root-accessible.
 
-# A Brief Note on Text Editors
+## A Brief Note on Text Editors
 There are a ton of terminal text editors out there. The two main ones are emacs and vim (or vi, vim is the generic name for vi).  Both of these are installed on each group computer.  We will not recommend one over the other, Anne uses vim and so it may be a good idea to learn that, but some would say that there is a steeper learning curve in vim than emacs.  Emacs automatically opens up a GUI, to allow it to run in terminal provide the command `emacs -nw`, which means "no window". 
 
-# Useful commands not covered thus far
+## Useful commands not covered thus far
 There are [plenty of internet resources](https://www.educative.io/blog/bash-shell-command-cheat-sheet) that will show you helpful command line commands, but here are some that we use in the group all the time that we wanted to highlight:
 
 * [at](https://linuxize.com/post/at-command-in-linux/): The at command allows you to execute an arbitrary command at a specified time.  Here is a [stackoverflow example](https://stackoverflow.com/c/mccoygroup/a/98/2) of how to run a Gaussian job on one of the group computers using the at command
