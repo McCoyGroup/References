@@ -19,6 +19,7 @@ We've provided the broad topics, _General_, _DMC_, and _DVR_, _Optimization_
 * [array](https://numpy.org/doc/stable/reference/generated/numpy.array.html): creates a numpy array (useful for making lists into numpy arrays)
 * [reshape](https://numpy.org/doc/stable/reference/generated/numpy.reshape.html): reshapes an array
 * [delete](https://numpy.org/doc/stable/reference/generated/numpy.delete.html): deletes specified elements of an array
+* [argmax](https://numpy.org/doc/stable/reference/generated/numpy.argmax.html): returns the indices of the maximum element
 
 ### Linear Algebra
 
