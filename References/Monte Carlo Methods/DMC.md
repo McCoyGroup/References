@@ -4,30 +4,26 @@
 
 As is shown in [Anderson et. al.](https://aip.scitation.org/doi/10.1063/1.432868) and is discussed
 in [Suhm and Watts](https://doi.org/10.1016/0370-1573(91)90136-A), the ground state solution to the
-TDSE is solved in this method first through a Wick rotation into imaginary time. The energy is shifted
-by some reference energy (This is similar to shifting our energy to redefine zero). It is then solved for
-discrete time steps as to achieve the following solution:
+time-independent Schrodinger Equation is solved using the time-dependent Schrodinger Equation. To begin, a variable substitution takes placce (known as a Wick rotation) into imaginary time ($\tau=it/\hbar$). The energy is then shifted
+by some reference energy. We then propagate the wave function forward in time using
+discrete time steps:
 
 $$
+\Psi(x, \tau + \Delta\tau) = e^{-(\hat{H}\Delta\tau}\Psi(x, \tau)
+
 \Psi(x, \tau + \Delta\tau) \approx e^{-(\hat{V} - E_{ref})\Delta\tau}e^{-\hat{T}\Delta\tau}\Psi(x, \tau)
 $$
 
-When we operate with our kinetic operator and our potential operator, we've stepped forward in time! The time-dependent wave function
+We approximate the time evolution operator by splitting it into exponential kinetic and potential energy operators. When we operate with the exponential kinetic and potential energy operator, we have stepped forward in time! The time-dependent wave function
 can always be written as a linear combination of eigenstates of the Hamiltonian multiplied by a time-dependent part like the following:
 
 $$
-\Psi(x, \tau) = \sum_n c_n (\tau = 0)\psi_n(x)e^{-(E_n-E_{ref}(\tau))\tau}
+\Psi(x, \tau) = \sum_n c_{n}\psi_n(x)e^{-(E_n-E_{ref}(\tau))\tau}
 $$
 
-When we take the long 
-limit, the exponent in the exponential term becomes a large negative number,
-causing most terms to go to 0. The ground state will decay the slowest.
-
-$$
-\lim_{\tau \to \infty} \Psi(x, \tau) \approx c_0(\tau=0) \psi_0(x)e^{-(E_0-E_{ref})\tau}
-$$
-
-This exponential decay can be seen in the following figure for different values of E<sub>ref</sub>.
+In the long time 
+limit, the exponent becomes a large negative number,
+causing most terms to go to 0. The ground state will decay the slowest. This exponential decay can be seen in the following figure for different values of E<sub>ref</sub>.
 
 ![exponential_dread](Implementing DMC/img/exponential_dread.PNG){:width="500px"}
 
@@ -63,14 +59,13 @@ randomly according to this Gaussian distribution. This can be shown in the follo
 In the first panel we have a set of three walkers on our potential energy surface. Then according to the gaussian
 distribution discussed above, the walkers are moved randomly in the second and third panel.
 
-The next step is using those displaced coordinates to evaluate the average potential energy of our 
-ensemble. The potential depends on our system and is a function you will be providing the simulation. The example
+The next step is using those displaced coordinates to evaluate the potential energy for each of our walkers in the ensemble. The potential depends on our system and is a function you will be providing the simulation. The example
 above is a simple harmonic oscillator.
 
 The third step we are comparing the potential energy of our walkers to the value of E<sub>ref</sub> from
-the previous step. If the energy is larger than this value, there is a probability that this walker will be 
-removed from the simulation. If the energy is lower than this value, there is a probability that this walker will
-spawn replicates into our simulation. To do this, we calculate the following exponential for each walker:
+the previous step. This is to check the favorability of its 'random walk', for example, if it moved into a classically forbidden region of the potential (higher energy) or classically allowed region (lower energy). If the energy is larger than E<sub>ref</sub>, there is a probability that this walker will be 
+removed from the simulation (lab speak: "death"). If the energy is lower than this value, there is a probability that this walker will
+spawn replicates (lab speak: "birth") into our simulation. To do this, we calculate the following exponential for each walker:
 
 $$
 e^{-(V(x_j)-E_{ref})\Delta\tau}
@@ -85,7 +80,7 @@ is 0.4, then there is only a 40% chance that the walker will stick around. This 
 ![Walkers_birth](Implementing DMC/img/Walkers_birth.PNG){:width="1000px"}
 
 We see that the walkers are compared to the value of E<sub>ref</sub> for this set of walkers. Since the orange walker was 
-below E<sub>ref</sub>, it had a chance to make a clone of itself and it did, making two replicates of the orange walker for
+below E<sub>ref</sub>, it had a chance to make a clone of itself and it did, yielding a total of two orange walkers for
 the next step in the simulation.
 
 The last step is calculating E<sub>ref</sub>. This is done with the following equation:
@@ -94,14 +89,13 @@ $$
 E_{ref}(\tau) = \bar{V}(\tau) - \alpha \frac{N(\tau) - N(\tau_0)}{N(\tau_0)}
 $$
 
-Where the first term is the average potential energy of our ensemble and the second term ensure
-that the number of walkers remain roughly constant. That α term is equal to 1/(2Δτ) and the N is equal
+Where the first term is the average potential energy of our ensemble at this time step, and the second term ensure
+that the number of walkers remain roughly constant. That α term is usually set equal to 1/(2Δτ) and the N is equal
 to the number of walkers.
 
-All of this is then repeated until the end of the simulation where you end up with an array of E<sub>ref</sub> values. To
-obtain our zero point energy for the system, we will take an imaginary-time average of E<sub>ref</sub> from an equilibrated
-point in our simulation until the end of the simulation. This can be shown in the following figure where the orange box represents
-the values of E<sub>ref</sub> that will be averaged over.
+All of this is then repeated until the end of the simulation where you end up with an array of E<sub>ref</sub> values as a function of time step. To
+obtain the zero point energy for the system, we will take an time average of E<sub>ref</sub> from an equilibrated
+point in our simulation until the end of the simulation. A safe bet for "equilibrated" is half way through the simulation, but many times we will go to earlier values of time as well. This averaged value should not fluctuate much depending on when you decide to start averaging.  An example of the section typically averaged to calculate the zero-point energy is shown in the following figure:
 
 ![Calculating_E0](Implementing%20DMC/img/Calculating_E0.PNG){:width="500px"}
 
@@ -112,7 +106,7 @@ to fluctuate. How this works in our algorithm is that for the birth and death st
 to the weight that walker contributes to the total ensemble. This means that instead of a walker replicating itself when it is in favorable regions
 of the potential, the weight of the walker increases. One consequence with this method is that a walker could stay in a favorable region
 of the potential and have a weight so large that it dominates the ensemble. In order to mitigate this, we replace walkers whose weight falls
-below a certain threshold with a replicate of the highest weight walker. These two walkers' weights are then cut in half.
+below a certain threshold with a replicate of the highest weight walker. Then, the two walkers' weights are cut in half.
 
 The second difference is that E<sub>ref</sub> is calculated using the sum of the weights of the walkers instead of the number of walkers.
 This is technically the same equation since in the discrete weighting case, the weight of each walker is 1, so the sum of the weights of the walkers
