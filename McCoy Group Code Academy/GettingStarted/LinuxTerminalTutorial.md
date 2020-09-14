@@ -41,3 +41,10 @@ There are [plenty of internet resources](https://www.educative.io/blog/bash-shel
 * cd <blankspace>: Bring you to your home directory
 * cd ..: Bring you out of the current directory, one 'upwards'
 * cd /: Go to the root filesystem (a no-no on the group computers)
+
+
+Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
+{: .alert .alert-info}
+
+---
+[Edit on GitHub <i class="fab fa-github" aria-hidden="true"></i>](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/GettingStarted/LinuxTerminalTutorial.md)
