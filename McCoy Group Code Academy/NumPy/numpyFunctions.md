@@ -30,6 +30,7 @@ We've provided the broad topics, _General_, _DMC_, and _DVR_, _Optimization_
 * [transpose](https://numpy.org/doc/stable/reference/generated/numpy.transpose.html): tranposes the elements of an array
 * [diag](https://numpy.org/doc/stable/reference/generated/numpy.diag.html): either brodcasts a 1D array to the diagional of a 2D array or pulls the diagonal of a 2D array
 * [column_stack](https://numpy.org/doc/stable/reference/generated/numpy.column_stack.html): stacks 1D arrays column-wise into a 2D array
+* [concatentate](https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html): concatenate arrays along  a specified axis
 
 ### Linear Algebra
 * [dot](https://numpy.org/doc/stable/reference/generated/numpy.dot.html): computes a dot product of 2 arrays
