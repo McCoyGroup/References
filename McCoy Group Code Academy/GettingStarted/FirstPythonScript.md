@@ -7,7 +7,7 @@ As you start working on your own research, we hope that you remember these steps
 
 ## Writing a Script
 
-We're gonna write a script that converts from wavenumbers ($cm{^-1}$), the energy unit we like to work, to Hartree ($E_h$), the [atomic unit](https://en.wikipedia.org/wiki/Hartree_atomic_units) of energy.
+We're gonna write a script that converts from wavenumbers ($cm{^(-1)}$), the energy unit we like to work, to Hartree ($E_h$), the [atomic unit](https://en.wikipedia.org/wiki/Hartree_atomic_units) of energy.
 To do so we'll make a file called `wave_to_au.py`.
 
 In it, to start, we'll put this content:
