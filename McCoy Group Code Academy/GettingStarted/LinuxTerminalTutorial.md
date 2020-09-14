@@ -30,6 +30,7 @@ There are a ton of terminal text editors out there. The two main ones are emacs 
 ## Useful commands not covered thus far
 There are [plenty of internet resources](https://www.educative.io/blog/bash-shell-command-cheat-sheet) that will show you helpful command line commands, but here are some that we use in the group all the time that we wanted to highlight:
 
+* `<command> --help`/`<command> -h`/`man <command>`: Gives you the brief documentation for <command> and the arguments it takes (--help), or the full manual for the command (man). 
 * [at](https://linuxize.com/post/at-command-in-linux/): The at command allows you to execute an arbitrary command at a specified time.  Here is a [stackoverflow example](https://stackoverflow.com/c/mccoygroup/a/98/2) of how to run a Gaussian job on one of the group computers using the at command
 * `grep`: Allows you to search for text in a file, it will automatically output the line where it is found (and the surrounding lines if specified with -A and -B) to the command line. 
 * `eog`: The photo client for our computers, eog <filename>.png will open up a graphics windows with the picture.
