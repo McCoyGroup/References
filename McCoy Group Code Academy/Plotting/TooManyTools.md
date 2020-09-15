@@ -14,8 +14,8 @@ We're not gonna try to write our own.
 We _are_ however, going to try to steer you away from some of the many, many pitfalls `matplotlib` exposes.
 
 <span class="text-muted">Next:</span>
- [Getting Started with Matplotlib](OOPMatplotlib.md)<br/>
-
+ [The Basics of Good Plots, and a Quick Tutorial](TheGoodPlot.md)
+ 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
 
