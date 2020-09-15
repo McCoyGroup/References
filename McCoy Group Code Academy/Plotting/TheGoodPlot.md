@@ -1,4 +1,4 @@
-# Principles of Good Plotting
+# Plotting Tutorial and Principles of Good Plotting
 
 It's hard, exactly, to say what makes a plot "good" and we're definitely not the people to go to with your deep questions on the subject.
 We are not visual designers, and we have no particular expertise in data presentation.
@@ -40,7 +40,7 @@ on the y axis so that the plots can be compared easily.
 
 ```
 
-![sharey](../img/sharey.PNG) {:width="500px"}
+![sharey](../img/sharey.PNG)
 
 In the above example, we manually set the y axis range for each plot. However, we could also use the `sharey` option in 
 `plt.subplots` to have the same y-axis between the two plots and then we just have to set the y-axis range on one plot.
@@ -53,7 +53,7 @@ In the above example, we manually set the y axis range for each plot. However, w
 >>> plt.show() 
 
 ```
-![more sharey](../img/sharey2.PNG) {:width="500px"}
+![more sharey](../img/sharey2.PNG)
 
 
 2) When making plots that are visually easy to interpret, you usually want colors that are not only vibrant, but those
@@ -68,7 +68,7 @@ and plotting them on the same plot.
 >>> plt.show()
 ```
 
-![colors](../img/colors.PNG) {:width="500px"}
+![colors](../img/colors.PNG)
 
 We also increased the `linewidth` to make the lines more bold and easier to see. 
 
@@ -87,7 +87,7 @@ in giving contrast between your data. In the following example, we will make one
 >>> plt.show()
 ```
 
-![dots](../img/dots.PNG) {:width="500px"}
+![dots](../img/dots.PNG)
 
 4) One thing that often gets overlooked is appropriate labels for the plot. That includes a y-axis label, x-axis label, 
 and legend that have consistent fonts between each other and your equations in the rest of your work (whether that's a 
@@ -120,7 +120,7 @@ we have some $\alpha$ term that we multiply the mass by in our harmonic oscillat
 >>> plt.show()
 ```
 
-![latex](../img/latex.PNG) {:width="500px"}
+![latex](../img/latex.PNG)
 
 Above we see an example of saving our figure for use later. A useful property is `bbox_inches='tight'` because it eliminates
 excess white space around your figure. When that is done it is also helpful to set `dpi` to either 300 or 500 to keep a 
@@ -151,7 +151,7 @@ state. What we'll do is convert things to cm$^{-1}$ and then set our viewing win
 >>> plt.show()
 ```
 
-![appropriate scales](../img/appropiate_range.PNG) {:width="500px"}
+![appropriate scales](../img/appropiate_range.PNG)
 
 Now we see a much more appropriate range for both the y and x-axis that we can compare.
 
