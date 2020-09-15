@@ -22,13 +22,13 @@ on the y axis so that the plots can be compared easily.
 >>> import matplotlib.pyplot as plt
 
 >>> m = 1728.26  # approximately the reduced mass of an OH stretch (in atomic units)
->>> k = 0.0164028  # an approximate frequency for an OH stretch (in atomic units)
+>>> omega = 0.0164028  # an approximate frequency for an OH stretch (in atomic units)
 
 >>> fig, axes = plt.subplots(1, 2) # sets up a figure with two side by side plots
 
 >>> x = np.linspace(-5, 5, num=2000)
->>> data1 = 0.5*m*k**2*x**2  # equation for the potential energy of a harmonic oscillator
->>> data2 = 0.5*(m*2)*k**2*x**2
+>>> data1 = 0.5*m*omega**2*x**2  # equation for the potential energy of a harmonic oscillator
+>>> data2 = 0.5*(m*2)*omega**2*x**2
 
 >>> axes[0].plot(x, data1)  # plotting data on the first plot (left plot)
 >>> axes[1].plot(x, data2)  # plotting data on the second plot (right plot)
