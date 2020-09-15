@@ -160,10 +160,12 @@ state. What we'll do is convert things to cm$^{-1}$ and then set our viewing win
 
 Now we see a much more appropriate range for both the y and x-axis that we can compare.
 
-<span class="text-muted">Next:</span>
- [Advanced Plotting with Matplotlib](OOPMatplotlib.md)
 <span class="text-muted">Previous:</span>
  [Too Many Tools](TooManyTools.md)
+
+<span class="text-muted">Next:</span>
+ [Advanced Plotting with Matplotlib](OOPMatplotlib.md)
+ 
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/Plotting/TheGoodPlot.md)
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
