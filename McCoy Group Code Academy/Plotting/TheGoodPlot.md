@@ -13,7 +13,7 @@ On the other hand, we have seen a lot of _bad_ plots and so here are our recomme
 
 ### Examples
 
-1 For these examples, let's compare two harmonic oscillator potentials. The only difference between the two
+For these examples, let's compare two harmonic oscillator potentials. The only difference between the two
 is that one of them will have a mass that is twice as large. When comparing them we want to set the range of energies to
 be equal, otherwise it becomes harder to visually compare differences. So, for the following example we will set a limit
 on the y axis so that the plots can be compared easily.
