@@ -1,4 +1,4 @@
-# Getting Started with Matplotlib
+# Advanced Plotting with Matplotlib 
 
 For completely historical reasons, `matplotlib` has two different ways to interact with it.
 There's a normal python-style object-oriented interface with `Figure` and `Axes` objects and a weird, vestigial, MATLAB-style `pyplot` module.
