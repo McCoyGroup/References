@@ -13,7 +13,7 @@ On the other hand, we have seen a lot of _bad_ plots and so here are our recomme
 
 ### Examples
 
-For these examples, let's compare two harmonic oscillator potentials. The only difference between the two
+1) For these examples, let's compare two harmonic oscillator potentials. The only difference between the two
 is that one of them will have a mass that is twice as large. When comparing them we want to set the range of energies to
 be equal, otherwise it becomes harder to visually compare differences. So, for the following example we will set a limit
 on the y axis so that the plots can be compared easily.
@@ -56,7 +56,7 @@ In the above example, we manually set the y axis range for each plot. However, w
 ![more sharey](../img/sharey2.PNG){:width="500px"}
 
 
-2 When making plots that are visually easy to interpret, you usually want colors that are not only vibrant, but those
+2) When making plots that are visually easy to interpret, you usually want colors that are not only vibrant, but those
 that contrast each other. Typically if if pick colors on opposite sides of the [color wheel] (https://en.wikipedia.org/wiki/Color_wheel)
 you should get colors to pop in a visually pleasing way. In the below example we will be making the two curves blue and red
 and plotting them on the same plot.
@@ -75,7 +75,7 @@ We also increased the `linewidth` to make the lines more bold and easier to see.
 A note that the default orange color in `matplotlib` looks more gold than orange so be aware of that.
 
 
-3 Sometimes, you want to also make your curves more visually distinct in case your plot gets printed in black and white, or
+3) Sometimes, you want to also make your curves more visually distinct in case your plot gets printed in black and white, or
 the colors on the projector you are using just aren't very clear. In that case, giving your data different shapes such as squares
 and circles, making use of open shapes versus closed shapes, or having dotted lines and dashed lines becomes very helpful
 in giving contrast between your data. In the following example, we will make one of our lines dotted.
@@ -89,7 +89,7 @@ in giving contrast between your data. In the following example, we will make one
 
 ![dots](../img/dots.PNG){:width="500px"}
 
-4 One thing that often gets overlooked is appropriate labels for the plot. That includes a y-axis label, x-axis label, 
+4) One thing that often gets overlooked is appropriate labels for the plot. That includes a y-axis label, x-axis label, 
 and legend that have consistent fonts between each other and your equations in the rest of your work (whether that's a 
 presentation or a paper). So, we will put something at the top of our script that should help with that.
 ```console?lang=python&prompt=>>>
@@ -128,7 +128,7 @@ consistent figure size.
 
 Also, when dealing with LaTeX in your labels, if you want something to not be in italics `\rm{}` is going to be your friend.
 
-5 Now we want to make sure that the ranges that we are plotting make sense according to the data that we want to present.
+5) Now we want to make sure that the ranges that we are plotting make sense according to the data that we want to present.
 For example, lets assume that we want to see how the potentials compare in context with the ground state energy of these 
 harmonic oscillators. In that case, looking at 10 Hartree isn't going to be useful as that energy is nowhere near the ground
 state. What we'll do is convert things to cm$^{-1}$ and then set our viewing window to something a lot smaller.
