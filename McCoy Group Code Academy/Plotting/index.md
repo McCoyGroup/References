@@ -21,8 +21,8 @@ And, with some luck, we'll be able to impart a bit of insight into what we, tota
 
 Here's the road map:
 * [Too Many Tools](TooManyTools.md)
-* [Getting Started with Matplotlib](OOPMatplotlib.md)
-* [The Basics of Good Plots](TheGoodPlot.md)
+* [The Basics of Good Plots, and a Quick Tutorial](TheGoodPlot.md)
+* [Advanced Plotting with Matplotlib](OOPMatplotlib.md)
 
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/Plotting/index.md)
