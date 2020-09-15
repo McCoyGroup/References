@@ -325,10 +325,8 @@ Or [animations](https://matplotlib.org/3.2.2/api/animation_api.html).
 Basically, there are tons of things we can play with at this point, but that is best done in a more free-form manner.
 So have fun with it, and when you're ready you can read up on the small set of things we think are important when making a quality plot.
 
-<span class="text-muted">Next:</span>
- [Good Plotting Practice](TheGoodPlot.md)<br/>
 <span class="text-muted">Previous:</span>
- [Too Many Tools](TooManyTools.md)
+ [The Basics of Good Plots, and a Quick Tutorial](TheGoodPlot.md)
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
