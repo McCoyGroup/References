@@ -165,7 +165,10 @@ Now we see a much more appropriate range for both the y and x-axis that we can c
 
 <span class="text-muted">Next:</span>
  [Advanced Plotting with Matplotlib](OOPMatplotlib.md)
- 
+
+
+Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
+{: .alert .alert-info}
+
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/Plotting/TheGoodPlot.md)
-Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
