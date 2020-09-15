@@ -151,7 +151,7 @@ state. What we'll do is convert things to cm$^{-1}$ and then set our viewing win
 >>> plt.show()
 ```
 
-![appropriate scales](../img/appropiate_range.PNG)
+![appropriate scales](../img/appropiate_range.PNG){:width="500px"}
 
 Now we see a much more appropriate range for both the y and x-axis that we can compare.
 
