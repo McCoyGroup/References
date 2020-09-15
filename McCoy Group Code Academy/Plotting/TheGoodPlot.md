@@ -36,7 +36,8 @@ on the y axis so that the plots can be compared easily.
 >>> axes[0].set_ylim(0, 15)
 >>> axes[1].set_ylim(0, 15)
 
->>> plt.show() 
+>>> fig.show() 
+>>> plt.close()
 
 ```
 
@@ -50,8 +51,8 @@ In the above example, we manually set the y axis range for each plot. However, w
 
 ...  # everything the same as before except without 'axes[1].set_ylim(0, 15)'
 
->>> plt.show() 
-
+>>> fig.show() 
+>>> plt.close()
 ```
 ![more sharey](../img/sharey2.PNG)
 
@@ -65,7 +66,8 @@ and plotting them on the same plot.
 >>> ax.plot(x, data1, color='blue', linewidth=3)
 >>> ax.plot(x, data2, color='red', linewidth=3)
 
->>> plt.show()
+>>> fig.show()
+>>> plt.close()
 ```
 
 ![colors](../img/colors.PNG)
@@ -84,7 +86,8 @@ in giving contrast between your data. In the following example, we will make one
 >>> ax.plot(x, data1, color='blue', linewidth=3)
 >>> ax.plot(x, data2, color='red', linewidth=3, linestyle='dotted')
 
->>> plt.show()
+>>> fig.show()
+>>> plt.close()
 ```
 
 ![dots](../img/dots.PNG)
@@ -108,16 +111,17 @@ we have some $\alpha$ term that we multiply the mass by in our harmonic oscillat
 >>> ax.plot(x, data1, color='blue', linewidth=3, label=r'$\alpha$ = 1') # this is a good example of using LaTeX with matplotlib
 >>> ax.plot(x, data2, color='red', linewidth=3, linestyle='dotted', label=r'$\alpha$ = 2')
 
->>> axes.set_ylim(0, 15)
+>>> ax.set_ylim(0, 15)
 
->>> axes.set_ylabel('Energy (Hartree)', fontsize=16)  # this is how you manually change the font size, in case it's too small
->>> axes.set_xlabel('x', fontsize=16)
+>>> ax.set_ylabel('Energy (Hartree)', fontsize=16)  # this is how you manually change the font size, in case it's too small
+>>> ax.set_xlabel('x', fontsize=16)
 
->>> plt.legend()  # displays a legend for our figure
+>>> ax.legend()  # displays a legend for the specified axis in our figure
 
->>> plt.savefig('figure12.PNG', dpi=300, bbox_inches='tight')  # an example of saving our figure (discussed below)
+>>> fig.savefig('figure12.PNG', dpi=300, bbox_inches='tight')  # an example of saving our figure (discussed below)
 
->>> plt.show()
+>>> fig.show()
+>>> plt.close()
 ```
 
 ![latex](../img/latex.PNG)
@@ -139,16 +143,17 @@ state. What we'll do is convert things to cm$^{-1}$ and then set our viewing win
 >>> ax.plot(x, data1*har2wave, color='blue', linewidth=3, label=r'$\alpha$ = 1')  # converting our energies 
 >>> ax.plot(x, data2*har2wave, color='red', linewidth=3, linestyle='dotted', label=r'$\alpha$ = 2')
 
->>> axes.set_ylim(0, 5000)  # puts a cap on the energy of about 5000 cm-1, slightly smaller than the first 
+>>> ax.set_ylim(0, 5000)  # puts a cap on the energy of about 5000 cm-1, slightly smaller than the first 
                               excited state energy of our blue curve.
->>> axes.set_xlim(-0.5, 0.5)  # zoom in on our relevant x range
+>>> ax.set_xlim(-0.5, 0.5)  # zoom in on our relevant x range
 
->>> axes.set_ylabel(r'Energy (cm$^{-1}$)', fontsize=16)  # don't forget to change the units on your y-axis label!!
->>> axes.set_xlabel('x', fontsize=16)
+>>> ax.set_ylabel(r'Energy (cm$^{-1}$)', fontsize=16)  # don't forget to change the units on your y-axis label!!
+>>> ax.set_xlabel('x', fontsize=16)
 
->>> plt.legend()
+>>> ax.legend()
 
->>> plt.show()
+>>> fig.show()
+>>> plt.close()
 ```
 
 ![appropriate scales](../img/appropiate_range.PNG)
