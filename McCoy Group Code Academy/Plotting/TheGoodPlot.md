@@ -110,7 +110,7 @@ we have some $\alpha$ term that we multiply the mass by in our harmonic oscillat
 
 >>> axes.set_ylim(0, 15)
 
->>> axes.set_ylabel('Energy (Hartree)', fontsize=16)  # this is how you manually change the font size, incase it's too small
+>>> axes.set_ylabel('Energy (Hartree)', fontsize=16)  # this is how you manually change the font size, in case it's too small
 >>> axes.set_xlabel('x', fontsize=16)
 
 >>> plt.legend()  # displays a legend for our figure
