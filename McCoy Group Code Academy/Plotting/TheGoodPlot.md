@@ -41,7 +41,7 @@ on the y axis so that the plots can be compared easily.
 
 ```
 
-![sharey](../img/sharey.PNG)
+![sharey](../img/sharey.PNG){:width="500px"}
 
 In the above example, we manually set the y axis range for each plot. However, we could also use the `sharey` option in 
 `plt.subplots` to have the same y-axis between the two plots and then we just have to set the y-axis range on one plot.
@@ -54,7 +54,7 @@ In the above example, we manually set the y axis range for each plot. However, w
 >>> fig.show() 
 >>> plt.close()
 ```
-![more sharey](../img/sharey2.PNG)
+![more sharey](../img/sharey2.PNG){:width="500px"}
 
 
 2) When making plots that are visually easy to interpret, you usually want colors that are not only vibrant, but those
@@ -70,7 +70,7 @@ and plotting them on the same plot.
 >>> plt.close()
 ```
 
-![colors](../img/colors.PNG)
+![colors](../img/colors.PNG){:width="500px"}
 
 We also increased the `linewidth` to make the lines more bold and easier to see. 
 
@@ -90,7 +90,7 @@ in giving contrast between your data. In the following example, we will make one
 >>> plt.close()
 ```
 
-![dots](../img/dots.PNG)
+![dots](../img/dots.PNG){:width="500px"}
 
 4) One thing that often gets overlooked is appropriate labels for the plot. That includes a y-axis label, x-axis label, 
 and legend that have consistent fonts between each other and your equations in the rest of your work (whether that's a 
@@ -124,7 +124,7 @@ we have some $\alpha$ term that we multiply the mass by in our harmonic oscillat
 >>> plt.close()
 ```
 
-![latex](../img/latex.PNG)
+![latex](../img/latex.PNG){:width="500px"}
 
 Above we see an example of saving our figure for use later. A useful property is `bbox_inches='tight'` because it eliminates
 excess white space around your figure. When that is done it is also helpful to set `dpi` to either 300 or 500 to keep a 
@@ -156,7 +156,7 @@ state. What we'll do is convert things to cm$^{-1}$ and then set our viewing win
 >>> plt.close()
 ```
 
-![appropriate scales](../img/appropiate_range.PNG)
+![appropriate scales](../img/appropiate_range.PNG){:width="500px"}
 
 Now we see a much more appropriate range for both the y and x-axis that we can compare.
 
