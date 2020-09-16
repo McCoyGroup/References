@@ -33,7 +33,7 @@ length for each walker, and then assign each walker into a segment along a discr
 Additionally, if we wanted an expectation value (integral) of a specific operator then all we have to do is use a method called Monte Carlo Integration:
 
 $$
-\langleA\rangle = \frac{\sum_j d_j A}{\sum_j d_j}
+\langle A\rangle = \frac{\sum_j d_j A}{\sum_j d_j}
 $$
 
 Where $A_j$ is any multiplicative operator (potential energy, displacement, dipole moment, etc.) of interest and $d_j$ is the descendant weight of the $j$th walker. Each walker will have a different value of $A$.
