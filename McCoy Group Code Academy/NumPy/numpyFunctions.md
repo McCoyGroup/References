@@ -44,7 +44,8 @@ We've provided the broad topics, _General_, _DMC_, and _DVR_, _Optimization_
 * [inner](https://numpy.org/doc/stable/reference/generated/numpy.inner.html): computes the inner porduct of 2 arrays
 * [outer](https://numpy.org/doc/stable/reference/generated/numpy.outer.html): computes the outer product of 2 arrays
 #### numpy.linalg
-_Note: If you use `import numpy as np` in order to call these functions you will need to use `np.linalg.norm`. Or, you can do `import numpy.linalg as la` and do la.norm_
+_Note: If you use `import numpy as np` in order to call these functions you will need to use `np.linalg.norm`. 
+Or, you can do `import numpy.linalg as la` and do `la.norm`_
 * [norm](https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html): gets the norm of a vector
 * [eigh](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eigh.html): computes the eigenvalues and eigenvectors of a Hermitian matrix
 * For more see [here](https://numpy.org/doc/stable/reference/routines.linalg.html)
