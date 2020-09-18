@@ -15,7 +15,7 @@ test_name: str
 ```
 <a id="Peeves.TestUtils.TestManagerClass.__init__" class="docs-object-method">&nbsp;</a>
 ```python
-__init__(self, test_root=None, test_dir=None, test_data=None, base_dir=None, test_pkg=None, test_data_ext='TestData'): 
+__init__(self, test_root=None, test_dir=None, test_data=None, base_dir=None, start_dir=None, test_pkg=None, test_data_ext='TestData'): 
 ```
 
 - `test_root`: `Any`
@@ -25,7 +25,9 @@ __init__(self, test_root=None, test_dir=None, test_data=None, base_dir=None, tes
 - `test_data`: `Any`
     >the directory to load test data from (usually test_dir/test_data_ext)
 - `base_dir`: `Any`
-    >the overall base directory to start test discovery from
+    >the overall base directory to do imports from
+- `start_dir`: `Any`
+    >the directory to start test discovery from
 - `test_pkg`: `Any`
     >the name of the python package that holds all the tests
 - `test_data_ext`: `Any`
@@ -41,6 +43,12 @@ test_root(self):
 ```python
 @property
 base_dir(self): 
+```
+
+<a id="Peeves.TestUtils.TestManagerClass.start_dir" class="docs-object-method">&nbsp;</a>
+```python
+@property
+start_dir(self): 
 ```
 
 <a id="Peeves.TestUtils.TestManagerClass.test_pkg" class="docs-object-method">&nbsp;</a>
