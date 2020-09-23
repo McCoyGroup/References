@@ -117,6 +117,11 @@ prep_show(self):
 show(self, reshow=True): 
 ```
 
+<a id="McUtils.Plots.Graphics.GraphicsBase.close" class="docs-object-method">&nbsp;</a>
+```python
+close(self): 
+```
+
 <a id="McUtils.Plots.Graphics.GraphicsBase.clear" class="docs-object-method">&nbsp;</a>
 ```python
 clear(self): 

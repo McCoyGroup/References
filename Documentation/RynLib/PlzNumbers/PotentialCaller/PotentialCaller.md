@@ -9,7 +9,7 @@ PoolPotential: type
 ```
 <a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.__init__" class="docs-object-method">&nbsp;</a>
 ```python
-__init__(self, potential, *ignore, bad_walker_file='bad_walkers.txt', mpi_manager=None, raw_array_potential=None, vectorized_potential=False, error_value=10000000000.0, fortran_potential=False, transpose_call=None): 
+__init__(self, potential, *ignore, bad_walker_file='bad_walkers.txt', mpi_manager=None, raw_array_potential=None, vectorized_potential=False, error_value=10000000000.0, fortran_potential=False, transpose_call=None, debug_print=False): 
 ```
 
 <a id="RynLib.PlzNumbers.PotentialCaller.PotentialCaller.lib" class="docs-object-method">&nbsp;</a>

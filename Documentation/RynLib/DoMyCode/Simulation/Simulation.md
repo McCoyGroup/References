@@ -16,7 +16,7 @@ Initializes the simulation from the simulation parameters
 
 <a id="RynLib.DoMyCode.Simulation.Simulation.configure_simulation" class="docs-object-method">&nbsp;</a>
 ```python
-configure_simulation(self, name='dmc', description='a dmc simulation', walker_set=None, time_step=0, alpha=None, potential=None, atomic_units=False, steps_per_propagation=None, mpi_manager=True, importance_sampler=None, num_wavefunctions=0, ignore_errors=False, branching_threshold=1.0, energy_error_value=1000000000.0, max_weight_threshold=None, min_potential_threshold=None, branch_on_steps=False, parallelize_diffusion=True, branch_on_cores=False, random_seed=None): 
+configure_simulation(self, name='dmc', description='a dmc simulation', walker_set=None, time_step=0, alpha=None, potential=None, atomic_units=False, steps_per_propagation=None, mpi_manager=True, importance_sampler=None, num_wavefunctions=0, ignore_errors=False, branching_threshold=1.0, energy_error_value=1000000000.0, max_weight_threshold=None, min_potential_threshold=None, branch_on_steps=False, parallelize_diffusion=True, branch_on_cores=False, random_seed=None, pre_run_script=None, post_run_script=None): 
 ```
 
 - `name`: `str`

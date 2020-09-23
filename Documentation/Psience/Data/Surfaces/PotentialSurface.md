@@ -9,7 +9,7 @@ from_fchk_file: method
 ```
 <a id="Psience.Data.Surfaces.PotentialSurface.get_log_values" class="docs-object-method">&nbsp;</a>
 ```python
-get_log_values(log_file, keys='ScanEnergies'): 
+get_log_values(log_file, keys=('StandardCartesianCoordinates', 'ScanEnergies')): 
 ```
 
 <a id="Psience.Data.Surfaces.PotentialSurface.get_fchk_values" class="docs-object-method">&nbsp;</a>
