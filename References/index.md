@@ -3,9 +3,6 @@
 This is the general list of references we've written up. 
 More may come in the future in which case they will be linked to here.
 
-## [Intro to Problems in Quantum Chem](Intro%20To%20Quantum)
-We wrote up some useful stuff on how to think about solving common problems what we encounter [»](Intro%20To%20Quantum)
-
 ## [Basis Set Methods](Basis%20Set%20Methods)
 These are methods that give exact solutions to the Schrödinger equation based on a choice of basis [»](Basis%20Set%20Methods)
 [![Meng Methyl-peroxy](img/thumbs/basis_set.png){:width="500px"}](https://pubs.acs.org/doi/10.1021/acs.jpca.7b10784)

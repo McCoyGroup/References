@@ -21,13 +21,9 @@ sitemap_roots:
         url: /McCoy%20Group%20Code%20Academy/Exercises/
       - name: Programming Best-Practices
         url: /McCoy%20Group%20Code%20Academy/ProgrammingTips/
-      - name: Tips and Tricks
-        url: /McCoy%20Group%20Code%20Academy/TipsAndTricks/
   - name: References
     url: /References/
     listing:
-      - name: Intro to Quantum
-        url: /References/Intro%20To%20Quantum/
       - name: Basis Set Methods
         url: /References/Basis%20Set%20Methods/
       - name: Monte Carlo Methods
