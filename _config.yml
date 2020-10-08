@@ -33,7 +33,7 @@ sitemap_roots:
   - name: Documentation
     depth: 2
 links:
-  - url: https://blogs.uw.edu/mccoygrp/
+  - url: https://sites.uw.edu/mccoygrp/
     title: Group Website
   - url: https://github.com/McCoyGroup
     title: GitHub
