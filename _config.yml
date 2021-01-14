@@ -2,9 +2,11 @@
 title: McCoy Group References
 description: References, resources, and tutorials for the study of large amplitude molecular motions
 url: "https://mccoygroup.github.io/References" # the base hostname & protocol for your site, e.g. http://example.com
+icon: favicon.png
 github_username:  McCoyGroup
 footer_text: >-
   Brought to you by the McCoy Group at the University of Washington
+#sitemap_depth: 2
 sitemap_roots:
   - name: McCode Academy
     url: /McCoy%20Group%20Code%20Academy/

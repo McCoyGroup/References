@@ -83,20 +83,21 @@ if __name__ == '__main__':
     # and change the path accordingly, or just download the zip. 
     
     # This test data is 100 different geometeries of the protonated water trimer, H+(H2O)3
-    read_coords = read_xyz(file_name="Data/test_data.xyz",
-                        atom_str=["O","O","O","H","H","H","H","H","H","H"])
+    read_coords = read_xyz(file_name="Data/XYZWriter_trimer_structures.xyz",
+                        atom_str=["O","H","H","O","H","H","O","H","H"])
     
     # A tidbit for debugging, Here is the third geometry. (Also you can use this to test your write_xyz function)
-        third_geom = np.array([[4.0362477781953885, 0.48245570384953718, -0.77820690932458714],
-                           [-3.8757325101018774, 1.4001697421556618, 0.68600431124013106],
-                           [-0.19939901634214111, -1.8374233668023414, 1.3588377092860093E-002],
-                           [5.1887072609430707, 1.2212249698202131, -1.6654241176447084],
-                           [5.5732519606927271, -0.81428653625693248, -0.47542240557259718],
-                           [-5.2840690484832562, 2.0086562345070975, -0.25856520876503686],
-                           [-4.2844428329210569, 1.9891864602524982, 2.5872351300576217],
-                           [-0.51375977628427882, -3.5372345255507942, 0.40921695153240789],
-                           [1.5813063785357493, -0.79979086014387502, -0.32696212338822861],
-                           [-1.6438806062209808, -0.78514558180958960, 0.97758657922969816]])
+    third_geom = np.array([
+        [-1.96773e-2, -0.673875,    1.51887   ],
+        [-2.74829e-3, -1.11168,     0.62399   ],
+        [ 0.645775,   -1.08455,     2.00786   ],
+        [ 3.95382e-3, -0.910543,   -1.30846   ],
+        [ 9.08469e-3, -7.83345e-3, -1.26388   ],
+        [ 0.578137,   -1.18991,    -1.99281   ],
+        [ 6.03729e-3,  1.63937,    -0.204656  ],
+        [-3.35615e-3,  1.0795,      0.604935  ],
+        [-0.627287,    2.22295,    -4.96801e-2]
+    ])
         
         # Uncomment the following lines when you have completed the functions and are ready to test them 
         # read_coords_numerical = read_xyz_with_numbers(file_name='Data/test_data.xyz', num_atoms=10)
