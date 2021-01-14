@@ -74,7 +74,7 @@ There are three reasons we like this one:
 
 1. There are analytic forms for the kinetic energy
 2. The grid points are evenly spaced
-3. It's appropriate for most non-periodic vibrations
+3. It's appropriate for most non-periodic wavefunctions
 
 Their approach actually differs from the one we detailed here, although the core idea is the same.
 The effect is to start with particle in a box basis functions, apply the type of DVR transformation that we describe here, then take the limit as the box and number of basis functions become infinite.
