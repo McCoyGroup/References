@@ -32,7 +32,7 @@ We've also got  a set of more advanced references for tackling multidimensional 
 
 * [Multidimensional Bases](MultidimBasis.md)
 * [Multidimensional DVR](MultidimDVR.md)
-* **(COMING SOON!)** [Adiabatic Separations](AdiabaticSeparations.md)
+* [Adiabatic Separations](AdiabaticSeparations.md)
 * **(COMING SOON!)** [Second-Order Vibrational Perturbation Theory](VPT2.md)
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
