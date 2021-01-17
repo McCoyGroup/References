@@ -7,6 +7,7 @@ one-dimensional.
 So when getting wave functions for such a system, one generally needs to go to some multi-dimensional basis.
 In general, this just means, as for any basis, that we have an indexed set of functions, but instead of each
 function taking one argument, now it takes multiple arguments, e.g. our basis is something like
+
 $$
 \Phi^{(\mathrm{ND})} = \{\phi_n(x_1, x_2, ..., x_N)\}
 $$
@@ -19,12 +20,17 @@ Often, though, we don't have a clean set of high dimensional functions with whic
 Instead, we commonly work with a _direct product basis_, where one has a starts with a set of $M$ low-dimensional bases
 $$
 \Phi^{(\mathrm{ND})} = \{\Phi^{\mathrm{N}_i\mathrm{D}}_i\ : i \in \{1, 2, ..., M\} \}
+
 $$
+
 where
+
 $$
 \sum_{i} N_i = N
 $$
+
 and basis functions are constructed by taking a product of terms in each of these bases
+
 $$
 \phi_{n_1, n_2, ..., n_M}(x_1, x_2, ..., x_N) = \prod_{i} \phi^{(N_i)}_{n_i}
 $$
@@ -54,6 +60,10 @@ This set of wave functions can then be used as a product basis in methods that g
 
 We don't work with electronic wave functions, so this is purely for example, but we'll recall that the hydrogen atom wave function
 can be written as a product of a radial wave function and an angular wave function
+
+$$
+\Psi_{n, l, m_l}(r, \theta, \phi) = R_n(r) Y_{l}^{m_l}(\theta, \phi)
+$$
 
 Hypothetically, for some electronic problem, one could use these wave functions as a zero-order basis in a perturbation theory treatment.
 They are a clean multidimensional product basis, built from 1D and 2D bases themselves.
