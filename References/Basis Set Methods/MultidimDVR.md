@@ -12,7 +12,7 @@ $$
 \phi_{n_1, n_2, ...}(x_1, x_2, ...) = \prod_{i} \phi^{(1D)}_{n_i}(x_i)
 $$
 
-where each term, $\phi^(DVR)_{n_i}(x_i)$, will show the localization to a single grid point that we discussed
+where each term, $\phi^{(DVR)}_{n_i}(x_i)$, will show the localization to a single grid point that we discussed
 before.
 
 Then given a Hamiltonian that can be written like

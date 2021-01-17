@@ -18,9 +18,9 @@ correspondingly more difficult).
 
 Often, though, we don't have a clean set of high dimensional functions with which we can nicely work.
 Instead, we commonly work with a _direct product basis_, where one has a starts with a set of $M$ low-dimensional bases
-$$
-\Phi^{(\mathrm{ND})} = \{\Phi^{\mathrm{N}_i\mathrm{D}}_i\ : i \in \{1, 2, ..., M\} \}
 
+$$
+\Phi^{(\mathrm{ND})} = \{\Phi^{(\mathrm{N}_i\mathrm{D})}_i\ : i \in \{1, 2, ..., M\} \}
 $$
 
 where
@@ -79,8 +79,8 @@ More specific details can be written down if there's interest.
 One of the biggest issues with multidimensional basis set methods is how they scale.
 In one dimension, we can use, say, $1000$ basis functions to really nail down the energies and wave functions.
 In two dimensions, assuming we take a product of 1D bases, if we wanted the same resolution, 
-we'd need $1000^2$ basis functions in each dimension, giving us $1000^2$ functions.
-More generally, in $N$ dimensions, we'd need $$1000^N$ basis functions.
+we'd need $1000$ basis functions in each dimension, giving us $1000^2$ functions.
+More generally, in $N$ dimensions, we'd need $1000^N$ basis functions.
 From a computational perspective, for the high-ish dimensional problems we work with, this means going beyond
 say 4 dimensional with a naive direct product basis requires either an exorbitant amount of computational resources 
 or a degradation in the quality of the results obtained.
