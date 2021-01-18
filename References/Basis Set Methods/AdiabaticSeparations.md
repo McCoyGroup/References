@@ -72,9 +72,11 @@ least in the range of energies that we usually care about, and so we can often t
 methods.
 Moreover, even if we use methods that require similar computational effort for our high- and low-frequency modes, if we're able
 to split a high-dimensional problem into two lower-dimensional problems, we can get a dramatic benefit.
-As an example, doing a 4D DVR with 60 DVR points in each dimension would require us to store a matrix with $60^{2*4} = 167961600000000$
+As an example, doing a 4D DVR with 60 DVR points in each dimension would require us to store a matrix with 
+$60^{2*4} = 167961600000000$
 elements.
-By contrast, doing separating this into two 2D problems means the maximum matrix size we ever need to store is $60^{2*2} = 12960000$.
+By contrast, doing separating this into two 2D problems means the maximum matrix size we ever need to store is 
+$60^{2*2} = 12960000$.
 Then factoring in the non-linear [time complexity](https://en.wikipedia.org/wiki/Time_complexity) of getting eigenvalues and eigenvectors, even if we have to do many 2D calculations, we still get a performance boost over doing a single 4D calculation.
 If dropping from 6D to coupled 3D problems, the performance boost will be even more significant.
 
