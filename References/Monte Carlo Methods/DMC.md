@@ -114,7 +114,7 @@ The second difference is that E<sub>ref</sub> is calculated using the sum of the
 This is technically the same equation since in the discrete weighting case, the weight of each walker is 1, so the sum of the weights of the walkers
 is equal to the number of walkers.
 
-[Link to Exercises](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/Exercises/)
+[Link to Exercises](https://mccoygroup.github.io/References/McCoy%20Group%20Code%20Academy/Exercises#monte-carlo-methods)
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
