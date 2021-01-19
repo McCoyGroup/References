@@ -1,7 +1,7 @@
 ---
 ---
 
-# Contributing
+## Contributing
 
 If you'd like to contribute, first off, thanks! But, before you hop in: 
 
