@@ -9,7 +9,8 @@ __pkgs__ = [
 ]
 
 target = os.path.join(os.path.dirname(__file__), "Documentation")
-DocWalker(__pkgs__,
-          target,
-          ignore_paths=['RynLib.md']
-          ).write_docs()
+DocWalker(
+    __pkgs__,
+    out=target,
+    ignore_paths=['RynLib.md']
+).write_docs()
