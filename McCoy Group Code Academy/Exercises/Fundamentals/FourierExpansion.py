@@ -20,7 +20,7 @@ class FourierSeries1D:
     This is a class that represents a 1D Fourier series expansion of a function
     A Fourier series is defined in terms of a reference value (r0), a length (L), & two sets of coefficients (c_k & sk_) by
 
-        f(x) = r0/2 + sum(c_k/L cos(2Pi/L  k), k=1...) + sum(s_k/L cos(2Pi/L  k), k=1...)
+        f(x) = r0/2 + sum(c_k/L cos(2Pi/L  k), k=1...) + sum(s_k/L sin(2Pi/L  k), k=1...)
 
     Construct it like
         fun = FourierSeries1D(cos_coeffs, sin_coeffs)
