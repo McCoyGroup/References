@@ -14,6 +14,10 @@ Methods for obtaining solutions to the Schrödinger equation through stochastic 
 ## [Spectrum Generation](Spectrum%20Generation)
 Methods for generating spectra to provide experimental validation of our theoretical results [»](Spectrum%20Generation)
 [![Laura Faraday](img/thumbs/spectra.png){:width="500px"}](https://pubs.rsc.org/en/content/articlelanding/2018/FD/C8FD00120K#!divAbstract)
+
+## [Hamiltonian Components](Hamiltonian%20Components)
+Tentative name for assorted components that come up when building Hamiltonian representations.
+Methods for generating spectra to provide experimental validation of our theoretical results [»](Hamiltonian%20Components)
   
 ---
 [Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/index.md)
