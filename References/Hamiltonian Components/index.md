@@ -13,10 +13,10 @@ This section details various components and forms of $T$ and $V$ and how to calc
 * [Normal Modes](NormalModes.md)
 * [Rotational Contstants](RotationalConstants.md)
 * [The G-Matrix](GMatrix.md)
-**(In Progress)**
-* [Reaction Path Normal Modes](ReactionPath.md)
-* [Coriolis Coupling](CoriolisCoupling.md)
 * [`V'`, the "psuedopotential"](Pseudopotential.md)
+* [Reaction Path Normal Modes](ReactionPath.md)
+**(In Progress)**
+* [Coriolis Coupling](CoriolisCoupling.md)
 
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
