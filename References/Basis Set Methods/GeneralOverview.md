@@ -53,7 +53,7 @@ $$
 therefore we know that
 
 $$
-\frac{d^2}{d x^2}|j\rangle = \frac{d}{d x}\frac{d}{d x}|j\rangle = \frac{d}{d x}\sum_n c^(j)_n |n\rangle
+\frac{d^2}{d x^2}|j\rangle = \frac{d}{d x}\frac{d}{d x}|j\rangle = \frac{d}{d x}\sum_n c^{(j)}_n |n\rangle
 $$
 
 we also know that derivatives are _linear_ operators, therefore we have
