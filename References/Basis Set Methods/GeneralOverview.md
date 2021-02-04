@@ -93,7 +93,7 @@ This will be a very powerful tool to let us decrease the amount of work we need 
 When we talk about compactness of a representation, the primary metric we care about is whether or not it's _diagonally dominant_, which just means that given some Hamiltonian representation $H$
 
 $$
-\forall_{i} \left|H_ii\right|^2 >= \sum_{j \neq i} \left|H_ij\right|^2
+\forall_{i} \left|H_{i,i}\right|^2 \geq \sum_{j \neq i} \left|H_{i,j}\right|^2
 $$
 
 Thinking about what this means in the context of
