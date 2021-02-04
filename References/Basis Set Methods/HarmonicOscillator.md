@@ -23,7 +23,7 @@ $$
 \phi_n(x) = N_n H_n(x) e^{-(x^2/2)}
 $$
 
-where $N_n$ is a normalization factor and $H_n$ is the $n^th$ _Hermite polynomial_.
+where $N_n$ is a normalization factor and $H_n$ is the $n^{th}$ _Hermite polynomial_.
 
 This basis has two important operators for which it gives simple representations.
 
@@ -43,8 +43,8 @@ and the derivative operator
 $$
 \langle i|\frac{d}{d x}|j\rangle =
 \begin{cases}
- k_{i+1} & j=i+n \\
- -k_{i} & j=i-n \\
+ k_{i+1} & j=i+1 \\
+ -k_{i} & j=i-1 \\
  0 & \text{else}
 \end{cases}
 $$
