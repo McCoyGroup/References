@@ -4,7 +4,7 @@
 
 As is shown in [Anderson et. al.](https://aip.scitation.org/doi/10.1063/1.432868) and is discussed
 in [Suhm and Watts](https://doi.org/10.1016/0370-1573(91)90136-A), the ground state solution to the
-time-independent Schrodinger Equation is solved using the time-dependent Schrodinger Equation. To begin, a variable substitution takes placce (known as a Wick rotation) into imaginary time ($\tau=it/\hbar$). The energy is then shifted
+time-independent Schrodinger Equation is solved using the time-dependent Schrodinger Equation. To begin, a variable substitution takes place (known as a Wick rotation) into imaginary time ($\tau=it/\hbar$). The energy is then shifted
 by some reference energy. We then propagate the wave function forward in time using
 discrete time steps:
 
