@@ -195,7 +195,8 @@ and so
 $$
 \begin{align}
 \omega_e &= \sqrt{\frac{1}{\mu} \frac{\partial^2V}{\partial r^2} (r_e)} \\
-\omega_ex_e &= -\frac{1}{16 \mu^2\omega_e^2} \left( \frac{\partial^4V}{\partial r^4}(r_e) - \frac{5}{3} \left( \frac{\partial^3V}{\partial r^3}(r_e) \right)^2 \left( \frac{\partial^2V}{\partial r^2}(r_e) \right)^{-1} \right)
+\omega_ex_e &= -\frac{1}{16 \mu^2\omega_e^2} \left( F_4 - \frac{5}{3} \frac{{F_3}^2}{F_2} \right) \\
+F_N &= \frac{\partial^{N} V}{\partial r^N} (r_e)
 \end{align}
 $$
 
