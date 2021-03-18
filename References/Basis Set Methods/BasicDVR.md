@@ -190,12 +190,12 @@ $$
 V(r_e) = \alpha^2D_e\Delta r^2 - \alpha^3D_e\Delta r^3 + \frac{7}{12}\alpha^4D_e\Delta r^4 + O(\Delta r^5)
 $$
 
-and so
+and so 
 
 $$
 \begin{align}
 \omega_e &= \sqrt{\frac{1}{\mu} \frac{\partial^2V}{\partial r^2} (r_e)} \\
-\omega_ex_e &= \frac{1}{16} \frac{1}{\mu^2\omega_e^2} \frac{\partial^4V}{\partial r^4}(r_e) - \frac{30}{288} \frac{1}{\mu^2\omega_e^2} \left( \frac{\partial^3V}{\partial r^3}(r_e) \right)^2 \left( \frac{\partial^2V}{\partial r^2}(r_e) \right)^{-1}
+\omega_ex_e &= -\frac{1}{16 \mu^2\omega_e^2} \left( \frac{\partial^4V}{\partial r^4}(r_e) - \frac{5}{3} \left( \frac{\partial^3V}{\partial r^3}(r_e) \right)^2 \left( \frac{\partial^2V}{\partial r^2}(r_e) \right)^{-1} \right)
 \end{align}
 $$
 
