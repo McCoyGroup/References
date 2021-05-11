@@ -22,7 +22,7 @@ $$
 
 * [Basic Diffusion Monte Carlo](DMC.md)
 * [Descendant-Weighting and Wavefunction Analysis](DWandWfns.md)
-* [Importance Sampling](POR.md)
+* **(COMING SOON!)** [Importance Sampling](ImpSamp.md)
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
