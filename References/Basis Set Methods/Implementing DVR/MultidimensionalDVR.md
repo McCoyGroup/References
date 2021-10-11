@@ -24,7 +24,7 @@ def dvr_grid_1D(domain=(-5, 5), divs=10, **kw):
 def dvr_grid(domain=((-5, -5), (-5, 5)), divs=(10, 10), **kw):
  '''Creates a ND grid from 1D ones'''
 
- mesh = np.array(np.meshgrid(*map(cm1D.grid, domain, divs), indexing='ij'))
+ mesh = np.array(np.meshgrid(*map(cm1D.get_grid, domain, divs), indexing='ij'))
  for i in range(mesh.shape[0]):
      mesh = mesh.swapaxes(i, i+1) # this is clumsy but the single .transpose() call that should have worked wasn't working...
 
@@ -147,7 +147,7 @@ def dvr_grid_1D(domain=(-5, 5), divs=10, **kw):
 def dvr_grid(domain=((-5, -5), (-5, 5)), divs=(10, 10), **kw):
  '''Creates a ND grid from 1D ones'''
 
- mesh = np.array(np.meshgrid(*map(cm1D.grid, domain, divs), indexing='ij'))
+ mesh = np.array(np.meshgrid(*map(cm1D.get_grid, domain, divs), indexing='ij'))
  for i in range(mesh.shape[0]):
      mesh = mesh.swapaxes(i, i+1) # this is clumsy but the single .transpose() call that should have worked wasn't working...
 
