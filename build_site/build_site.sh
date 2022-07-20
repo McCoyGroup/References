@@ -11,10 +11,10 @@ cd /home
 git config --global user.name ${GITHUB_ACTOR}
 git config --global user.email ${GITHUB_ACTOR}@users.noreply.github.com
 # clone in the group repos
-git clone https://github.com/McCoyGroup/Peeves.git
-git clone https://github.com/McCoyGroup/McUtils.git
-git clone https://github.com/McCoyGroup/Psience.git
-git clone https://github.com/McCoyGroup/RynLib.git
+# git clone https://github.com/McCoyGroup/Peeves.git
+# git clone https://github.com/McCoyGroup/McUtils.git
+# git clone https://github.com/McCoyGroup/Psience.git
+# git clone https://github.com/McCoyGroup/RynLib.git
 ## make sure we're build off of an up to date repo
 cd References
 git pull
