@@ -38,9 +38,9 @@ sitemap_roots:
     url: /PyVibPackages/
     listing:
       - name: PyVibDMC
-        url: /PyVibPackages/PyVibDMC/
+        url: /PyVibPackages/PyVibDMC
       - name: PyVibPTn
-        url: /PyVibPackages/PyVibPTn/
+        url: /PyVibPackages/PyVibPTn
 links:
   - url: https://sites.uw.edu/mccoygrp/
     title: Group Website
