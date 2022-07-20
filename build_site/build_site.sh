@@ -27,9 +27,9 @@ git add -A && git commit -m "updated exercises"
 git push -u origin HEAD
 
 ## run the docs script
-cd /home
-PYTHONPATH=/home python3 References/docs.py
-### push back to main
-cd References
-git add -A && git commit -m "Built out site"
-git push -u origin HEAD
+# cd /home
+# PYTHONPATH=/home python3 References/docs.py
+# ### push back to main
+# cd References
+# git add -A && git commit -m "Built out site"
+# git push -u origin HEAD
