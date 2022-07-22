@@ -1,9 +1,9 @@
 # What is a Class?
 
-Previously, we looked at writing functions. As we remember, they're mainly a way for us to make the logic of our code more obvious and less dependent on details of how we implement things (usually we call this _abstraction_).
+Previously, we looked at writing functions. As we remember, they're mainly a way for us to make the logic of our code more obvious and less dependent on details of how we implement things (usually we call this [_abstraction_](https://education.molssi.org/oop_and_design_patterns/03-Abstraction/index.html)).
 We can use a higher-level object than a function, though, called a `class`.
 The idea with a class is to allow us to write code in an even more abstract way that makes the logic of our program even clearer, by replacing things like looping through lists and manipulating arrays with relationships between different conceptual objects.
-That's why this is usually called _object-oriented programming_.
+That's why this is usually called _object-oriented programming_ (more on this [here](https://education.molssi.org/oop_and_design_patterns/01-Object-Oriented_Programming/index.html)).
 
 This is the 1000 foot view, of course, and maybe somewhat conceptually difficult to wrap one's head around, so we'll take a concrete example that'll extend what we did before and also be useful as we move forward, by writing a class that this time we're calling `UnitConverter`.
 Our `UnitConverter` will do one thing and one thing only: it'll convert units.
