@@ -9,6 +9,7 @@ On the other hand, we have seen a lot of _bad_ plots and so here are our recomme
 3. Plots should remain mostly comprehensible in black and white
 4. When using LaTeX, make sure the fonts are consistent
 5. The plot range and aspect ratio should be chosen so as to not distort the data.
+6. ALL PLOTS should probably have x- and y-axis labels (WITH UNITS!)
 
 
 ### Examples
@@ -78,7 +79,7 @@ A note that the default orange color in `matplotlib` looks more gold than orange
 
 
 3) Sometimes, you want to also make your curves more visually distinct in case your plot gets printed in black and white, or
-the colors on the projector you are using just aren't very clear. In that case, giving your data different shapes such as squares
+the colors on the projector you are using just aren't very clear (looking at you Victor G. M. Lee Memorial Projector). In that case, giving your data different shapes such as squares
 and circles, making use of open shapes versus closed shapes, or having dotted lines and dashed lines becomes very helpful
 in giving contrast between your data. In the following example, we will make one of our lines dotted.
 ```console?lang=python&prompt=>>>
@@ -159,6 +160,10 @@ state. What we'll do is convert things to cm$^{-1}$ and then set our viewing win
 ![appropriate scales](../img/appropiate_range.PNG){:width="500px"}
 
 Now we see a much more appropriate range for both the y and x-axis that we can compare.
+And most importantly we've added x- and y- axis labels (WITH UNITS) so that anyone else looking at the plot can be easily clued in to what they are looking at.
+
+One final note, we aren't telling you how to present your data, learning how to do that effectively is half the fun of being a scientist, 
+but we are warning you that no one looks at your data nearly as much as you do. So, when making a plot try and think about someone else for a change ;)
 
 <span class="text-muted">Previous:</span>
  [Too Many Tools](TooManyTools.md)

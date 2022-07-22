@@ -4,7 +4,7 @@ Whether using a Linux or MacOS machine, you have access to the Bash command line
 
 The command line allows you to navigate around your filesystem, execute and edit code, and much more without using a graphical user interface (GUI). 
 
-There are a ton of online resources and [youtube tutorials](https://youtu.be/YHFzr-akOas?t=204) that will get you familiar with the command line.
+There are a ton of online resources and [youtube tutorials](https://youtu.be/YHFzr-akOas?t=204) that will get you familiar with the command line. We recommend starting with [this one.](https://education.molssi.org/getting-started-computational-chemistry/02-terminal/index.html)
 
 When you begin in the group, you have to talk to Anne or a senior graduate student about getting an account on the lab computers.  Once you get an account, you will have a directory that is your own in the filesystem on each computer.
 
@@ -25,7 +25,7 @@ If you choose to do so, you can SSH and SFTP onto remote computers purely using 
 On the group computers, you will have read-only access to other group mates' filesystems (and the system files), and you will have autonomy over your own filesystem.  You will not have super-user or root access on the group computers unless specifically given the responsibility.  The keeper of the root passwords is designated in the group, but for security purposes we are not putting whot that is here.  Ask Anne if you need root access or if you need someone to do something root-accessible.
 
 ## A Brief Note on Text Editors
-There are a ton of terminal text editors out there. The two main ones are emacs and vim (or vi, vim is the generic name for vi).  Both of these are installed on each group computer.  We will not recommend one over the other, Anne uses vim and so it may be a good idea to learn that, but some would say that there is a steeper learning curve in vim than emacs.  Emacs automatically opens up a GUI, to allow it to run in terminal provide the command `emacs -nw`, which means "no window". 
+There are a ton of terminal text editors out there. The two main ones are emacs and vim (or vi, vim is the generic name for vi).  Both of these are installed on each group computer.  We will not recommend one over the other, Anne uses vim and so it may be a good idea to learn that, but some would say that there is a steeper learning curve in vim than emacs.  Emacs automatically opens up a GUI, to allow it to run in terminal provide the command `emacs -nw`, which means "no window". For more on Text Editors see [here](https://education.molssi.org/getting-started-computational-chemistry/03-text-editors/index.html)
 
 ## Useful commands not covered thus far
 There are [plenty of internet resources](https://www.educative.io/blog/bash-shell-command-cheat-sheet) that will show you helpful command line commands, but here are some that we use in the group all the time that we wanted to highlight:
