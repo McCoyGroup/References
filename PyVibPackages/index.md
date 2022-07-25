@@ -13,7 +13,7 @@ Read about what we've done with it:
 * citations of papers that have used pyvibDMC
 
 Read about how you can use it!
-* [McCode Academy PyVibDMC Intro](PvVibDMC.md)
+* [McCode Academy PyVibDMC Intro](PyVibDMC.md)
 
 
 ![PyVibPTnlogo](PVPTn_logo.png){:width="300px"}
