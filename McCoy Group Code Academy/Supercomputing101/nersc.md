@@ -10,6 +10,6 @@ NERSC already provided a detailed [guide](https://docs.nersc.gov/connect/mfa/) o
 
 ### 3. Accessing and running the jobs
 Once your MFA is activated you can got in CORI via terminal with command `ssh xxx@cori.nersc.gov` Replacing `xxx` with your NERSC account username.
-One logged on, you can do anything like any other supercomputer environment.
+One logged on, you can do anything like everything other supercomputer environment.
 
 **Note** that if you need an access to GPU on CORI, you need to fill out the request [here](https://nersc.servicenowservices.com/com.glideapp.servicecatalog_cat_item_view.do?v=1&sysparm_id=a715ed9edbe0ff00200f7d321f9619f5&sysparm_link_parent=e15706fc0a0a0aa7007fc21e1ab70c2f&sysparm_catalog=e0d08b13c3330100c8b837659bba8fb4&sysparm_catalog_view=catalog_default&sysparm_view=catalog_default)
