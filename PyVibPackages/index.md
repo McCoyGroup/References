@@ -4,7 +4,7 @@ Now, we still believe the best way to learn a new method is to code it yourself,
 Although there is always room for user error...
 
 
-![PyVibDMC_logo](PVDMC_logo.PNG){:width="500px"}
+![PyVibDMClogo](PVDMC_logo.png){:width="300px"}
 
 Read about it:
 * citation to the main pyvib reference
@@ -16,7 +16,7 @@ Read about how you can use it!
 * [McCode Academy PyVibDMC Intro](PvVibDMC.md)
 
 
-![PyVibPTn_logo](PVPTn_logo.PNG){:width="500px"}
+![PyVibPTnlogo](PVPTn_logo.png){:width="300px"}
 
 Read about it:
 * [A Flexible Approach to Vibrational Perturbation Theory Using Sparse Matrix Elements](https://aip.scitation.org/doi/10.1063/5.0080892)
