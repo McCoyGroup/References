@@ -6,7 +6,7 @@ and for the purpose of documentation it is always refered to as _VPT2_.
 If you're looking for download help try [here](https://mccoygroup.github.io/Psience/)
 
 Here is a nice flow-chart of the code structure:
-![VPT-flowchart](vpt_codeflow.png){width:800px}
+![VPT-flowchart](vpt_codeflow.png){width:600px}
 
 But if that doesn't mean much to you, there is also this _pretty good_ [intro tutorial](https://mccoygroup.github.io/Psience/AnneDocs.html) to this package.
 Or if you feel like jumping right in, [this](https://mccoygroup.github.io/Psience/Psience/VPT2.html) might be where you want to start.
