@@ -25,7 +25,7 @@ Here's a road map for the methods we use:
 * [Basis Set Spectra](BasisSetSpectra.md)
 * [Discrete Variable Representation Spectra](DVRSpectra.md)
 * **(COMING SOON!)** [The Difficulty with DMC](DMCSpectraDifficulties.md)
-* **(COMING SOON!)** [Fixed-Node DMC Spectra](FixedNodeSpectra.md)
+* [Fixed-Node DMC Spectra](FixedNodeSpectra.md)
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask)
 {: .alert .alert-info}
