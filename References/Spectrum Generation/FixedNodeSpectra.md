@@ -27,7 +27,6 @@ In most situation, you will be working with PyVibDMC to run a fixed-node DMC, an
 - a line in DMC_Sim with the following
 `fixed_node = {"function":xxx,"g_matrix":yyy}` Replace the `xxx` and `yyy` with your distance and g matrix function.
 
-###
 
 Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflow.com/c/mccoygroup/questions/ask).
 {: .alert .alert-info}
