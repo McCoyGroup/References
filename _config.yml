@@ -19,12 +19,14 @@ sitemap_roots:
         url: /McCoy%20Group%20Code%20Academy/DataIO/
       - name: Plotting
         url: /McCoy%20Group%20Code%20Academy/Plotting/
-      - name: Exercises
-        url: /McCoy%20Group%20Code%20Academy/Exercises/
+      - name: Git & Github
+        url: /McCoy%20Group%20Code%20Academy/Git&Github/
       - name: Programming Tips
         url: /McCoy%20Group%20Code%20Academy/ProgrammingTips/
       - name: Supercomputing at UW
         url: /McCoy%20Group%20Code%20Academy/Supercomputing101/
+      - name: Exercises
+        url: /McCoy%20Group%20Code%20Academy/Exercises/
   - name: References
     url: /References/
     listing:
