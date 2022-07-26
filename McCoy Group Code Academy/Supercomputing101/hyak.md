@@ -18,3 +18,7 @@ After you're approved, there are many things you can do and a long, detailed Wik
 * [Clean Workflow for Testing Parameter Sets on Mox](https://stackoverflow.com/c/mccoygroup/questions/27)
 * [How do I join the RCC Slack?](https://stackoverflow.com/c/mccoygroup/questions/28)
 * [Using Jupyter on Hyak (or other Interactive Software)](https://stackoverflow.com/c/mccoygroup/questions/57)
+
+
+---
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/McCoy%20Group%20Code%20Academy/Supercomputing101/hyak.md)
