@@ -1,8 +1,8 @@
 ### Supercomputing at UW
-As a UW Student you have acess to _supercomputers_ ! As a member of the McCoy Group you have opportunities to access even more _supercomputers_ !!
+As a UW Student you have acess to _supercomputers_! As a member of the McCoy Group you have opportunities to access even more _supercomputers_!!
 
 ### UW Supercomputer - Hyak
-As of right now, we use the [Mox](https://wiki.cac.washington.edu/display/hyakusers/Hyak+mox+Overview) partition of Hyak. This is where the `stf` queue is (You have access by being a student), `chem` queue (nodes managed by the chemistry department), `ilahie` queue (more nodes you can get access to).
+As of right now, we use the [Mox](https://wiki.cac.washington.edu/display/hyakusers/Hyak+mox+Overview) cluster of Hyak. This is where the `stf` queue is (You have access by being a student), `chem` queue (nodes managed by the chemistry department), `ilahie` queue (more nodes you can get access to).
 
 * Read more about getting started with and using Mox [here](hyak.md)!
 
