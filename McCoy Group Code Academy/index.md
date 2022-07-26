@@ -9,8 +9,9 @@ Here's a basic road map we think you might find useful:
 * [NumPy and SciPy](NumPy): working with big blocks of numbers
 * [Data/IO](DataIO): getting data into your programs and writing it back out
 * [Plotting](Plotting): finding ways to plot what you've done
+* [Git + Github](Git&Github): using version control software to help yourself and others
 * [Programming Tips](ProgrammingTips): writing code that other people can read and reuse
-* [Supercomputing at UW](Supercomputing101): logging in and using Supercomputing Resources available to the McCoy Group.
+* [Supercomputing at UW](Supercomputing101): logging in and using Supercomputing Resources available to the McCoy Group
 
 ## [Exercises](Exercises)
 
