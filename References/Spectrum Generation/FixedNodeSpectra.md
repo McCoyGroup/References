@@ -5,7 +5,7 @@ Fixed-node method is one way to get the excited state information from the groun
 <p align="center">
 <img src="../img/fixed_node_potential.png" alt="fixed_node_potential" width="500"/>
 </p>
-If we know where the node of the excited state function beforehand, we can cover one side of the potential, and the ground state function of the half potential would be the first excited state function of the whole potential. The reason is because if we take a look at the Schrodinger's equation $\frac{H\Psi(x)}{\Psi(x)} = E(x)$. The equation only evolves one position (x) at the time, so it is locally satisfied. So, with DMC, we can get the excited state energy and the excited state wavefunction. We can simulate the half potential with the infinite potential wall for the other half of the potenital. 
+if we know exactly where the node is for the excited state, we can make the two half-potentials by putting the infinite potential wall on the other side of the node. Note that the combinations of the ground state solutions of the half-potentials would be the same as the first excited state solution of the whole potential since all of the solutions need to satisfy the same Schrödinger's equation. Therefore, we can use the ground state method, like DMC, to find the first excited state energy and wavefunction from the two half potentials.
 
 ### Finding node position
 The only thing we need is the location of the node, the way we get it is by running two adiabatic DMC calculations. On one calculation, we move the potential wall from the right to the left, and on the other calculation, we move the potenital wall from the left to the right. 
