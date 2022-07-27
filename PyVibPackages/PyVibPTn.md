@@ -15,4 +15,4 @@ P.S. you might notice this site looks a lot like the Psience documentation site.
 {: .alert .alert-success}
 
 ---
-[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/PyVibPackages/PyVibPTn.md)
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/PyVibPackages/PyVibPTn.md)
