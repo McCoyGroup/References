@@ -19,4 +19,4 @@ We sometimes also use supercomputers off the UW campus like:
 * Read up on [_High Performace Computing_ (HPC)](https://en.wikipedia.org/wiki/High-performance_computing) and [_Message Passing Interface_ (MPI)](https://en.wikipedia.org/wiki/Message_Passing_Interface), and then learn about how we implement them [here](HPC_MPI.md)!
 
 ---
-[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/McCoy%20Group%20Code%20Academy/<Path/To/Page.md>)
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/Supercomputing101/index.md)
