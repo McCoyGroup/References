@@ -41,7 +41,7 @@ $$
         \ \prod_{k=1}^N\exp \left [-\left (\left |\mathbf{\delta}^\prime_ {k,j}\right |^2-\left |\mathbf{\delta}_ {k,j}\right |^2\right )/2\sigma_ k^2\right ]
 $$
 
-$\delta$ is the shift that is applied to the walkers' positions from the Gaussian probability distribution described [before](https://mccoygroup.github.io/References/References/Monte%20Carlo%20Methods/DMC.html) and $\sigma$ is the width of that Guassian distribution that $\delta$ is sampled from.
+$\delta$ is the shift that is applied to the walkers' positions from the Gaussian probability distribution described [before](https://mccoygroup.github.io/References/References/Monte%20Carlo%20Methods/DMC.html) and $\sigma$ is the width of that Guassian distribution that $\delta$ is sampled from. This ratio of probabilities is then compared to a random number between 0 and 1 for each walker. If the ratio is smaller than the random number, the move is rejected and the walker stays at position $x$ and does not move to position $x'$.
 
 ### How You Can Use Guided DMC
 We've implemented the capability to perform Guided DMC with PyVibDMC so that the only thing that is neccessary to provide is a function that calculates the guiding function for each of your walkers. This is outlined on [this](https://pyvibdmc.readthedocs.io/en/latest/imp_samp.html) page of the documentation for PyVibDMC and has an example that you can follow for a 1-d harmonic oscillator and a water monomer. 
