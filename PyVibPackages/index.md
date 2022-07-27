@@ -7,10 +7,12 @@ Although there is always room for user error...
 ![PyVibDMClogo](PVDMC_logo.png){:width="300px"}
 
 Read about it:
-* citation to the main pyvib reference
+* [Diffusion Monte Carlo approaches for studying nuclear quantum effects in fluxional molecules](https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/wcms.1615)
 
 Read about what we've done with it:
-* citations of papers that have used pyvibDMC
+* [Fast Near Ab Initio Potential Energy Surfaces Using Machine Learning](https://pubs.acs.org/doi/full/10.1021/acs.jpca.2c02243)
+* [Using Diffusion Monte Carlo Wave Functions to Analyze the Vibrational Spectra of H7O3+ and H9O4+](https://pubs.acs.org/doi/full/10.1021/acs.jpca.1c05025)
+* [GPU-Accelerated Neural Network Potential Energy Surfaces for Diffusion Monte Carlo](https://pubs.acs.org/doi/full/10.1021/acs.jpca.1c03709)
 
 Read about how you can use it!
 * [McCode Academy PyVibDMC Intro](PyVibDMC.md)
@@ -31,4 +33,4 @@ Read about how you can use it!
 
 
 ---
-[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/PyVibPackages/index.md)
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/PyVibPackages/index.md)
