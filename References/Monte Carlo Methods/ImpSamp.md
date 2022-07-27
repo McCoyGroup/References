@@ -5,7 +5,7 @@ Importance sampling or guided DMC, as is often referenced in [our](https://pubs.
 
 The method is based upon provided a "good guess" to some of the degrees of freedom within your system so that the simulation doesn't have to sample those vibrations as much. What this means is that we are providing a guiding function, sometimes called a trial wave function, to the simulation to help guide walkers to more probable positions based on the provided guiding function. For example, in the following figure we have a system for a 1-d vibration of the Hydrogen-bonded OH stretch in water dimer. The potential for this system is on the left and the wave function is on the right in black. A good guess for this system would be the 1-d OH stretch in an isolated water momomer which is shown in blue on the right. 
 
-![Imp_samp_system_example](Implementing DMC/img/Imp_samp_system_example.PNG){:width=500px}
+![Imp_samp_system_example](Implementing DMC/img/Imp_samp_system_example.png){:width=500px}
 
 When using this guiding function, instead of sampling $\Psi$ like in the [basic diffusion monte carlo algorithm](https://mccoygroup.github.io/References/References/Monte%20Carlo%20Methods/DMC.html), the simulation will sample $f = \Psi*\Phi_T$ where $\Phi_T$ is our guiding function or trial wave function. This changes the imaginary-time time-dependent Schrodinger Equation from, 
 
@@ -32,7 +32,7 @@ $$
 
 The effect that these terms have can be shown in the following figure. The local energy replaces the potential energy evaluation in the simulation. As is shown below, this has the effect of reducing the dpendence that this coordinate has on the energy of the system significantly. When using the black wave function, which is the eigen state of the system, the local energy is constant because it is equal to the ground state energy of the system. When using the blue wave function, the wave function from an isolated water monomer, the local energy isn't constant but is less dependent on the coordinate that the potential energy. The drift term has the effect of guiding walkers toward more probable positions of the guiding function. In the right plot, the drift term is positive when $r_{OH}$ is too short and negative when $r_{OH}$ is too long. 
 
-![Imp_samp_terms_example](Implementing DMC/img/Imp_samp_terms_example.PNG){:width=500px}
+![Imp_samp_terms_example](Implementing DMC/img/Imp_samp_terms_example.png){:width=500px}
 
 Due to the drift term, a final piece needs to be added so that each step in the simulation obeys microscopic reversibility. We compare the probability of a walker moving from $x$ to $x'$ to the probability of a walker moving from $x'$ to $x$. This relative probability is calculated with the following formula.
 
