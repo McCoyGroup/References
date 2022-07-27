@@ -32,4 +32,4 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 {: .alert .alert-info}
 
 ---
-[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/McCoy%20Group%20Code%20Academy/<Path/To/Page.md>)
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Spectrum%20Generation/FixedNodeSpectra.md)
