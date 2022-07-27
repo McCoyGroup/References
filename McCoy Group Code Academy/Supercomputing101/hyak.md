@@ -21,4 +21,4 @@ After you're approved, there are many things you can do and a long, detailed Wik
 
 
 ---
-[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/McCoy%20Group%20Code%20Academy/Supercomputing101/hyak.md)
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/McCoy%20Group%20Code%20Academy/Supercomputing101/hyak.md)
