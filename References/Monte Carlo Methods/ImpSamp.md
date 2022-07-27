@@ -27,18 +27,18 @@ E_\mathrm{L} = \frac{\hat{H}\Phi_\mathrm{T}}{\Phi_\mathrm{T}}
 $$
 
 $$
-\vec{D}_j(\mathbf{x})=\frac{\hbar^2}{m_j}\ \frac{1}{_\Phi_\mathrm{T}(\mathbf{x})}\ \vec \nabla_j \Phi_\mathrm{T}(\mathbf{x})
+\vec{D}_ j(\mathbf{x})=\frac{\hbar^2}{m_j}\ \frac{1}{\Phi_\mathrm{T}(\mathbf{x})}\ \vec \nabla_j \Phi_\mathrm{T}(\mathbf{x})
 $$
 
-The effect that these terms have can be shown in the following figure. The local energy replaces the potential energy evaluation in the simulation. As is shown below, this has the effect of reducing the dpendence that this coordinate has on the energy of the system significantly. When using the black wave function, which is the eigen state of the system, the local energy is constant because it is equal to the ground state energy of the system. When using the blue wave function, the wave function from an isolated water monomer, the local energy isn't constant but is less dependent on the coordinate that the potential energy. The drift term has the effect of guiding walkers toward more probable positions of the guiding function. In the right plot, the drift term is positive when $r_{OH}$ is too short and negative when $r_OH$ is too long. 
+The effect that these terms have can be shown in the following figure. The local energy replaces the potential energy evaluation in the simulation. As is shown below, this has the effect of reducing the dpendence that this coordinate has on the energy of the system significantly. When using the black wave function, which is the eigen state of the system, the local energy is constant because it is equal to the ground state energy of the system. When using the blue wave function, the wave function from an isolated water monomer, the local energy isn't constant but is less dependent on the coordinate that the potential energy. The drift term has the effect of guiding walkers toward more probable positions of the guiding function. In the right plot, the drift term is positive when $r_{OH}$ is too short and negative when $r_{OH}$ is too long. 
 
 ![Imp_samp_terms_example](Implementing DMC/img/Imp_samp_terms_example.PNG){:width="500px"}
 
 Due to the drift term, a final piece needs to be added so that each step in the simulation obeys microscopic reversibility. We compare the probability of a walker moving from $x$ to $x'$ to the probability of a walker moving from $x'$ to $x$. This relative probability is calculated with the following formula.
 
 $$
-{\cal{P}}_j = \frac{P\left (_\mathbf{x}^\prime_j\rightarrow \mathbf{x}_ j\right )}{P\left (\mathbf{x}_ j\rightarrow \mathbf{x}_ j^\prime\right )}= \frac{\Phi^2_\mathrm{T}(\mathbf{x}^\prime_ j)}{\Phi^2_\mathrm{T}(\mathbf{x}_ j)}
-        \ \prod_{k=1}^N\exp \left [-\left (\left |\mathbf{\delta}^\prime_{k,j}\right |^2-\left |\mathbf{\delta}_{k,j}\right |^2\right )/2\sigma_k^2\right ]
+{\cal{P}}_ j = \frac{P\left (\mathbf{x}^\prime_ j\rightarrow \mathbf{x}_ j\right )}{P\left (\mathbf{x}_ j\rightarrow \mathbf{x}_ j^\prime\right )}= \frac{\Phi^2_ \mathrm{T}(\mathbf{x}^\prime_ j)}{\Phi^2_ \mathrm{T}(\mathbf{x}_ j)}
+        \ \prod_{k=1}^N\exp \left [-\left (\left |\mathbf{\delta}^\prime_ {k,j}\right |^2-\left |\mathbf{\delta}_ {k,j}\right |^2\right )/2\sigma_ k^2\right ]
 $$
 
 $\delta$ is the shift that is applied to the walkers' positions from the Gaussian probability distribution described [before](https://mccoygroup.github.io/References/References/Monte%20Carlo%20Methods/DMC.html) and $\sigma$ is the width of that Guassian distribution that $\delta$ is sampled from.
@@ -54,4 +54,4 @@ Got questions? Ask them on the [McCoy Group Stack Overflow](https://stackoverflo
 
 ---
 
-[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Monte%20Carlo%20Methods/DMC.md)
+[Edit on GitHub](https://github.com/McCoyGroup/References/edit/gh-pages/References/Monte%20Carlo%20Methods/ImpSamp.md)
