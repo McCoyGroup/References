@@ -129,7 +129,7 @@ def plot_wavefunctions(grid, potE, results):
     # If you've previously written a Converter class now might be a good time to bring that in! (an import inside a function perhaps?)
     # what matplotlib tricks do you remember to make this nice? (and have axis labels)
 
-def runDVR(domain, NumGP, mu, potential_function, potential_options):
+def runDVR(domain, NumGP, potential_function, potential_options):
     """ You can use this function to gather all your functions to calculate the results in such a way that you only need
         to call this function. We've added some suggested arguments and tips, but feel free to make it your own!
         As you are doing so, think about what would make it easiest to use in other scripts?
@@ -162,7 +162,7 @@ def runDVR(domain, NumGP, mu, potential_function, potential_options):
     # an npz file, and also save the parameters so we can recreate it. Here is a suggestion, but make what feels right for you.
     param_dict = {"domain": domain, 
                   "numberpoints": NumGP, 
-                  "mass": mu}
+                  "mass": potential_options['mass']}
     np.savez("myDVRresults.npz", params=param_dict, grid=results["grid"], energies=results["energies"], wavefunctions=results["wavefunctions"])
     # Can you think of a way (maybe adding parameters to run function and using format strings *hint hint*) to make these
     # data file names more descriptive? Probably add a system name, maybe some of the parameters or the units used in the file?
