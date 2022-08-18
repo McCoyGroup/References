@@ -21,7 +21,7 @@ Read about how you can use it!
 ![PyVibPTnlogo](PVPTn_logo.png){:width="300px"}
 
 Read about it:
-* [A Flexible Approach to Vibrational Perturbation Theory Using Sparse Matrix Elements](https://aip.scitation.org/doi/10.1063/5.0080892)
+* [A Flexible Approach to Vibrational Perturbation Theory Using Sparse Matrix Methods](https://aip.scitation.org/doi/10.1063/5.0080892)
 
 Read about what we've done with it:
 * [Electronic and Mechanical Anharmonicities in the Vibrational Spectra of the H-bonded, Cryogenically Cooled X−HOCl (X=Cl, Br, I) Complexes: Characterization of the Strong Anionic H-bond to an Acidic OH Group](https://aip.scitation.org/doi/10.1063/5.0083078)
