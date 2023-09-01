@@ -7,7 +7,7 @@ As of right now, we use the [Mox](https://wiki.cac.washington.edu/display/hyakus
 * Read more about getting started with and using Mox [here](hyak.md)!
 
 ### McCoy Group Nodes on Klone
-[Klone](https://wiki.cac.washington.edu/display/hyakusers/WIKI+for+Hyak+users#WIKIforHyakusers-HyakOverview) is the second cluster that the group currently uses. Klone has 'stf', and 'chem' queue which work the same as the queues of the same name on Mox, however on Klone is no 'ilahie' but there is 'mccoy' (which you can only get access to if you are in the McCoy group).
+[Klone](https://wiki.cac.washington.edu/display/hyakusers/WIKI+for+Hyak+users#WIKIforHyakusers-HyakOverview) is the second cluster that the group currently uses. Klone has `stf`, and `chem` queue which work the same as the queues of the same name on Mox, however on Klone is no `ilahie` but there is `mccoy` (which you can only get access to if you are in the McCoy group).
 
 * Read more about getting started with and using the McCoy Group Nodes [here](kloneNodes.md)!
 
