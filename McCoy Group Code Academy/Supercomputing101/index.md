@@ -2,15 +2,10 @@
 As a UW Student you have acess to _supercomputers_! As a member of the McCoy Group you have opportunities to access even more _supercomputers_!! 
 
 ### UW Supercomputer - Hyak
-As of right now, we use the [Mox](https://wiki.cac.washington.edu/display/hyakusers/Hyak+mox+Overview) cluster of Hyak, however Mox is being phased out and most people are migrating to Klone. This is where the `stf` queue is (You have access by being a student), `chem` queue (nodes managed by the chemistry department), `ilahie` queue (more nodes you can get access to).
+As of right now, we use the [Mox](https://wiki.cac.washington.edu/display/hyakusers/Hyak+mox+Overview) and [Klone](https://wiki.cac.washington.edu/display/hyakusers/WIKI+for+Hyak+users#WIKIforHyakusers-HyakOverview) clusters of Hyak, however Mox is being phased out and most people are migrating to Klone. On both clusters there are the `stf` queue is (You have access by being a student), `chem` queue (nodes managed by the chemistry department), only on Mox there is `ilahie` queue (more nodes you can get access to), and only on Klone there `mccoy` queue (which you can only get access to if you are in the McCoy group).
 
-* Read more about getting started with and using Mox [here](hyak.md)!
-
-### McCoy Group Nodes on Klone
-[Klone](https://wiki.cac.washington.edu/display/hyakusers/WIKI+for+Hyak+users#WIKIforHyakusers-HyakOverview) is the second cluster that the group currently uses. Klone has `stf`, and `chem` queue which work the same as the queues of the same name on Mox, however on Klone is no `ilahie` but there is `mccoy` (which you can only get access to if you are in the McCoy group).
-
-* Read more about getting started with and using the McCoy Group Nodes [here](kloneNodes.md)!
-
+* Read more about getting started with and using Hyak [here](hyak.md)!
+  
 ### Other Supercomputers
 We sometimes also use supercomputers off the UW campus like: 
 * [NERSC](nersc.md)
