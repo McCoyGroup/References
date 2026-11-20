@@ -59,7 +59,9 @@ Hydroxide clusters with four or five water molecules have many low-symmetry isom
 
 ## The Current Workflow at a Glance
 
-![Flowchart of the end-to-end workflow: small DMC simulations run with DFT provide training data for the MOB-ML model; small DMC simulations run with MOB-ML provide training data for the EGNN; large DMC simulations with the EGNN supply wave-function snapshots for retraining before full-scale production DMC.](flowchart.png)
+<p align="center">
+  <img src="flowchart.png" width="50%" alt="Flowchart of the end-to-end workflow">
+</p>
 
 *The end-to-end workflow. Pink: DMC sampling steps. Blue: training-data construction. Orange: ML model inputs. Purple: model training. Green: production DMC.*
 
