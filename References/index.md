@@ -11,7 +11,7 @@ Methods that give exact solutions to the Schrödinger equation based on a choice
 Methods for obtaining solutions to the Schrödinger equation through stochastic approaches[»](Monte%20Carlo%20Methods)
 [![Jacob CH5](img/thumbs/dmc.png){:width="500px"}](https://pubs.acs.org/doi/10.1021/acs.jpca.0c07181)
 
-## [Machine Learning](Machine%Learning)
+## [Machine Learning](Machine%20Learning)
 An overview of our machine learning efforts for potential energy surface development[»](Machine%20Learning)
 [![ML_flowchart](Machine%20Learning/flowchart.png){:width="500px"}](https://chemrxiv.org/doi/abs/10.26434/chemrxiv.15008636/v1)
 
