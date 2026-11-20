@@ -4,7 +4,7 @@ Many of the molecules and ions we study are *floppy*: even in their ground vibra
 
 That cost raises two problems. Even when a good fitted potential exists, evaluating it 10⁹ times can dominate the cost of a calculation. For many interesting systems no potential exists at all, and CCSD(T)-quality electronic structure calculations are far too expensive to run directly at that scale.
 
-Since 2021, the group has addressed both problems with machine learning. The guiding idea is that **DMC doesn't need a global potential**. It only needs an accurate description of the regions of configuration space that the ground-state wave function actually samples, and **DMC itself is an efficient way to find those regions**. This idea has grown, through several generations of students and collaborators, into an end-to-end workflow. That workflow produces GPU-accelerated potentials at CCSD(T) accuracy for systems that had no potential surface before.
+Since 2021, the group has addressed both problems with machine learning. The guiding idea is that DMC needs an accurate description of the regions of configuration space that the ground-state wave function actually samples, and **DMC itself is an efficient way to find those regions**. This idea has grown, through several generations of students and collaborators, into an end-to-end workflow. That workflow produces GPU-accelerated potentials at CCSD(T) accuracy for systems that had no potential surface before.
 
 ---
 
